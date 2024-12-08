@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primaryColor: #874BFF;
+    --gold: #fadf6e;
+    --myBlack: #000;
+    --inputBack: #eee;
+    --placeHolderColor: #6e6e6e;
+}
+
+::selection {
+    background: var(--primaryColor);
+    color: white;
+}
+
+::placeholder {
+    color: var(--placeHolderColor);
+}
+
+
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+input, button {
+    border: 0;
+    outline: 0;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.3rem;
+    background-color: transparent;
+}
+
+input {
+    background-color: var(--inputBack);
+}
+
+.header {
+    height: 12vh;
+    padding: 0 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primaryColor);
+}
+
+.searchBar{
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    background-color: var(--inputBack);
+    border-radius: 0.5rem;
+}
+
+.searchBar input {
+    flex: 1;
+}
+
+img {
+    width: 1.5rem;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.btns, .icons {
+    display: flex;
+}
+
+.btns{
+    column-gap: 1.8rem;
+}
+
+.icons {
+    column-gap: 1.5rem;
+}
+
+#permutaBtn{
+    color: white;
+    background-color: var(--primaryColor);
+}
+
+#premiumBtn{
+    color: black;
+    background-color: var(--gold);
+}
+
+#premiumBtn span, #permutaBtn span {
+    font-weight: 600;
+}
+
+
+
+
+
+/* helpers */
+.bigText{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.midText{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.normalText{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.smallText{
+    font-size: 1rem;
+    font-weight: 400;
+}

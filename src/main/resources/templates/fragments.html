@@ -1,0 +1,27 @@
+ <div th:fragment="header">
+    <div class="header">
+        <div class="logo bigText">Lambda</div>
+
+        <form action="/" method="post" class="searchBar">
+            <input class="smallText" type="text" placeholder="Search..." name="">
+            <button type="submit"><img th:src="@{/images/search.svg}" alt="search"></button>
+        </form>
+
+        <div class="btns">
+            <button class="button" id="permutaBtn">
+                <span class="smallText">Permuta</span>
+            </button>
+
+            <button class="button" id="premiumBtn">
+                <span class="smallText">Premium</span>
+                <span><img th:src="@{/images/crown.svg}" alt="crown"></span>
+            </button>
+        </div>
+
+        <div class="icons">
+            <img th:src="@{/images/user.svg}" alt="user">
+            <img th:src="@{/images/heart.svg}" alt="heart">
+            <img th:src="@{/images/shopping-cart.svg}" alt="shopping-cart">
+        </div>
+    </div>
+</div>
