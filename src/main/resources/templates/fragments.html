@@ -1,4 +1,4 @@
- <div th:fragment="header">
+ <div th:fragment="headerUser">
     <div class="header">
         <div class="logo bigText">Lambda</div>
 
@@ -8,11 +8,11 @@
         </form>
 
         <div class="btns">
-            <button class="button" id="permutaBtn">
+            <button class="button violetBtn">
                 <span class="smallText">Permuta</span>
             </button>
 
-            <button class="button" id="premiumBtn">
+            <button class="button goldBtn">
                 <span class="smallText">Premium</span>
                 <span><img th:src="@{/images/crown.svg}" alt="crown"></span>
             </button>
@@ -25,3 +25,9 @@
         </div>
     </div>
 </div>
+
+ <div th:fragment="headerNormal">
+     <div class="header" style="justify-content: center">
+         <div class="logo bigText">Lambda</div>
+     </div>
+ </div>

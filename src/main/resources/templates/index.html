@@ -8,7 +8,32 @@
 </head>
 <body>
 
-    <div th:replace="fragments :: header"></div>
+    <div th:replace="fragments :: headerNormal"></div>
+
+    <div id="hero" class="poster">
+        <div class="poster__content">
+            <div class="bigText">
+                Lambda Progetto IS
+            </div>
+
+            <div class="normalText" style="padding: 30px 0">
+                Unisciti a Lambda Premium e scopri tutti i vantaggi esclusivi progettati per migliorare la tua esperienza.
+            </div>
+
+            <div class="btns">
+                <button class="button violetBtn" id="utenteBtn">
+                    <span class="smallText" style="font-weight: 500">Area utente</span>
+                </button>
+
+                <button class="button whiteBtn" id="rivenditoreBtn">
+                    <span class="smallText" style="font-weight: 500">Area rivenditore</span>
+                </button>
+            </div>
+        </div>
+        <div class="poster__image">
+            <img th:src="@{/images/hero.svg}" alt="">
+        </div>
+    </div>
 
 </body>
 </html>
