@@ -14,4 +14,9 @@ public class HTMLMapping {
     public String vendorAuth() {
         return "vendorAuth";
     }
+
+    @GetMapping("/userAuth")
+    public String userAuth() {
+        return "userAuth";
+    }
 }
