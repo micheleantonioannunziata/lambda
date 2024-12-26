@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+</head>
+<body class="centerForced" style="height: 100vh; overflow: hidden; flex-direction: column;">
+
+<div class="bigText textCenter">Area Rivenditore</div>
+
+<div class="authContainer shadow mt20 scale-in-center">
+    <div id="logInForm">
+        <form class="authForm">
+            <span class="bigText">Sign in</span>
+            <input class="smallText" type="email" placeholder="Email">
+            <input class="smallText" type="password" placeholder="Password">
+            <button type="submit" class="button violetBtn normalText mt20">Log in</button>
+        </form>
+    </div>
+
+    <div id="logInCall">
+        <span class="bigText">Non hai un account?</span>
+        <span class="smallText">Registrati ora per usufruire dei servizi della piattaforma Lambda</span>
+        <button class="button whiteBtn normalText" id="activeButton">Sign up</button>
+    </div>
+
+    <div id="signUpForm">
+        <form class="authForm">
+            <span class="bigText textCenter">Crea Account rivenditore</span>
+            <input class="smallText" placeholder="Ragione Sociale">
+            <input class="smallText" placeholder="Partita IVA">
+            <input class="smallText" type="email" placeholder="Email">
+            <input class="smallText" type="password" placeholder="Password">
+            <input class="smallText" type="password" placeholder="Confirm password">
+            <div style="width: 80%;">Hai già un account? <span style="color: #874BFF;" class="underline clickable" id="removeButton">Log in</span></div>
+            <button type="submit" class="button violetBtn normalText mt20">Sign Up</button>
+        </form>
+    </div>
+
+    <div id="signUpCall">
+        <span class="bigText">Sei un acquirente?</span>
+        <span class="smallText">Registrati ora per cercare i prodotti che più ami al miglior prezzo in circolazione</span>
+        <a href="userAuth.html" style="color: white;">
+            <button class="button whiteBtn normalText">Sign up</button>
+        </a>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/js/authSlice.js}"></script>
+
+</body>
+</html>
