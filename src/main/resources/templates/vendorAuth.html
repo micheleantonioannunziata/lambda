@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +43,7 @@
     <div id="signUpCall">
         <span class="bigText">Sei un acquirente?</span>
         <span class="smallText">Registrati ora per cercare i prodotti che più ami al miglior prezzo in circolazione</span>
-        <a href="userAuth.html" style="color: white;">
+        <a th:href="@{/vendorAuth.html}" style="color: white;">
             <button class="button whiteBtn normalText">Sign up</button>
         </a>
     </div>

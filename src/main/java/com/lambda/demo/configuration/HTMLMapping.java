@@ -1,4 +1,4 @@
-package configuration;
+package com.lambda.demo.configuration;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
