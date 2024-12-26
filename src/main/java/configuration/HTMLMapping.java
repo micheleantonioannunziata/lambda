@@ -9,4 +9,9 @@ public class HTMLMapping {
     public String index() {
         return "index";
     }
+
+    @GetMapping("/vendorAuth")
+    public String vendorAuth() {
+        return "vendorAuth";
+    }
 }
