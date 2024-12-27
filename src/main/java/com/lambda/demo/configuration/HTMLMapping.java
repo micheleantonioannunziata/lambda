@@ -22,5 +22,8 @@ public class HTMLMapping {
 
     @GetMapping("/myCart")
     public String myCart(){ return "myCart";}
+
+    @GetMapping("/checkout")
+    public String checkout(){ return "checkout";}
 }
 

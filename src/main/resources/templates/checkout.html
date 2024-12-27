@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/checkout.css}">
+</head>
+<body>
+
+<div th:replace="fragments :: headerUser"></div>
+
+<form action="" method="" class="centerForced pdHead">
+    <div class="centerForced">
+        <div class="addressForm">
+            <span class="midText">Indirizzo di spedizione</span>
+            <input class="smallText" type="text" placeholder="Nome proprietario">
+            <input class="smallText" type="text" placeholder="Indirizzo">
+        </div>
+        <div class="paymentForm">
+            <span class="midText">Metodo di pagamento</span>
+            <span class="normalText centerForced underline">Paga con Lambda Points<img th:src="@{/images/coin.svg}" alt="" style="width: 30px"></span>
+            <input class="smallText" type="text" placeholder="Intestatario carta">
+            <input class="smallText" type="text" placeholder="Numero carta">
+            <div>
+                <input class="smallText" type="text" placeholder="CVV">
+                <input class="smallText" type="text" placeholder="Scadenza">
+            </div>
+
+            <div class="smallText">
+                <input type="checkbox"> Accetta ToS
+            </div>
+        </div>
+    </div>
+    <button class="violetBtn normalText" type="submit">Conferma</button>
+</form>
+</body>
+</html>
