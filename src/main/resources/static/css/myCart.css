@@ -1,0 +1,41 @@
+#globalBox {
+    display: flex;
+    justify-content: space-between;
+    max-width: 2000px;
+    margin-bottom: 50px;
+}
+
+.cart {
+    width: 55%;
+}
+
+.cardContainer {
+    padding-inline: 0;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.card {
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+    column-gap: 10px;
+}
+
+.card > div {
+    display: block;
+}
+
+.card > div.infoBlock {
+    margin: 20px 0;
+    position: relative;
+}
+
+.recap {
+    width: 35%;
+}
+
+.recap > div {
+    display: flex;
+    justify-content: space-between;
+}

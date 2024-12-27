@@ -19,4 +19,8 @@ public class HTMLMapping {
     public String userAuth() {
         return "userAuth";
     }
+
+    @GetMapping("/myCart")
+    public String myCart(){ return "myCart";}
 }
+
