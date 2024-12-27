@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/myCart.css}">
+</head>
+<body>
+
+<div class="header shadow" style="justify-content: center">
+    <div class="logo bigText">Lambda</div>
+</div>
+
+<div class="pdHead pdInline" id="globalBox">
+    <div class="cart">
+        <div class="midText">Il tuo Carrello</div>
+        <div class="cardContainer mt20">
+            <div class="card shadow">
+                <img th:src="@{/images/image.png}" alt="">
+                <div class="infoBlock">
+                    <span class="normalText">Apple Ipad 10.2</span>
+
+                    <div class="rating mt10">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                    </div>
+
+                    <div class="italic smallText mt10">
+                        di “La Galleria del Telefonino”
+                    </div>
+
+                    <button class="violetBtn topRight smallText">Rimuovi</button>
+
+                    <span class="midText bottomRight mt10">€ 125,00</span>
+                </div>
+            </div>
+            <div class="card shadow">
+                <img th:src="@{/images/image.png}" alt="">
+                <div class="infoBlock">
+                    <span class="normalText">Apple Ipad 10.2</span>
+
+                    <div class="rating mt10">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/midStar.svg}" alt="">
+                    </div>
+
+                    <div class="italic smallText mt10">
+                        di “La Galleria del Telefonino”
+                    </div>
+
+                    <button class="violetBtn topRight smallText">Rimuovi</button>
+
+                    <span class="midText bottomRight mt10">€ 125,00</span>
+                </div>
+            </div>
+            <div class="card shadow">
+                <img th:src="@{/images/image.png}" alt="">
+                <div class="infoBlock">
+                    <span class="normalText">Apple Ipad 10.2</span>
+
+                    <div class="rating mt10">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/fullStar.svg}" alt="">
+                        <img th:src="@{/images/star.svg}" alt="">
+                    </div>
+
+                    <div class="italic smallText mt10">
+                        di “La Galleria del Telefonino”
+                    </div>
+
+                    <button class="violetBtn topRight smallText">Rimuovi</button>
+
+                    <span class="midText bottomRight mt10">€ 125,00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="recap">
+        <span class="midText">Riepilogo</span>
+
+        <div class="mt20 w100">
+            <span class="normalText">Subtotale</span>
+            <span class="midText">€ 424,99</span>
+        </div>
+
+        <div class="mt20 w100">
+            <span class="normalText ">Spedizione</span>
+            <span class="midText">€ 3,99</span>
+        </div>
+
+        <div class="mt20 w100">
+            <span class="midText ">Totale</span>
+            <span class="bigText">€ 428,99</span>
+        </div>
+
+        <button class="violetBtn bigText mt100 w100">Checkout</button>
+    </div>
+</div>
+</body>
+</html>
