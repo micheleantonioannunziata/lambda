@@ -1,0 +1,51 @@
+form.pdHead {
+    column-gap: 50px;
+    padding-inline: 3%;
+    max-width: 2000px;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+form.pdHead div.centerForced {
+    column-gap: 50px;
+}
+
+.paymentForm, .addressForm {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    width: 100%;
+    align-items: center;
+}
+
+.paymentForm > span, .addressForm > span {
+    column-gap: 10px;
+}
+
+.paymentForm > *, .addressForm > * {
+    width: 30%;
+    min-width: 320px;
+}
+
+.paymentForm input, .addressForm input {
+    width: 30%;
+    min-width: 320px;
+    padding: 12px 20px;
+}
+
+.paymentForm > div {
+    width: 30%;
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paymentForm > div input {
+    width: 40%;
+    min-width: 150px;
+}
+
+form > button[type=submit] {
+    padding: 12px 50px;
+}
