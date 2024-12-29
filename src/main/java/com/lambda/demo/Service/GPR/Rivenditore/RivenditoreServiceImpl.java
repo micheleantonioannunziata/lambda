@@ -1,13 +1,14 @@
-package com.lambda.demo.Service.GPR.Acquirente;
+package com.lambda.demo.Service.GPR.Rivenditore;
 
 import com.lambda.demo.Entity.GPR.RivenditoreEntity;
 import com.lambda.demo.Repository.GPR.RivenditoreRepository;
 import com.lambda.demo.Utility.Encrypt;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RivenditoreServiceImpl implements RivenditoreService{
+public class RivenditoreServiceImpl implements com.lambda.demo.Service.GPR.Acquirente.RivenditoreService {
     @Autowired
     private RivenditoreRepository rivenditoreRepository;
 
@@ -49,5 +50,11 @@ public class RivenditoreServiceImpl implements RivenditoreService{
         rivenditore = rivenditoreRepository.findByEmailAndPassword(email, Encrypt.encrypt(password));
 
         if(rivenditore == null) throw new Exception("Password errata!");
+    }
+
+    @Override
+    @Transactional
+    public int updateRivenditore(RivenditoreEntity rivenditoreEntity) {
+        return rivenditoreRepository.updateRivenditoreEntity(rivenditoreEntity);
     }
 }
