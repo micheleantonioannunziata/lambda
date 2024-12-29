@@ -25,5 +25,18 @@ public class HTMLMapping {
 
     @GetMapping("/checkout")
     public String checkout(){ return "checkout";}
+
+    @GetMapping("/userArea")
+    public String userArea(){ return "userArea";}
+
+    @GetMapping("/vendorArea")
+    public String vendorArea(){ return "vendorArea";}
+
+    @GetMapping("/userDataUpdate")
+    public String userDataUpdate(){ return "userDataUpdate";}
+
+    @GetMapping("/vendorDataUpdate")
+    public String vendorDataUpdate(){ return "vendorDataUpdate";}
+
 }
 
