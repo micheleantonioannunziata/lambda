@@ -1,0 +1,47 @@
+div.bigText.textCenter {
+    font-weight: normal;
+    font-size: 4rem;
+}
+
+#globalArea {
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+}
+
+#areas, #contents {
+    border-radius: 10px;
+    height: 100%;
+}
+
+#areas {
+    padding: 30px 0;
+}
+
+#areas div.bigText {
+    font-weight: 600;
+}
+
+#areas div.bigText.violet {
+    transition: color 0.5s ease-in-out;
+}
+
+#contents {
+    width: 50%;
+    padding: 30px;
+    position: relative;
+}
+
+#contents div.midText span.grey {
+    font-weight: 450;
+}
+
+#dataArea > div > span {
+    position: relative;
+}
+
+#dataArea > div > span > img {
+    position: absolute;
+    height: 100%;
+    margin-left: 20px;
+}

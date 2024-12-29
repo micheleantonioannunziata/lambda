@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/dataUpdate.css}">
+</head>
+<body>
+<div class="header shadow" style="justify-content: center">
+    <div class="logo bigText">Lambda</div>
+</div>
+
+<form action="purchaserDataUpdate" method="POST" class="centerForced pdHead pdInline scale-in-center">
+    <span class="midText">Modifica dati personali</span>
+    <input class="smallText" name="nome" type="text" placeholder="Nome">
+    <input class="smallText" name="cognome" type="text" placeholder="Cognome">
+    <input class="smallText" name="indirizzo" type="text" placeholder="Indirizzo">
+    <input class="smallText" name="passwordAttuale" type="password" placeholder="Password attuale">
+    <input class="smallText" name="nuovaPassword" type="password" placeholder="Nuova password">
+    <input class="smallText" name="confermaNuovaPassword" type="password" placeholder="Conferma nuova password">
+    <button class="violetBtn normalText" type="submit">Conferma</button>
+</form>
+</body>
+</html>

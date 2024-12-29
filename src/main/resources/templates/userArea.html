@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/userArea.css}">
+</head>
+<body>
+
+<div th:replace="fragments :: headerUser"></div>
+
+<div class="bigText textCenter pdHead">Ciao <span th:text="${session.acquirente.getNome()}"></span>!</div>
+
+<div id="globalArea" class="pdInline mt20 mb50">
+    <div id="areas">
+        <div class="bigText clickable violet" id="dataAreaBtn">Area Dati</div>
+        <div class="bigText mt20 clickable" id="orderAreaBtn">Area Ordini</div>
+        <div class="bigText mt20 clickable" id="tradeInAreaBtn">Area Permute</div>
+    </div>
+
+    <div id="contents" class="shadow scale-in-center">
+        <div id="dataArea" class="scale-in-center">
+            <div class="bigText" style="font-weight: 700;">Dati personali</div>
+            <div class="midText mt20">Lambda Points<br>
+                <span class="violet">375<img th:src="@{/images/coin.svg}"></span></div>
+            <div class="midText mt20">Nome<br><span class="grey" th:text="${session.acquirente.getNome()}"></span></div>
+            <div class="midText mt20">Cognome<br><span class="grey" th:text="${session.acquirente.getCognome()}"></span></div>
+            <div class="midText mt20">Indirizzo<br><span class="grey" th:text="${session.acquirente.getIndirizzo()}"></span></div>
+            <div class="midText mt20">Email<br><span class="grey" th:text="${session.acquirente.getEmail()}"></span></div>
+            <!--il .html non ci vuole mai in un href-->
+            <a th:href="@{/userDataUpdate}"><button class="violetBtn topRight smallText" style="font-weight: 700;">Modifica</button></a>
+        </div>
+
+        <div id="orderArea" class="scale-in-center hidden">
+            <div class="bigText" style="font-weight: 700;">Cronologia ordini</div>
+        </div>
+
+        <div id="tradeInArea" class="scale-in-center hidden">
+            <div class="bigText" style="font-weight: 700;">Cronologia permute</div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/js/userAreaClickHandler.js}"></script>
+</body>
+</html>
