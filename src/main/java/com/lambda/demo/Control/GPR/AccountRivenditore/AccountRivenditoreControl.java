@@ -1,7 +1,7 @@
 package com.lambda.demo.Control.GPR.AccountRivenditore;
 
 import com.lambda.demo.Entity.GPR.RivenditoreEntity;
-import com.lambda.demo.Service.GPR.Acquirente.RivenditoreService;
+import com.lambda.demo.Service.GPR.Rivenditore.RivenditoreService;
 import com.lambda.demo.Utility.Encrypt;
 import com.lambda.demo.Utility.SessionManager;
 import com.lambda.demo.Utility.Validator;

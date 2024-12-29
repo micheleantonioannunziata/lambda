@@ -1,7 +1,7 @@
 package com.lambda.demo.Control.GPR.AccessoRivenditore;
 
 import com.lambda.demo.Repository.GPR.RivenditoreRepository;
-import com.lambda.demo.Service.GPR.Acquirente.RivenditoreService;
+import com.lambda.demo.Service.GPR.Rivenditore.RivenditoreService;
 import com.lambda.demo.Utility.SessionManager;
 import com.lambda.demo.Utility.Validator;
 import jakarta.servlet.http.HttpServletRequest;

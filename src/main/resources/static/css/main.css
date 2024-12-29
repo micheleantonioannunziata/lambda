@@ -17,6 +17,36 @@
     color: var(--placeHolderColor);
 }
 
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    scrollbar-width: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+input, button {
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    background-color: var(--inputBack);
+}
+
 /* header */
 .header {
     height: 12vh;
@@ -61,7 +91,6 @@
     column-gap: 1.5rem;
 }
 
-
 /* card */
 
 .cardContainer {
@@ -99,59 +128,6 @@
 }
 
 
-/* reset css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-}
-
-body{
-    overflow-x: hidden;
-}
-
-input, button {
-    border: 0;
-    outline: 0;
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.5rem;
-    background-color: transparent;
-}
-
-a {
-    text-decoration: none;
-}
-
-input {
-    background-color: var(--inputBack);
-}
-
-.violetBtn {
-    background-color: var(--primaryColor);
-    color: white;
-}
-
-.whiteBtn {
-    border: 1px solid var(--primaryColor);
-    color: var(--primaryColor);
-}
-
-.btns, .icons {
-    display: flex;
-}
-
-.btns {
-    column-gap: 1.8rem;
-}
-
-.goldBtn {
-    color: black;
-    background-color: var(--gold);
-}
-
-
 /* helpers */
 .bigText{
     font-size: 2rem;
@@ -183,8 +159,16 @@ input {
     justify-content: center;
 }
 
+.hidden {
+    display: none;
+}
+
 .textCenter {
     text-align: center;
+}
+
+.textRight {
+    text-align: right;
 }
 
 .italic {
@@ -193,6 +177,37 @@ input {
 
 .underline {
     text-decoration: underline;
+}
+
+.grey {
+    color: var(--placeHolderColor);
+}
+
+.violet {
+    color: var(--primaryColor);
+}
+
+.violetBtn {
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+.whiteBtn {
+    border: 1px solid var(--primaryColor);
+    color: var(--primaryColor);
+}
+
+.btns, .icons {
+    display: flex;
+}
+
+.btns {
+    column-gap: 1.8rem;
+}
+
+.goldBtn {
+    color: black;
+    background-color: var(--gold);
 }
 
 .mt10 {
@@ -205,6 +220,10 @@ input {
 
 .mt50 {
     margin-top: 50px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
 }
 
 .mt100 {
@@ -239,6 +258,11 @@ input {
     cursor: pointer;
 }
 
+/* oscura password*/
+.password-hidden {
+    font-family: 'password';
+    -webkit-text-security: disc;
+}
 
 /* animazione stupida  */
 .scale-in-center {
