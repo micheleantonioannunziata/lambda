@@ -13,10 +13,10 @@
 
 <div class="authContainer shadow mt20 scale-in-center">
     <div id="logInForm">
-        <form class="authForm">
+        <form class="authForm" action="vendorLogin" method="POST">
             <span class="bigText">Sign in</span>
-            <input class="smallText" type="email" placeholder="Email">
-            <input class="smallText" type="password" placeholder="Password">
+            <input class="smallText" name="email" type="email" placeholder="Email" pattern="[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}" required>
+            <input class="smallText" name="password" type="password" placeholder="Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,50}" required>
             <button type="submit" class="button violetBtn normalText mt20">Log in</button>
         </form>
     </div>
@@ -28,13 +28,13 @@
     </div>
 
     <div id="signUpForm">
-        <form class="authForm">
+        <form class="authForm" action="vendorSignup" method="POST">
             <span class="bigText textCenter">Crea Account rivenditore</span>
-            <input class="smallText" placeholder="Ragione Sociale">
-            <input class="smallText" placeholder="Partita IVA">
-            <input class="smallText" type="email" placeholder="Email">
-            <input class="smallText" type="password" placeholder="Password">
-            <input class="smallText" type="password" placeholder="Confirm password">
+            <input class="smallText" name="ragioneSociale" placeholder="Ragione Sociale" required>
+            <input class="smallText" name="partitaIVA" placeholder="Partita IVA" pattern="\d+" required>
+            <input class="smallText" name="email" type="email" placeholder="Email" pattern="[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}" required>
+            <input class="smallText" name="password" type="password" placeholder="Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,50}" required>
+            <input class="smallText" name="confermaPassword" type="password" placeholder="Confirm password" required>
             <div style="width: 80%;">Hai già un account? <span style="color: #874BFF;" class="underline clickable" id="removeButton">Log in</span></div>
             <button type="submit" class="button violetBtn normalText mt20">Sign Up</button>
         </form>
@@ -43,7 +43,7 @@
     <div id="signUpCall">
         <span class="bigText">Sei un acquirente?</span>
         <span class="smallText">Registrati ora per cercare i prodotti che più ami al miglior prezzo in circolazione</span>
-        <a th:href="@{/vendorAuth.html}" style="color: white;">
+        <a th:href="@{/userAuth}" style="color: white;">
             <button class="button whiteBtn normalText">Sign up</button>
         </a>
     </div>
