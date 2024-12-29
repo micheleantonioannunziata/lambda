@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/vendorArea.css}">
+</head>
+<body>
+
+<div th:replace="fragments :: headerNormal"></div>
+
+<div id="globalArea" class="pdHead pdInline">
+    <div id="areas">
+        <div class="bigText clickable violet" id="insertionAreaBtn">Area Inserzioni</div>
+        <div class="bigText mt20 clickable" id="dataAreaBtn">Area Dati</div>
+        <div class="bigText mt20 clickable" id="statsAreaBtn">Area Statistiche</div>
+    </div>
+
+    <div id="contents" class="scale-in-center">
+        <div id="insertionArea" class="scale-in-center">
+            <button class="violetBtn smallText" style="font-weight: 700;">
+                <a href="addInsertion.html" style="color: white;">Aggiungi inserzione</a></button>
+            <div class="cardContainer mt20">
+                <div class="card shadow">
+                    <img th:src="@{/images/image.png}" alt="">
+                    <div class="info">
+
+                        <div class="nameBtn">
+                            <span class="midText">Apple Ipad 10.2</span>
+                            <button class="violetBtn smallText" style="font-weight: 700;">
+                                <a href="../../../../../lambdaParallelo/src/main/resources/templates/userDataUpdate.html" style="color: white;">Modifica</a></button>
+                        </div>
+
+                        <div class="normalText mt50">Prodotti nel carrello: <span class="grey">800</span></div>
+                        <div class="normalText mt20">Prodotti in vendita: <span class="grey">100</span></div>
+
+                        <div class="midText w100 textRight mt20">€ 125,00</div>
+
+                    </div>
+                </div>
+                <div class="card shadow">
+                    <img th:src="@{/images/image.png}" alt="">
+                    <div class="info">
+
+                        <div class="nameBtn">
+                            <span class="midText">Apple Ipad 10.2</span>
+                            <button class="violetBtn smallText" style="font-weight: 700;">
+                                <a href="../../../../../lambdaParallelo/src/main/resources/templates/userDataUpdate.html" style="color: white;">Modifica</a></button>
+                        </div>
+
+                        <div class="normalText mt50">Prodotti nel carrello: <span class="grey">800</span></div>
+                        <div class="normalText mt20">Prodotti in vendita: <span class="grey">100</span></div>
+
+                        <div class="midText w100 textRight mt20">€ 125,00</div>
+
+                    </div>
+                </div>
+                <div class="card shadow">
+                    <img th:src="@{/images/image.png}" alt="">
+                    <div class="info">
+
+                        <div class="nameBtn">
+                            <span class="midText">Apple Ipad 10.2</span>
+                            <button class="violetBtn smallText" style="font-weight: 700;">
+                                <a href="../../../../../lambdaParallelo/src/main/resources/templates/userDataUpdate.html" style="color: white;">Modifica</a></button>
+                        </div>
+
+                        <div class="normalText mt50">Prodotti nel carrello: <span class="grey">800</span></div>
+                        <div class="normalText mt20">Prodotti in vendita: <span class="grey">100</span></div>
+
+                        <div class="midText w100 textRight mt20">€ 125,00</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dataArea" class="scale-in-center hidden shadow">
+            <div class="bigText" style="font-weight: 700;">Dati</div>
+            <div class="midText mt20">Ragione Sociale<br><span class="grey" th:text="${session.rivenditore.getRagioneSociale()}"></span></div>
+            <div class="midText mt20">Partita IVA<br><span class="grey" th:text="${session.rivenditore.getPartitaIva()}"></span></div>
+            <div class="midText mt20">Indirizzo<br><span class="grey" th:text="${session.rivenditore.getIndirizzo()}"></span></div>
+            <div class="midText mt20">Email<br><span class="grey" th:text="${session.rivenditore.getEmail()}"></span></div>
+            <a th:href="@{/vendorDataUpdate}"><button class="violetBtn topRight smallText" style="font-weight: 700;">Modifica</button></a>
+        </div>
+
+        <div id="statsArea" class="scale-in-center hidden">
+            <div class="bigText" style="font-weight: 700;">Statistiche</div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/js/vendorAreaClickHandler.js}"></script>
+</body>
+</html>
