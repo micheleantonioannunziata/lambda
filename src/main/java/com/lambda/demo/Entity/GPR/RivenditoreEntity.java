@@ -27,7 +27,7 @@ public class RivenditoreEntity {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false, columnDefinition = "VARCHAR(50)")
+    @Column(nullable = false, unique = true, columnDefinition = "VARCHAR(50)")
     private String ragioneSociale;
 
     @Column

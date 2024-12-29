@@ -42,7 +42,7 @@ public class RecensioneEntity {
             @JoinColumn(name = "colore", referencedColumnName = "colore"),
             @JoinColumn(name = "partita_iva_rivenditore", referencedColumnName = "partita_iva_rivenditore")
     }, foreignKey = @ForeignKey(
-            foreignKeyDefinition = "FOREIGN KEY (ram, spazio_di_archiviazione, super_prodotto_id, colore, partita_iva_rivenditore) REFERENCES inserzione (ram, spazio_di_archiviazione, super_prodotto_id, colore, partita_iva_rivenditore) ON UPDATE CASCADE ON DELETE CASCADE"
+            foreignKeyDefinition = "FOREIGN KEY (ram, spazio_archiviazione, super_prodotto_id, colore, partita_iva_rivenditore) REFERENCES inserzione (ram, spazio_archiviazione, super_prodotto_id, colore, partita_iva_rivenditore) ON UPDATE CASCADE ON DELETE CASCADE"
     ))
     private InserzioneEntity inserzione;
 

@@ -46,7 +46,7 @@ public class InserzioneEntity {
             @JoinColumn(name = "super_prodotto_id", referencedColumnName = "super_prodotto_id"),
             @JoinColumn(name = "colore", referencedColumnName = "colore"),
     }, foreignKey = @ForeignKey(
-            foreignKeyDefinition = "FOREIGN KEY (ram, spazio_di_archiviazione, super_prodotto_id, colore) REFERENCES prodotto (ram, spazio_di_archiviazione, super_prodotto_id, colore) ON UPDATE CASCADE ON DELETE CASCADE"
+            foreignKeyDefinition = "FOREIGN KEY (ram, spazio_archiviazione, super_prodotto_id, colore) REFERENCES prodotto (ram, spazio_archiviazione, super_prodotto_id, colore) ON UPDATE CASCADE ON DELETE CASCADE"
     ))
     private ProdottoEntity prodotto;
 
