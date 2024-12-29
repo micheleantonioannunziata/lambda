@@ -21,13 +21,17 @@
             </div>
 
             <div class="btns">
-                <button class="button violetBtn" id="utenteBtn">
-                    <span class="smallText" style="font-weight: 500">Area utente</span>
-                </button>
+                <a th:href="@{userAuth}">
+                    <button class="button violetBtn" id="utenteBtn">
+                        <span class="smallText clickable" style="font-weight: 500">Area utente</span>
+                    </button>
+                </a>
 
-                <button class="button whiteBtn" id="rivenditoreBtn">
-                    <span class="smallText" style="font-weight: 500">Area rivenditore</span>
-                </button>
+                <a th:href="@{vendorAuth}">
+                    <button class="button whiteBtn" id="rivenditoreBtn">
+                        <span class="smallText clickable" style="font-weight: 500">Area rivenditore</span>
+                    </button>
+                </a>
             </div>
         </div>
         <div class="poster__image">

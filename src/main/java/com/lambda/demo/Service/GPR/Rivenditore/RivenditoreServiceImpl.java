@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RivenditoreServiceImpl implements com.lambda.demo.Service.GPR.Acquirente.RivenditoreService {
+public class RivenditoreServiceImpl implements RivenditoreService {
     @Autowired
     private RivenditoreRepository rivenditoreRepository;
 
