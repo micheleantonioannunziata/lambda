@@ -4,7 +4,10 @@ import com.lambda.demo.Entity.GPR.RivenditoreEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public interface RivenditoreRepository extends JpaRepository<RivenditoreEntity, String> {
@@ -27,4 +30,18 @@ public interface RivenditoreRepository extends JpaRepository<RivenditoreEntity, 
             "r.password = :#{#rivenditore.password} " +
             "WHERE r.id = :#{#rivenditore.id}")
     int updateRivenditoreEntity(RivenditoreEntity rivenditore);
+
+
+    @Query(value = """
+            SELECT DISTINCT r.*
+            FROM super_prodotto sp
+                     JOIN prodotto p ON sp.id = p.super_prodotto_id
+                     JOIN inserzione i ON i.ram = p.ram
+                AND i.spazio_archiviazione = p.spazio_archiviazione
+                AND i.colore = p.colore
+                AND i.super_prodotto_id = p.super_prodotto_id
+                     JOIN rivenditore r ON i.partita_iva_rivenditore = r.partita_iva
+            WHERE i.super_prodotto_id = :superProdottoId
+            """, nativeQuery = true)
+    List<RivenditoreEntity> findDistinctBySuperProdottoId(@Param("superProdottoId") int superProdottoId);
 }
