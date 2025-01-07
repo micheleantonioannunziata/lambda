@@ -49,7 +49,7 @@ public class AcquirenteEntity {
     private boolean premium;
 
 
-    @OneToMany(mappedBy = "acquirente")
+    @OneToMany(mappedBy = "acquirente", fetch = FetchType.EAGER)
     private List<PermutaEntity> permute = new ArrayList<>();
 
     @OneToMany(mappedBy = "acquirente")

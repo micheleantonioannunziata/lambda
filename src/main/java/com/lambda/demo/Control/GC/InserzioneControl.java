@@ -317,7 +317,7 @@ public class InserzioneControl {
 
 
         if (partitaIva != null){
-            RivenditoreEntity rivenditore = rivenditoreService.findByPartita(partitaIva);
+            RivenditoreEntity rivenditore = rivenditoreService.findByPartitaIva(partitaIva);
             if (rivenditore != null){
 
                 inserzioneEntity = rivenditore.getCheapestInsertion(Integer.parseInt(id));
