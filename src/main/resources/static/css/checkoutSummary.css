@@ -1,0 +1,19 @@
+.cart {
+    width: 50%;
+}
+
+.recap {
+    width: 40%;
+}
+
+.recap > div.midText {
+    display: block;
+}
+
+.recap > div > span {
+    color: var(--placeHolderColor);
+}
+
+.recap > div.btns {
+    justify-content: center;
+}
