@@ -1,8 +1,7 @@
 package com.lambda.demo.Entity.GA.Permuta;
 
 
-
-import com.lambda.demo.Entity.GC.Prodotto.ProdottoEntity;
+import com.lambda.demo.Entity.GC.SuperProdottoEntity;
 import com.lambda.demo.Entity.GPR.AcquirenteEntity;
 import jakarta.persistence.*;
 import lombok.*;
@@ -24,17 +23,13 @@ public class PermutaEntity {
 
 
 
-    @MapsId("prodottoId")
+    @MapsId("superProdottoId")
     @ManyToOne
-    @JoinColumns(value = {
-            @JoinColumn(name = "ram", referencedColumnName = "ram"),
-            @JoinColumn(name = "spazio_archiviazione", referencedColumnName = "spazio_archiviazione"),
-            @JoinColumn(name = "super_prodotto_id", referencedColumnName = "super_prodotto_id"),
-            @JoinColumn(name = "colore", referencedColumnName = "colore"),
-    }, foreignKey = @ForeignKey(
-            foreignKeyDefinition = "FOREIGN KEY (ram, spazio_archiviazione, super_prodotto_id, colore) REFERENCES prodotto (ram, spazio_archiviazione, super_prodotto_id, colore) ON UPDATE CASCADE ON DELETE CASCADE"
+    @JoinColumn(name = "super_prodotto_id",
+            foreignKey = @ForeignKey(
+            foreignKeyDefinition =  "FOREIGN KEY (super_prodotto_id) REFERENCES super_prodotto(id) ON UPDATE CASCADE ON DELETE CASCADE"
     ))
-    private ProdottoEntity prodotto;
+    private SuperProdottoEntity superProdotto;
 
 
 
@@ -50,11 +45,22 @@ public class PermutaEntity {
     @Column(nullable = false)
     private int statoBatteria;
 
-    @Column(nullable = false)
-    private String foto;
-
     @Column(nullable = false, columnDefinition = "VARCHAR(50)")
     private String condizioneGenerale;
+
+    @Check(constraints = "ram IN (2, 4, 6, 8, 12, 16, 24, 32, 64, 128)")
+    @Column(nullable = false)
+    private int ram;
+
+    @Check(constraints = "spazio_archiviazione IN (4, 6, 8, 12, 16, 24, 32, 64, 128, 256, 512, 1024, 2048)")
+    @Column(nullable = false)
+    private int spazioArchiviazione;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(50)")
+    private String colore;
+
+    @Column(nullable = false, columnDefinition = "INT UNSIGNED")
+    private int lambdaPoints;
 
 
     @Override

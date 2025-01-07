@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Check;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -56,5 +58,12 @@ public class FormazioneCarrelloEntity {
     @Override
     public int hashCode() {
         return getId().hashCode();
+    }
+
+    public void setCarrello(CarrelloEntity carrelloEntity){
+        List<FormazioneCarrelloEntity> cartItems = carrelloEntity.getCarrelloItems();
+
+        if(!cartItems.contains(this))
+            cartItems.add(this);
     }
 }

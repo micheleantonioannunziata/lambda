@@ -1,11 +1,14 @@
 package com.lambda.demo.Entity.GC.Prodotto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Check;
 
 import java.io.Serializable;
-import lombok.*;
-import org.hibernate.annotations.Check;
 
 
 @Data
@@ -15,12 +18,16 @@ import org.hibernate.annotations.Check;
 public class ProdottoEntityId implements Serializable {
 
     private int superProdottoId;
+    @JsonProperty("ram")
     @Check(constraints = "ram IN (1, 2, 4, 6, 8, 10, 12, 16, 24, 32, 64, 128)")
     private int ram;
 
+    @JsonProperty("spazio_archiviazione")
     @Check(constraints = "spazio_archiviazione IN (4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048)")
     @Column(name = "spazio_archiviazione")
     private int spazioArchiviazione;
+
+    @JsonProperty("colore")
     private String colore;
 
     @Override

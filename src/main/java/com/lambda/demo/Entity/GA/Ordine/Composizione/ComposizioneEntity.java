@@ -58,13 +58,18 @@ public class ComposizioneEntity {
 
     }
 
-    public void setOrdine(OrdineEntity ordine) {
+    /*public void setOrdine(OrdineEntity ordine) {
+        System.out.println("Chiamata");
         if(this.ordine != ordine && ordine != null){
+            System.out.println("Chiamata primo IF");
             this.ordine = ordine;
-            if(!ordine.getComposizioni().contains(this)) ordine.getComposizioni().add(this);
+            if(!ordine.getComposizioni().contains(this)) {
+                ordine.getComposizioni().add(this);
+                System.out.println("OK" + ordine.getComposizioni().size());
+            }
         }
     }
-
+*/
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

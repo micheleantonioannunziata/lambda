@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Getter
@@ -41,6 +42,35 @@ public class RivenditoreEntity {
     @OneToMany(mappedBy = "rivenditore")
     private List<IscrizioneNewsletterEntity> newsletters = new ArrayList<>();
 
+
+    public InserzioneEntity getCheapestInsertion(int idSuperProdotto){
+        List<InserzioneEntity> inserzioni = getInserzioni();
+        if (inserzioni == null) inserzioni = new ArrayList<>();
+        List<InserzioneEntity> results = new ArrayList<>();
+
+
+        for(InserzioneEntity i : inserzioni){
+            if(i.getProdotto().getSuperProdotto().getId() == idSuperProdotto) results.add(i);
+        }
+
+        results.sort(Comparator.comparingDouble(InserzioneEntity::getPrezzoBase));
+
+        return results.getFirst();
+    }
+
+    public List<InserzioneEntity> getInsertionsBySuperProductId(int idSuperProdotto){
+        List<InserzioneEntity> inserzioni = getInserzioni();
+        if (inserzioni == null) inserzioni = new ArrayList<>();
+        List<InserzioneEntity> results = new ArrayList<>();
+
+
+        for(InserzioneEntity i : inserzioni){
+            if(i.getProdotto().getSuperProdotto().getId() == idSuperProdotto) results.add(i);
+        }
+
+
+        return results;
+    }
 
     @Override
     public boolean equals(Object o) {

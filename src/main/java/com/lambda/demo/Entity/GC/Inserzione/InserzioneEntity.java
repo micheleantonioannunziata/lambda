@@ -11,8 +11,10 @@ import lombok.*;
 import org.hibernate.annotations.Check;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -50,9 +52,8 @@ public class InserzioneEntity {
     ))
     private ProdottoEntity prodotto;
 
-
     @Column(nullable = false, columnDefinition = "DECIMAL (10, 2)")
-    private float prezzoBase;
+    private double prezzoBase;
 
     @Column(nullable = false)
     private int scontoStandard;
@@ -63,10 +64,9 @@ public class InserzioneEntity {
     @Column(nullable = false)
     private int quantita;
 
-
     @Column(nullable = false)
     @CreationTimestamp
-    private Date dataPubblicazione;
+    private LocalDateTime dataPubblicazione;
 
 
     @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT 1")
@@ -113,5 +113,10 @@ public class InserzioneEntity {
     @Override
     public int hashCode() {
         return getId().hashCode();
+    }
+
+    public double getPrezzoBase(){
+        BigDecimal bd = new BigDecimal(this.prezzoBase).setScale(2, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 }

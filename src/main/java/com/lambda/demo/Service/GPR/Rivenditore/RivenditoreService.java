@@ -8,4 +8,6 @@ public interface RivenditoreService {
     void loginRivenditore(String email, String password) throws Exception;
 
     int updateRivenditore(RivenditoreEntity rivenditoreEntity);
+
+    RivenditoreEntity findByPartita(String partitaIva);
 }

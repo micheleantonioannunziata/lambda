@@ -8,8 +8,8 @@ import lombok.*;
 import org.hibernate.annotations.Check;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -18,6 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
+@ToString
 @Table(name = "ordine")
 public class OrdineEntity {
 
@@ -34,7 +35,25 @@ public class OrdineEntity {
 
     @CreationTimestamp
     @Column(nullable = false, columnDefinition = "DATETIME")
-    private Date dataOra;
+    private LocalDateTime dataOra;
+
+    @Check(constraints = "metodo_di_pagamento IN ('carta di debito', 'lambda points' )")
+    @Column(nullable = false)
+    private String metodoDiPagamento;
+
+    @Column(nullable = false)
+    private String destinatario;
+
+    @Column(nullable = false)
+    private String indirizzoSpedizione;
+
+    @Column(columnDefinition = "CHAR(4)")
+    private String ultimeQuattroCifre;
+
+
+    @Column(columnDefinition = "INT UNSIGNED")
+    private int lambdaPointsSpesi;
+
 
     @ManyToOne
     @JoinColumn(
@@ -57,6 +76,12 @@ public class OrdineEntity {
             if (!acquirente.getOrdini().contains(this)) acquirente.getOrdini().add(this);
         }
     }
+
+    public void addComposizione(ComposizioneEntity composizione) {
+        composizioni.add(composizione);
+        composizione.setOrdine(this);
+    }
+
 
 
     @Override

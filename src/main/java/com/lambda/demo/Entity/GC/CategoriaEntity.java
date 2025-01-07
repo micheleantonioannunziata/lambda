@@ -25,6 +25,12 @@ public class CategoriaEntity {
     @Column(columnDefinition = "VARCHAR(50)")
     private String nome;
 
+
+    /*
+    @Column(nullable = false)
+    private String urlImmagine;
+    */
+
     @OneToMany(mappedBy = "categoria")
     List<SuperProdottoEntity> superProdotti = new ArrayList<>();
 

@@ -38,5 +38,40 @@ public class HTMLMapping {
     @GetMapping("/vendorDataUpdate")
     public String vendorDataUpdate(){ return "vendorDataUpdate";}
 
+    @GetMapping("/technicalRequirementsForm")
+    public String technicalRequirementsForm(){ return "technicalRequirementsForm";}
+
+    @GetMapping("/priceQuantityForm")
+    public String priceQuantityForm(){ return "priceQuantityForm";}
+
+    @GetMapping("/selectProduct")
+    public String selectProduct(){ return "selectProduct";}
+
+    @GetMapping("/catalog")
+    public String catalog(){ return "catalog";}
+
+    @GetMapping("/insertionOverview")
+    public String insertionOverview(){ return "insertionOverview";}
+
+    @GetMapping("/tradeInCategory")
+    public String tradeInCategory(){ return "tradeInCategory";}
+
+    @GetMapping("/tradeInForm")
+    public String tradeInForm(){ return "tradeInForm";}
+
+    @GetMapping("/tradeInSearchProduct")
+    public String tradeInSearchProduct(){ return "tradeInSearchProduct";}
+
+    @GetMapping("/tradeInSummary")
+    public String tradeInSummary(){ return "tradeInSummary";}
+
+    @GetMapping("/checkoutSummary")
+    public String checkoutSummary(){ return "checkoutSummary";}
+
+    @GetMapping("/tecnhicalRequirementsForm")
+    public String tecnhicalRequirementsForm(){ return "tecnhicalRequirementsForm";}
+
+    @GetMapping("/addInsertionSummary")
+    public String addInsertionSummary(){ return "addInsertionSummary";}
 }
 

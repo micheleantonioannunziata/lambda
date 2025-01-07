@@ -1,12 +1,14 @@
 package com.lambda.demo.Entity.GA.Permuta;
 
-import com.lambda.demo.Entity.GC.Prodotto.ProdottoEntityId;
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.Objects;
 
 
 @Data
@@ -15,21 +17,22 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class PermutaEntityId implements Serializable {
 
-    private ProdottoEntityId prodottoId;
+    private int superProdottoId;
     private int acquirenteId;
+
+    @Column(columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
+    private LocalDateTime dataOra;
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         PermutaEntityId that = (PermutaEntityId) o;
-        return getAcquirenteId() == that.getAcquirenteId() && getProdottoId().equals(that.getProdottoId());
+        return superProdottoId == that.superProdottoId && acquirenteId == that.acquirenteId;
     }
 
     @Override
     public int hashCode() {
-        int result = getProdottoId().hashCode();
-        result = 31 * result + getAcquirenteId();
-        return result;
+        return Objects.hash(superProdottoId, acquirenteId);
     }
 }

@@ -1,12 +1,15 @@
 package com.lambda.demo.Entity.GC;
 
 
+import com.lambda.demo.Entity.GA.Permuta.PermutaEntity;
+import com.lambda.demo.Entity.GC.Inserzione.InserzioneEntity;
 import com.lambda.demo.Entity.GC.Prodotto.ProdottoEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Check;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @AllArgsConstructor
@@ -65,6 +68,9 @@ public class SuperProdottoEntity {
     @OneToMany(mappedBy = "superProdotto")
     private List<ProdottoEntity> prodotti = new ArrayList<>();
 
+    @OneToMany(mappedBy = "superProdotto")
+    private List<PermutaEntity> permute = new ArrayList<>();
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -73,6 +79,24 @@ public class SuperProdottoEntity {
         SuperProdottoEntity that = (SuperProdottoEntity) o;
         return getId() == that.getId();
     }
+
+    public InserzioneEntity getCheapestInsertion(){
+       InserzioneEntity inserzioneEntity = new InserzioneEntity();
+
+       List<ProdottoEntity> products = getProdotti();
+       if (products == null) products = new ArrayList<>();
+
+       List<InserzioneEntity> inserzioni = new ArrayList<>();
+       for (ProdottoEntity p: products) inserzioni.addAll(p.getInserzioni());
+
+       inserzioni.sort(Comparator.comparingDouble(InserzioneEntity::getPrezzoBase));
+
+
+        inserzioneEntity = inserzioni.getFirst();
+        return inserzioneEntity;
+    }
+
+
 
     @Override
     public int hashCode() {

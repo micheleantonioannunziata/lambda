@@ -1,7 +1,6 @@
 package com.lambda.demo.Entity.GC.Prodotto;
 
 
-import com.lambda.demo.Entity.GA.Permuta.PermutaEntity;
 import com.lambda.demo.Entity.GC.Inserzione.InserzioneEntity;
 import com.lambda.demo.Entity.GC.SuperProdottoEntity;
 import jakarta.persistence.*;
@@ -30,10 +29,6 @@ public class ProdottoEntity {
             )
     )
     private SuperProdottoEntity superProdotto;
-
-
-    @OneToMany(mappedBy = "prodotto")
-    private List<PermutaEntity> permute;
 
     @OneToMany(mappedBy = "prodotto")
     private List<InserzioneEntity> inserzioni;

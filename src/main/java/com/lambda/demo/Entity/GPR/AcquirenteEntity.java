@@ -67,7 +67,7 @@ public class AcquirenteEntity {
     @OneToMany(mappedBy = "acquirente")
     private List<SottoscrizioneEntity> sottoscrizioni = new ArrayList<>();
 
-    @OneToMany(mappedBy = "acquirente")
+    @OneToMany(mappedBy = "acquirente", fetch = FetchType.EAGER)
     private List<OrdineEntity> ordini = new ArrayList<>();
 
     @Override

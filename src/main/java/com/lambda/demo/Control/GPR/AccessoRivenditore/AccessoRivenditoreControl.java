@@ -1,5 +1,6 @@
 package com.lambda.demo.Control.GPR.AccessoRivenditore;
 
+import com.lambda.demo.Entity.GPR.RivenditoreEntity;
 import com.lambda.demo.Repository.GPR.RivenditoreRepository;
 import com.lambda.demo.Service.GPR.Rivenditore.RivenditoreService;
 import com.lambda.demo.Utility.SessionManager;
@@ -29,7 +30,7 @@ public class AccessoRivenditoreControl {
      */
 
     @RequestMapping(value = "/vendorSignup", method = RequestMethod.POST)
-    public String signup(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String signupRivenditore(HttpServletRequest req, HttpServletResponse res) throws Exception {
         //la notazione RequestBody mi permette di salvare tutti i parametri inviati alla servlet nella stringa singUp
 
         String ragioneSociale = req.getParameter("ragioneSociale");
@@ -100,6 +101,21 @@ public class AccessoRivenditoreControl {
 
         rivenditoreService.loginRivenditore(email, password);
         SessionManager.setRivenditore(req, rivenditoreRepository.findByEmail(email));
-        return"vendorArea";
+        return "vendorArea";
     }
+
+    @RequestMapping(value = "/vendorLogout", method = RequestMethod.POST)
+    public String logoutRivenditore(HttpServletRequest req, HttpServletResponse res){
+        RivenditoreEntity rivenditore = SessionManager.getRivenditore(req);
+
+        rivenditoreRepository.save(rivenditore);
+
+
+        req.getSession().invalidate();
+
+
+
+        return "index";
+    }
+
 }
