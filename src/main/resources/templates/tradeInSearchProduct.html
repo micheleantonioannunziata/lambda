@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/formGeneric.css}">
+</head>
+<body>
+<div th:replace="fragments :: headerNormal"></div>
+
+<form id="searchProductByCategory" action="searchProduct" method="GET" class="centerForced pdHead pdInline scale-in-center">
+    <input type="hidden" name="idCategoria" th:value="${idCategoria}">
+    <span class="bigText">Rivendi il tuo prodotto usato</span>
+    <span class="midText textCenter">
+            Noi valutiamo il tuo prodotto usato.
+            Tu devi solo spedircelo per ricevere il valore direttamente sul tuo conto Lambda.</span>
+    <div class="boxSearch shadow">
+        <input id="searchByCategory" class="smallText" type="text" placeholder="Search..." name="name">
+        <button type="submit"><img th:src="@{/images/search.svg}" alt="search"></button>
+    </div>
+</form>
+
+<div id="resultsGrid" class="cardContainer mt10" th:each="product : ${products}" >
+    <div class="card shadow clickable">
+        <form action="redirectToTradeInForm" method="GET" id="searchProductForm">
+            <input type="hidden" name="id" th:value="${product.id}">
+        </form>
+        <img th:src="${product.getImmagine()}" alt="">
+        <span class="normalText mt10" th:text="${product.marca} + ' ' + ${product.modello}"></span>
+    </div>
+</div>
+
+<script th:src="@{/js/tradeInSearch.js}"></script>
+
+</body>
+</html>

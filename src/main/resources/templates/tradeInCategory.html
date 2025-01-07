@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/formGeneric.css}">
+</head>
+<body>
+
+<div th:replace="fragments :: headerUser">
+</div>
+<form class="centerForced pdHead pdInline scale-in-center">
+    <span class="bigText">Rivendi il tuo prodotto usato</span>
+    <span class="midText textCenter">
+            Noi valutiamo il tuo prodotto usato.
+            Tu devi solo spedircelo per ricevere il valore direttamente sul tuo conto Lambda.</span>
+</form>
+
+
+<div class="cardContainer mt20 w100" style="justify-content: space-around;">
+    <div class="card shadow clickable" th:each="category : ${categories}">
+        <form action="redirectToTradeInSearch" method="GET" >
+            <input type="hidden" th:value="${category.getId()}" name="idCategoria">
+        </form>
+        <img th:src="@{/images/image.png}" alt="">
+        <span class="midText mt10 textCenter" th:text="${category.getNome()}"></span>
+    </div>
+
+</div>
+
+<script type="text/javascript" th:src="@{/js/tradeInCategory.js}"></script>
+</body>
+</html>

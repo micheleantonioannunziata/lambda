@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/formGeneric.css}">
+</head>
+<body>
+<div th:replace="fragments :: headerNormal"></div>
+
+<form action="addTradeIn" method="POST" class="centerForced pdHead pdInline scale-in-center">
+    <input type="hidden" name="superProdottoId" th:value="${superProdotto.getId()}">
+    <input type="hidden" name="ram" th:value="${ram}">
+    <input type="hidden" name="spazioArchiviazione" th:value="${spazioArchiviazione}">
+    <input type="hidden" name="colore" th:value="${colore}">
+    <input type="hidden" name="condizioneGenerale" th:value="${condizioneGenerale}">
+    <input type="hidden" name="batteria" th:value="${batteria}">
+    <input type="hidden" name="lambdaPoints" th:value="${lambdaPoints}">
+
+
+    <span class="bigText">Rivendi il tuo prodotto usato</span>
+    <span class="midText textCenter">
+            Noi valutiamo il tuo prodotto usato. Tu devi solo spedircelo per ricevere il valore direttamente sul tuo conto Lambda.
+        </span>
+
+    <span class="midText textCenter"><b>Dispositivo selezionato</b>: <span style="font-weight: 400;" th:text="${superProdotto.getMarca() + ' ' + superProdotto.getModello()}"></span></span>
+
+    <div>
+        <span style="font-weight: bold;" class="midText">Colore: <span class="smallText" th:text="${colore}"></span></span>
+        <span style="font-weight: bold;" class="midText">RAM: <span class="smallText" th:text="${ram + 'GB'}"></span></span>
+    </div>
+
+    <div>
+        <span style="font-weight: bold;" class="midText">Spazio archiviazione: <span class="smallText" th:text="${spazioArchiviazione + 'GB'}"></span></span>
+        <span style="font-weight: bold;" class="midText">Batteria: <span class="smallText" th:text="${batteria+'%'}"></span></span>
+    </div>
+
+
+    <div>
+        <span style="font-weight: bold;" class="midText textCenter">Condizione: <span class="smallText" th:text="${condizioneGenerale}"></span></span>
+
+    </div>
+
+    <span class="bigText mt10">La nostra valutazione è di
+        <span class="violet" style="display: flex; gap: 20px;" th:text="${lambdaPoints + ' Lambda Points'}">
+            <img th:src="@{/images/coin.svg}" alt="">
+        </span>
+    </span>
+
+    <div class="btns">
+        <button name="action" type="submit" value="conferma" class="button violetBtn">
+            <span class="smallText clickable" style="font-weight: 600">Conferma</span>
+        </button>
+
+        <button name="action" type="submit" value="annulla" class="button whiteBtn">
+            <span class="smallText clickable" style="font-weight: 600">Annulla</span>
+        </button>
+    </div>
+</form>
+</body>
+</html>

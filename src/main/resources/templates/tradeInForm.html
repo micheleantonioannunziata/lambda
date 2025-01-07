@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/formGeneric.css}">
+</head>
+<body>
+<div th:replace="fragments :: headerNormal"></div>
+
+<form action="productEvaluation" method="POST" class="centerForced pdHead pdInline scale-in-center" enctype="multipart/form-data">
+    <span class="bigText">Rivendi il tuo prodotto usato</span>
+    <span class="midText textCenter">
+            Noi valutiamo il tuo prodotto usato. Tu devi solo spedircelo per ricevere il valore direttamente sul tuo conto Lambda.
+        </span>
+
+    <span class="midText textCenter"><b>Dispositivo selezionato</b>: <span style="font-weight: 400;" th:text="${superProdotto.getMarca()+ ' ' + superProdotto.getModello()}"></span></span>
+
+    <input type="hidden" name="superProdottoId" th:value="${superProdotto.getId()}">
+
+    <div class="upLoad">
+        <button id="upLoadImageBtn" class="button clickable" type="button">
+            Carica File<img th:src="@{/images/share.svg}">
+        </button>
+        <button id="resetImageBtn" class="button hidden clickable" type="button">
+            Reset<img th:src="@{/images/refresh.svg}">
+        </button>
+        <input type="file" class="hidden" name="imgDispositivo" accept="image/png" id="hiddenImageInput" required>
+        <span id="imageNameDisplay">Nessun file selezionato</span>
+    </div>
+
+    <select name="ram" class="smallText shadow" required>
+        <option value="" disabled selected>RAM</option>
+        <option value="2">2GB</option>
+        <option value="4">4GB</option>
+        <option value="6">6GB</option>
+        <option value="8">8GB</option>
+        <option value="12">12GB</option>
+        <option value="16">16GB</option>
+        <option value="24">24GB</option>
+        <option value="32">32GB</option>
+        <option value="64">64GB</option>
+        <option value="128">128GB</option>
+    </select>
+
+    <select name="spazioArchiviazione" class="smallText shadow" required>
+        <option value="" disabled selected>Spazio di archiviazione</option>
+        <option value="4">4GB</option>
+        <option value="6">6GB</option>
+        <option value="8">8GB</option>
+        <option value="12">12GB</option>
+        <option value="16">16GB</option>
+        <option value="24">24GB</option>
+        <option value="32">32GB</option>
+        <option value="64">64GB</option>
+        <option value="128">128GB</option>
+        <option value="256">256GB</option>
+        <option value="512">512GB</option>
+        <option value="1024">1024GB</option>
+        <option value="2048">2048GB</option>
+    </select>
+
+    <select name="condizioneGenerale" class="smallText shadow" required>
+        <option disabled selected>Condizione generale</option>
+        <option value="Discreta">Discreta</option>
+        <option value="Buona">Buona</option>
+        <option value="Ottima">Ottima</option>
+        <option value="Eccellente">Eccellente</option>
+    </select>
+
+    <input type="text" name="colore" placeholder="Colore" required>
+
+    <input type="number" name="batteria" placeholder="Batteria" min="1" max="100" required>
+
+    <button id="submitForm" class="violetBtn normalText" type="submit">Conferma</button>
+</form>
+
+<script type="text/javascript" th:src="@{/js/tradeInForm.js}">
+</script>
+</body>
+</html>
