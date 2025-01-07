@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/formGeneric.css}">
+</head>
+<body>
+<div th:replace="fragments :: headerNormal"></div>
+
+<form action="searchProduct"  id="searchForm" class="centerForced pdHead pdInline scale-in-center">
+    <span class="midText textCenter" style="font-weight: 700">Aggiungi inserzione</span>
+    <span class="smallText">Ricerca un prodotto esistente nel catalogo per aggiungere la tua insezione</span>
+    <div class="boxSearch shadow">
+        <input class="smallText" type="text" id="searchProduct" placeholder="Search..." name="name">
+        <button type="submit"><img th:src="@{/images/search.svg}" alt="search"></button>
+    </div>
+</form>
+
+<div id="resultsGrid" class="cardContainer">
+    <div class="card shadow clickable" th:each="product : ${products}" onclick="submitForm(this)">
+        <form action="searchProductInfo" id="searchProductForm">
+            <input type="hidden" name="id" th:value="${product.id}">
+        </form>
+        <img th:src="${product.getImmagine()}" alt="">
+        <span class="normalText mt10" th:text="${product.marca} + ' ' + ${product.modello}"></span>
+    </div>
+</div>
+
+<script th:src="@{/js/searchProduct.js}"></script>
+</body>
+</html>

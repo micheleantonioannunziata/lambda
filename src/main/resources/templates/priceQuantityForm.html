@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+  <link rel="stylesheet" th:href="@{/css/formGeneric.css}">
+</head>
+<body>
+<div th:replace="fragments :: headerNormal"></div>
+
+<form action="/priceQuantity" method="GET" class="centerForced pdHead pdInline scale-in-center">
+  <span class="midText textCenter" style="font-weight: 700">Modulo per prezzo e quantità</span>
+
+  <input type="hidden" name="ram" th:value="${ram}">
+  <input type="hidden" name="spazioArchiviazione" th:value="${storage}">
+  <input type="hidden" name="colore" th:value="${color}">
+  <input type="hidden" name="idSuperProdotto" th:value="${idSuperProdotto}">
+
+
+  <span class="smallText textCenter">Inserisci le tue preferenze riguardanti quantità,
+            prezzo, sconto per gli acquirenti base e sconto per gli acquirenti con abbonameneto Premium</span>
+
+  <div>
+    <input class="smallText" name="quantity" type="number" placeholder="Quantità" min="1" max="">
+    <input class="smallText" name="prezzoBase" type="text" placeholder="Prezzo" min="" max="">
+  </div>
+
+  <div>
+    <input class="smallText" name="scontoStandard" type="number" placeholder="Sconto Base" min="" max="">
+    <input class="smallText" name="scontoPremium" type="number" placeholder="Sconto Premium" min="" max="">
+  </div>
+
+  <button class="violetBtn normalText" type="submit">Conferma</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/insertionOverview.css}">
+</head>
+<body>
+
+<div class="header shadow" style="justify-content: center">
+    <div class="logo bigText">Lambda</div>
+</div>
+
+<div id="overlay" class="hidden w100"></div>
+
+
+<div id="insertionBox" class="pdHead pdInline">
+
+    <img th:src="@{/images/image.png}" alt="">
+
+    <div class="insertionDetails">
+        <div class="bigText" th:text="${insertion.getProdotto().getSuperProdotto().getMarca()
+        + ' ' + insertion.getProdotto().getSuperProdotto().getModello()}"></div>
+
+        <div class="rating mt20">
+            <img th:src="@{/images/fullStar.svg}" alt="">
+            <img th:src="@{/images/fullStar.svg}" alt="">
+            <img th:src="@{/images/fullStar.svg}" alt="">
+            <img th:src="@{/images/fullStar.svg}" alt="">
+            <img th:src="@{/images/midStar.svg}" alt="">
+        </div>
+
+        <div id="colorChoose" class="choose mt50">
+            <div class="midText">Colore</div>
+            <div class="chooses mt10">
+                <button class="button shadow clickable"
+                        th:each="color : ${colors}"
+                        th:classappend="${color == activeColor} ? ' active' : ''">
+                    <span class="smallText" th:text="${color}"></span>
+                </button>
+            </div>
+        </div>
+
+
+
+        <div id="ramChoose" class="choose mt50">
+            <div class="midText">RAM</div>
+            <div class="chooses mt10">
+                <button class="button shadow clickable"
+                        th:each="ram : ${rams}"
+                        th:classappend="${ram == activeRam} ? ' active' : ''">
+                    <span class="smallText" th:text="${ram + 'GB'}"></span>
+                </button>
+            </div>
+        </div>
+
+
+
+        <div id="storageChoose" class="choose mt50">
+            <div class="midText">Spazio Archiviazione</div>
+            <div class="chooses mt10">
+                <button class="button shadow clickable"
+                        th:each="storage : ${storages}"
+                        th:classappend="${storage == activeStorage} ? ' active' : ''">
+                    <span class="smallText" th:text="${storage + 'GB'}"></span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="insertionInfo">
+        <div class="midText">Rivenditore: <span class="italic" th:text="${insertion.getRivenditore().getRagioneSociale()}"></span></div>
+
+        <div class="midText mt20 green">Disponibilità immediata</div>
+
+        <div id="price" class="bigText textRight mt20" th:text="'€ ' + ${insertion.getPrezzoBase()}"></div>
+
+        <form id="addToCartForm" action="addToCart" method="post">
+            <input type="hidden" id="pIvaCart" name="partitaIvaRivenditore">
+            <input type="hidden" id="idSuperCart" name="idSuperProdotto">
+            <input type="hidden" id="ramCart" name="RAM">
+            <input type="hidden" id="storageCart" name="spazioArchiviazione">
+            <input type="hidden" id="colorCart" name="colore">
+            <button id="addToCartBtn" type="submit" class="violetBtn midText w100 mt50" disabled>Aggiungi al carrello</button>
+        </form>
+        <div id="otherVendorBtn" class="midText mt100 textRight clickable underline">Altri rivenditori</div>
+    </div>
+
+</div>
+
+<div id="otherVendorSection">
+    <div class="midText mt50">Scegli l'offerta migliore!</div>
+    <div class="cardContainer mt20">
+        <div class="card shadow w100 clickable" th:each="rivenditore : ${rivenditori}">
+            <form action="redirectToInsertionOverview" method="POST">
+                <input type="hidden" name="partitaIva" th:value="${rivenditore.getPartitaIva()}">
+                <input type="hidden" name="id" th:value="${rivenditore.getCheapestInsertion(insertion.getProdotto().getSuperProdotto().getId()).getProdotto().getSuperProdotto().getId()}">
+            </form>
+
+            <span class="normalText mt10" th:text="${rivenditore.getRagioneSociale()}"></span>
+
+            <div class="evaluation mt10">
+                <div class="rating">
+                    <img th:src="@{/images/fullStar.svg}" alt="">
+                    <img th:src="@{/images/fullStar.svg}" alt="">
+                    <img th:src="@{/images/fullStar.svg}" alt="">
+                    <img th:src="@{/images/fullStar.svg}" alt="">
+                    <img th:src="@{/images/fullStar.svg}" alt="">
+                </div>
+                <img th:src="@{/images/fullBell.svg}" alt="">
+            </div>
+
+            <div class="mt10">
+                <span class="midText" th:text="${rivenditore.getCheapestInsertion(insertion.getProdotto().getSuperProdotto().getId()).getPrezzoBase()}"></span>
+            </div>
+
+            </div>
+
+    </div>
+</div>
+
+<form id="idHelper">
+    <input type="hidden" name="idSuperProdotto" th:value="${insertion.getProdotto().getSuperProdotto().getId()}">
+    <input type="hidden" name="partitaIvaRivenditore" th:value="${insertion.getRivenditore().getPartitaIva()}">
+</form>
+
+<script type="text/javascript" th:src="@{/js/insertionOverview.js}"></script>
+
+</body>
+</html>

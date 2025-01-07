@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/formGeneric.css}">
+</head>
+<body>
+<div class="header shadow" style="justify-content: center">
+    <div class="logo bigText">Lambda</div>
+</div>
+
+<form action="addInsertion" method="POST" class="centerForced pdHead pdInline scale-in-center">
+
+
+    <input type="hidden" name="idSuperProdotto" th:value="${idSuperProdotto}">
+    <input type="hidden" name="ram" th:value="${ram}">
+    <input type="hidden" name="spazioArchiviazione" th:value="${spazioArchiviazione}">
+    <input type="hidden" name="colore" th:value="${colore}">
+    <input type="hidden" name="quantity" th:value="${quantity}">
+    <input type="hidden" name="prezzoBase" th:value="${prezzoBase}">
+    <input type="hidden" name="scontoStandard" th:value="${scontoStandard}">
+    <input type="hidden" name="scontoPremium" th:value="${scontoPremium}">
+
+
+    <span class="bigText textCenter">Sommario aggiunta insezione</span>
+
+    <div>
+        <span style="font-weight: bold;" class="midText">Colore: <span class="smallText" th:text="${colore}"></span></span>
+        <span style="font-weight: bold;" class="midText">RAM: <span class="smallText" th:text="${ram + 'GB'}"></span></span>
+    </div>
+
+    <div>
+        <span style="font-weight: bold;" class="midText">Spazio archiviazione: <span class="smallText" th:text="${spazioArchiviazione + 'GB'}"></span></span>
+        <span style="font-weight: bold;" class="midText">Quantità: <span class="smallText" th:text="${quantity}"></span></span>
+    </div>
+
+    <div>
+        <span style="font-weight: bold;" class="midText">Sconto base: <span class="smallText" th:text="${scontoStandard + '%'}"></span></span>
+        <span style="font-weight: bold;" class="midText">Sconto premium: <span class="smallText" th:text="${scontoPremium + '%'}"></span></span>
+    </div>
+
+
+    <div>
+        <span style="font-weight: bold;" class="midText textCenter">Prezzo: <span class="smallText" th:text="${'€ ' + prezzoBase}"></span></span>
+
+    </div>
+
+    <div class="btns">
+        <button class="button violetBtn" type="submit" name="action" value="conferma">
+            <span class="smallText clickable" style="font-weight: 600">Conferma</span>
+        </button>
+
+        <button class="button whiteBtn" type="submit" name="action" value="annulla">
+            <span class="smallText clickable" style="font-weight: 600">Annulla</span>
+        </button>
+    </div>
+</form>
+</body>
+</html>

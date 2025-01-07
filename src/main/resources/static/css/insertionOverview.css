@@ -1,0 +1,85 @@
+body {
+    margin-bottom: 0;
+}
+
+#insertionBox {
+    height: 100vh;
+    display: flex;
+    column-gap: 30px;
+}
+
+#insertionBox > img {
+    width: 30%;
+    object-fit: contain;
+}
+
+#insertionBox > .insertionDetails {
+    width: 35%;
+}
+
+#insertionBox > .insertionDetails > .rating > img {
+    width: 20px;
+}
+
+#insertionBox > .insertionDetails > .choose .chooses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#insertionBox > .insertionInfo {
+    width: 30%;
+}
+
+#addToCartBtn {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+}
+
+#addToCartBtn.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#otherVendorSection {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    z-index: 100000;
+    background: white;
+    padding-inline: 50px;
+    height: 100%;
+    transition: all .4s ease-in-out;
+    overflow-y: auto;
+}
+
+#otherVendorSection.active {
+    right: 0;
+}
+
+#otherVendorSection > .cardContainer {
+    flex-direction: column;
+    padding-inline: 0;
+    gap: 20px;
+}
+
+#otherVendorSection > .cardContainer > .card {
+    margin: 0;
+    padding: 15px;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#overlay.active {
+    display: block;
+}

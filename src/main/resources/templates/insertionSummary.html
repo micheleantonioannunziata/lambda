@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <form action="addInsertion" method="post">
+        <input type="hidden" name="idSuperProdotto" th:value="${idSuperProdotto}">
+        <input type="hidden" name="ram" th:value="${ram}">
+        <input type="hidden" name="spazioArchiviazione" th:value="${spazioArchiviazione}">
+        <input type="hidden" name="colore" th:value="${colore}">
+        <input type="hidden" name="quantity" th:value="${quantity}">
+        <input type="hidden" name="prezzoBase" th:value="${prezzoBase}">
+        <input type="hidden" name="scontoStandard" th:value="${scontoStandard}">
+        <input type="hidden" name="scontoPremium" th:value="${scontoPremium}">
+
+        <button type="submit" name="action" value="conferma">Conferma</button>
+        <button type="submit" name="action" value="annulla">Annulla</button>
+    </form>
+</head>
+<body>
+
+</body>
+</html>
