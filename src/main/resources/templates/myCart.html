@@ -9,18 +9,20 @@
 </head>
 <body>
 
-<div class="header shadow" style="justify-content: center">
-    <div class="logo bigText">Lambda</div>
+<div th:replace="fragments :: headerUser"></div>
+
+<div th:if="${#lists.isEmpty(session.carrello.getCarrelloItems())}" class="pdHead textCenter midText pdInline w100">
+    Il carrello è vuoto
 </div>
 
-<div class="pdHead pdInline" id="globalBox">
+<div class="pdHead pdInline" id="globalBox" th:unless="${#lists.isEmpty(session.carrello.getCarrelloItems())}">
     <div class="cart">
         <div class="midText">Il tuo Carrello</div>
         <div class="cardContainer mt20">
-            <div class="card shadow">
-                <img th:src="@{/images/image.png}" alt="">
+            <div class="card shadow scale-in-center" th:each="insertion : ${session.carrello.getCarrelloItems()}">
+                <img th:src="${insertion.getInserzione().getProdotto().getSuperProdotto().getImmagine()}" alt="">
                 <div class="infoBlock">
-                    <span class="normalText">Apple Ipad 10.2</span>
+                    <span class="normalText" th:text="${insertion.getInserzione().getProdotto().getSuperProdotto().getModello()}"></span>
 
                     <div class="rating mt10">
                         <img th:src="@{/images/fullStar.svg}" alt="">
@@ -30,57 +32,33 @@
                         <img th:src="@{/images/fullStar.svg}" alt="">
                     </div>
 
-                    <div class="italic smallText mt10">
-                        di “La Galleria del Telefonino”
+                    <div class="italic smallText mt10" th:text="'di ' + ${insertion.getInserzione().getRivenditore().getRagioneSociale()}">
                     </div>
 
-                    <button class="violetBtn topRight smallText">Rimuovi</button>
-
-                    <span class="midText bottomRight mt10">€ 125,00</span>
-                </div>
-            </div>
-            <div class="card shadow">
-                <img th:src="@{/images/image.png}" alt="">
-                <div class="infoBlock">
-                    <span class="normalText">Apple Ipad 10.2</span>
-
-                    <div class="rating mt10">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/midStar.svg}" alt="">
+                    <div class="smallText mt10"
+                         th:text="|colore: ${insertion.getInserzione().getId().getIdProdotto().getColore()},
+                                    ram: ${insertion.getInserzione().getId().getIdProdotto().getRam()}GB,
+                                    spazio di archiviazione: ${insertion.getInserzione().getId().getIdProdotto().getSpazioArchiviazione()}GB|">
                     </div>
 
-                    <div class="italic smallText mt10">
-                        di “La Galleria del Telefonino”
+
+
+                    <div class="mt10">
+                        <form action="updateQuantity" method="post">
+                            <input type="hidden" name="idInserzione" th:value="${insertion.getInserzione().getId()}">
+                            <input type="number" name="quantity" placeholder="Quantità" min="0" th:max="${insertion.getInserzione().getQuantita()}" th:value="${insertion.getQuantita()}">
+                            <button class="violetBtn smallText">Conferma</button>
+                        </form>
                     </div>
 
-                    <button class="violetBtn topRight smallText">Rimuovi</button>
 
-                    <span class="midText bottomRight mt10">€ 125,00</span>
-                </div>
-            </div>
-            <div class="card shadow">
-                <img th:src="@{/images/image.png}" alt="">
-                <div class="infoBlock">
-                    <span class="normalText">Apple Ipad 10.2</span>
+                    <form action="removeFromCart" method="post">
+                        <input type="hidden" name="idInserzione" th:value="${insertion.getInserzione().getId()}">
+                        <button class="violetBtn smallText topRight">Rimuovi</button>
+                    </form>
 
-                    <div class="rating mt10">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/star.svg}" alt="">
-                    </div>
 
-                    <div class="italic smallText mt10">
-                        di “La Galleria del Telefonino”
-                    </div>
-
-                    <button class="violetBtn topRight smallText">Rimuovi</button>
-
-                    <span class="midText bottomRight mt10">€ 125,00</span>
+                    <span class="midText bottomRight mt10" th:text="'€ ' + ${insertion.getInserzione().getPrezzoBase()}"></span>
                 </div>
             </div>
         </div>
@@ -91,21 +69,24 @@
 
         <div class="mt20 w100">
             <span class="normalText">Subtotale</span>
-            <span class="midText">€ 424,99</span>
+            <span class="midText" th:text="'€ ' + ${session.carrello.getPrezzoProvvisorio()}"></span>
         </div>
 
         <div class="mt20 w100">
             <span class="normalText ">Spedizione</span>
-            <span class="midText">€ 3,99</span>
+            <span class="midText">€ 3.99</span>
         </div>
 
         <div class="mt20 w100">
-            <span class="midText ">Totale</span>
-            <span class="bigText">€ 428,99</span>
+            <span class="midText">Totale</span>
+            <span class="bigText" th:text="${'€ ' + #numbers.formatDecimal(session.carrello.getPrezzoProvvisorio() + 3.99, 2, 2)}"></span>
         </div>
 
-        <button class="violetBtn bigText mt100 w100">Checkout</button>
+
+        <a th:href="@{checkout}"><button class="violetBtn bigText mt100 w100">Checkout</button></a>
     </div>
 </div>
+
+<script th:src="@{/js/removeFromCart.js}"></script>
 </body>
 </html>

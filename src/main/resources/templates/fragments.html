@@ -2,26 +2,35 @@
     <div class="header shadow">
         <div class="logo bigText">Lambda</div>
 
-        <form action="/" method="post" class="searchBar">
-            <input class="smallText" type="text" placeholder="Search..." name="">
+        <form action="searchProduct" class="searchBar">
+            <input class="smallText" type="text" placeholder="Search..." name="catalogName">
             <button type="submit"><img th:src="@{/images/search.svg}" alt="search"></button>
         </form>
 
         <div class="btns">
-            <button class="button violetBtn">
-                <span class="smallText">Permuta</span>
-            </button>
 
-            <button class="button goldBtn">
+            <form action="categories" method="POST">
+                <button class="button violetBtn clickable">
+                    <span class="smallText">Permuta</span>
+                </button>
+            </form>
+
+            <button class="button goldBtn clickable">
                 <span class="smallText">Premium</span>
                 <span><img th:src="@{/images/crown.svg}" alt="crown"></span>
             </button>
         </div>
 
         <div class="icons">
-            <img th:src="@{/images/user.svg}" alt="user">
+            <a th:href="@{/userArea}">
+                <img th:src="@{/images/user.svg}" alt="user">
+            </a>
+
             <img th:src="@{/images/heart.svg}" alt="heart">
-            <img th:src="@{/images/shopping-cart.svg}" alt="shopping-cart">
+
+            <a th:href="@{/myCart}">
+                <img th:src="@{/images/shopping-cart.svg}" alt="shopping-cart">
+            </a>
         </div>
     </div>
 </div>

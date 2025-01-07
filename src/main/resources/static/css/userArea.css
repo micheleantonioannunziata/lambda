@@ -45,3 +45,39 @@ div.bigText.textCenter {
     height: 100%;
     margin-left: 20px;
 }
+
+#dataArea > form > button {
+    min-width: 120px;
+}
+
+#orderArea > .orderRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-inline: 20px;
+    border-radius: 10px;
+    transition: all .4s ease-in-out;
+}
+
+#orderArea > .orderRow > .cardContainer, #tradeInArea > .cardContainer {
+    flex-direction: column;
+    row-gap: 20px;
+    padding-inline: 0;
+}
+
+#orderArea > .orderRow > .cardContainer > .card, #tradeInArea > .cardContainer > .card{
+    flex-direction: row;
+    margin: 0;
+    column-gap: 20px;
+}
+
+#orderArea > .orderRow > .cardContainer > .card > img, #tradeInArea > .cardContainer > .card > img{
+    height: 150px;
+}
+
+#orderArea > .orderRow > .cardContainer > .card > .infoBlock, #tradeInArea > .cardContainer > .card > .infoBlock{
+    display: block;
+    position: relative;
+}
+

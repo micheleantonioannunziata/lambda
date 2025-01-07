@@ -31,6 +31,7 @@ form.pdHead div.centerForced {
     width: 30%;
     min-width: 320px;
     padding: 12px 20px;
+    transition: opacity .2s ease-in-out;
 }
 
 .paymentForm > div {
@@ -48,4 +49,10 @@ form.pdHead div.centerForced {
 
 form > button[type=submit] {
     padding: 12px 50px;
+}
+
+/*aggiunto da RC e GV*/
+.highlight {
+    background-color: #874BFF;
+    color: black;
 }

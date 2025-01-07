@@ -31,6 +31,11 @@
     position: relative;
 }
 
+.card > div.infoBlock > div > form input {
+    width: 130px;
+    margin-right: 20px;
+}
+
 .recap {
     width: 35%;
 }

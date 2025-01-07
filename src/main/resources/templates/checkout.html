@@ -11,29 +11,32 @@
 
 <div th:replace="fragments :: headerUser"></div>
 
-<form action="" method="" class="centerForced pdHead">
+<form action="checkoutInfo" method="POST" class="centerForced pdHead">
     <div class="centerForced">
         <div class="addressForm">
             <span class="midText">Indirizzo di spedizione</span>
-            <input class="smallText" type="text" placeholder="Nome proprietario">
-            <input class="smallText" type="text" placeholder="Indirizzo">
+            <input class="smallText" type="text" placeholder="Destinatario" th:value="${session.acquirente.getNome()+' '+session.acquirente.getCognome()}" name="destinatario" required>
+            <input class="smallText" type="text" placeholder="Indirizzo" th:value="${session.acquirente.getIndirizzo()}" name="indirizzo" required>
         </div>
         <div class="paymentForm">
             <span class="midText">Metodo di pagamento</span>
-            <span class="normalText centerForced underline">Paga con Lambda Points<img th:src="@{/images/coin.svg}" alt="" style="width: 30px"></span>
-            <input class="smallText" type="text" placeholder="Intestatario carta">
-            <input class="smallText" type="text" placeholder="Numero carta">
+            <span class="normalText centerForced" onclick="lambdaMethod(this)"><input type="hidden" name="lambdaFlag" value="false">Paga con Lambda Points<img th:src="@{/images/coin.svg}" alt="" style="width: 30px"></span>
+            <input id="intestatarioCarta" class="smallText" name="intestatarioCarta" type="text" placeholder="Intestatario carta">
+            <input id="numeroCarta" class="smallText" name="numeroCarta" type="text" placeholder="Numero carta">
             <div>
-                <input class="smallText" type="text" placeholder="CVV">
-                <input class="smallText" type="text" placeholder="Scadenza">
+                <input id="CVV" class="smallText" name="CVV" type="text" placeholder="CVV">
+                <input id="scadenza" class="smallText" name="scadenza" type="text" placeholder="Scadenza">
             </div>
 
             <div class="smallText">
-                <input type="checkbox"> Accetta ToS
+                <input type="checkbox" required> Accetta termini e condizioni
             </div>
+
         </div>
     </div>
     <button class="violetBtn normalText" type="submit">Conferma</button>
 </form>
+
+<script th:src="@{/js/lambdaMethod.js}"></script>
 </body>
 </html>

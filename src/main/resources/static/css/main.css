@@ -6,6 +6,7 @@
     --myBlack: #000;
     --inputBack: #eee;
     --placeHolderColor: #6e6e6e;
+    --green: #28a745;
 }
 
 ::selection {
@@ -29,6 +30,7 @@
 
 body{
     overflow-x: hidden;
+    margin-bottom: 50px;
 }
 
 input, button {
@@ -39,12 +41,31 @@ input, button {
     background-color: transparent;
 }
 
+button.active {
+    background: var(--primaryColor);
+    color: white;
+    transition: all .4s ease-in-out;
+}
+
 a {
     text-decoration: none;
 }
 
 input {
     background-color: var(--inputBack);
+}
+
+select {
+    appearance: none;
+    min-width: 200px;
+    padding: 15px 20px;
+    border: none;
+    color: var(--placeHolderColor);
+    border-radius: 10px;
+}
+
+select:focus-visible {
+    outline: none;
 }
 
 /* header */
@@ -64,7 +85,7 @@ input {
     color: var(--primaryColor);
 }
 
-.searchBar{
+.header .searchBar{
     width: 100%;
     max-width: 480px;
     display: flex;
@@ -187,6 +208,10 @@ input {
     color: var(--primaryColor);
 }
 
+.green {
+    color: var(--green);
+}
+
 .violetBtn {
     background-color: var(--primaryColor);
     color: white;
@@ -256,6 +281,10 @@ input {
 
 .clickable {
     cursor: pointer;
+}
+
+.notClickable {
+    cursor: not-allowed;
 }
 
 /* oscura password*/

@@ -24,25 +24,87 @@
         <div id="dataArea" class="scale-in-center">
             <div class="bigText" style="font-weight: 700;">Dati personali</div>
             <div class="midText mt20">Lambda Points<br>
-                <span class="violet">375<img th:src="@{/images/coin.svg}"></span></div>
+                <span class="violet" th:text="${session.acquirente.getSaldo()}"><img th:src="@{/images/coin.svg}"></span></div>
             <div class="midText mt20">Nome<br><span class="grey" th:text="${session.acquirente.getNome()}"></span></div>
             <div class="midText mt20">Cognome<br><span class="grey" th:text="${session.acquirente.getCognome()}"></span></div>
             <div class="midText mt20">Indirizzo<br><span class="grey" th:text="${session.acquirente.getIndirizzo()}"></span></div>
             <div class="midText mt20">Email<br><span class="grey" th:text="${session.acquirente.getEmail()}"></span></div>
-            <!--il .html non ci vuole mai in un href-->
             <a th:href="@{/userDataUpdate}"><button class="violetBtn topRight smallText" style="font-weight: 700;">Modifica</button></a>
+
+            <form action="purchaserLogout" class="mt50 topRight">
+                <button class="violetBtn smallText" style="font-weight: 700;" type="submit">Logout</button>
+            </form>
         </div>
 
         <div id="orderArea" class="scale-in-center hidden">
             <div class="bigText" style="font-weight: 700;">Cronologia ordini</div>
+            <div class="orderRow w100 shadow mt20" th:each="order : ${session.acquirente.getOrdini()}">
+                <div class="smallText" th:text="${'ID: ' + order.getId()}"></div>
+                <div class="smallText" th:text = "${'Totale: € ' + order.getPrezzo()}"></div>
+                <img th:src="@{/images/down.svg}" alt="">
+                <div class="cardContainer w100 hidden">
+                    <div class="card shadow w100" th:each="composizione : ${order.getComposizioni()}">
+                        <img th:src="${composizione.getInserzione().getProdotto().getSuperProdotto().getImmagine()}" alt="">
+                        <div class="infoBlock">
+                            <span class="normalText" th:text="${composizione.getInserzione().getProdotto().getSuperProdotto().getMarca() + ' ' + composizione.getInserzione().getProdotto().getSuperProdotto().getModello()}"></span>
+
+                            <div class="rating mt10">
+                                <img th:src="@{/images/fullStar.svg}" alt="">
+                                <img th:src="@{/images/fullStar.svg}"  alt="">
+                                <img th:src="@{/images/fullStar.svg}"  alt="">
+                                <img th:src="@{/images/fullStar.svg}"  alt="">
+                                <img th:src="@{/images/fullStar.svg}"  alt="">
+                            </div>
+
+                            <div class="italic smallText mt10" th:text="${'di ' + composizione.getInserzione().getRivenditore().getRagioneSociale()}">
+                            </div>
+
+                            <div class="italic smallText mt10" th:text="${'Quantità: ' + composizione.getQuantita()}">
+                            </div>
+                            <span class="midText bottomRight mt10" th:text="${'Prezzo: € ' + composizione.getPrezzoAcquisto()}"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <form action="purchaserLogout" class="topRight">
+                <button class="violetBtn smallText" style="font-weight: 700;" type="submit">Logout</button>
+            </form>
         </div>
+
+
 
         <div id="tradeInArea" class="scale-in-center hidden">
             <div class="bigText" style="font-weight: 700;">Cronologia permute</div>
+                <div class="cardContainer w100">
+                    <div class="card shadow w100" th:each="tradeIn : ${session.acquirente.getPermute()}">
+                        <img th:src="${tradeIn.getSuperProdotto().getImmagine()}" alt="">
+                        <div class="infoBlock">
+                            <span class="normalText" th:text="${tradeIn.getSuperProdotto().getMarca() + ' ' + tradeIn.getSuperProdotto().getModello()}"></span>
+                            <div class="italic smallText mt10"
+                                 th:text="|Condizione generale: ${tradeIn.getCondizioneGenerale()}, batteria: ${tradeIn.getStatoBatteria()}%,
+                                            ram: ${tradeIn.getRam()}GB, spazio archiviazione: ${tradeIn.getSpazioArchiviazione()}GB, colore: ${tradeIn.getColore()}|">
+                            </div>
+
+                            <div class="italic normalText mt20"
+                                 th:text="|Lambda Points guadagnati: ${tradeIn.getLambdaPoints()}|">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form action="purchaserLogout" class="topRight">
+                    <button class="violetBtn smallText" style="font-weight: 700;" type="submit">Logout</button>
+                </form>
         </div>
+
     </div>
 </div>
 
+
 <script type="text/javascript" th:src="@{/js/userAreaClickHandler.js}"></script>
+<script type="text/javascript" th:src="@{/js/orderHistory.js}"></script>
 </body>
 </html>

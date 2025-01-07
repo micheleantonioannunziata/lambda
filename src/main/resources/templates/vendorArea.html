@@ -21,59 +21,35 @@
     <div id="contents" class="scale-in-center">
         <div id="insertionArea" class="scale-in-center">
             <button class="violetBtn smallText" style="font-weight: 700;">
-                <a href="addInsertion.html" style="color: white;">Aggiungi inserzione</a></button>
+                <a th:href="@{selectProduct}" style="color: white;">Aggiungi inserzione</a></button>
             <div class="cardContainer mt20">
-                <div class="card shadow">
-                    <img th:src="@{/images/image.png}" alt="">
+                <div class="card shadow" th:each="insertion: ${session.rivenditore.getInserzioni()}">
+                    <img th:src="${insertion.getProdotto().getSuperProdotto().getImmagine()}" alt="">
                     <div class="info">
 
                         <div class="nameBtn">
-                            <span class="midText">Apple Ipad 10.2</span>
+                            <span class="midText" th:text="${insertion.getProdotto().getSuperProdotto().getMarca() + ' ' + insertion.getProdotto().getSuperProdotto().getModello()}"></span>
                             <button class="violetBtn smallText" style="font-weight: 700;">
-                                <a href="../../../../../lambdaParallelo/src/main/resources/templates/userDataUpdate.html" style="color: white;">Modifica</a></button>
+                                <a href="userDataUpdate.html" style="color: white;">Modifica</a></button>
                         </div>
 
-                        <div class="normalText mt50">Prodotti nel carrello: <span class="grey">800</span></div>
-                        <div class="normalText mt20">Prodotti in vendita: <span class="grey">100</span></div>
+                        <!-- <div class="normalText mt20">Prodotti in vendita: <span class="grey" th:text="${}"></span></div> -->
 
-                        <div class="midText w100 textRight mt20">€ 125,00</div>
+                        <div class="normalText mt50">Prodotti nel carrello: <span class="grey" th:text="${insertion.getFormazioneCarrello().size()}"></span></div>
+                        <div class="smallText mt20"
+                             th:text="|Colore: ${insertion.getProdotto().getId().getColore()},
+                                    RAM: ${insertion.getProdotto().getId().getRam()}GB,
+                                    Spazio di archiviazione: ${insertion.getProdotto().getId().getSpazioArchiviazione()}GB|">
+                        </div>
+
+                        <div class="smallText mt10" th:text="|Data pubblicazione: ${#temporals.format(insertion.getDataPubblicazione(), 'dd-MM-yyyy')}|">
+
+                        </div>
+                        <div class="midText w100 textRight mt20" th:text="${'€ ' + insertion.getPrezzoBase() }"></div>
 
                     </div>
                 </div>
-                <div class="card shadow">
-                    <img th:src="@{/images/image.png}" alt="">
-                    <div class="info">
 
-                        <div class="nameBtn">
-                            <span class="midText">Apple Ipad 10.2</span>
-                            <button class="violetBtn smallText" style="font-weight: 700;">
-                                <a href="../../../../../lambdaParallelo/src/main/resources/templates/userDataUpdate.html" style="color: white;">Modifica</a></button>
-                        </div>
-
-                        <div class="normalText mt50">Prodotti nel carrello: <span class="grey">800</span></div>
-                        <div class="normalText mt20">Prodotti in vendita: <span class="grey">100</span></div>
-
-                        <div class="midText w100 textRight mt20">€ 125,00</div>
-
-                    </div>
-                </div>
-                <div class="card shadow">
-                    <img th:src="@{/images/image.png}" alt="">
-                    <div class="info">
-
-                        <div class="nameBtn">
-                            <span class="midText">Apple Ipad 10.2</span>
-                            <button class="violetBtn smallText" style="font-weight: 700;">
-                                <a href="../../../../../lambdaParallelo/src/main/resources/templates/userDataUpdate.html" style="color: white;">Modifica</a></button>
-                        </div>
-
-                        <div class="normalText mt50">Prodotti nel carrello: <span class="grey">800</span></div>
-                        <div class="normalText mt20">Prodotti in vendita: <span class="grey">100</span></div>
-
-                        <div class="midText w100 textRight mt20">€ 125,00</div>
-
-                    </div>
-                </div>
             </div>
         </div>
 
