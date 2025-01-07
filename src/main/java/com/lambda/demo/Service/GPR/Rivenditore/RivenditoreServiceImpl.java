@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RivenditoreServiceImpl implements RivenditoreService {
+public class RivenditoreServiceImpl implements RivenditoreService{
     @Autowired
     private RivenditoreRepository rivenditoreRepository;
 
@@ -56,5 +56,10 @@ public class RivenditoreServiceImpl implements RivenditoreService {
     @Transactional
     public int updateRivenditore(RivenditoreEntity rivenditoreEntity) {
         return rivenditoreRepository.updateRivenditoreEntity(rivenditoreEntity);
+    }
+
+    @Override
+    public RivenditoreEntity findByPartita(String partitaIva) {
+        return rivenditoreRepository.findByPartitaIva(partitaIva);
     }
 }
