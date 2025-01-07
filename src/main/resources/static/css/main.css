@@ -112,6 +112,25 @@ select:focus-visible {
     column-gap: 1.5rem;
 }
 
+/* hero */
+#hero {
+    height: 100vh;
+}
+
+.poster {
+    display: flex;
+    padding: 0 3%;
+    align-items: center;
+}
+
+.poster__image, .poster__content {
+    width: 50%;
+}
+
+.poster__image img {
+    width: 100%;
+}
+
 /* card */
 
 .cardContainer {
@@ -228,6 +247,7 @@ select:focus-visible {
 
 .btns {
     column-gap: 1.8rem;
+    transition: all .6s ease-in-out;
 }
 
 .goldBtn {

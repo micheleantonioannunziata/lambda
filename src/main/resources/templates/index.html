@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" th:href="@{/css/main.css}">
 </head>
-<body>
+<body style="margin-bottom: 0">
 
     <div th:replace="fragments :: headerNormal"></div>
 
@@ -22,14 +22,14 @@
 
             <div class="btns">
                 <a th:href="@{userAuth}">
-                    <button class="button violetBtn" id="utenteBtn">
-                        <span class="smallText clickable" style="font-weight: 500">Area utente</span>
+                    <button class="button violetBtn clickable" id="utenteBtn">
+                        <span class="smallText" style="font-weight: 500">Area utente</span>
                     </button>
                 </a>
 
                 <a th:href="@{vendorAuth}">
-                    <button class="button whiteBtn" id="rivenditoreBtn">
-                        <span class="smallText clickable" style="font-weight: 500">Area rivenditore</span>
+                    <button class="button whiteBtn clickable" id="rivenditoreBtn">
+                        <span class="smallText" style="font-weight: 500">Area rivenditore</span>
                     </button>
                 </a>
             </div>
@@ -38,6 +38,11 @@
             <img th:src="@{/images/hero.svg}" alt="">
         </div>
     </div>
+
+    <script>
+        document.getElementById('hero').style.background =
+            'url("/images/ellipse.svg") no-repeat center center';
+    </script>
 
 </body>
 </html>
