@@ -1,8 +1,15 @@
 package com.lambda.demo.Service.GPR.Rivenditore;
 
 import com.lambda.demo.Entity.GPR.RivenditoreEntity;
+import com.lambda.demo.Exception.GA.GestioneOrdini.InvalidAddressException;
+import com.lambda.demo.Exception.GPR.*;
+import com.lambda.demo.Exception.GPR.AccessoRivenditore.AlreadyRegisteredCompanyNameException;
+import com.lambda.demo.Exception.GPR.AccessoRivenditore.AlreadyRegisteredVATNumberException;
+import com.lambda.demo.Exception.GPR.AccessoRivenditore.InvalidCompanyNameException;
+import com.lambda.demo.Exception.GPR.AccessoRivenditore.InvalidVATNumberException;
 import com.lambda.demo.Repository.GPR.RivenditoreRepository;
 import com.lambda.demo.Utility.Encrypt;
+import com.lambda.demo.Utility.Validator;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,19 +20,34 @@ public class RivenditoreServiceImpl implements RivenditoreService{
     private RivenditoreRepository rivenditoreRepository;
 
     @Override
-    public void signupRivenditore(String ragioneSociale, String partitaIVA, String email, String password) throws Exception {
+    public void signupRivenditore(String ragioneSociale, String partitaIVA, String email, String password, String confermaPassword) throws GPRException {
+        if(!Validator.isValidCompanyName(ragioneSociale))
+            throw new InvalidCompanyNameException("Ragione sociale non rispetta il formato richiesto!");
+
+        if (!Validator.isValidEmail(email))
+            throw new InvalidEmailException("Email non rispetta il formato richiesto!");
+
+        if(!Validator.isValidPartitaIVA(partitaIVA))
+            throw new InvalidVATNumberException("Partita Iva non rispetta il formato richiesto!");
+
+        if (!Validator.isValidPassword(password))
+            throw new InvalidPasswordException("Password non rispetta il formato richiesto!");
+
+        if (!confermaPassword.equals(password))
+            throw new UnMatchedPasswordException("Le password non coincidono!");
+
         RivenditoreEntity rivenditore = rivenditoreRepository.findByPartitaIva(partitaIVA);
         if (rivenditore != null)
-            throw new Exception("Partita IVA già registrata!");
+            throw new AlreadyRegisteredVATNumberException("Partita IVA già registrata!");
 
         rivenditore = rivenditoreRepository.findByRagioneSociale(ragioneSociale);
         if (rivenditore != null)
-            throw new Exception("Ragione sociale già registrata!");
+            throw new AlreadyRegisteredCompanyNameException("Ragione sociale già registrata!");
 
         rivenditore = rivenditoreRepository.findByEmail(email);
-        //se è già presente una mail nel DB, l'utente già esiste, quindi non può registrarsi
+        //se è già presente una mail nel DB, non può registrarsi con quella mail
         if(rivenditore != null)
-            throw new Exception("Utente già registrato!");
+            throw new AlreadyRegisteredEmailException("Utente già registrato con questa email!");
 
         String encryptedPassword = Encrypt.encrypt(password);
         rivenditore = new RivenditoreEntity();
@@ -38,18 +60,60 @@ public class RivenditoreServiceImpl implements RivenditoreService{
 
 
     @Override
-    public void loginRivenditore(String email, String password) throws Exception {
-        RivenditoreEntity rivenditore = null;
+    public void loginRivenditore(String email, String password) throws GPRException {
+        if (!Validator.isValidEmail(email))
+            throw new InvalidEmailException("Email non rispetta il formato richiesto!");
 
-        rivenditore = rivenditoreRepository.findByEmail(email);
+        if (!Validator.isValidPassword(password))
+            throw new InvalidPasswordException("Password non rispetta il formato richiesto!");
 
-        if(rivenditore == null) throw new Exception("Utente non registrato!");
 
-        rivenditore = null;
+        RivenditoreEntity rivenditore = rivenditoreRepository.findByEmail(email);
+
+        if(rivenditore == null) throw new NotRegisteredUserException("Utente non registrato!");
+
 
         rivenditore = rivenditoreRepository.findByEmailAndPassword(email, Encrypt.encrypt(password));
 
-        if(rivenditore == null) throw new Exception("Password errata!");
+        if(rivenditore == null) throw new WrongPasswordException("Password errata!");
+    }
+
+
+    @Override
+    public RivenditoreEntity updateVendorData(RivenditoreEntity rivenditoreEntity, String ragioneSociale, String indirizzo, String passwordAttuale, String nuovaPassword, String confermaNuovaPassword) throws GPRException, InvalidAddressException {
+        if (!ragioneSociale.isBlank()){
+            if (!Validator.isValidCompanyName(ragioneSociale)) throw new InvalidCompanyNameException("Ragione sociale non rispetta il formato richiesto!");
+            rivenditoreEntity.setRagioneSociale(ragioneSociale);
+        }
+
+        if (!indirizzo.isBlank()){
+            if (!Validator.isValidAddress(indirizzo)) throw new InvalidAddressException("Indirizzo non rispetta il formato richiesto");
+            rivenditoreEntity.setIndirizzo(indirizzo);
+        }
+
+        //NB: modificare questo blocco di if se e solo se si trova una lista di condizioni che migliora la leggibilità AND mantiene i controlli ben presenti come qui
+        if ((passwordAttuale.isBlank() && nuovaPassword.isBlank() && confermaNuovaPassword.isBlank()))
+            ;
+        else if (!passwordAttuale.isBlank() && !nuovaPassword.isBlank() && !confermaNuovaPassword.isBlank()){
+            //se la password attuale non coincide con quella in utilizzo
+            if (!Encrypt.encrypt(passwordAttuale).equals(rivenditoreEntity.getPassword())) throw new WrongPasswordException("Password attuale non corretta!");
+
+            //se la nuova password non rispetta il formato previsto
+            if (!Validator.isValidPassword(nuovaPassword)) throw new InvalidPasswordException("Nuova password non rispetta il formato!");
+
+            //se password attuale e nuova password coincidono
+            if (passwordAttuale.equals(nuovaPassword)) throw new MatchingOldAndNewPasswordException("La vecchia password e la nuova password non possono essere uguali!");
+
+            //se nuova password e conferma password non coincidono
+            if (!nuovaPassword.equals(confermaNuovaPassword)) throw new UnMatchedPasswordException("La nuova password e la conferma non coincidono!");
+
+            rivenditoreEntity.setPassword(Encrypt.encrypt(nuovaPassword));
+        } else {
+            throw new NotCompiledAllPasswordFIelds("I campi relativi alle password non sono stati compilati nella loro interezza!");
+        }
+
+
+        return rivenditoreEntity;
     }
 
     @Override
@@ -59,7 +123,17 @@ public class RivenditoreServiceImpl implements RivenditoreService{
     }
 
     @Override
-    public RivenditoreEntity findByPartita(String partitaIva) {
+    public RivenditoreEntity findByPartitaIva(String partitaIva) {
         return rivenditoreRepository.findByPartitaIva(partitaIva);
+    }
+
+    @Override
+    public RivenditoreEntity findByEmail(String email) {
+        return rivenditoreRepository.findByEmail(email);
+    }
+
+    @Override
+    public void saveRivenditore(RivenditoreEntity rivenditoreEntity) {
+        rivenditoreRepository.save(rivenditoreEntity);
     }
 }

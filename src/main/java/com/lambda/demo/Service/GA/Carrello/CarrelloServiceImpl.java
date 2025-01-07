@@ -6,10 +6,13 @@ import com.lambda.demo.Entity.GA.Carrello.FormazioneCarrello.FormazioneCarrelloE
 import com.lambda.demo.Entity.GC.Inserzione.InserzioneEntity;
 import com.lambda.demo.Entity.GC.Inserzione.InserzioneEntityId;
 import com.lambda.demo.Entity.GC.Prodotto.ProdottoEntityId;
+import com.lambda.demo.Entity.GPR.AcquirenteEntity;
+import com.lambda.demo.Repository.GA.Carrello.CarrelloRepository;
 import com.lambda.demo.Repository.GA.Carrello.FormazioneCarrelloRepository;
 import com.lambda.demo.Repository.GC.Inserzione.InserzioneRepository;
 import com.lambda.demo.Repository.GC.Prodotto.ProdottoRepository;
 import com.lambda.demo.Repository.GC.SuperProdottoRepository;
+import com.lambda.demo.Repository.GPR.AcquirenteRepository;
 import com.lambda.demo.Repository.GPR.RivenditoreRepository;
 import com.lambda.demo.Utility.SessionManager;
 import jakarta.servlet.http.HttpServletRequest;
@@ -25,16 +28,14 @@ public class CarrelloServiceImpl implements CarrelloService{
     private InserzioneRepository inserzioneRepository;
 
     @Autowired
-    private RivenditoreRepository rivenditoreRepository;
-
-    @Autowired
-    private SuperProdottoRepository superProdottoRepository;
-
-    @Autowired
     private ProdottoRepository prodottoRepository;
 
     @Autowired
+    private CarrelloRepository carrelloRepository;
+
+    @Autowired
     private FormazioneCarrelloRepository formazioneCarrelloRepository;
+
 
     @Override
     public void addToCart(String partitaIvaRivenditore, int idSuperProdotto, int ram, int spazioArchiviazione, String colore, HttpServletRequest req) throws Exception {
@@ -181,5 +182,25 @@ public class CarrelloServiceImpl implements CarrelloService{
         carrelloEntity.setPrezzoProvvisorio(carrelloEntity.getPrezzoProvvisorio() - oldTotal + newTotal);
 
         SessionManager.setCarrello(req, carrelloEntity);
+    }
+
+    @Override
+    public CarrelloEntity getCartByUser(int idAcquirente) {
+        return carrelloRepository.findByAcquirente(idAcquirente);
+    }
+
+    @Override
+    public void deleteCartByUser(int idAcquirente) {
+        carrelloRepository.deleteCarrelloByAcquirente(idAcquirente);
+    }
+
+    @Override
+    public void insertCartByUser(int idAcquirente, double prezzoProvvisorio) {
+        carrelloRepository.insert(idAcquirente, prezzoProvvisorio);
+    }
+
+    @Override
+    public void insertItems(int idCarrello, int quantity, int ram, int spazioArchiviazione, int superProdottoId, String colore, String partitaIva) {
+        formazioneCarrelloRepository.insert(idCarrello, quantity, ram, spazioArchiviazione, superProdottoId, colore, partitaIva);
     }
 }

@@ -8,9 +8,9 @@ import com.lambda.demo.Exception.GPR.GPRException;
 import com.lambda.demo.Repository.GA.Carrello.CarrelloRepository;
 import com.lambda.demo.Repository.GA.Carrello.FormazioneCarrelloRepository;
 import com.lambda.demo.Repository.GPR.AcquirenteRepository;
+import com.lambda.demo.Service.GA.Carrello.CarrelloService;
 import com.lambda.demo.Service.GPR.Acquirente.AcquirenteService;
 import com.lambda.demo.Utility.SessionManager;
-import com.lambda.demo.Utility.Validator;
 import jakarta.persistence.EntityManager;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -28,16 +28,7 @@ public class AccessoAcquirenteControl {
     private AcquirenteService acquirenteService;
 
     @Autowired
-    private AcquirenteRepository acquirenteRepository;
-
-    @Autowired
-    private CarrelloRepository carrelloRepository;
-
-    @Autowired
-    private FormazioneCarrelloRepository formazioneCarrelloRepository;
-
-    @Autowired
-    private EntityManager entityManager;
+    private CarrelloService carrelloService;
 
     /**
      * gestisce la richiesta di signup di un nuovo acquirente
@@ -49,7 +40,6 @@ public class AccessoAcquirenteControl {
      */
     @RequestMapping(value = "/purchaserSignup", method = RequestMethod.POST)
     public String signupAcquirente(HttpServletRequest req, HttpServletResponse res) throws Exception {
-        //la notazione RequestBody mi permette di salvare tutti i parametri inviati alla servlet nella stringa singUp
 
         String nome = req.getParameter("nome");
         String cognome = req.getParameter("cognome");
@@ -70,15 +60,16 @@ public class AccessoAcquirenteControl {
             throw new GPRException(e.getMessage());
         }
 
-        //se tutto va a buon fine, bisogna associare all'acquirente un nuovo carrello
-        SessionManager.setAcquirente(req, acquirenteRepository.findByEmail(email));
 
+
+        SessionManager.setAcquirente(req, acquirenteService.getAcquirente(email));
+
+        //se tutto va a buon fine, bisogna associare all'acquirente un nuovo carrello
         CarrelloEntity carrelloEntity = new CarrelloEntity();
         carrelloEntity.setAcquirente(SessionManager.getAcquirente(req));
         SessionManager.setCarrello(req, carrelloEntity);
 
-
-        return "userArea";
+        return "redirect:/userArea";
     }
 
     /**
@@ -94,35 +85,27 @@ public class AccessoAcquirenteControl {
     public String loginAcquirente(HttpServletRequest req, HttpServletResponse res) throws Exception {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
-        if (email == null || password == null) {
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Tutti i campi sono obbligatori.");
-            return null;
+
+
+        try {
+            acquirenteService.loginAcquirente(email, password);
+        }catch (GPRException gprException){
+            throw new GPRException(gprException.getMessage());
         }
 
-
-        if (!Validator.isValidEmail(email)){
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "L'email non rispetta il formato richiesto.");
-            return null;
-        }
-
-        if (!Validator.isValidPassword(password)){
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "La password non rispetta il formato richiesto.");
-            return null;
-        }
-
-        acquirenteService.loginAcquirente(email, password);
+        AcquirenteEntity acquirente = acquirenteService.getAcquirente(email);
 
         //setto il bean dell'acquirente nella sessione
-        SessionManager.setAcquirente(req, acquirenteRepository.findByEmail(email));
+        SessionManager.setAcquirente(req, acquirente);
 
         //anche se il carrello è vuoto, già c'è sul database
-        CarrelloEntity carrelloEntity;
-        //mi prendo il carrello dal db
-        carrelloEntity = carrelloRepository.findByAcquirente(SessionManager.getAcquirente(req));
+        CarrelloEntity carrelloEntity = carrelloService.getCartByUser(acquirente.getId());
+        if (carrelloEntity == null) carrelloEntity = new CarrelloEntity();
+
         //setto il carrello preso dal db nella sessione
         SessionManager.setCarrello(req, carrelloEntity);
 
-        return "userArea";
+        return "redirect:/userArea";
     }
 
     /**
@@ -138,41 +121,33 @@ public class AccessoAcquirenteControl {
     public String logout(HttpServletRequest req, HttpServletResponse res) {
         AcquirenteEntity acquirente = SessionManager.getAcquirente(req);
 
-        //chiamata a save - merge - in modo tale da salvare eventuali informazioni cambiate durante l'accesso al sito
-        //acquirenteRepository.save(acquirente);
 
         //prendo il carrello dalla sessione
         CarrelloEntity carrelloEntity = SessionManager.getCarrello(req);
 
 
         if(carrelloEntity == null) {
-            System.out.println("Carrello non presente in sessione - .");
             carrelloEntity = new CarrelloEntity();
         }
         //rimuovo dal db l'attuale carrello salvato
-        carrelloRepository.deleteCarrelloByAcquirente(SessionManager.getAcquirente(req).getId());
+        carrelloService.deleteCartByUser(acquirente.getId());
 
         //inserisco nel db il carrello presente in sessione
-        carrelloRepository.insert(SessionManager.getAcquirente(req).getId(), carrelloEntity.getPrezzoProvvisorio());
+        carrelloService.insertCartByUser(acquirente.getId(), carrelloEntity.getPrezzoProvvisorio());
 
 
         //Salvo ogni elemento della lista FormazioneCarrelloEntity associata al carrello in sessione
         List<FormazioneCarrelloEntity> cartItems = carrelloEntity.getCarrelloItems();
         for(FormazioneCarrelloEntity cartItem : cartItems){
-            FormazioneCarrelloEntityId id = new FormazioneCarrelloEntityId();
-            id.setIdCarrello(carrelloRepository.findByAcquirente(SessionManager.getAcquirente(req)).getId());
-            id.setIdInserzione(cartItem.getInserzione().getId());
+            FormazioneCarrelloEntityId id = new FormazioneCarrelloEntityId(carrelloService.getCartByUser(SessionManager.getAcquirente(req).getId()).getId(), cartItem.getInserzione().getId());
             cartItem.setId(id);
-            formazioneCarrelloRepository.insert(cartItem.getId().getIdCarrello(), cartItem.getQuantita(), cartItem.getInserzione().getProdotto().getId().getRam(), cartItem.getInserzione().getProdotto().getId().getSpazioArchiviazione(), cartItem.getInserzione().getProdotto().getSuperProdotto().getId(), cartItem.getInserzione().getProdotto().getId().getColore(), cartItem.getInserzione().getRivenditore().getPartitaIva());
+            carrelloService.insertItems(cartItem.getId().getIdCarrello(), cartItem.getQuantita(), cartItem.getInserzione().getProdotto().getId().getRam(), cartItem.getInserzione().getProdotto().getId().getSpazioArchiviazione(), cartItem.getInserzione().getProdotto().getSuperProdotto().getId(), cartItem.getInserzione().getProdotto().getId().getColore(), cartItem.getInserzione().getRivenditore().getPartitaIva());
         }
-
-
 
         //chiudo la sessione
         req.getSession().invalidate();
 
-
-        return "index";
+        return "redirect:/";
     }
 
 

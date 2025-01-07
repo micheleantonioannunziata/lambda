@@ -1,6 +1,8 @@
 package com.lambda.demo.Service.GPR.Acquirente;
 
 import com.lambda.demo.Entity.GPR.AcquirenteEntity;
+import com.lambda.demo.Exception.GA.GestioneOrdini.InvalidAddressException;
+import com.lambda.demo.Exception.GPR.*;
 import com.lambda.demo.Exception.GPR.AccessoAcquirente.*;
 import com.lambda.demo.Repository.GPR.AcquirenteRepository;
 import com.lambda.demo.Utility.Encrypt;
@@ -15,12 +17,12 @@ public class AcquirenteServiceImpl implements AcquirenteService{
     private AcquirenteRepository acquirenteRepository;
 
     @Override
-    public void signupAcquirente(String nome, String cognome, String email, String password, String confermaPassword) throws Exception {
+    public void signupAcquirente(String nome, String cognome, String email, String password, String confermaPassword) throws GPRException {
         AcquirenteEntity acquirente = acquirenteRepository.findByEmail(email);
 
         //se è già presente una mail nel DB, l'utente già esiste, quindi non può registrarsi
         if(acquirente != null)
-            throw new Exception("Utente già registrato!");
+            throw new AlreadyRegisteredEmailException("Utente già registrato!");
 
         if(!Validator.isValidName(nome))
             throw new InvalidNameException("Nome non rispetta il formato!");
@@ -48,23 +50,78 @@ public class AcquirenteServiceImpl implements AcquirenteService{
     }
 
     @Override
-    public void loginAcquirente(String email, String password) throws Exception {
-        AcquirenteEntity acquirente = null;
+    public void loginAcquirente(String email, String password) throws GPRException {
+        if (!Validator.isValidEmail(email)) {
+            throw new InvalidEmailException("Email non rispetta il formato!");
+        }
 
-        acquirente = acquirenteRepository.findByEmail(email);
+        if (!Validator.isValidPassword(password)) {
+            throw new InvalidPasswordException("Password non rispetta il formato!");
+        }
 
-        if(acquirente == null) throw new Exception("Utente non registrato!");
 
-        acquirente = null;
+        AcquirenteEntity acquirente = acquirenteRepository.findByEmail(email);
+        if (acquirente == null) {
+            throw new NotRegisteredUserException("Utente non registrato!");
+        }
 
-        acquirente = acquirenteRepository.findByEmailAndPassword(email, Encrypt.encrypt(password));
+        String encryptedPassword = Encrypt.encrypt(password);
+        acquirente = acquirenteRepository.findByEmailAndPassword(email, encryptedPassword);
+        if (acquirente == null) {
+            throw new WrongPasswordException("Password errata!");
+        }
+    }
 
-        if(acquirente == null) throw new Exception("Password errata!");
+
+    @Override
+    public AcquirenteEntity updateAcquirenteData(AcquirenteEntity acquirente, String nome, String cognome, String indirizzo, String passwordAttuale, String nuovaPassword, String confermaNuovaPassword) throws GPRException, InvalidAddressException {
+        if (!nome.isBlank()){
+            if (!Validator.isValidName(nome)) throw new InvalidNameException("Nome non rispetta il formato!");
+            acquirente.setNome(nome);
+        }
+
+        if (!cognome.isBlank()){
+            if (!Validator.isValidSurname(cognome)) throw new InvalidSurnameException("Cognome non rispetta il formato!");
+            acquirente.setCognome(cognome);
+        }
+
+        if (!indirizzo.isBlank()){
+            if (!Validator.isValidAddress(indirizzo)) throw new InvalidAddressException("Indizzo non rispetta il formato richiesto!");
+            acquirente.setIndirizzo(indirizzo);
+        }
+
+        //NB: modificare questo blocco di if se e solo se si trova una lista di condizioni che migliora la leggibilità AND mantiene i controlli ben presenti come qui
+        if ((passwordAttuale.isBlank() && nuovaPassword.isBlank() && confermaNuovaPassword.isBlank()))
+            ;
+        else if (!passwordAttuale.isBlank() && !nuovaPassword.isBlank() && !confermaNuovaPassword.isBlank()){
+            //se la password attuale non coincide con quella in utilizzo
+            if (!Encrypt.encrypt(passwordAttuale).equals(acquirente.getPassword())) throw new WrongPasswordException("Password attuale non corretta!");
+
+            //se la nuova password non rispetta il formato previsto
+            if (!Validator.isValidPassword(nuovaPassword)) throw new InvalidPasswordException("Nuova password non rispetta il formato!");
+
+            //se password attuale e nuova password coincidono
+            if (passwordAttuale.equals(nuovaPassword)) throw new MatchingOldAndNewPasswordException("La vecchia password e la nuova password non possono essere uguali!");
+
+            //se nuova password e conferma password non coincidono
+            if (!nuovaPassword.equals(confermaNuovaPassword)) throw new UnMatchedPasswordException("La nuova password e la conferma non coincidono!");
+
+            acquirente.setPassword(Encrypt.encrypt(nuovaPassword));
+        } else {
+            throw new NotCompiledAllPasswordFIelds("I campi relativi alle password non sono stati compilati nella loro interezza!");
+        }
+
+        return acquirente;
     }
 
     @Override
     @Transactional
     public int updateAcquirente(AcquirenteEntity acquirenteEntity) {
         return acquirenteRepository.updateAcquirenteEntity(acquirenteEntity);
+    }
+
+    @Override
+    public AcquirenteEntity getAcquirente(String email){
+        return acquirenteRepository.findByEmail(email);
     }
 }

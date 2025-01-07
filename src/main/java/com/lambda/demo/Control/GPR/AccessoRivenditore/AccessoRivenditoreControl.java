@@ -1,10 +1,9 @@
 package com.lambda.demo.Control.GPR.AccessoRivenditore;
 
 import com.lambda.demo.Entity.GPR.RivenditoreEntity;
-import com.lambda.demo.Repository.GPR.RivenditoreRepository;
+import com.lambda.demo.Exception.GPR.GPRException;
 import com.lambda.demo.Service.GPR.Rivenditore.RivenditoreService;
 import com.lambda.demo.Utility.SessionManager;
-import com.lambda.demo.Utility.Validator;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +16,6 @@ public class AccessoRivenditoreControl {
     @Autowired
     private RivenditoreService rivenditoreService;
 
-    @Autowired
-    private RivenditoreRepository rivenditoreRepository;
-
     /**
      * gestisce la richiesta di signup di un nuovo rivenditore
      * @param req oggetto HttServletRequest che rappresenta la richiesta Http
@@ -31,7 +27,6 @@ public class AccessoRivenditoreControl {
 
     @RequestMapping(value = "/vendorSignup", method = RequestMethod.POST)
     public String signupRivenditore(HttpServletRequest req, HttpServletResponse res) throws Exception {
-        //la notazione RequestBody mi permette di salvare tutti i parametri inviati alla servlet nella stringa singUp
 
         String ragioneSociale = req.getParameter("ragioneSociale");
         String partitaIVA = req.getParameter("partitaIVA");
@@ -39,35 +34,13 @@ public class AccessoRivenditoreControl {
         String password = req.getParameter("password");
         String confermaPassword = req.getParameter("confermaPassword");
 
-        if (ragioneSociale == null || partitaIVA == null || email == null || password == null || confermaPassword == null) {
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Tutti i campi sono obbligatori.");
-            return null;
+        try {
+            rivenditoreService.signupRivenditore(ragioneSociale, partitaIVA, email, password, confermaPassword);
+        }catch (GPRException gprException){
+            throw new GPRException(gprException.getMessage());
         }
-
-        if (!Validator.isValidPartitaIVA(partitaIVA)){
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "La partita IVA non rispetta il formato richiesto.");
-            return null;
-        }
-
-        if (!Validator.isValidEmail(email)){
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "L'email non rispetta il formato richiesto.");
-            return null;
-        }
-
-        /*System.out.println(password);*/
-        if (!Validator.isValidPassword(password)){
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "La password non rispetta il formato richiesto.");
-            return null;
-        }
-
-        if (!password.equals(confermaPassword)){
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Le password non coincidono.");
-            return null;
-        }
-
-        rivenditoreService.signupRivenditore(ragioneSociale, partitaIVA, email, password);
-        SessionManager.setRivenditore(req, rivenditoreRepository.findByEmail(email));
-        return "vendorArea";
+        SessionManager.setRivenditore(req, rivenditoreService.findByPartitaIva(partitaIVA));
+        return "redirect:/vendorArea";
     }
 
     /**
@@ -83,39 +56,26 @@ public class AccessoRivenditoreControl {
     public String loginRivenditore(HttpServletRequest req, HttpServletResponse res) throws Exception {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
-        if (email == null || password == null) {
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Tutti i campi sono obbligatori.");
-            return null;
+
+        try {
+            rivenditoreService.loginRivenditore(email, password);
+        }catch (GPRException gprException){
+            throw new GPRException(gprException.getMessage());
         }
 
-
-        if (!Validator.isValidEmail(email)){
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "L'email non rispetta il formato richiesto.");
-            return null;
-        }
-
-        if (!Validator.isValidPassword(password)){
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "La password non rispetta il formato richiesto.");
-            return null;
-        }
-
-        rivenditoreService.loginRivenditore(email, password);
-        SessionManager.setRivenditore(req, rivenditoreRepository.findByEmail(email));
-        return "vendorArea";
+        SessionManager.setRivenditore(req, rivenditoreService.findByPartitaIva(email));
+        return "redirect:/vendorArea";
     }
 
     @RequestMapping(value = "/vendorLogout", method = RequestMethod.POST)
     public String logoutRivenditore(HttpServletRequest req, HttpServletResponse res){
         RivenditoreEntity rivenditore = SessionManager.getRivenditore(req);
 
-        rivenditoreRepository.save(rivenditore);
-
+        rivenditoreService.updateRivenditore(rivenditore);
 
         req.getSession().invalidate();
 
-
-
-        return "index";
+        return "redirect:/";
     }
 
 }

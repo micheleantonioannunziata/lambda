@@ -76,6 +76,12 @@ public class Validator {
     }
 
 
+    private static final String ragioneSocialeRegex = "^[A-Za-z0-9ÀÈÉÌÒÓÙàèéìòóùç&',.\\s-]{2,100}$";
+    private static final Pattern ragioneSocialePattern = Pattern.compile(ragioneSocialeRegex);
+    public static boolean isValidCompanyName(String ragioneSociale){
+        return ragioneSociale != null && ragioneSocialePattern.matcher(ragioneSociale).matches();
+    }
+
     private static final String quantitaRegex = "[1-9][0-9]{1,2}";
     private static final Pattern quantitaPattern = Pattern.compile(quantitaRegex);
     public static boolean isValidQuantita(String quantita){
