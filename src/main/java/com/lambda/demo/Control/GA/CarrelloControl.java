@@ -28,29 +28,16 @@ public class CarrelloControl {
     @RequestMapping(value = "/addToCart", method = RequestMethod.POST)
     public String addToCart(HttpServletRequest req, HttpServletResponse res) throws Exception {
         String partitaIvaRivenditore = req.getParameter("partitaIvaRivenditore");
-        String idSuperProdottoRequest = req.getParameter("idSuperProdotto");
-        String ramRequest = req.getParameter("RAM");
-        String spazioArchiviazioneRequest = req.getParameter("spazioArchiviazione");
+        String idSuperProdotto = req.getParameter("idSuperProdotto");
+        String ram = req.getParameter("RAM");
+        String spazioArchiviazione = req.getParameter("spazioArchiviazione");
         String colore = req.getParameter("colore");
 
-        int ram;
-        int spazioArchiviazione;
-        int idSuperProdotto;
 
-        //controllo che i campi non siano vuoti (potrebbe accadere se qualcuno manipola il DOM)
-        if (partitaIvaRivenditore.isBlank() || idSuperProdottoRequest.isBlank() ||
-                ramRequest.isBlank() || spazioArchiviazioneRequest.isBlank() ||
-                colore.isBlank())
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Inserzione non valida");
-
-        //verifico che i campi ram, spazioArchiviazione e idSuperProdotto siano degli interi come da DB
         try {
-            ram = Integer.parseInt(ramRequest);
-            spazioArchiviazione = Integer.parseInt(spazioArchiviazioneRequest);
-            idSuperProdotto = Integer.parseInt(idSuperProdottoRequest);
             carrelloService.addToCart(partitaIvaRivenditore, idSuperProdotto, ram, spazioArchiviazione, colore, req);
-        } catch (NumberFormatException e){
-            throw new IllegalArgumentException("Parametri non validi - DOM modificato");
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
         }
 
         return "redirect:/myCart";
@@ -64,97 +51,44 @@ public class CarrelloControl {
      * @see HttpServletRequest
      * @see HttpServletResponse
      */
+
     @RequestMapping(value="/removeFromCart", method = RequestMethod.POST)
-    public String removeFromCart(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String removeFromCart(HttpServletRequest req, HttpServletResponse res) throws Exception{
         //Prendo l'id dell'Inserzione (formato da idSuperProdotto, ram, spazioArchiviazione, colore)
         String insertionWrapper = req.getParameter("idInserzione");
 
         List<String> values = getValues(insertionWrapper);
 
-        String partitaIvaRivenditore = values.get(0);
-        // Controllo che la Partita IVA sia valida
-        if (!Validator.isValidPartitaIVA(partitaIvaRivenditore))
-            throw new IllegalArgumentException("PartitaIVA non valida - DOM modificato");
-
-        String idSuperProdottoReq = values.get(1);
-        String ramReq = values.get(2);
-        String spazioArchiviazioneReq = values.get(3);
-        String colore = values.get(4);
-
-        try{
-            int idSuperProdotto = Integer.parseInt(idSuperProdottoReq);
-            int ram = Integer.parseInt(ramReq);
-            int spazioArchiviazione = Integer.parseInt(spazioArchiviazioneReq);
-
-            //elimino l'inserzione dal carrello
-            carrelloService.removeFromCart(partitaIvaRivenditore, idSuperProdotto, ram, spazioArchiviazione, colore, req);
-        }catch (NumberFormatException e){
-            throw new IllegalArgumentException("Parametri non validi - DOM modificato");
+        try {
+            carrelloService.removeFromCart(values.getFirst(),  values.get(1), values.get(2), values.get(3), values.get(4), req);
+        }catch (Exception e) {
+            throw new Exception(e.getMessage());
         }
 
-        //redirect necessario per evitare che ricaricando la pagina di myCart dopo aver rimosso un elemento da carrello possa lanciare un eccezione
         return "redirect:/myCart";
     }
+
 
     @RequestMapping(value = "/updateQuantity", method = RequestMethod.POST)
     public String updateQuantity(HttpServletRequest req, HttpServletResponse res) throws Exception {
-        // Recupero l'id dell'inserzione
+        //Prendo l'id dell'Inserzione (formato da idSuperProdotto, ram, spazioArchiviazione, colore)
         String insertionWrapper = req.getParameter("idInserzione");
 
-        // Recupero la quantità che si desidera modificare
-        String quantityReq = req.getParameter("quantity");
+        List<String> values = getValues(insertionWrapper);
+        String quantity = req.getParameter("quantity");
 
+        System.out.println(quantity);
         try {
-            int quantity = Integer.parseInt(quantityReq);
-
-            // Se la quantità è pari o inferiore a 0, rimuovo l'elemento dal carrello
-            if (quantity <= 0) {
-                removeFromCart(req, res);
-            } else {
-                // Estraggo i valori necessari per l'aggiornamento
-                List<String> values = getValues(insertionWrapper);
-
-                // Controllo che la Partita IVA sia valida
-                String partitaIvaRivenditore = values.get(0);
-                if (!Validator.isValidPartitaIVA(partitaIvaRivenditore)) {
-                    throw new IllegalArgumentException("Partita IVA non valida - DOM modificato");
-                }
-
-                // Recupero altri parametri necessari
-                String idSuperProdottoReq = values.get(1);
-                String ramReq = values.get(2);
-                String spazioArchiviazioneReq = values.get(3);
-                String colore = values.get(4);
-
-                try {
-                    int idSuperProdotto = Integer.parseInt(idSuperProdottoReq);
-                    int ram = Integer.parseInt(ramReq);
-                    int spazioArchiviazione = Integer.parseInt(spazioArchiviazioneReq);
-
-                    // Aggiorno la quantità del prodotto nel carrello
-                    carrelloService.updateQuantity(partitaIvaRivenditore, idSuperProdotto, ram, spazioArchiviazione, colore, quantity, req);
-                } catch (NumberFormatException e) {
-                    // Errore nei parametri numerici
-                    throw new IllegalArgumentException("Parametri non validi - DOM modificato", e);
-                }
-
-                // Redirect necessario per evitare il reinvio accidentale della richiesta
-                return "redirect:/myCart";
-            }
-        } catch (NumberFormatException e) {
-            // Gestione dell'errore per parametri non numerici
-            throw new IllegalArgumentException("Parametri non validi - DOM modificato", e);
+            carrelloService.updateQuantity(values.getFirst(), values.get(1), values.get(2), values.get(3), values.get(4), quantity, req);
+        }catch (Exception e) {
+            throw new Exception(e.getMessage());
         }
 
         return "redirect:/myCart";
     }
 
-
-
     List<String> getValues(String insertionWrapper) {
         String[] insertionComponents = insertionWrapper.split(",");
-        for (String s : insertionComponents)
-            System.out.println(s);
 
         List<String> values = new ArrayList<>();
 

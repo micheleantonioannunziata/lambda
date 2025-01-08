@@ -6,20 +6,27 @@ import com.lambda.demo.Entity.GA.Carrello.FormazioneCarrello.FormazioneCarrelloE
 import com.lambda.demo.Entity.GC.Inserzione.InserzioneEntity;
 import com.lambda.demo.Entity.GC.Inserzione.InserzioneEntityId;
 import com.lambda.demo.Entity.GC.Prodotto.ProdottoEntityId;
-import com.lambda.demo.Entity.GPR.AcquirenteEntity;
+import com.lambda.demo.Exception.GA.GestionePermuta.InvalidColorException;
+import com.lambda.demo.Exception.GC.GestioneInserzione.*;
+import com.lambda.demo.Exception.GC.InvalidSuperProductIdException;
+import com.lambda.demo.Exception.GC.SuperProductNotFoundException;
+import com.lambda.demo.Exception.GPR.AccessoRivenditore.InvalidVATNumberException;
+import com.lambda.demo.Exception.GPR.VendorNotFoundException;
 import com.lambda.demo.Repository.GA.Carrello.CarrelloRepository;
 import com.lambda.demo.Repository.GA.Carrello.FormazioneCarrelloRepository;
 import com.lambda.demo.Repository.GC.Inserzione.InserzioneRepository;
 import com.lambda.demo.Repository.GC.Prodotto.ProdottoRepository;
 import com.lambda.demo.Repository.GC.SuperProdottoRepository;
-import com.lambda.demo.Repository.GPR.AcquirenteRepository;
 import com.lambda.demo.Repository.GPR.RivenditoreRepository;
 import com.lambda.demo.Utility.SessionManager;
+import com.lambda.demo.Utility.Validator;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 @Service
@@ -28,160 +35,146 @@ public class CarrelloServiceImpl implements CarrelloService{
     private InserzioneRepository inserzioneRepository;
 
     @Autowired
+    private SuperProdottoRepository superProdottoRepository;
+
+    @Autowired
     private ProdottoRepository prodottoRepository;
 
     @Autowired
     private CarrelloRepository carrelloRepository;
 
+
+    @Autowired
+    private RivenditoreRepository rivenditoreRepository;
+
     @Autowired
     private FormazioneCarrelloRepository formazioneCarrelloRepository;
 
+    public boolean isValidInsertion(String partitaIvaRivenditore, String idSuperProdotto, String ram, String spazioArchiviazione, String colore) throws InvalidRAMException, InvalidStorageException, InvalidVATNumberException, InvalidColorException, ProductNotFoundException, VendorNotFoundException, InvalidSuperProductIdException, SuperProductNotFoundException {
+        if (!Validator.isValidRamValue(ram))
+            throw new InvalidRAMException("Valore ram non ammesso -  DOM probabilmente modificato");
 
-    @Override
-    public void addToCart(String partitaIvaRivenditore, int idSuperProdotto, int ram, int spazioArchiviazione, String colore, HttpServletRequest req) throws Exception {
-        ProdottoEntityId prodottoEntityId = new ProdottoEntityId();
-        prodottoEntityId.setColore(colore);
-        prodottoEntityId.setRam(ram);
-        prodottoEntityId.setSpazioArchiviazione(spazioArchiviazione);
-        prodottoEntityId.setSuperProdottoId(idSuperProdotto);
+        if(!Validator.isValidStorageValue(spazioArchiviazione))
+            throw new InvalidStorageException("Valore spazio archiviazione non ammesso - DOM probabilmente modificato");
 
-        InserzioneEntityId inserzioneEntityId = new InserzioneEntityId();
-        inserzioneEntityId.setPartitaIvaRivenditore(partitaIvaRivenditore);
-        inserzioneEntityId.setIdProdotto(prodottoEntityId);
+        if(!Validator.isValidPartitaIVA(partitaIvaRivenditore))
+            throw new InvalidVATNumberException("Valore partita iva non ammesso - DOM probabilmente modificato");
 
+        if (!Validator.isValidColor(colore))
+            throw new InvalidColorException("Colore non rispetta il formato richiesto - DOM probabilmente modificato");
 
-        InserzioneEntity inserzioneEntity = inserzioneRepository.findById(inserzioneEntityId).get();
-        System.out.println(inserzioneEntity.getPrezzoBase());
+        if (superProdottoRepository.findById(Integer.parseInt(idSuperProdotto)) == null) throw new SuperProductNotFoundException("SuperProdotto non trovaot - DOM probabilmente modificato");
 
+        if (prodottoRepository.findById(new ProdottoEntityId(Integer.parseInt(idSuperProdotto), Integer.parseInt(ram), Integer.parseInt(spazioArchiviazione), colore)).isEmpty()) throw new ProductNotFoundException("Prodotto non trovato - DOM probabilmente modificato");
 
-        CarrelloEntity carrelloEntity = SessionManager.getCarrello(req);
+        if (rivenditoreRepository.findByPartitaIva(partitaIvaRivenditore) == null) throw new VendorNotFoundException("Rivenditore non trovato - DOM probabilmente modificato");
 
-        List<FormazioneCarrelloEntity> cartItems = carrelloEntity.getCarrelloItems();
-
-        if(cartItems == null) cartItems = new ArrayList<>();
-        FormazioneCarrelloEntityId formazioneCarrelloEntityId = new FormazioneCarrelloEntityId();
-        formazioneCarrelloEntityId.setIdCarrello(carrelloEntity.getId());
-        formazioneCarrelloEntityId.setIdInserzione(inserzioneEntityId);
-        if(cartItems.isEmpty()){
-            FormazioneCarrelloEntity cartItem = new FormazioneCarrelloEntity();
-            cartItem.setId(formazioneCarrelloEntityId);
-            cartItem.setCarrello(carrelloEntity);
-            cartItem.setInserzione(inserzioneEntity);
-            cartItem.setQuantita(1);
-        }else{
-            boolean isNotTheSame = false;
-            for(FormazioneCarrelloEntity cartItem : cartItems){
-                if(cartItem.getInserzione().equals(inserzioneEntity)) cartItem.setQuantita(cartItem.getQuantita() + 1);
-                else isNotTheSame = true;
-            }
-            if(isNotTheSame){
-                FormazioneCarrelloEntity cartItem = new FormazioneCarrelloEntity();
-                cartItem.setId(formazioneCarrelloEntityId);
-                cartItem.setCarrello(carrelloEntity);
-                cartItem.setInserzione(inserzioneEntity);
-                cartItem.setQuantita(1);
-            }
-        }
-        carrelloEntity.setPrezzoProvvisorio(carrelloEntity.getPrezzoProvvisorio() + inserzioneEntity.getPrezzoBase());
-
-        SessionManager.setCarrello(req, carrelloEntity);
+        return inserzioneRepository.findById(new InserzioneEntityId(partitaIvaRivenditore, new ProdottoEntityId(Integer.parseInt(idSuperProdotto), Integer.parseInt(ram), Integer.parseInt(spazioArchiviazione), colore))).isPresent();
     }
 
+
     @Override
-    public void removeFromCart(String partitaIvaRivenditore, int idSuperProdotto, int ram, int spazioArchiviazione, String colore, HttpServletRequest req) throws Exception {
-        CarrelloEntity carrelloEntity = SessionManager.getCarrello(req);
-        List<FormazioneCarrelloEntity> cartItems = carrelloEntity.getCarrelloItems();
-
-        ProdottoEntityId prodottoEntityId = new ProdottoEntityId();
-        prodottoEntityId.setSuperProdottoId(idSuperProdotto);
-        prodottoEntityId.setRam(ram);
-        prodottoEntityId.setSpazioArchiviazione(spazioArchiviazione);
-        prodottoEntityId.setColore(colore);
-
-        if (!prodottoRepository.findById(prodottoEntityId).isPresent())
-            throw new Exception();
-
-        InserzioneEntityId inserzioneEntityId = new InserzioneEntityId();
-        inserzioneEntityId.setIdProdotto(prodottoEntityId);
-        inserzioneEntityId.setPartitaIvaRivenditore(partitaIvaRivenditore);
-
-        if (!inserzioneRepository.findById(inserzioneEntityId).isPresent())
-            throw new Exception();
-
-        InserzioneEntity inserzioneEntity = inserzioneRepository.findById(inserzioneEntityId).get();
-
-        boolean isPresent = false;
-        int index = 0;
-        for (FormazioneCarrelloEntity item: cartItems){
-            if (item.getInserzione().equals(inserzioneEntity)) {
-                isPresent = true;
-                carrelloEntity.setPrezzoProvvisorio(carrelloEntity.getPrezzoProvvisorio()-
-                        item.getInserzione().getPrezzoBase()*item.getQuantita());
-                break;
-            }
-            index++;
+    public void addToCart(String partitaIvaRivenditore, String idSuperProdotto, String ram, String spazioArchiviazione, String colore, HttpServletRequest request) throws Exception {
+        if (!isValidInsertion(partitaIvaRivenditore, idSuperProdotto, ram, spazioArchiviazione, colore)) {
+            throw new Exception("Inserzione non valida - DOM probabilmente modificato");
         }
 
-        if (!isPresent) {
-            System.out.println("Nun nge sta");
-            throw new Exception("Prodotto non presente nel carrello");
-        } else {
-            System.out.println("ci siamo fratm, sempre presenti");
-            cartItems.remove(index);
+        InserzioneEntityId inserzioneEntityId = new InserzioneEntityId(partitaIvaRivenditore,
+                new ProdottoEntityId(Integer.parseInt(idSuperProdotto), Integer.parseInt(ram), Integer.parseInt(spazioArchiviazione), colore));
+        InserzioneEntity inserzione = inserzioneRepository.findById(inserzioneEntityId).get();
+
+        CarrelloEntity carrello = SessionManager.getCarrello(request);
+        List<FormazioneCarrelloEntity> cartItems = carrello.getCarrelloItems();
+        if (cartItems == null) {
+            cartItems = new ArrayList<>();
+            carrello.setCarrelloItems(cartItems);
         }
 
-        SessionManager.setCarrello(req, carrelloEntity);
+
+        int itemIndex = getItemIndex(cartItems, inserzione);
+        if (itemIndex == -1) cartItems.add(new FormazioneCarrelloEntity(new FormazioneCarrelloEntityId(carrello.getId(), inserzioneEntityId), carrello, inserzione, 1));
+        else cartItems.get(itemIndex).setQuantita(cartItems.get(itemIndex).getQuantita() + 1);
 
 
+        carrello.setPrezzoProvvisorio(carrello.getPrezzoProvvisorio() + inserzione.getPrezzoBase());
+
+        SessionManager.setCarrello(request, carrello);
     }
 
+
+
     @Override
-    public void updateQuantity(String partitaIvaRivenditore, int idSuperProdotto, int ram, int spazioArchiviazione, String colore, int quantity, HttpServletRequest req) throws Exception {
-        CarrelloEntity carrelloEntity = SessionManager.getCarrello(req);
-        List<FormazioneCarrelloEntity> cartItems = carrelloEntity.getCarrelloItems();
+    public void removeFromCart(String partitaIvaRivenditore, String idSuperProdotto, String ram, String spazioArchiviazione, String colore, HttpServletRequest req) throws Exception {
+        if (!isValidInsertion(partitaIvaRivenditore, idSuperProdotto, ram, spazioArchiviazione, colore))
+            throw new Exception("Inserzione non valida - DOM probabilmente modificato");
 
-        ProdottoEntityId prodottoEntityId = new ProdottoEntityId();
-        prodottoEntityId.setSuperProdottoId(idSuperProdotto);
-        prodottoEntityId.setRam(ram);
-        prodottoEntityId.setSpazioArchiviazione(spazioArchiviazione);
-        prodottoEntityId.setColore(colore);
+        InserzioneEntity inserzione = inserzioneRepository.findById(new InserzioneEntityId(partitaIvaRivenditore,
+                new ProdottoEntityId(Integer.parseInt(idSuperProdotto), Integer.parseInt(ram), Integer.parseInt(spazioArchiviazione), colore))).get();
 
-        if (!prodottoRepository.findById(prodottoEntityId).isPresent())
-            throw new Exception();
-
-        InserzioneEntityId inserzioneEntityId = new InserzioneEntityId();
-        inserzioneEntityId.setIdProdotto(prodottoEntityId);
-        inserzioneEntityId.setPartitaIvaRivenditore(partitaIvaRivenditore);
-
-        if (!inserzioneRepository.findById(inserzioneEntityId).isPresent())
-            throw new Exception();
-
-        InserzioneEntity inserzioneEntity = inserzioneRepository.findById(inserzioneEntityId).get();
+        CarrelloEntity carrello = SessionManager.getCarrello(req);
+        List<FormazioneCarrelloEntity> cartItems = carrello.getCarrelloItems();
 
 
-        int index = 0;
-        boolean isPresent = false;
-        for(FormazioneCarrelloEntity item: cartItems){
-            if(item.getInserzione().equals(inserzioneEntity)){
-                isPresent = true;
-                break;
-            }
-            index++;
+        int itemToRemoveIndex = getItemIndex(cartItems, inserzione);
+        if (itemToRemoveIndex == -1) throw new Exception("Inserzione non presente nel carrello - DOM probabilmente modificato");
+
+        carrello.setPrezzoProvvisorio(carrello.getPrezzoProvvisorio() -
+                cartItems.get(itemToRemoveIndex).getInserzione().getPrezzoBase() * cartItems.get(itemToRemoveIndex).getQuantita());
+
+        cartItems.remove(itemToRemoveIndex);
+
+        SessionManager.setCarrello(req, carrello);
+    }
+
+
+
+
+    @Override
+    public void updateQuantity(String partitaIvaRivenditore, String idSuperProdotto, String ram, String spazioArchiviazione, String colore, String quantity, HttpServletRequest req) throws Exception {
+        if (!isValidInsertion(partitaIvaRivenditore, idSuperProdotto, ram, spazioArchiviazione, colore))
+            throw new Exception("Inserzione non valida -  DOM probabilmente modificato");
+
+        InserzioneEntity inserzione = inserzioneRepository.findById(new InserzioneEntityId(partitaIvaRivenditore, new ProdottoEntityId(Integer.parseInt(idSuperProdotto), Integer.parseInt(ram), Integer.parseInt(spazioArchiviazione), colore))).get();
+
+        int q;
+        try {
+            q = Integer.parseInt(quantity);
+        }catch (NumberFormatException e) {
+            throw new InvalidQuantityException("Quantità non valida - DOM probabilmente modificato");
         }
+        if (q > inserzione.getQuantita()) throw new InvalidQuantityException("Quantità non valida - DOM probabilmente modificato");
 
-        if(!isPresent) {throw new Exception("Prodotto non presente nel carrello");}
+        if (q == 0) removeFromCart(partitaIvaRivenditore, idSuperProdotto, ram, spazioArchiviazione, colore, req);
+        else {
+            CarrelloEntity carrello = SessionManager.getCarrello(req);
+            List<FormazioneCarrelloEntity> cartItems = carrello.getCarrelloItems();
 
-        int oldQuantity = carrelloEntity.getCarrelloItems().get(index).getQuantita();
 
-        cartItems.get(index).setQuantita(quantity);
+            int itemToUpdateIndex = getItemIndex(cartItems, inserzione);
 
-        double prezzoBase = carrelloEntity.getCarrelloItems().get(index).getInserzione().getPrezzoBase();
-        double oldTotal = oldQuantity * prezzoBase;
-        double newTotal = quantity * prezzoBase;
+            if (itemToUpdateIndex == -1) throw new Exception("Inserzione non presente nel carrello - DOM probabilmente modificato");
 
-        carrelloEntity.setPrezzoProvvisorio(carrelloEntity.getPrezzoProvvisorio() - oldTotal + newTotal);
+            int oldQuantity = carrello.getCarrelloItems().get(itemToUpdateIndex).getQuantita();
 
-        SessionManager.setCarrello(req, carrelloEntity);
+            carrello.getCarrelloItems().get(itemToUpdateIndex).setQuantita(q);
+
+            double prezzoBase = carrello.getCarrelloItems().get(itemToUpdateIndex).getInserzione().getPrezzoBase();
+            double oldTotal = oldQuantity * prezzoBase;
+            double newTotal = q * prezzoBase;
+
+            carrello.setPrezzoProvvisorio(carrello.getPrezzoProvvisorio() - oldTotal + newTotal);
+
+            SessionManager.setCarrello(req, carrello);
+        }
+    }
+
+    int getItemIndex(List<FormazioneCarrelloEntity> cartItems, InserzioneEntity inserzione) {
+        for (int i = 0; i < cartItems.size(); i++) {
+            if (cartItems.get(i).getInserzione().equals(inserzione)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override

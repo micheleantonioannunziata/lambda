@@ -82,7 +82,7 @@ public class Validator {
         return ragioneSociale != null && ragioneSocialePattern.matcher(ragioneSociale).matches();
     }
 
-    private static final String quantitaRegex = "[1-9][0-9]{1,2}";
+    private static final String quantitaRegex = "[1-9][0-9]{0,2}";
     private static final Pattern quantitaPattern = Pattern.compile(quantitaRegex);
     public static boolean isValidQuantita(String quantita){
         if (quantita == null)
@@ -151,7 +151,7 @@ public class Validator {
     }
 
 
-    private static final String nomeFileRegex = "^[A-Za-z0-9]+\\.png$";
+    private static final String nomeFileRegex = "^[A-Za-z0-9]+([-_ ][A-Za-z0-9]+)*\\.png$";
     private static final Pattern nomeFilePattern = Pattern.compile(nomeFileRegex);
     public static boolean isValidFileName(String nome){
         return nome != null && nomeFilePattern.matcher(nome).matches();

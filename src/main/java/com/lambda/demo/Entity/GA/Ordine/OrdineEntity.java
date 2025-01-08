@@ -66,7 +66,7 @@ public class OrdineEntity {
     private AcquirenteEntity acquirente;
 
 
-    @OneToMany(mappedBy = "ordine")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "ordine")
     private List<ComposizioneEntity> composizioni = new ArrayList<>();
 
 
