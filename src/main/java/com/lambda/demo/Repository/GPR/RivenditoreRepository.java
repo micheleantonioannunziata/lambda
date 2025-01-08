@@ -28,7 +28,7 @@ public interface RivenditoreRepository extends JpaRepository<RivenditoreEntity, 
     @Query("UPDATE RivenditoreEntity r SET r.ragioneSociale = :#{#rivenditore.ragioneSociale}, " +
             "r.indirizzo = :#{#rivenditore.indirizzo}, " +
             "r.password = :#{#rivenditore.password} " +
-            "WHERE r.id = :#{#rivenditore.id}")
+            "WHERE r.partitaIva = :#{#rivenditore.partitaIva}")
     int updateRivenditoreEntity(RivenditoreEntity rivenditore);
 
 

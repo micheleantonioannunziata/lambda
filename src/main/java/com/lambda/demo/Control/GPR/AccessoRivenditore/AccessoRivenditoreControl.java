@@ -63,7 +63,7 @@ public class AccessoRivenditoreControl {
             throw new GPRException(gprException.getMessage());
         }
 
-        SessionManager.setRivenditore(req, rivenditoreService.findByPartitaIva(email));
+        SessionManager.setRivenditore(req, rivenditoreService.findByEmail(email));
         return "redirect:/vendorArea";
     }
 

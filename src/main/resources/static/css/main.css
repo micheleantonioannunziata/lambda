@@ -123,7 +123,7 @@ select:focus-visible {
     align-items: center;
 }
 
-.poster__image, .poster__content {
+.poster_image, .poster_content {
     width: 50%;
 }
 
@@ -148,6 +148,7 @@ select:focus-visible {
     margin: 20px 10px;
     padding: 20px;
     border-radius: 10px;
+    align-items: center;
 }
 
 .card > img {

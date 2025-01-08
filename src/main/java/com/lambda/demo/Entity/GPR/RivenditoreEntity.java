@@ -35,7 +35,7 @@ public class RivenditoreEntity {
     private String indirizzo;
 
 
-    @OneToMany(mappedBy = "rivenditore")
+    @OneToMany(mappedBy = "rivenditore", fetch = FetchType.EAGER)
     private List<InserzioneEntity> inserzioni = new ArrayList<>();
 
 

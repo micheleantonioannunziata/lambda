@@ -11,7 +11,9 @@
 
 <div th:replace="fragments :: headerNormal"></div>
 
-<div id="globalArea" class="pdHead pdInline">
+<div class="bigText textCenter pdHead pdInline" th:text="${session.rivenditore.getRagioneSociale()}"></div>
+
+<div id="globalArea" class="pdInline mt20">
     <div id="areas">
         <div class="bigText clickable violet" id="insertionAreaBtn">Area Inserzioni</div>
         <div class="bigText mt20 clickable" id="dataAreaBtn">Area Dati</div>
@@ -20,8 +22,12 @@
 
     <div id="contents" class="scale-in-center">
         <div id="insertionArea" class="scale-in-center">
-            <button class="violetBtn smallText" style="font-weight: 700;">
-                <a th:href="@{selectProduct}" style="color: white;">Aggiungi inserzione</a></button>
+            <button class="violetBtn smallText clickable" style="font-weight: 700;">
+                <a th:href="@{selectProduct}" style="color: white;">Aggiungi inserzione</a>
+            </button>
+            <form action="vendorLogout" method="post" class="topRight">
+                <button class="violetBtn smallText clickable" style="font-weight: 700;" type="submit">Logout</button>
+            </form>
             <div class="cardContainer mt20">
                 <div class="card shadow" th:each="insertion: ${session.rivenditore.getInserzioni()}">
                     <img th:src="${insertion.getProdotto().getSuperProdotto().getImmagine()}" alt="">
@@ -29,7 +35,7 @@
 
                         <div class="nameBtn">
                             <span class="midText" th:text="${insertion.getProdotto().getSuperProdotto().getMarca() + ' ' + insertion.getProdotto().getSuperProdotto().getModello()}"></span>
-                            <button class="violetBtn smallText" style="font-weight: 700;">
+                            <button class="violetBtn smallText clickable" style="font-weight: 700;">
                                 <a href="userDataUpdate.html" style="color: white;">Modifica</a></button>
                         </div>
 
@@ -53,17 +59,23 @@
             </div>
         </div>
 
-        <div id="dataArea" class="scale-in-center hidden shadow">
+        <div id="dataArea" class="scale-in-center hidden">
             <div class="bigText" style="font-weight: 700;">Dati</div>
             <div class="midText mt20">Ragione Sociale<br><span class="grey" th:text="${session.rivenditore.getRagioneSociale()}"></span></div>
             <div class="midText mt20">Partita IVA<br><span class="grey" th:text="${session.rivenditore.getPartitaIva()}"></span></div>
             <div class="midText mt20">Indirizzo<br><span class="grey" th:text="${session.rivenditore.getIndirizzo()}"></span></div>
             <div class="midText mt20">Email<br><span class="grey" th:text="${session.rivenditore.getEmail()}"></span></div>
-            <a th:href="@{/vendorDataUpdate}"><button class="violetBtn topRight smallText" style="font-weight: 700;">Modifica</button></a>
+            <a th:href="@{/vendorDataUpdate}"><button class="violetBtn topRight clickable smallText" style="font-weight: 700;">Modifica</button></a>
+            <form action="vendorLogout" method="post" class="mt50 topRight">
+                <button class="violetBtn smallText clickable" style="font-weight: 700; min-width: 120px" type="submit">Logout</button>
+            </form>
         </div>
 
         <div id="statsArea" class="scale-in-center hidden">
             <div class="bigText" style="font-weight: 700;">Statistiche</div>
+            <form action="vendorLogout" method="post" class="topRight">
+                <button class="violetBtn clickable smallText" style="font-weight: 700;" type="submit">Logout</button>
+            </form>
         </div>
     </div>
 </div>

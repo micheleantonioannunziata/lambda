@@ -24,15 +24,16 @@
         <div id="dataArea" class="scale-in-center">
             <div class="bigText" style="font-weight: 700;">Dati personali</div>
             <div class="midText mt20">Lambda Points<br>
-                <span class="violet" th:text="${session.acquirente.getSaldo()}"><img th:src="@{/images/coin.svg}"></span></div>
+                <span class="violet" th:text="${session.acquirente.getSaldo()}"></span>
+            </div>
             <div class="midText mt20">Nome<br><span class="grey" th:text="${session.acquirente.getNome()}"></span></div>
             <div class="midText mt20">Cognome<br><span class="grey" th:text="${session.acquirente.getCognome()}"></span></div>
             <div class="midText mt20">Indirizzo<br><span class="grey" th:text="${session.acquirente.getIndirizzo()}"></span></div>
             <div class="midText mt20">Email<br><span class="grey" th:text="${session.acquirente.getEmail()}"></span></div>
-            <a th:href="@{/userDataUpdate}"><button class="violetBtn topRight smallText" style="font-weight: 700;">Modifica</button></a>
+            <a th:href="@{/userDataUpdate}"><button class="violetBtn topRight smallText clickable" style="font-weight: 700;">Modifica</button></a>
 
             <form action="purchaserLogout" class="mt50 topRight">
-                <button class="violetBtn smallText" style="font-weight: 700;" type="submit">Logout</button>
+                <button class="violetBtn smallText clickable" style="font-weight: 700; min-width: 120px" type="submit">Logout</button>
             </form>
         </div>
 
@@ -40,7 +41,8 @@
             <div class="bigText" style="font-weight: 700;">Cronologia ordini</div>
             <div class="orderRow w100 shadow mt20" th:each="order : ${session.acquirente.getOrdini()}">
                 <div class="smallText" th:text="${'ID: ' + order.getId()}"></div>
-                <div class="smallText" th:text = "${'Totale: € ' + order.getPrezzo()}"></div>
+                <div class="smallText" th:if="${(order.getMetodoDiPagamento().equalsIgnoreCase('Lambda points'))}" th:text="${(T(java.lang.Math).round((order.getPrezzo()) / 10.0)) + ' Lambda points'}"></div>
+                <div class="smallText" th:unless="${(order.getMetodoDiPagamento().equalsIgnoreCase('Lambda points'))}" th:text = "${'Totale: € ' + order.getPrezzo()}"></div>
                 <img th:src="@{/images/down.svg}" alt="">
                 <div class="cardContainer w100 hidden">
                     <div class="card shadow w100" th:each="composizione : ${order.getComposizioni()}">
@@ -79,25 +81,42 @@
 
         <div id="tradeInArea" class="scale-in-center hidden">
             <div class="bigText" style="font-weight: 700;">Cronologia permute</div>
-                <div class="cardContainer w100">
-                    <div class="card shadow w100" th:each="tradeIn : ${session.acquirente.getPermute()}">
-                        <img th:src="${tradeIn.getSuperProdotto().getImmagine()}" alt="">
-                        <div class="infoBlock">
-                            <span class="normalText" th:text="${tradeIn.getSuperProdotto().getMarca() + ' ' + tradeIn.getSuperProdotto().getModello()}"></span>
-                            <div class="italic smallText mt10"
-                                 th:text="|Condizione generale: ${tradeIn.getCondizioneGenerale()}, batteria: ${tradeIn.getStatoBatteria()}%,
-                                            ram: ${tradeIn.getRam()}GB, spazio archiviazione: ${tradeIn.getSpazioArchiviazione()}GB, colore: ${tradeIn.getColore()}|">
-                            </div>
+            <div class="cardContainer w100">
+                <div class="card shadow w100" th:each="tradeIn : ${session.acquirente.getPermute()}">
+                    <img th:src="${tradeIn.getSuperProdotto().getImmagine()}" alt="">
+                    <div class="infoBlock">
+                        <span class="normalText" th:text="${tradeIn.getSuperProdotto().getMarca() + ' ' + tradeIn.getSuperProdotto().getModello()}"></span>
+                        <div class="italic smallText mt20"
+                             th:text="|Condizione generale: ${tradeIn.getCondizioneGenerale()}|">
+                        </div>
 
-                            <div class="italic normalText mt20"
-                                 th:text="|Lambda Points guadagnati: ${tradeIn.getLambdaPoints()}|">
-                            </div>
+                        <div class="italic smallText"
+                             th:text="|Batteria: ${tradeIn.getStatoBatteria()}%|">
+                        </div>
+
+                        <div class="italic smallText"
+                             th:text="|Ram: ${tradeIn.getRam()}GB|">
+                        </div>
+
+                        <div class="italic smallText"
+                             th:text="|Spazio archiviazione: ${tradeIn.getSpazioArchiviazione()}GB|">
+                        </div>
+
+                        <div class="italic smallText"
+                             th:text="|Colore: ${tradeIn.getColore()}|">
+                        </div>
+
+                        <div class="italic normalText mt20" style="display: flex; gap: 10px; align-items: center;">
+                            Guadagno:
+                            <span class="midText violet" th:text="${tradeIn.getLambdaPoints()}"></span>
+                            <img th:src="@{/images/coin.svg}" alt="" width="30px">
                         </div>
                     </div>
                 </div>
-                <form action="purchaserLogout" class="topRight">
-                    <button class="violetBtn smallText" style="font-weight: 700;" type="submit">Logout</button>
-                </form>
+            </div>
+            <form action="purchaserLogout" class="topRight">
+                <button class="violetBtn smallText" style="font-weight: 700;" type="submit">Logout</button>
+            </form>
         </div>
 
     </div>
