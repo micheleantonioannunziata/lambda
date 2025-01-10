@@ -1,7 +1,6 @@
 package com.lambda.demo.Control.GA;
 
 import com.lambda.demo.Service.GA.Carrello.CarrelloService;
-import com.lambda.demo.Utility.Validator;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -5,13 +5,9 @@ import com.lambda.demo.Entity.GA.Carrello.FormazioneCarrello.FormazioneCarrelloE
 import com.lambda.demo.Entity.GA.Carrello.FormazioneCarrello.FormazioneCarrelloEntityId;
 import com.lambda.demo.Entity.GPR.AcquirenteEntity;
 import com.lambda.demo.Exception.GPR.GPRException;
-import com.lambda.demo.Repository.GA.Carrello.CarrelloRepository;
-import com.lambda.demo.Repository.GA.Carrello.FormazioneCarrelloRepository;
-import com.lambda.demo.Repository.GPR.AcquirenteRepository;
 import com.lambda.demo.Service.GA.Carrello.CarrelloService;
 import com.lambda.demo.Service.GPR.Acquirente.AcquirenteService;
 import com.lambda.demo.Utility.SessionManager;
-import jakarta.persistence.EntityManager;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.transaction.Transactional;

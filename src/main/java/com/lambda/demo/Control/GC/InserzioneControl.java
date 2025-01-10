@@ -2,14 +2,13 @@ package com.lambda.demo.Control.GC;
 
 
 import com.lambda.demo.Entity.GC.Inserzione.InserzioneEntity;
-import com.lambda.demo.Entity.GC.Inserzione.InserzioneEntityId;
 import com.lambda.demo.Entity.GC.Prodotto.ProdottoEntity;
 import com.lambda.demo.Entity.GC.Prodotto.ProdottoEntityId;
 import com.lambda.demo.Entity.GC.SuperProdottoEntity;
 import com.lambda.demo.Entity.GPR.RivenditoreEntity;
+import com.lambda.demo.Exception.GA.GestionePermuta.InvalidColorException;
 import com.lambda.demo.Exception.GC.GCException;
 import com.lambda.demo.Service.GC.Inserzione.InserzioneService;
-import com.lambda.demo.Service.GC.Prodotto.ProdottoService;
 import com.lambda.demo.Service.GC.SuperProdotto.SuperProdottoService;
 import com.lambda.demo.Service.GPR.Rivenditore.RivenditoreService;
 import com.lambda.demo.Utility.SessionManager;
@@ -26,7 +25,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Controller
 public class InserzioneControl {
@@ -38,16 +36,13 @@ public class InserzioneControl {
     @Autowired
     private InserzioneService inserzioneService;
 
-    @Autowired
-    private ProdottoService prodottoService;
-
 
     @Autowired
     private RivenditoreService rivenditoreService;
 
 
-    @RequestMapping(value = "/searchProductInfo", method = RequestMethod.GET)
-    public String searchProductInfo(HttpServletRequest req, HttpServletResponse res, Model model) {
+    @RequestMapping(value = "/redirectToTechnicalRequirementsForm", method = RequestMethod.GET)
+    public String redirectToTechnicalRequirementsForm(HttpServletRequest req, HttpServletResponse res, Model model) {
         String id = req.getParameter("id");
         List<ProdottoEntity> products = new ArrayList<>();
 
@@ -55,17 +50,16 @@ public class InserzioneControl {
         products = superProdottoService.findProductsBySuperProdottoId(Integer.parseInt(id));
 
 
-        Set<Integer> ramValues = products.stream()
-                .map(p -> p.getId().getRam())
-                .collect(Collectors.toSet());
+        Set<Integer> ramValues = new HashSet<>();
+        Set<Integer> storageValues = new HashSet<>();
+        Set<String> colorValues = new HashSet<>();
 
-        Set<Integer> storageValues = products.stream()
-                .map(p -> p.getId().getSpazioArchiviazione())
-                .collect(Collectors.toSet());
+        for (ProdottoEntity p : products) {
+            ramValues.add(p.getId().getRam());
+            storageValues.add(p.getId().getSpazioArchiviazione());
+            colorValues.add(p.getId().getColore());
+        }
 
-        Set<String> colorValues = products.stream()
-                .map(p -> p.getId().getColore())
-                .collect(Collectors.toSet());
 
         model.addAttribute("ramValues", ramValues);
         model.addAttribute("storageValues", storageValues);
@@ -75,6 +69,93 @@ public class InserzioneControl {
 
 
         return "technicalRequirementsForm";
+    }
+
+    @RequestMapping(value = "/techRequirements", method = RequestMethod.GET)
+    public String techRequirements(HttpServletRequest req, HttpServletResponse res, Model model) throws GCException {
+        String ram = req.getParameter("ram");
+        String spazioArchiviazione = req.getParameter("storage");
+        String colore = req.getParameter("color");
+        String idSuperProdotto = req.getParameter("idSuperProdotto");
+
+        try {
+            inserzioneService.checkTechRequirements(idSuperProdotto, ram, spazioArchiviazione, colore);
+        }catch (GCException | InvalidColorException gcException){
+            throw new GCException(gcException.getMessage());
+        }
+
+        model.addAttribute("ram", ram);
+        model.addAttribute("storage", spazioArchiviazione);
+        model.addAttribute("color", colore);
+        model.addAttribute("idSuperProdotto", idSuperProdotto);
+
+        return "priceQuantityForm";
+    }
+
+    @RequestMapping(value = "/priceQuantity", method = RequestMethod.GET)
+    public String priceQuantity(HttpServletRequest req, HttpServletResponse res, Model model) throws GCException {
+        String ram = req.getParameter("ram");
+        String storage = req.getParameter("spazioArchiviazione");
+        String colore = req.getParameter("colore");
+        String idSuperProdotto = req.getParameter("idSuperProdotto");
+        String quantity = req.getParameter("quantity");
+        String prezzoBase = req.getParameter("prezzoBase");
+        String scontoStandard = req.getParameter("scontoStandard");
+        String scontoPremium = req.getParameter("scontoPremium");
+
+
+
+        try {
+            inserzioneService.checkTechRequirements(idSuperProdotto, ram, storage, colore);
+            inserzioneService.checkPriceQuantity(quantity, prezzoBase, scontoStandard, scontoPremium);
+        } catch (GCException | InvalidColorException e) {
+            throw new GCException(e.getMessage());
+        }
+
+
+        model.addAttribute("ram", ram);
+        model.addAttribute("spazioArchiviazione", storage);
+        model.addAttribute("colore", colore);
+        model.addAttribute("idSuperProdotto", idSuperProdotto);
+        model.addAttribute("quantity", quantity);
+        model.addAttribute("prezzoBase", prezzoBase);
+        model.addAttribute("scontoStandard", scontoStandard);
+        model.addAttribute("scontoPremium", scontoPremium);
+
+
+        return "addInsertionSummary";
+    }
+
+    @RequestMapping(value = "/addInsertion", method = RequestMethod.POST)
+    public String addInsertion(HttpServletRequest req, HttpServletResponse res) throws Exception {
+        String action = req.getParameter("action");
+        if (action.equals("conferma")) {
+
+            String ram = req.getParameter("ram");
+            String storage = req.getParameter("spazioArchiviazione");
+            String colore = req.getParameter("colore");
+            int idSuperProdotto = Integer.parseInt(req.getParameter("idSuperProdotto"));
+            String quantity = req.getParameter("quantity");
+            String prezzoBase = req.getParameter("prezzoBase");
+            String scontoStandard = req.getParameter("scontoStandard");
+            String scontoPremium = req.getParameter("scontoPremium");
+            String partitaIva = SessionManager.getRivenditore(req).getPartitaIva();
+
+            ProdottoEntityId prodottoEntityId = new ProdottoEntityId(idSuperProdotto, Integer.parseInt(ram), Integer.parseInt(storage), colore);
+
+            ProdottoEntity prodottoEntity = new ProdottoEntity();
+            prodottoEntity.setId(prodottoEntityId);
+
+
+            try {
+                inserzioneService.addInserzione(prodottoEntity, prezzoBase, quantity, scontoStandard, scontoPremium);
+            }catch (GCException e){
+                throw new Exception(e.getMessage());
+            }
+
+        }
+
+        return "redirect:/vendorArea";
     }
 
 
@@ -116,29 +197,20 @@ public class InserzioneControl {
             }
         }
 
-        // Output di debug per verificare i valori
-        System.out.println("RAM: " + values.get("ram"));
-        System.out.println("Storage: " + values.get("storage"));
-        System.out.println("Color: " + values.get("color"));
-
 
         JSONArray jsonArray = new JSONArray();
 
         int index = 0;
 
         if (partitaIvaRivenditore != null){
-            System.out.println("PartitaIvaRivenditore: " + partitaIvaRivenditore);
-
             InserzioneEntity inserzioneEntity = null;
             inserzioneEntity = inserzioneService.getInsertionsCombinationsByVendor(partitaIvaRivenditore, idSuperProdotto,
                     Integer.parseInt(values.get("ram")), Integer.parseInt(values.get("storage")), values.get("color"));
 
 
             if(inserzioneEntity != null) {
-                System.out.println("InserzioneEntity: " + inserzioneEntity.getPrezzoBase());
-
                 JSONObject obj = new JSONObject();
-                obj.put("prezzo", inserzioneEntity.getPrezzoBase());
+                obj.put("prezzo", inserzioneEntity.returnDiscountedPrice(SessionManager.getAcquirente(req).isPremium()));
                 jsonArray.put(obj);
             }
         }else{
@@ -157,8 +229,6 @@ public class InserzioneControl {
                 JSONObject obj = new JSONObject();
 
                 obj.put("ram"+index, prod.getId().getRam());
-
-                System.out.println("ram" + index + ":" + prod.getId().getRam());
 
                 obj.put("storage"+index, prod.getId().getSpazioArchiviazione());
                 obj.put("color"+index, prod.getId().getColore());
@@ -181,122 +251,7 @@ public class InserzioneControl {
 
 
 
-    @RequestMapping(value = "/techRequirements", method = RequestMethod.GET)
-    public String techRequirements(HttpServletRequest req, HttpServletResponse res, Model model) {
-        String ramReq = req.getParameter("ram");
-        String storageReq = req.getParameter("storage");
-        String color = req.getParameter("color");
-        String idSuperProdottoReq = req.getParameter("idSuperProdotto");
-        int idSuperProdotto = Integer.parseInt(idSuperProdottoReq);
 
-
-        int ram = Integer.parseInt(ramReq);
-        int storage = Integer.parseInt(storageReq);
-
-
-        System.out.println("RAM: " + ram);
-        System.out.println("Storage: " + storage);
-        System.out.println("Color: " + color);
-
-        model.addAttribute("ram", ram);
-        model.addAttribute("storage", storage);
-        model.addAttribute("color", color);
-        model.addAttribute("idSuperProdotto", idSuperProdotto);
-
-        return "priceQuantityForm";
-    }
-
-    @RequestMapping(value = "/priceQuantity", method = RequestMethod.GET)
-    public String priceQuantity(HttpServletRequest req, HttpServletResponse res, Model model) {
-        String ramReq = req.getParameter("ram");
-        String storageReq = req.getParameter("spazioArchiviazione");
-        String colore = req.getParameter("colore");
-        String idSuperProdottoReq = req.getParameter("idSuperProdotto");
-        int idSuperProdotto = Integer.parseInt(idSuperProdottoReq);
-
-
-        System.out.println("RAM: " + ramReq);
-        System.out.println(storageReq);
-        System.out.println(colore);
-        System.out.println(idSuperProdotto);
-
-        //SANNA FA E CONTROLLI
-        int ram = Integer.parseInt(ramReq);
-        int storage = Integer.parseInt(storageReq);
-
-        String quantityReq = req.getParameter("quantity");
-        int quantity = Integer.parseInt(quantityReq);
-
-        String prezzoReq = req.getParameter("prezzoBase");
-        double prezzoBase = Double.parseDouble(prezzoReq);
-
-
-        String scontoStandardReq = req.getParameter("scontoStandard");
-        int scontoStandard = Integer.parseInt(scontoStandardReq);
-
-        String scontoPremiumReq = req.getParameter("scontoPremium");
-        int scontoPremium = Integer.parseInt(scontoPremiumReq);
-
-
-        model.addAttribute("ram", ram);
-        model.addAttribute("spazioArchiviazione", storage);
-        model.addAttribute("colore", colore);
-        model.addAttribute("idSuperProdotto", idSuperProdotto);
-        model.addAttribute("quantity", quantity);
-        model.addAttribute("prezzoBase", prezzoBase);
-        model.addAttribute("scontoStandard", scontoStandard);
-        model.addAttribute("scontoPremium", scontoPremium);
-
-
-        return "addInsertionSummary";
-    }
-
-    @RequestMapping(value = "/addInsertion", method = RequestMethod.POST)
-    public String addInsertion(HttpServletRequest req, HttpServletResponse res) throws Exception {
-        String action = req.getParameter("action");
-        if (action.equals("conferma")) {
-
-            String ram = req.getParameter("ram");
-            String storage = req.getParameter("spazioArchiviazione");
-            String colore = req.getParameter("colore");
-            int idSuperProdotto = Integer.parseInt(req.getParameter("idSuperProdotto"));
-            String quantity = req.getParameter("quantity");
-            String prezzoBase = req.getParameter("prezzoBase");
-            String scontoStandard = req.getParameter("scontoStandard");
-            String scontoPremium = req.getParameter("scontoPremium");
-            String partitaIva = SessionManager.getRivenditore(req).getPartitaIva();
-
-            ProdottoEntityId prodottoEntityId = new ProdottoEntityId(idSuperProdotto, Integer.parseInt(ram), Integer.parseInt(storage), colore);
-
-            ProdottoEntity prodottoEntity = new ProdottoEntity();
-            prodottoEntity.setId(prodottoEntityId);
-
-
-            try {
-                inserzioneService.checkAddInserzione(prodottoEntity,
-                        prezzoBase, quantity, scontoStandard, scontoPremium);
-
-
-                inserzioneService.addInserzione(prodottoEntity, partitaIva, prezzoBase, quantity, scontoStandard, scontoPremium);
-            }catch (GCException e){
-                throw new Exception(e.getMessage());
-            }
-
-
-            InserzioneEntityId inserzioneEntityId = new InserzioneEntityId(partitaIva, prodottoEntityId);
-            InserzioneEntity justAddedInsertion = new InserzioneEntity();
-            justAddedInsertion = inserzioneService.findById(inserzioneEntityId);
-
-            RivenditoreEntity rivenditore = SessionManager.getRivenditore(req);
-            rivenditore.getInserzioni().add(justAddedInsertion);
-
-            SessionManager.setRivenditore(req, rivenditore);
-
-
-        }
-
-        return "redirect:/vendorArea";
-    }
 
 
     @RequestMapping (value = "/redirectToInsertionOverview", method = RequestMethod.POST)

@@ -2,8 +2,9 @@ package com.lambda.demo.Service.GPR.Acquirente;
 
 import com.lambda.demo.Entity.GPR.AcquirenteEntity;
 import com.lambda.demo.Exception.GA.GestioneOrdini.InvalidAddressException;
+import com.lambda.demo.Exception.GPR.AccessoAcquirente.InvalidNameException;
+import com.lambda.demo.Exception.GPR.AccessoAcquirente.InvalidSurnameException;
 import com.lambda.demo.Exception.GPR.*;
-import com.lambda.demo.Exception.GPR.AccessoAcquirente.*;
 import com.lambda.demo.Repository.GPR.AcquirenteRepository;
 import com.lambda.demo.Utility.Encrypt;
 import com.lambda.demo.Utility.Validator;

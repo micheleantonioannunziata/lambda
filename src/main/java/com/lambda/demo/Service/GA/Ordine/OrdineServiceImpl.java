@@ -8,13 +8,13 @@ import com.lambda.demo.Entity.GA.Ordine.OrdineEntity;
 import com.lambda.demo.Entity.GPR.AcquirenteEntity;
 import com.lambda.demo.Exception.GA.GAException;
 import com.lambda.demo.Exception.GA.GestioneOrdini.*;
+import com.lambda.demo.Repository.GA.Carrello.CarrelloRepository;
 import com.lambda.demo.Repository.GA.Ordine.ComposizioneRepository;
 import com.lambda.demo.Repository.GA.Ordine.OrdineRepository;
 import com.lambda.demo.Repository.GPR.AcquirenteRepository;
 import com.lambda.demo.Utility.SessionManager;
 import com.lambda.demo.Utility.Validator;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,9 +32,14 @@ public class OrdineServiceImpl implements OrdineService{
     @Autowired
     private AcquirenteRepository acquirenteRepository;
 
+    @Autowired
+    private CarrelloRepository carrelloRepository;
+
+    @Autowired
+    private HttpServletRequest request;
 
     @Override
-    public void checkout(String destinatario, String indirizzo, String intestatario, String numeroCarta, String cvv, String scadenza) throws GAException {
+    public void cardCheckoutValidation(String destinatario, String indirizzo, String intestatario, String numeroCarta, String cvv, String scadenza) throws GAException {
         if (!Validator.isValidReceiver(destinatario))
             throw new InvalidReceiverException("Destinatario non rispetta il formato richiesto!");
 
@@ -52,51 +57,60 @@ public class OrdineServiceImpl implements OrdineService{
 
         if (!Validator.isValidExpirationDate(scadenza))
             throw new InvalidExpirationDateException("Scadenza della carta non rispetta il formato richiesto!");
+    }
 
+    @Override
+    public void lambdaCheckoutValidation(String destinatario, String indirizzo) throws GAException {
+        if (!Validator.isValidReceiver(destinatario))
+            throw new InvalidReceiverException("Destinatario non rispetta il formato richiesto!");
+
+        if (!Validator.isValidAddress(indirizzo))
+            throw new InvalidAddressException("Indirizzo non rispetta il formato richiesto!");
+
+        AcquirenteEntity acquirente = SessionManager.getAcquirente(request);
+        int saldo = acquirente.getSaldo();
+        if ((saldo * 10) < (SessionManager.getCarrello(request).getPrezzoProvvisorio() + 3.99))
+            throw new InsufficientLambdaPointsException("Errore: il saldo attuale di lambda points non è sufficiente per la finalizzazione dell'ordine. Si prega di inserire un metodo di pagamento alternativo.");
 
     }
 
-    @Transactional
     @Override
-    public void checkoutFinalization(boolean lambda, String destinatario, String indirizzo, String numeroCarta, HttpServletRequest req) {
-        CarrelloEntity carrelloEntity = SessionManager.getCarrello(req);
-        List<FormazioneCarrelloEntity> cartItems = carrelloEntity.getCarrelloItems();
+    public void checkoutFinalization(String destinatario, String indirizzo, String intestatario, String numeroCarta, String cvv, String scadenza) throws GAException {
+        boolean lambda = Boolean.parseBoolean(request.getParameter("lambda"));
 
+        if (lambda && (!intestatario.isBlank() || !numeroCarta.isBlank() || !cvv.isBlank() || !scadenza.isBlank()))
+            throw new GAException("Errore: Hai selezionato i Lambda Points come metodo di pagamento, ma alcuni campi relativi a un altro metodo di pagamento (carta di credito) risultano compilati. Verifica i dati e riprova. Potrebbe essere stato alterato il DOM della pagina.");
 
-        System.out.println(destinatario);
-        System.out.println(indirizzo);
-        System.out.println(numeroCarta);
+        if (lambda) lambdaCheckoutValidation(destinatario, indirizzo);
+        if (!lambda) cardCheckoutValidation(destinatario, indirizzo, intestatario, numeroCarta, cvv, scadenza);
+
+        AcquirenteEntity acquirente = SessionManager.getAcquirente(request);
+
+        CarrelloEntity carrello = SessionManager.getCarrello(request);
+        List<FormazioneCarrelloEntity> cartItems = carrello.getCarrelloItems();
 
         OrdineEntity ordineEntity = new OrdineEntity();
-        ordineEntity.setAcquirente(SessionManager.getAcquirente(req));
-        ordineEntity.setPrezzo(carrelloEntity.getPrezzoProvvisorio() + 3.99); //da rivedere
-        ordineEntity.setStato("in esecuzione");
-        ordineEntity.setDestinatario(destinatario);
-        ordineEntity.setIndirizzoSpedizione(indirizzo);
-
-
+        ordineEntity.setAcquirente(acquirente); ordineEntity.setPrezzo(carrello.getPrezzoProvvisorio() + 3.99); ordineEntity.setStato("In esecuzione");
+        ordineEntity.setDestinatario(destinatario); ordineEntity.setIndirizzoSpedizione(indirizzo);
 
         if (lambda) {
             int lambdaPoints = (int) Math.round(ordineEntity.getPrezzo() / 10.0);
-            int idAcquirente = SessionManager.getAcquirente(req).getId();
-            int updatedSaldo = SessionManager.getAcquirente(req).getSaldo() - lambdaPoints;
+            int idAcquirente = SessionManager.getAcquirente(request).getId();
+            int updatedSaldo = SessionManager.getAcquirente(request).getSaldo() - lambdaPoints;
 
-            SessionManager.getAcquirente(req).setSaldo(updatedSaldo);
+            SessionManager.getAcquirente(request).setSaldo(updatedSaldo);
             ordineEntity.setMetodoDiPagamento("lambda points");
             ordineEntity.setLambdaPointsSpesi(lambdaPoints);
-
             acquirenteRepository.updateSaldoLambdaPoints(updatedSaldo, idAcquirente);
         }else{
             ordineEntity.setMetodoDiPagamento("carta di debito");
             ordineEntity.setUltimeQuattroCifre(numeroCarta.substring(numeroCarta.length() - 4));
         }
 
-
         ordineRepository.save(ordineEntity);
 
         List<ComposizioneEntity> orderItems = new ArrayList<>();
         ComposizioneEntityId composizioneEntityId = new ComposizioneEntityId();
-
         for (FormazioneCarrelloEntity cartItem: cartItems){
             composizioneEntityId.setIdOrdine(ordineEntity.getId());
             composizioneEntityId.setIdInserzione(cartItem.getInserzione().getId());
@@ -107,7 +121,7 @@ public class OrdineServiceImpl implements OrdineService{
             orderItem.setInserzione(cartItem.getInserzione());
             orderItem.setQuantita(cartItem.getQuantita());
             //prezzoAcquisto di ordine contiene il prezzo di acquisto di un singolo articolo, indipendetemente dalla quantità specificata
-            orderItem.setPrezzoAcquisto(cartItem.getInserzione().getPrezzoBase());
+            orderItem.setPrezzoAcquisto(cartItem.getInserzione().returnDiscountedPrice(acquirente.isPremium()));
 
             ordineEntity.addComposizione(orderItem);
             orderItems.add(orderItem);
@@ -115,12 +129,16 @@ public class OrdineServiceImpl implements OrdineService{
 
 
         composizioneRepository.saveAll(orderItems);
+
         cartItems.clear();
-        carrelloEntity.setPrezzoProvvisorio(0);
+        carrello.setPrezzoProvvisorio(0);
+        carrelloRepository.deleteCarrelloByAcquirente(acquirenteRepository.findByEmail(acquirente.getEmail()).getId());
+        carrelloRepository.insert(acquirenteRepository.findByEmail(acquirente.getEmail()).getId(), carrello.getPrezzoProvvisorio());
+        SessionManager.setCarrello(request, carrello);
 
-        AcquirenteEntity acquirente = SessionManager.getAcquirente(req);
-        System.out.println(acquirente.getId());
-
-
+        SessionManager.setAcquirente(request, acquirente);
     }
+
+
+
 }

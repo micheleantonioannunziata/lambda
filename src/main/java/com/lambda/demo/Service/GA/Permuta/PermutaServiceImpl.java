@@ -18,6 +18,7 @@ import com.lambda.demo.Repository.GPR.AcquirenteRepository;
 import com.lambda.demo.Utility.SessionManager;
 import com.lambda.demo.Utility.Validator;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,9 +36,11 @@ public class PermutaServiceImpl implements PermutaService {
     @Autowired
     private SuperProdottoRepository superProdottoRepository;
 
+    @Autowired
+    private HttpServletRequest request;
+
     @Override
     public void checkAddPermuta(String ramReq, String spazioArchiviazioneReq, String batteriaReq, String condizioneGenerale, String colore, List<String> immagine) throws GAException, InvalidRAMException, InvalidStorageException {
-
     if (!Validator.isValidGeneralCondition(condizioneGenerale))
         throw new InvalidGeneralConditionException("Valore di Condizione generale non ammesso!");
 
@@ -62,25 +65,34 @@ public class PermutaServiceImpl implements PermutaService {
     }
 
     @Override
-    public void addPermuta(int superProdottoId, int ram, int spazioArchiviazione, int batteria, String condizioneGenerale, String colore, int lambdaPoints, HttpServletRequest req) {
-        PermutaEntityId permutaEntityId = new PermutaEntityId(SessionManager.getAcquirente(req).getId(), superProdottoId, LocalDateTime.now());
+    public void addPermuta(int ram, int spazioArchiviazione, int batteria, String condizioneGenerale, String colore, List<String> immagine) throws GAException, InvalidStorageException, InvalidRAMException {
 
-        AcquirenteEntity acquirenteEntity =  acquirenteRepository.findById(SessionManager.getAcquirente(req).getId()).get();
+        //HttpSession session = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest().getSession();
+
+        HttpSession session = request.getSession();
+        checkAddPermuta(String.valueOf(ram), String.valueOf(spazioArchiviazione), String.valueOf(batteria), condizioneGenerale, colore, immagine);
+        AcquirenteEntity acquirenteEntity = (AcquirenteEntity) session.getAttribute("acquirente");
+
+        int superProdottoId = (int) request.getAttribute("superProdottoId");
+        PermutaEntityId permutaEntityId = new PermutaEntityId(acquirenteEntity.getId(), superProdottoId, LocalDateTime.now());
+
         SuperProdottoEntity superProdottoEntity = superProdottoRepository.findById(superProdottoId);
+        int lambdaPoints = evaluateLambdaPoints(superProdottoEntity, condizioneGenerale, String.valueOf(batteria));
 
-        PermutaEntity permutaEntity = new PermutaEntity(permutaEntityId, superProdottoEntity, acquirenteEntity, batteria, condizioneGenerale, ram, spazioArchiviazione, colore, lambdaPoints);
-
+        PermutaEntity permutaEntity = new PermutaEntity(permutaEntityId, superProdottoEntity, SessionManager.getAcquirente(request), batteria, condizioneGenerale, ram, spazioArchiviazione, colore, lambdaPoints);
         permutaRepository.save(permutaEntity);
 
+        acquirenteEntity.setSaldo(acquirenteEntity.getSaldo() + lambdaPoints);
 
-        SessionManager.getAcquirente(req).setSaldo(SessionManager.getAcquirente(req).getSaldo() + lambdaPoints);
+        acquirenteRepository.updateSaldoLambdaPoints(acquirenteEntity.getSaldo(), acquirenteEntity.getId());
 
-        acquirenteRepository.updateSaldoLambdaPoints(SessionManager.getAcquirente(req).getSaldo(), SessionManager.getAcquirente(req).getId());
-
-        List<PermutaEntity> permute = SessionManager.getAcquirente(req).getPermute();
+        List<PermutaEntity> permute = acquirenteEntity.getPermute();
         permute.add(permutaEntity);
-        SessionManager.getAcquirente(req).setPermute(permute);
+        acquirenteEntity.setPermute(permute);
+        SessionManager.setAcquirente(request, acquirenteEntity);
     }
+
+
 
 
     @Override

@@ -40,6 +40,7 @@ public class ProdottoControl {
         if (catalogName != null && !catalogName.isBlank()) {
 
             products = superProdottoService.findByName(catalogName);
+            model.addAttribute("catalogName", catalogName);
             model.addAttribute("products", products);
 
             return "catalog";

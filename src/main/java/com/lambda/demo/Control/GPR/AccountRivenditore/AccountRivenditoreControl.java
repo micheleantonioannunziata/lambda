@@ -4,17 +4,13 @@ import com.lambda.demo.Entity.GPR.RivenditoreEntity;
 import com.lambda.demo.Exception.GA.GestioneOrdini.InvalidAddressException;
 import com.lambda.demo.Exception.GPR.GPRException;
 import com.lambda.demo.Service.GPR.Rivenditore.RivenditoreService;
-import com.lambda.demo.Utility.Encrypt;
 import com.lambda.demo.Utility.SessionManager;
-import com.lambda.demo.Utility.Validator;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import java.io.IOException;
 
 @Controller
 public class AccountRivenditoreControl {

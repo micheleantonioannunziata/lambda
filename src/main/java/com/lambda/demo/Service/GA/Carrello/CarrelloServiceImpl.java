@@ -7,7 +7,10 @@ import com.lambda.demo.Entity.GC.Inserzione.InserzioneEntity;
 import com.lambda.demo.Entity.GC.Inserzione.InserzioneEntityId;
 import com.lambda.demo.Entity.GC.Prodotto.ProdottoEntityId;
 import com.lambda.demo.Exception.GA.GestionePermuta.InvalidColorException;
-import com.lambda.demo.Exception.GC.GestioneInserzione.*;
+import com.lambda.demo.Exception.GC.GestioneInserzione.InvalidQuantityException;
+import com.lambda.demo.Exception.GC.GestioneInserzione.InvalidRAMException;
+import com.lambda.demo.Exception.GC.GestioneInserzione.InvalidStorageException;
+import com.lambda.demo.Exception.GC.GestioneInserzione.ProductNotFoundException;
 import com.lambda.demo.Exception.GC.InvalidSuperProductIdException;
 import com.lambda.demo.Exception.GC.SuperProductNotFoundException;
 import com.lambda.demo.Exception.GPR.AccessoRivenditore.InvalidVATNumberException;
@@ -25,8 +28,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 
 @Service
@@ -96,7 +97,7 @@ public class CarrelloServiceImpl implements CarrelloService{
         else cartItems.get(itemIndex).setQuantita(cartItems.get(itemIndex).getQuantita() + 1);
 
 
-        carrello.setPrezzoProvvisorio(carrello.getPrezzoProvvisorio() + inserzione.getPrezzoBase());
+        carrello.setPrezzoProvvisorio(carrello.getPrezzoProvvisorio() + inserzione.returnDiscountedPrice(SessionManager.getAcquirente(request).isPremium()));
 
         SessionManager.setCarrello(request, carrello);
     }
@@ -119,7 +120,7 @@ public class CarrelloServiceImpl implements CarrelloService{
         if (itemToRemoveIndex == -1) throw new Exception("Inserzione non presente nel carrello - DOM probabilmente modificato");
 
         carrello.setPrezzoProvvisorio(carrello.getPrezzoProvvisorio() -
-                cartItems.get(itemToRemoveIndex).getInserzione().getPrezzoBase() * cartItems.get(itemToRemoveIndex).getQuantita());
+                cartItems.get(itemToRemoveIndex).getInserzione().returnDiscountedPrice(SessionManager.getAcquirente(req).isPremium()) * cartItems.get(itemToRemoveIndex).getQuantita());
 
         cartItems.remove(itemToRemoveIndex);
 
@@ -158,7 +159,7 @@ public class CarrelloServiceImpl implements CarrelloService{
 
             carrello.getCarrelloItems().get(itemToUpdateIndex).setQuantita(q);
 
-            double prezzoBase = carrello.getCarrelloItems().get(itemToUpdateIndex).getInserzione().getPrezzoBase();
+            double prezzoBase = carrello.getCarrelloItems().get(itemToUpdateIndex).getInserzione().returnDiscountedPrice(SessionManager.getAcquirente(req).isPremium());
             double oldTotal = oldQuantity * prezzoBase;
             double newTotal = q * prezzoBase;
 

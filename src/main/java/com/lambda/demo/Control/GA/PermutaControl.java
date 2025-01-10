@@ -42,8 +42,8 @@ public class PermutaControl {
      * @see HttpServletResponse
      * @see Model
      */
-    @RequestMapping(value="/categories", method = RequestMethod.POST)
-    public String selectCategories(HttpServletRequest req, HttpServletResponse res, Model model){
+    @RequestMapping(value="/redirectToTradeInCategory", method = RequestMethod.POST)
+    public String redirectToTradeInCategory(HttpServletRequest req, HttpServletResponse res, Model model){
         List<CategoriaEntity> categories = categoriaService.getAllCategories();
 
         model.addAttribute("categories", categories);
@@ -130,6 +130,8 @@ public class PermutaControl {
         model.addAttribute("colore", colore);
         model.addAttribute("condizioneGenerale", condizioneGenerale);
         model.addAttribute("batteria", batteria);
+        model.addAttribute("nomeImg", img.getFirst());
+        model.addAttribute("pesoImg", img.getLast());
 
 
         int lambdaPoints = permutaService.evaluateLambdaPoints(superProdottoEntity, condizioneGenerale, batteria);
@@ -161,12 +163,20 @@ public class PermutaControl {
             String colore = req.getParameter("colore");
             String condizioneGenerale = req.getParameter("condizioneGenerale");
             String batteria = req.getParameter("batteria");
-            String lambdaPoints = req.getParameter("lambdaPoints");
+
+            List<String> img = new ArrayList<>();
+            img.add(req.getParameter("nomeImg"));
+            img.add(req.getParameter("pesoImg"));
 
 
-            permutaService.addPermuta(Integer.parseInt(superProdottoId), Integer.parseInt(ram),
-                                            Integer.parseInt(spazioArchiviazione), Integer.parseInt(batteria),
-                                            condizioneGenerale, colore, Integer.parseInt(lambdaPoints), req);
+            req.setAttribute("superProdottoId", Integer.parseInt(superProdottoId));
+            try {
+                permutaService.addPermuta(Integer.parseInt(ram),
+                        Integer.parseInt(spazioArchiviazione), Integer.parseInt(batteria),
+                        condizioneGenerale, colore, img);
+            }catch (GAException gaException){
+                throw new GAException(gaException.getMessage());
+            }
 
         }
 

@@ -44,4 +44,10 @@ public interface RivenditoreRepository extends JpaRepository<RivenditoreEntity, 
             WHERE i.super_prodotto_id = :superProdottoId
             """, nativeQuery = true)
     List<RivenditoreEntity> findDistinctBySuperProdottoId(@Param("superProdottoId") int superProdottoId);
+
+    @Query
+    boolean existsByRagioneSociale(String ragioneSociale);
+
+    @Query
+    boolean existsByEmail(String email);
 }

@@ -11,4 +11,9 @@ public interface CategoriaRepository extends JpaRepository<CategoriaEntity, Inte
     @Query
     CategoriaEntity findById(int id);
 
+    @Query
+    boolean existsByNome(String nome);
+
+    @Query
+    CategoriaEntity findByNome(String nome);
 }

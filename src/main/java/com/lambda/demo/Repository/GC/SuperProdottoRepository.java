@@ -22,6 +22,10 @@ public interface SuperProdottoRepository extends JpaRepository<SuperProdottoEnti
             nativeQuery = true)
     List<SuperProdottoEntity> findByNameAndIdCategoria(@Param("name") String name, @Param("idCategoria") int idCategoria);
 
+    @Query
+    boolean existsByModello(String modello);
 
+    @Query
+    SuperProdottoEntity findByModello(String modello);
 
 }

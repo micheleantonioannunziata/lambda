@@ -2,11 +2,11 @@ package com.lambda.demo.Service.GPR.Rivenditore;
 
 import com.lambda.demo.Entity.GPR.RivenditoreEntity;
 import com.lambda.demo.Exception.GA.GestioneOrdini.InvalidAddressException;
-import com.lambda.demo.Exception.GPR.*;
 import com.lambda.demo.Exception.GPR.AccessoRivenditore.AlreadyRegisteredCompanyNameException;
 import com.lambda.demo.Exception.GPR.AccessoRivenditore.AlreadyRegisteredVATNumberException;
 import com.lambda.demo.Exception.GPR.AccessoRivenditore.InvalidCompanyNameException;
 import com.lambda.demo.Exception.GPR.AccessoRivenditore.InvalidVATNumberException;
+import com.lambda.demo.Exception.GPR.*;
 import com.lambda.demo.Repository.GPR.RivenditoreRepository;
 import com.lambda.demo.Utility.Encrypt;
 import com.lambda.demo.Utility.Validator;

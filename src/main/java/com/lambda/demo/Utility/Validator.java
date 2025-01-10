@@ -121,7 +121,7 @@ public class Validator {
     }
 
 
-    private static final Set<Integer> ramValues = Set.of(2, 4, 6, 8, 12, 16, 24, 32, 64, 128);
+    private static final Set<Integer> ramValues = Set.of(1, 2, 4, 6, 8, 12, 16, 24, 32, 64, 128);
     public static boolean isValidRamValue(String ramValue){
         return ramValue != null && ramValues.contains(Integer.parseInt(ramValue));
     }
