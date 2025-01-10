@@ -24,7 +24,7 @@
         <form action="redirectToTradeInSearch" method="GET" >
             <input type="hidden" th:value="${category.getId()}" name="idCategoria">
         </form>
-        <img th:src="@{/images/image.png}" alt="">
+        <img th:src="${category.getImmagine()}" th:alt="${category.getNome()}">
         <span class="midText mt10 textCenter" th:text="${category.getNome()}"></span>
     </div>
 

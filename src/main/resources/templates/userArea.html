@@ -82,7 +82,7 @@
         <div id="tradeInArea" class="scale-in-center hidden">
             <div class="bigText" style="font-weight: 700;">Cronologia permute</div>
             <div class="cardContainer w100">
-                <div class="card shadow w100" th:each="tradeIn : ${session.acquirente.getPermute()}">
+                <div class="card shadow w100" style="align-items: center" th:each="tradeIn : ${session.acquirente.getPermute()}">
                     <img th:src="${tradeIn.getSuperProdotto().getImmagine()}" alt="">
                     <div class="infoBlock">
                         <span class="normalText" th:text="${tradeIn.getSuperProdotto().getMarca() + ' ' + tradeIn.getSuperProdotto().getModello()}"></span>

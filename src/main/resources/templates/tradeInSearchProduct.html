@@ -22,8 +22,8 @@
     </div>
 </form>
 
-<div id="resultsGrid" class="cardContainer mt10" th:each="product : ${products}" >
-    <div class="card shadow clickable">
+<div id="resultsGrid" class="cardContainer mt10"  >
+    <div class="card shadow clickable" th:each="product : ${products}">
         <form action="redirectToTradeInForm" method="GET" id="searchProductForm">
             <input type="hidden" name="id" th:value="${product.id}">
         </form>

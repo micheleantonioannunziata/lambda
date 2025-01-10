@@ -13,9 +13,10 @@
 
 <div class="authContainer shadow mt20 scale-in-center">
     <div id="logInForm">
-        <form class="authForm" action="purchaserLogin" method="POST">
+        <form class="authForm" action="purchaserLogin" method="POST" onsubmit="return validateLoginForm()">
             <span class="bigText">Sign in</span>
-            <input class="smallText" name="email" type="email" placeholder="Email" pattern="[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}" required><!--"[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}"-->            <input class="smallText" name="password" type="password" placeholder="Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,50}" required>
+            <input class="smallText" id="emailLogin" name="email" type="email" placeholder="Email" required>
+            <input class="smallText" id="passwordLogin" name="password" type="password" placeholder="Password"  required>
             <button type="submit" class="button violetBtn normalText mt20">Log in</button>
         </form>
     </div>
@@ -27,13 +28,13 @@
     </div>
 
     <div id="signUpForm">
-        <form class="authForm" action="purchaserSignup" method="POST">
+        <form class="authForm" action="purchaserSignup" method="POST" onsubmit="return validateUserSignUpForm()">
             <span class="bigText textCenter">Crea Account acquirente</span>
-            <input class="smallText" name="nome" placeholder="Nome" required>
-            <input class="smallText" name="cognome" placeholder="Cognome" required>
-            <input class="smallText" name="email" type="email" placeholder="Email" pattern="[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}" required>
-            <input class="smallText" name="password" type="password" placeholder="Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,50}" required>
-            <input class="smallText" name="confermaPassword" type="password" placeholder="Confirm password" required>
+            <input id="userName" class="smallText" name="nome" placeholder="Nome" required>
+            <input id="userSurname" class="smallText" name="cognome" placeholder="Cognome" required>
+            <input id="userEmail" class="smallText" name="email" type="email" placeholder="Email"  required>
+            <input id="userPassword" class="smallText" name="password" type="password" placeholder="Password" required>
+            <input id="userConfirmPassword" class="smallText" name="confermaPassword" type="password" placeholder="Confirm password" required>
             <div style="width: 80%;">Hai già un account? <span id="removeButton" style="color: #874BFF;" class="underline clickable">Log in </span></div>
             <button type="submit" class="button violetBtn normalText mt20">Sign Up</button>
         </form>
@@ -49,6 +50,9 @@
 </div>
 
 <script type="text/javascript" th:src="@{/js/authSlice.js}"></script>
+
+<script type="text/javascript" th:src="@{/js/validateAuthForm.js}"></script>
+
 
 </body>
 </html>

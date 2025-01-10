@@ -9,16 +9,15 @@
 </head>
 <body>
 
-<div class="header shadow" style="justify-content: center">
-    <div class="logo bigText">Lambda</div>
-</div>
+<div th:replace="fragments :: headerUser"></div>
+
 
 <div id="overlay" class="hidden w100"></div>
 
 
 <div id="insertionBox" class="pdHead pdInline">
 
-    <img th:src="@{/images/image.png}" alt="">
+    <img th:src="${insertion.getProdotto().getSuperProdotto().getImmagine()}" alt="">
 
     <div class="insertionDetails">
         <div class="bigText" th:text="${insertion.getProdotto().getSuperProdotto().getMarca()
@@ -77,7 +76,7 @@
 
         <div class="midText mt20 green">Disponibilità immediata</div>
 
-        <div id="price" class="bigText textRight mt20" th:text="'€ ' + ${insertion.getPrezzoBase()}"></div>
+        <div id="price" class="bigText textRight mt20" th:text="'€ ' + ${insertion.returnDiscountedPrice(session.acquirente.premium)}"></div>
 
         <form id="addToCartForm" action="addToCart" method="post">
             <input type="hidden" id="pIvaCart" name="partitaIvaRivenditore">
@@ -115,10 +114,10 @@
             </div>
 
             <div class="mt10">
-                <span class="midText" th:text="${rivenditore.getCheapestInsertion(insertion.getProdotto().getSuperProdotto().getId()).getPrezzoBase()}"></span>
+                <span class="midText" th:text="${rivenditore.getCheapestInsertion(insertion.getProdotto().getSuperProdotto().getId()).returnDiscountedPrice(session.acquirente.premium)}"></span>
             </div>
 
-            </div>
+        </div>
 
     </div>
 </div>

@@ -21,7 +21,7 @@
 
 <div id="resultsGrid" class="cardContainer">
     <div class="card shadow clickable" th:each="product : ${products}" onclick="submitForm(this)">
-        <form action="searchProductInfo" id="searchProductForm">
+        <form action="redirectToTechnicalRequirementsForm" id="searchProductForm">
             <input type="hidden" name="id" th:value="${product.id}">
         </form>
         <img th:src="${product.getImmagine()}" alt="">

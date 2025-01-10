@@ -58,7 +58,7 @@
                     </form>
 
 
-                    <span class="midText bottomRight mt10" th:text="'€ ' + ${insertion.getInserzione().getPrezzoBase()}"></span>
+                    <span class="midText bottomRight mt10" th:text="'€ ' + ${insertion.getInserzione().returnDiscountedPrice(session.acquirente.premium)}"></span>
                 </div>
             </div>
         </div>

@@ -33,7 +33,7 @@
                     <div class="italic smallText mt10" th:text="'di ' + ${insertion.getInserzione().getRivenditore().getRagioneSociale()}"></div>
 
                     <div class="smallText mt10" th:text="'Quantità: ' + ${insertion.getQuantita()}"></div>
-                    <span class="midText bottomRight mt10" th:text="'€ ' + ${insertion.getInserzione().getPrezzoBase()}"></span>
+                    <span class="midText bottomRight mt10" th:text="${'€ ' + #numbers.formatDecimal(insertion.getInserzione().returnDiscountedPrice(session.acquirente.premium), 2, 2)}"></span>
                 </div>
             </div>
         </div>
@@ -56,6 +56,9 @@
             <input type="hidden" name="indirizzoSpedizione" th:value="${indirizzo}">
             <input type="hidden" name="destinatario" th:value="${destinatario}">
             <input type="hidden" name="numeroCarta" th:value="${numeroCarta}">
+            <input type="hidden" name="intestatario" th:value="${intestatarioCarta}">
+            <input type="hidden" name="cvv" th:value="${cvv}">
+            <input type="hidden" name="scadenza" th:value="${scadenza}">
             <input type="hidden" name="lambda" th:value="${lambda}">
             <button class="button violetBtn" type="submit" name="action" value="conferma">
                 <span class="smallText clickable" style="font-weight: 600">Conferma ordine</span>

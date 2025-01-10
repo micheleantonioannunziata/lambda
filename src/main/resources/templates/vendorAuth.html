@@ -13,10 +13,10 @@
 
 <div class="authContainer shadow mt20 scale-in-center">
     <div id="logInForm">
-        <form class="authForm" action="vendorLogin" method="POST">
+        <form class="authForm" action="vendorLogin" method="POST" onsubmit="return validateLoginForm()">
             <span class="bigText">Sign in</span>
-            <input class="smallText" name="email" type="email" placeholder="Email" pattern="[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}" required>
-            <input class="smallText" name="password" type="password" placeholder="Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,50}" required>
+            <input id="emailLogin" class="smallText" name="email" type="email" placeholder="Email" required>
+            <input id="passwordLogin" class="smallText" name="password" type="password" placeholder="Password" required>
             <button type="submit" class="button violetBtn normalText mt20">Log in</button>
         </form>
     </div>
@@ -28,13 +28,13 @@
     </div>
 
     <div id="signUpForm">
-        <form class="authForm" action="vendorSignup" method="POST">
+        <form class="authForm" action="vendorSignup" method="POST" onsubmit="return validateVendorSignUp()">
             <span class="bigText textCenter">Crea Account rivenditore</span>
-            <input class="smallText" name="ragioneSociale" placeholder="Ragione Sociale" required>
-            <input class="smallText" name="partitaIVA" placeholder="Partita IVA" pattern="\d+" required>
-            <input class="smallText" name="email" type="email" placeholder="Email" pattern="[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}" required>
-            <input class="smallText" name="password" type="password" placeholder="Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,50}" required>
-            <input class="smallText" name="confermaPassword" type="password" placeholder="Confirm password" required>
+            <input id="ragioneSocialeSignUp" class="smallText" name="ragioneSociale" placeholder="Ragione Sociale" required>
+            <input id="partitaIvaSignUp" class="smallText" name="partitaIVA" placeholder="Partita IVA" pattern="\d+" required>
+            <input id="emailSignUp" class="smallText" name="email" type="email" placeholder="Email" required>
+            <input id="passwordSignUp" class="smallText" name="password" type="password" placeholder="Password" required>
+            <input id="confirmPasswordSignUp" class="smallText" name="confermaPassword" type="password" placeholder="Confirm password" required>
             <div style="width: 80%;">Hai già un account? <span style="color: #874BFF;" class="underline clickable" id="removeButton">Log in</span></div>
             <button type="submit" class="button violetBtn normalText mt20">Sign Up</button>
         </form>
@@ -50,6 +50,7 @@
 </div>
 
 <script type="text/javascript" th:src="@{/js/authSlice.js}"></script>
+<script type="text/javascript" th:src="@{/js/validateAuthForm.js}"></script>
 
 </body>
 </html>

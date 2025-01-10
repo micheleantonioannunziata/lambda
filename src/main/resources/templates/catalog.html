@@ -9,31 +9,32 @@
 <body>
 <div th:replace="fragments :: headerUser"></div>
 
-<div class="cardContainer pdHead">
+<div class="pdInline pdHead normalText italic" th:text="|La tua ricerca: '${catalogName}'|"></div>
+
+<div class="cardContainer mt20">
     <div class="card shadow clickable" th:each="product : ${products}">
         <form action="redirectToInsertionOverview" method="post">
             <input type="hidden" name="id" th:value="${product.id}">
         </form>
-            <img th:src="${product.getImmagine()}" alt="">
+        <img th:src="${product.getImmagine()}" alt="">
 
-            <span class="normalText mt10" th:text="${product.getMarca() + ' ' + product.getModello() }"></span>
+        <span class="normalText mt10" th:text="${product.getModello() }"></span>
 
-
-                <div class="evaluation mt10">
-                    <div class="rating">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/fullStar.svg}" alt="">
-                        <img th:src="@{/images/star.svg}" alt="">
-                    </div>
-                    <img th:src="@{/images/fullHeart.svg}" alt="">
-                </div>
-
-            <div class="mt10">
-                <span class="smallText">A partire da</span>
-                <span class="midText" th:text="${'€ ' + product.getCheapestInsertion().getPrezzoBase()}"></span>
+        <div class="evaluation mt10">
+            <div class="rating">
+                <img th:src="@{/images/fullStar.svg}" alt="">
+                <img th:src="@{/images/fullStar.svg}" alt="">
+                <img th:src="@{/images/fullStar.svg}" alt="">
+                <img th:src="@{/images/fullStar.svg}" alt="">
+                <img th:src="@{/images/star.svg}" alt="">
             </div>
+            <img th:src="@{/images/fullHeart.svg}" alt="">
+        </div>
+
+        <div class="mt10">
+            <span class="smallText">A partire da</span>
+            <span class="midText" th:text="${'€ ' + product.getCheapestInsertion().returnDiscountedPrice(session.acquirente.premium)}"></span>
+        </div>
     </div>
 
 </div>
