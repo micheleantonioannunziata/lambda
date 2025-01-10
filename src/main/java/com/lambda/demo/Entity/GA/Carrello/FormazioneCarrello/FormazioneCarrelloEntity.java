@@ -37,8 +37,8 @@ public class FormazioneCarrelloEntity {
             @JoinColumn(name = "ram", referencedColumnName = "ram"),
             @JoinColumn(name = "spazio_archiviazione", referencedColumnName = "spazio_archiviazione"),
             @JoinColumn(name = "super_prodotto_id", referencedColumnName = "super_prodotto_id"),
-            @JoinColumn(name = "colore", referencedColumnName = "colore"),
-            @JoinColumn(name = "partita_iva_rivenditore", referencedColumnName = "partita_iva_rivenditore")
+            @JoinColumn(name = "colore", referencedColumnName = "colore", columnDefinition = "VARCHAR(50)"),
+            @JoinColumn(name = "partita_iva_rivenditore", referencedColumnName = "partita_iva_rivenditore", columnDefinition = "CHAR(11)")
     }, foreignKey = @ForeignKey(
             foreignKeyDefinition = "FOREIGN KEY (ram, spazio_archiviazione, super_prodotto_id, colore, partita_iva_rivenditore) REFERENCES inserzione (ram, spazio_archiviazione, super_prodotto_id, colore, partita_iva_rivenditore) ON UPDATE CASCADE ON DELETE CASCADE"
     ))

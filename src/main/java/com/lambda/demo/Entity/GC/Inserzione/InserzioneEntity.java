@@ -34,6 +34,7 @@ public class InserzioneEntity {
     @ManyToOne
     @JoinColumn(
             name = "partita_iva_rivenditore",
+            columnDefinition = "CHAR(11)",
             foreignKey = @ForeignKey(
                     foreignKeyDefinition = "FOREIGN KEY (partita_iva_rivenditore) REFERENCES rivenditore(partita_iva)"
             )
@@ -46,7 +47,7 @@ public class InserzioneEntity {
             @JoinColumn(name = "ram", referencedColumnName = "ram"),
             @JoinColumn(name = "spazio_archiviazione", referencedColumnName = "spazio_archiviazione"),
             @JoinColumn(name = "super_prodotto_id", referencedColumnName = "super_prodotto_id"),
-            @JoinColumn(name = "colore", referencedColumnName = "colore"),
+            @JoinColumn(name = "colore", referencedColumnName = "colore", columnDefinition = "VARCHAR(50)"),
     }, foreignKey = @ForeignKey(
             foreignKeyDefinition = "FOREIGN KEY (ram, spazio_archiviazione, super_prodotto_id, colore) REFERENCES prodotto (ram, spazio_archiviazione, super_prodotto_id, colore) ON UPDATE CASCADE ON DELETE CASCADE"
     ))
@@ -68,6 +69,8 @@ public class InserzioneEntity {
     @CreationTimestamp
     private LocalDateTime dataPubblicazione;
 
+    @Transient
+    private double prezzoScontato;
 
     @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT 1")
     private boolean disponibilita;
@@ -86,7 +89,6 @@ public class InserzioneEntity {
     private List<ComposizioneEntity> composizioni = new ArrayList<>();
 
 
-
     public void setRivenditore(RivenditoreEntity rivenditore) {
         if (this.rivenditore != rivenditore && rivenditore != null) {
             this.rivenditore = rivenditore;
@@ -100,6 +102,16 @@ public class InserzioneEntity {
             if (!prodotto.getInserzioni().contains(this)) prodotto.getInserzioni().add(this);
         }
     }
+
+    public Double returnDiscountedPrice(boolean premium) {
+        if (premium)
+            prezzoScontato = roundPrice(prezzoBase - ((scontoPremium / 100.0) * prezzoBase));
+        else
+            prezzoScontato = roundPrice(prezzoBase - ((scontoStandard / 100.0) * prezzoBase));
+
+        return prezzoScontato;
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -116,7 +128,10 @@ public class InserzioneEntity {
     }
 
     public double getPrezzoBase(){
-        BigDecimal bd = new BigDecimal(this.prezzoBase).setScale(2, RoundingMode.HALF_UP);
-        return bd.doubleValue();
+        return roundPrice(prezzoBase);
+    }
+
+    public double roundPrice(double price) {
+        return new BigDecimal(price).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
 }

@@ -41,7 +41,7 @@ public class OrdineEntity {
     @Column(nullable = false)
     private String metodoDiPagamento;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "VARCHAR(50)")
     private String destinatario;
 
     @Column(nullable = false)

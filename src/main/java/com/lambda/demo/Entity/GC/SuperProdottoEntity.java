@@ -31,17 +31,17 @@ public class SuperProdottoEntity {
     @Column(unique = true, nullable = false, columnDefinition = "VARCHAR(50)")
     private String modello;
 
-    @Column(nullable = false, columnDefinition = "VARCHAR(50)")
+    @Column(columnDefinition = "VARCHAR(50)")
     private String cpu;
 
-    @Column(nullable = false, columnDefinition = "VARCHAR(50)")
+    @Column(columnDefinition = "VARCHAR(50)")
     private String gpu;
 
     @Check(constraints = "connettivita IN ('3g', '4g', '5g')")
-    @Column(nullable = false, columnDefinition = "VARCHAR(50)")
+    @Column(columnDefinition = "VARCHAR(50)")
     private String connettivita;
 
-    @Column(nullable = false, columnDefinition = "DECIMAL (10, 2)")
+    @Column(columnDefinition = "DECIMAL (10, 2)")
     private float pollici;
 
     @Column(nullable = false)

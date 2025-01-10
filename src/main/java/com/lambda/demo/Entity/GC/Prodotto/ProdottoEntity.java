@@ -6,6 +6,7 @@ import com.lambda.demo.Entity.GC.SuperProdottoEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
@@ -30,8 +31,8 @@ public class ProdottoEntity {
     )
     private SuperProdottoEntity superProdotto;
 
-    @OneToMany(mappedBy = "prodotto")
-    private List<InserzioneEntity> inserzioni;
+    @OneToMany(mappedBy = "prodotto", fetch = FetchType.EAGER)
+    private List<InserzioneEntity> inserzioni = new ArrayList<>();
 
     @Override
     public boolean equals(Object o) {

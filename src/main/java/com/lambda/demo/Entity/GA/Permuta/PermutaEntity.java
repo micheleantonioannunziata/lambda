@@ -45,10 +45,11 @@ public class PermutaEntity {
     @Column(nullable = false)
     private int statoBatteria;
 
+    @Check(constraints = "condizione_generale IN ('Discreta', 'Buona', 'Ottima', 'Eccellente')")
     @Column(nullable = false, columnDefinition = "VARCHAR(50)")
     private String condizioneGenerale;
 
-    @Check(constraints = "ram IN (2, 4, 6, 8, 12, 16, 24, 32, 64, 128)")
+    @Check(constraints = "ram IN (1, 2, 4, 6, 8, 12, 16, 24, 32, 64, 128)")
     @Column(nullable = false)
     private int ram;
 

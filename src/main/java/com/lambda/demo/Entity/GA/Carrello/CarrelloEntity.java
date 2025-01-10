@@ -41,9 +41,7 @@ public class CarrelloEntity {
     private double prezzoProvvisorio;
 
 
-    //se nello stesso metodo cerchi di accedere a questa lista con fetch.lazy (default) dà errore perché dovresti rieffettuare
-    //una query dal db. Questo oggetto non si trovava in realtà nel db ma nella cache di Hibernate, ovvero nel persistent Context
-    //Scrivendo fetch.eager si forza il caricamento degli oggetti appartenenti alla lista
+
     @OneToMany(mappedBy = "carrello", fetch = FetchType.EAGER)
     private List<FormazioneCarrelloEntity> carrelloItems = new ArrayList<>();
 

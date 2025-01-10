@@ -22,16 +22,14 @@ public class CategoriaEntity {
     private int id;
 
 
-    @Column(columnDefinition = "VARCHAR(50)")
+    @Column(unique = true, columnDefinition = "VARCHAR(50)")
     private String nome;
 
 
-    /*
     @Column(nullable = false)
-    private String urlImmagine;
-    */
+    private String immagine;
 
-    @OneToMany(mappedBy = "categoria")
+    @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER)
     List<SuperProdottoEntity> superProdotti = new ArrayList<>();
 
     @Override
