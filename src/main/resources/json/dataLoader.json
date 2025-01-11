@@ -4901,6 +4901,5884 @@
       "mail": "galleriaDeiTelefonini@pec.it",
       "password": "042b42e94870ac30d9d5836c36e8a19f66539d3d79429d28f5eb508a9bbaf707"
     }
-  ]
+  ],
 
+  "insertions": [
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1500,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1500,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1500,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1500,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1450,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1450,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1450,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1450,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 15",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1300,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1400,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 14",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 850,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 900,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 650,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 650,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 650,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 650,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 650,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Iphone 13",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 750,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 1024,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 1024,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 1024,
+        "colore": "Nero"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 13 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 1024,
+        "colore": "Nero"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1030,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1080,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 1024,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1130,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1080,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1130,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 1024,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1180,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1030,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1080,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 1024,
+        "colore": "Nero"
+      },
+      "prezzo": 1130,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1080,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1130,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Air 15 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 1024,
+        "colore": "Nero"
+      },
+      "prezzo": 1180,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 1024,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 1024,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 1024,
+        "colore": "Nero"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1200,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 14 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 1024,
+        "colore": "Nero"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1130,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1180,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 1024,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1230,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1180,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1230,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 1024,
+        "colore": "Grigio Siderale"
+      },
+      "prezzo": 1280,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1130,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1180,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 8,
+        "spazioArchiviazione": 1024,
+        "colore": "Nero"
+      },
+      "prezzo": 1230,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1180,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1230,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Macbook Pro 16 (M3)",
+        "ram": 16,
+        "spazioArchiviazione": 1024,
+        "colore": "Nero"
+      },
+      "prezzo": 1280,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Ipad Air 11",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Ipad Air 11",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Ipad Air 11",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Ipad Air 11",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Ipad Pro 11",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Ipad Pro 11",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Ipad Pro 11",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 700,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "12345678901",
+      "prodotto": {
+        "superProdottoModello": "Ipad Pro 11",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 800,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A54",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 500,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A54",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 550,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A54",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 600,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A54",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 550,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A54",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 600,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A54",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 650,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy M14",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 300,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy M14",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy M14",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy M14",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy M14",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy M14",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 450,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A14",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 300,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A14",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A14",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A14",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A14",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "53343678131",
+      "prodotto": {
+        "superProdottoModello": "Galaxy A14",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 450,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 300,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 450,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "Redmi Note 14",
+        "ram": 2,
+        "spazioArchiviazione": 16,
+        "colore": "Nero"
+      },
+      "prezzo": 300,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "Redmi Note 14",
+        "ram": 2,
+        "spazioArchiviazione": 32,
+        "colore": "Nero"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "Redmi Note 14",
+        "ram": 2,
+        "spazioArchiviazione": 64,
+        "colore": "Nero"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "Redmi Note 14",
+        "ram": 4,
+        "spazioArchiviazione": 16,
+        "colore": "Bianco"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "Redmi Note 14",
+        "ram": 4,
+        "spazioArchiviazione": 32,
+        "colore": "Bianco"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "Redmi Note 14",
+        "ram": 4,
+        "spazioArchiviazione": 64,
+        "colore": "Bianco"
+      },
+      "prezzo": 450,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "POCO X7",
+        "ram": 4,
+        "spazioArchiviazione": 32,
+        "colore": "Nero"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "POCO X7",
+        "ram": 4,
+        "spazioArchiviazione": 64,
+        "colore": "Nero"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "POCO X7",
+        "ram": 4,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 450,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "POCO X7",
+        "ram": 6,
+        "spazioArchiviazione": 32,
+        "colore": "Bianco"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "POCO X7",
+        "ram": 6,
+        "spazioArchiviazione": 64,
+        "colore": "Bianco"
+      },
+      "prezzo": 450,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "67342978112",
+      "prodotto": {
+        "superProdottoModello": "POCO X7",
+        "ram": 6,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 500,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1100,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1450,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1450,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Blu oltremare"
+      },
+      "prezzo": 1450,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1150,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 100
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1250,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1350,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Iphone 16 Pro Max",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Verde Acqua"
+      },
+      "prezzo": 1450,
+      "scontoStandard": 0,
+      "scontoPremium": 10,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 950,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 1000,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "Galaxy S24 Ultra",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 1050,
+      "scontoStandard": 0,
+      "scontoPremium": 15,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 8,
+        "spazioArchiviazione": 128,
+        "colore": "Nero"
+      },
+      "prezzo": 250,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 8,
+        "spazioArchiviazione": 256,
+        "colore": "Nero"
+      },
+      "prezzo": 300,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 8,
+        "spazioArchiviazione": 512,
+        "colore": "Nero"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 16,
+        "spazioArchiviazione": 128,
+        "colore": "Bianco"
+      },
+      "prezzo": 300,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 16,
+        "spazioArchiviazione": 256,
+        "colore": "Bianco"
+      },
+      "prezzo": 350,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    },
+    {
+      "partitaIva": "23343478221",
+      "prodotto": {
+        "superProdottoModello": "14T Pro",
+        "ram": 16,
+        "spazioArchiviazione": 512,
+        "colore": "Bianco"
+      },
+      "prezzo": 400,
+      "scontoStandard": 0,
+      "scontoPremium": 20,
+      "quantità": 90
+    }
+  ]
 }
