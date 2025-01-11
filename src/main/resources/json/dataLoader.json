@@ -215,5 +215,4692 @@
       "immagine": "/images/ipadpro.png",
       "categoria": "Tablet"
     }
+  ],
+
+  "products":[
+    {
+      "superProdottoModello": "Ipad Air 11",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Ipad Air 11",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Ipad Air 11",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Ipad Air 11",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Ipad Pro 11",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Ipad Pro 11",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Ipad Pro 11",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Ipad Pro 11",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 16",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 15",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 13",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 12",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro Max",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11 Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu oltremare"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Iphone 11",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Verde Acqua"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 13 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Air 15 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 14 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 8,
+      "spazioArchiviazione": 1024,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Macbook Pro 16 (M3)",
+      "ram": 16,
+      "spazioArchiviazione": 1024,
+      "colore": "Grigio Siderale"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24 Ultra",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy S24",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A54",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy A14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy M14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Galaxy Z Fold 5",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T Pro",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14T",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 8,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 256,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "14",
+      "ram": 16,
+      "spazioArchiviazione": 512,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 16,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 32,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 64,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 16,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 32,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 64,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 16,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 32,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 64,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 16,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 32,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 64,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 16,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 32,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 64,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 16,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 32,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 64,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 16,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 32,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 2,
+      "spazioArchiviazione": 64,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 16,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 32,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "Redmi Note 14",
+      "ram": 4,
+      "spazioArchiviazione": 64,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 32,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 64,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 32,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 64,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 128,
+      "colore": "Nero"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 32,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 64,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 32,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 64,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 128,
+      "colore": "Bianco"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 32,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 64,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 32,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 64,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 128,
+      "colore": "Giallo"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 32,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 64,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 4,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 32,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 64,
+      "colore": "Blu"
+    },
+    {
+      "superProdottoModello": "POCO X7",
+      "ram": 6,
+      "spazioArchiviazione": 128,
+      "colore": "Blu"
+    }
+  ],
+
+  "vendors": [
+    {
+      "partitaIva": "12345678901",
+      "ragioneSociale": "Apple",
+      "mail": "apple@pec.it",
+      "password": "042b42e94870ac30d9d5836c36e8a19f66539d3d79429d28f5eb508a9bbaf707"
+    },
+    {
+      "partitaIva": "53343678131",
+      "ragioneSociale": "Samsung",
+      "mail": "samsung@pec.it",
+      "password": "042b42e94870ac30d9d5836c36e8a19f66539d3d79429d28f5eb508a9bbaf707"
+    },
+    {
+      "partitaIva": "67342978112",
+      "ragioneSociale": "Xiaomi",
+      "mail": "xiaomi@pec.it",
+      "password": "042b42e94870ac30d9d5836c36e8a19f66539d3d79429d28f5eb508a9bbaf707"
+    },
+    {
+      "partitaIva": "23343478221",
+      "ragioneSociale": "Galleria Dei Telefonini",
+      "mail": "galleriaDeiTelefonini@pec.it",
+      "password": "042b42e94870ac30d9d5836c36e8a19f66539d3d79429d28f5eb508a9bbaf707"
+    }
   ]
+
 }
