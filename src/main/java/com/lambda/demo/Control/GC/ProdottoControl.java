@@ -1,5 +1,6 @@
 package com.lambda.demo.Control.GC;
 
+import com.lambda.demo.Entity.GC.Prodotto.ProdottoEntity;
 import com.lambda.demo.Entity.GC.SuperProdottoEntity;
 import com.lambda.demo.Service.GC.SuperProdotto.SuperProdottoService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -38,10 +39,15 @@ public class ProdottoControl {
         String catalogName = req.getParameter("catalogName");
 
         if (catalogName != null && !catalogName.isBlank()) {
-
+            List<SuperProdottoEntity> productsToAdd = new ArrayList<>();
             products = superProdottoService.findByName(catalogName);
+            for (SuperProdottoEntity superProdotto : products)
+            {
+                if(superProdotto.getCheapestInsertion() != null)
+                    productsToAdd.add(superProdotto);
+            }
             model.addAttribute("catalogName", catalogName);
-            model.addAttribute("products", products);
+            model.addAttribute("products", productsToAdd);
 
             return "catalog";
 

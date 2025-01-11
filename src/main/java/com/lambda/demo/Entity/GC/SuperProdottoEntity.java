@@ -80,21 +80,33 @@ public class SuperProdottoEntity {
         return getId() == that.getId();
     }
 
-    public InserzioneEntity getCheapestInsertion(){
-       InserzioneEntity inserzioneEntity = new InserzioneEntity();
+    public InserzioneEntity getCheapestInsertion() {
+        // Creazione di una nuova istanza di InserzioneEntity come valore predefinito
+        InserzioneEntity inserzioneEntity = null;
 
-       List<ProdottoEntity> products = getProdotti();
-       if (products == null) products = new ArrayList<>();
+        // Recupero dei prodotti, con gestione del caso in cui sia null
+        List<ProdottoEntity> products = getProdotti();
+        if (products == null) products = new ArrayList<>();
 
-       List<InserzioneEntity> inserzioni = new ArrayList<>();
-       for (ProdottoEntity p: products) inserzioni.addAll(p.getInserzioni());
+        // Raccolta di tutte le inserzioni dai prodotti
+        List<InserzioneEntity> inserzioni = new ArrayList<>();
+        for (ProdottoEntity p : products) {
+            if (p.getInserzioni() != null && !p.getInserzioni().isEmpty()) { // Gestisce il caso in cui getInserzioni() sia null
+                inserzioni.addAll(p.getInserzioni());
+            }
+        }
 
-       inserzioni.sort(Comparator.comparingDouble(InserzioneEntity::getPrezzoBase));
+        // Ordinamento delle inserzioni in base al prezzo
+        inserzioni.sort(Comparator.comparingDouble(InserzioneEntity::getPrezzoBase));
 
+        // Controllo che la lista delle inserzioni non sia vuota prima di accedere al primo elemento
+        if (!inserzioni.isEmpty()) {
+            inserzioneEntity = inserzioni.get(0); // Ottieni la più economica
+        }
 
-        inserzioneEntity = inserzioni.getFirst();
         return inserzioneEntity;
     }
+
 
 
 

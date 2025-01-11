@@ -151,6 +151,7 @@ public class DataLoader {
             inserzione.setScontoPremium(insertion.getInt("scontoPremium"));
             inserzione.setQuantita(insertion.getInt("quantità"));
             inserzione.setDataPubblicazione(LocalDateTime.now());
+            inserzione.setDisponibilita(true);
 
             if (inserzioneRepository.findById(inserzioneEntityId).isEmpty()){
                 inserzioneRepository.saveAndFlush(inserzione);
