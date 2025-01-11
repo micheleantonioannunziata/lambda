@@ -1,208 +1,219 @@
 {
   "categories": [
-    {"nome": "Smartphone", "immagine": "https://i.postimg.cc/rsP6jMFy/smartphone.png"}, {"nome": "PC", "immagine": "https://i.postimg.cc/Y2nwMffc/laptop.png"}
-  ],
+    {"nome": "Smartphone", "immagine": "/images/image9.png"},
+    {"nome": "PC", "immagine": "/images/image9.png"},
+    {"nome": "Tablet", "immagine": "/images/download.png"}],
+
   "superProducts": [
     {
       "marca": "Apple",
-      "modello": "Iphone 15 Pro",
-      "immagine": "https://i.postimg.cc/cLWtZSB5/iphone15pro.png",
+      "modello": "Iphone 16 Pro Max",
+      "immagine": "/images/download2.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
-      "modello": "Macbook M3 PRO",
-      "immagine": "https://i.postimg.cc/HnSvm2f6/macbook.png",
+      "modello": "Iphone 16 Pro",
+      "immagine": "/images/download2.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 16",
+      "immagine": "/images/iphone16.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 15 Pro Max",
+      "immagine": "/images/download2.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 15 Pro",
+      "immagine": "/images/download2.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 15",
+      "immagine": "/images/iphone15.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 14 Pro Max",
+      "immagine": "/images/download2.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 14 Pro",
+      "immagine": "/images/download2.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 14",
+      "immagine": "/images/iphone14.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 13 Pro Max",
+      "immagine": "/images/iphone13promax.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 13 Pro",
+      "immagine": "/images/iphone13promax.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 13",
+      "immagine": "/images/iphone13.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 12 Pro Max",
+      "immagine": "/images/iphone13promax.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 12 Pro",
+      "immagine": "/images/iphone13promax.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 12",
+      "immagine": "/images/iphone12.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 11 Pro Max",
+      "immagine": "/images/iphone11promax.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 11 Pro",
+      "immagine": "/images/iphone13promax.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Iphone 11",
+      "immagine": "/images/iphone11.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Macbook Air 13 (M3)",
+      "immagine": "/images/macbook.png",
+      "categoria": "PC"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Macbook Air 15 (M3)",
+      "immagine": "/images/macbook.png",
+      "categoria": "PC"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Macbook Pro 14 (M3)",
+      "immagine": "/images/macbook.png",
+      "categoria": "PC"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Macbook Pro 16 (M3)",
+      "immagine": "/images/macbook.png",
       "categoria": "PC"
     },
     {
       "marca": "Samsung",
       "modello": "Galaxy S24 Ultra",
-      "immagine": "https://i.postimg.cc/8c8PHRyn/samsungs24.png",
+      "immagine": "/images/s24ultra.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Samsung",
+      "modello": "Galaxy S24",
+      "immagine": "/images/s24.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Samsung",
+      "modello": "Galaxy A54",
+      "immagine": "/images/a54.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Samsung",
+      "modello": "Galaxy A14",
+      "immagine": "/images/a14.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Samsung",
+      "modello": "Galaxy Z Fold 5",
+      "immagine": "/images/zfold5.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Samsung",
+      "modello": "Galaxy M14",
+      "immagine": "/images/m14.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Xiaomi",
       "modello": "14T Pro",
-      "immagine": "https://i.postimg.cc/bw6yMcCn/xiaomit14pro.png",
+      "immagine": "/images/14tpro.png",
       "categoria": "Smartphone"
+    },
+    {
+      "marca": "Xiaomi",
+      "modello": "14T",
+      "immagine": "/images/14t.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Xiaomi",
+      "modello": "14",
+      "immagine": "/images/14base.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Xiaomi",
+      "modello": "Redmi Note 14",
+      "immagine": "/images/redmi.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Xiaomi",
+      "modello": "POCO X7",
+      "immagine": "/images/poco.png",
+      "categoria": "Smartphone"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Ipad Air 11",
+      "immagine": "/images/ipadair.png",
+      "categoria": "Tablet"
+    },
+    {
+      "marca": "Apple",
+      "modello": "Ipad Pro 11",
+      "immagine": "/images/ipadpro.png",
+      "categoria": "Tablet"
     }
-  ],
-  "products":[
-    {
-      "superProdottoModello": "Macbook M3 PRO",
-      "ram": 32,
-      "spazioArchiviazione": 2048,
-      "colore": "Rosa pepe"
-    },
-    {
-      "superProdottoModello": "Iphone 15 Pro",
-      "ram": 8,
-      "spazioArchiviazione": 128,
-      "colore": "Titanio naturale"
-    },
-    {
-      "superProdottoModello": "Iphone 15 Pro",
-      "ram": 16,
-      "spazioArchiviazione": 256,
-      "colore": "Titanio sabbia"
-    },
-    {
-      "superProdottoModello": "Galaxy S24 Ultra",
-      "ram": 32,
-      "spazioArchiviazione": 512,
-      "colore": "Giallo ambra"
-    },
-    {
-      "superProdottoModello": "Galaxy S24 Ultra",
-      "ram": 64,
-      "spazioArchiviazione": 1024,
-      "colore": "Viola cobalto"
-    },
-    {
-      "superProdottoModello": "14T Pro",
-      "ram": 12,
-      "spazioArchiviazione": 512,
-      "colore": "Verde smeraldo"
-    },
-    {
-      "superProdottoModello": "14T Pro",
-      "ram": 32,
-      "spazioArchiviazione": 1024,
-      "colore": "Amaranto"
-    },
-    {
-      "superProdottoModello": "14T Pro",
-      "ram": 32,
-      "spazioArchiviazione": 256,
-      "colore": "Azzurro pastello"
-    }
-  ],
-  "vendors": [
-    {
-      "partitaIva": "12345678901",
-      "ragioneSociale": "Apple",
-      "mail": "apple@pec.it",
-      "password": "042b42e94870ac30d9d5836c36e8a19f66539d3d79429d28f5eb508a9bbaf707"
-    },
-    {
-      "partitaIva": "12345678911",
-      "ragioneSociale": "Samsung",
-      "mail": "samsung@pec.it",
-      "password": "042b42e94870ac30d9d5836c36e8a19f66539d3d79429d28f5eb508a9bbaf707"
-    },
-    {
-      "partitaIva": "12345678912",
-      "ragioneSociale": "Xiaomi",
-      "mail": "xiaomi@pec.it",
-      "password": "042b42e94870ac30d9d5836c36e8a19f66539d3d79429d28f5eb508a9bbaf707"
-    }
-  ],
-  "insertions": [
-    {
-      "partitaIva": "12345678901",
-      "prodotto": {
-        "superProdottoModello": "Macbook M3 PRO",
-        "ram": 32,
-        "spazioArchiviazione": 2048,
-        "colore": "Rosa pepe"
-      },
-      "prezzo": 4200,
-      "scontoStandard": 0,
-      "scontoPremium": 10,
-      "quantità": 90
-    },
-    {
-      "partitaIva": "12345678901",
-      "prodotto": {
-        "superProdottoModello": "Iphone 15 Pro",
-        "ram": 8,
-        "spazioArchiviazione": 128,
-        "colore": "Titanio naturale"
-      },
-      "prezzo": 1500,
-      "scontoStandard": 10,
-      "scontoPremium": 25,
-      "quantità": 50
-    },
-    {
-      "partitaIva": "12345678901",
-      "prodotto": {
-        "superProdottoModello": "Iphone 15 Pro",
-        "ram": 16,
-        "spazioArchiviazione": 256,
-        "colore": "Titanio sabbia"
-      },
-      "prezzo": 1800,
-      "scontoStandard": 10,
-      "scontoPremium": 35,
-      "quantità": 20
-    },
-    {
-      "partitaIva": "12345678911",
-      "prodotto": {
-        "superProdottoModello": "Galaxy S24 Ultra",
-        "ram": 32,
-        "spazioArchiviazione": 512,
-        "colore": "Giallo ambra"
-      },
-      "prezzo": 2000,
-      "scontoStandard": 20,
-      "scontoPremium": 25,
-      "quantità": 120
-    },
-    {
-      "partitaIva": "12345678911",
-      "prodotto": {
-        "superProdottoModello": "Galaxy S24 Ultra",
-        "ram": 64,
-        "spazioArchiviazione": 1024,
-        "colore": "Viola cobalto"
-      },
-      "prezzo": 1750,
-      "scontoStandard": 10,
-      "scontoPremium": 15,
-      "quantità": 99
-    },
-    {
-      "partitaIva": "12345678912",
-      "prodotto": {
-        "superProdottoModello": "14T Pro",
-        "ram": 12,
-        "spazioArchiviazione": 512,
-        "colore": "Verde smeraldo"
-      },
-      "prezzo": 1999,
-      "scontoStandard": 10,
-      "scontoPremium": 35,
-      "quantità": 120
-    },
-    {
-      "partitaIva": "12345678912",
-      "prodotto": {
-        "superProdottoModello": "14T Pro",
-        "ram": 32,
-        "spazioArchiviazione": 1024,
-        "colore": "Amaranto"
-      },
-      "prezzo": 2200,
-      "scontoStandard": 20,
-      "scontoPremium": 40,
-      "quantità": 120
-    },
-    {
-      "partitaIva": "12345678912",
-      "prodotto": {
-        "superProdottoModello": "14T Pro",
-        "ram": 32,
-        "spazioArchiviazione": 256,
-        "colore": "Azzurro pastello"
-      },
-      "prezzo": 1700,
-      "scontoStandard": 10,
-      "scontoPremium": 15,
-      "quantità": 80
-    }
-
   ]
 }
