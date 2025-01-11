@@ -47,14 +47,14 @@
                         <form action="updateQuantity" method="post">
                             <input type="hidden" name="idInserzione" th:value="${insertion.getInserzione().getId()}">
                             <input type="number" name="quantity" placeholder="Quantità" min="0" th:max="${insertion.getInserzione().getQuantita()}" th:value="${insertion.getQuantita()}">
-                            <button class="violetBtn smallText">Conferma</button>
+                            <button class="violetBtn smallText clickable">Conferma</button>
                         </form>
                     </div>
 
 
                     <form action="removeFromCart" method="post">
                         <input type="hidden" name="idInserzione" th:value="${insertion.getInserzione().getId()}">
-                        <button class="violetBtn smallText topRight">Rimuovi</button>
+                        <button class="violetBtn smallText topRight clickable">Rimuovi</button>
                     </form>
 
 
@@ -83,7 +83,7 @@
         </div>
 
 
-        <a th:href="@{checkout}"><button class="violetBtn bigText mt100 w100">Checkout</button></a>
+        <a th:href="@{checkout}"><button class="violetBtn bigText mt100 w100 clickable">Checkout</button></a>
     </div>
 </div>
 

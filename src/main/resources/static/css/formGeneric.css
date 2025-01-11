@@ -1,7 +1,7 @@
 body > form {
     display: flex;
     flex-direction: column;
-    row-gap: 50px;
+    gap: 35px;
     width: 100%;
     max-width: 2000px;
     align-items: center;
@@ -53,7 +53,7 @@ body > form > span.midText {
 
 .boxSearch button {
     transition: 0.8s ease-in-out;
-    padding: 0 inherit;
+    padding: 0;
 }
 
 form > select {

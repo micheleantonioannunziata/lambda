@@ -11,21 +11,21 @@
 
 <div th:replace="fragments :: headerUser"></div>
 
-<form action="checkoutInfo" method="POST" class="centerForced pdHead">
+<form id="checkoutInfo" action="checkoutInfo" method="POST" class="centerForced pdHead" onsubmit="return validateCheckoutForm()">
     <div class="centerForced">
         <div class="addressForm">
             <span class="midText">Indirizzo di spedizione</span>
-            <input class="smallText" type="text" placeholder="Destinatario" th:value="${session.acquirente.getNome()+' '+session.acquirente.getCognome()}" name="destinatario" required>
-            <input class="smallText" type="text" placeholder="Indirizzo" th:value="${session.acquirente.getIndirizzo()}" name="indirizzo" required>
+            <input id="destinatario" class="smallText" type="text" placeholder="Destinatario" th:value="${session.acquirente.getNome()+' '+session.acquirente.getCognome()}" name="destinatario" required>
+            <input id="indirizzo" class="smallText" type="text" placeholder="Indirizzo" th:value="${session.acquirente.getIndirizzo()}" name="indirizzo" required>
         </div>
         <div class="paymentForm">
             <span class="midText">Metodo di pagamento</span>
-            <span class="normalText centerForced" onclick="lambdaMethod(this)"><input type="hidden" name="lambdaFlag" value="false">Paga con Lambda Points<img th:src="@{/images/coin.svg}" alt="" style="width: 30px"></span>
-            <input id="intestatarioCarta" class="smallText" name="intestatarioCarta" type="text" placeholder="Intestatario carta">
-            <input id="numeroCarta" class="smallText" name="numeroCarta" type="text" placeholder="Numero carta">
+            <span id="lambdaFlag" class="normalText centerForced" onclick="lambdaMethod(this)"><input type="hidden" name="lambdaFlag" value="false">Paga con Lambda Points<img th:src="@{/images/coin.svg}" alt="" style="width: 30px"></span>
+            <input id="intestatarioCarta" class="smallText" name="intestatarioCarta" type="text" placeholder="Intestatario carta" required>
+            <input id="numeroCarta" class="smallText" name="numeroCarta" type="text" placeholder="Numero carta" required>
             <div>
-                <input id="CVV" class="smallText" name="CVV" type="text" placeholder="CVV">
-                <input id="scadenza" class="smallText" name="scadenza" type="text" placeholder="Scadenza">
+                <input id="CVV" class="smallText" name="CVV" type="text" placeholder="CVV" required>
+                <input id="scadenza" class="smallText" name="scadenza" type="text" placeholder="Scadenza" required>
             </div>
 
             <div class="smallText">
@@ -38,5 +38,6 @@
 </form>
 
 <script th:src="@{/js/lambdaMethod.js}"></script>
+<script th:src="@{/js/validateCheckoutForm.js}"></script>
 </body>
 </html>

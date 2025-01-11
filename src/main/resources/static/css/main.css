@@ -165,24 +165,33 @@ select:focus-visible {
     width: 20px;
 }
 
+#errorLogIn, #errorSignUp, #error {
+    background: #ffbaba;
+    color: red;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: auto;
+}
 
 /* helpers */
-.bigText{
+.bigText {
     font-size: 2rem;
     font-weight: 800;
 }
 
-.midText{
+.midText {
     font-size: 1.6rem;
     font-weight: 600;
 }
 
-.normalText{
+.normalText {
     font-size: 1.3rem;
     font-weight: 500;
 }
 
-.smallText{
+.smallText {
     font-size: 1rem;
     font-weight: 400;
 }

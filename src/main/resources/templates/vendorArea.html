@@ -1,56 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" th:href="@{/css/main.css}">
-    <link rel="stylesheet" th:href="@{/css/auth.css}">
+    <link rel="stylesheet" th:href="@{/css/vendorArea.css}">
 </head>
-<body class="centerForced" style="height: 100vh; overflow: hidden; flex-direction: column;">
+<body>
 
-<div class="bigText textCenter">Area Rivenditore</div>
+<div th:replace="fragments :: headerNormal"></div>
 
-<div class="authContainer shadow mt20 scale-in-center">
-    <div id="logInForm">
-        <form class="authForm" action="vendorLogin" method="POST" onsubmit="return validateLoginForm()">
-            <span class="bigText">Sign in</span>
-            <input id="emailLogin" class="smallText" name="email" type="email" placeholder="Email" required>
-            <input id="passwordLogin" class="smallText" name="password" type="password" placeholder="Password" required>
-            <button type="submit" class="button violetBtn normalText mt20">Log in</button>
-        </form>
+<div class="bigText textCenter pdHead pdInline" th:text="Ciao + ' ' +${session.rivenditore.getRagioneSociale()}"></div>
+
+<div id="globalArea" class="pdInline mt20">
+    <div id="areas">
+        <div class="bigText clickable violet" id="insertionAreaBtn">Area Inserzioni</div>
+        <div class="bigText mt20 clickable" id="dataAreaBtn">Area Dati</div>
+        <div class="bigText mt20 clickable" id="statsAreaBtn">Area Statistiche</div>
     </div>
 
-    <div id="logInCall">
-        <span class="bigText">Non hai un account?</span>
-        <span class="smallText">Registrati ora per usufruire dei servizi della piattaforma Lambda</span>
-        <button class="button whiteBtn normalText" id="activeButton">Sign up</button>
-    </div>
+    <div id="contents" class="scale-in-center">
+        <div id="insertionArea" class="scale-in-center">
+            <button class="violetBtn smallText clickable" style="font-weight: 700;">
+                <a th:href="@{selectProduct}" style="color: white;">Aggiungi inserzione</a>
+            </button>
+            <form action="vendorLogout" method="post" class="topRight">
+                <button class="violetBtn smallText clickable" style="font-weight: 700;" type="submit">Logout</button>
+            </form>
+            <div class="cardContainer mt20">
+                <div class="card shadow" th:each="insertion: ${session.rivenditore.getInserzioni()}">
+                    <img th:src="${insertion.getProdotto().getSuperProdotto().getImmagine()}" alt="">
+                    <div class="info">
 
-    <div id="signUpForm">
-        <form class="authForm" action="vendorSignup" method="POST" onsubmit="return validateVendorSignUp()">
-            <span class="bigText textCenter">Crea Account rivenditore</span>
-            <input id="ragioneSocialeSignUp" class="smallText" name="ragioneSociale" placeholder="Ragione Sociale" required>
-            <input id="partitaIvaSignUp" class="smallText" name="partitaIVA" placeholder="Partita IVA" pattern="\d+" required>
-            <input id="emailSignUp" class="smallText" name="email" type="email" placeholder="Email" required>
-            <input id="passwordSignUp" class="smallText" name="password" type="password" placeholder="Password" required>
-            <input id="confirmPasswordSignUp" class="smallText" name="confermaPassword" type="password" placeholder="Confirm password" required>
-            <div style="width: 80%;">Hai già un account? <span style="color: #874BFF;" class="underline clickable" id="removeButton">Log in</span></div>
-            <button type="submit" class="button violetBtn normalText mt20">Sign Up</button>
-        </form>
-    </div>
+                        <div class="nameBtn">
+                            <span class="midText" th:text="${insertion.getProdotto().getSuperProdotto().getMarca() + ' ' + insertion.getProdotto().getSuperProdotto().getModello()}"></span>
+                            <button class="violetBtn smallText clickable" style="font-weight: 700;">
+                                <a href="userDataUpdate.html" style="color: white;">Modifica</a></button>
+                        </div>
 
-    <div id="signUpCall">
-        <span class="bigText">Sei un acquirente?</span>
-        <span class="smallText">Registrati ora per cercare i prodotti che più ami al miglior prezzo in circolazione</span>
-        <a th:href="@{/userAuth}" style="color: white;">
-            <button class="button whiteBtn normalText">Sign up</button>
-        </a>
+                        <div class="smallText mt20"
+                             th:text="|Colore: ${insertion.getProdotto().getId().getColore()},
+                                    RAM: ${insertion.getProdotto().getId().getRam()}GB,
+                                    Spazio di archiviazione: ${insertion.getProdotto().getId().getSpazioArchiviazione()}GB|">
+                        </div>
+
+                        <div class="smallText mt10" th:text="|Data pubblicazione: ${#temporals.format(insertion.getDataPubblicazione(), 'dd-MM-yyyy')}|">
+
+                        </div>
+                        <div class="midText w100 textRight mt20" th:text="${'€ ' + insertion.getPrezzoBase() }"></div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="dataArea" class="scale-in-center hidden">
+            <div class="bigText" style="font-weight: 700;">Dati</div>
+            <div class="midText mt20">Ragione Sociale<br><span class="grey" th:text="${session.rivenditore.getRagioneSociale()}"></span></div>
+            <div class="midText mt20">Partita IVA<br><span class="grey" th:text="${session.rivenditore.getPartitaIva()}"></span></div>
+            <div class="midText mt20">Indirizzo<br><span class="grey" th:text="${session.rivenditore.getIndirizzo()}"></span></div>
+            <div class="midText mt20">Email<br><span class="grey" th:text="${session.rivenditore.getEmail()}"></span></div>
+            <a th:href="@{/vendorDataUpdate}"><button class="violetBtn topRight clickable smallText" style="font-weight: 700;">Modifica</button></a>
+            <form action="vendorLogout" method="post" class="mt50 topRight">
+                <button class="violetBtn smallText clickable" style="font-weight: 700; min-width: 120px" type="submit">Logout</button>
+            </form>
+        </div>
+
+        <div id="statsArea" class="scale-in-center hidden">
+            <div class="bigText" style="font-weight: 700;">Statistiche</div>
+            <form action="vendorLogout" method="post" class="topRight">
+                <button class="violetBtn clickable smallText" style="font-weight: 700;" type="submit">Logout</button>
+            </form>
+        </div>
     </div>
 </div>
 
-<script type="text/javascript" th:src="@{/js/authSlice.js}"></script>
-<script type="text/javascript" th:src="@{/js/validateAuthForm.js}"></script>
-
+<script type="text/javascript" th:src="@{/js/vendorAreaClickHandler.js}"></script>
 </body>
 </html>

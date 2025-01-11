@@ -10,7 +10,7 @@
 <body>
 <div th:replace="fragments :: headerNormal"></div>
 
-<form action="/priceQuantity" method="GET" class="centerForced pdHead pdInline scale-in-center">
+<form action="/priceQuantity" method="GET" class="centerForced pdHead pdInline scale-in-center" onsubmit="return validatePriceQuantityForm()">
   <span class="midText textCenter" style="font-weight: 700">Modulo per prezzo e quantità</span>
 
   <input type="hidden" name="ram" th:value="${ram}">
@@ -23,16 +23,18 @@
             prezzo, sconto per gli acquirenti base e sconto per gli acquirenti con abbonameneto Premium</span>
 
   <div>
-    <input class="smallText" name="quantity" type="number" placeholder="Quantità" min="1" max="">
-    <input class="smallText" name="prezzoBase" type="text" placeholder="Prezzo" min="" max="">
+    <input id="quantita" class="smallText" name="quantity" type="number" placeholder="Quantità" min="1" max="">
+    <input id="prezzo" class="smallText" name="prezzoBase" type="text" placeholder="Prezzo" min="" max="">
   </div>
 
   <div>
-    <input class="smallText" name="scontoStandard" type="number" placeholder="Sconto Base" min="" max="">
-    <input class="smallText" name="scontoPremium" type="number" placeholder="Sconto Premium" min="" max="">
+    <input id="scontoBase" class="smallText" name="scontoStandard" type="number" placeholder="Sconto Base" min="" max="">
+    <input id="scontoPremium" class="smallText" name="scontoPremium" type="number" placeholder="Sconto Premium" min="" max="">
   </div>
 
   <button class="violetBtn normalText" type="submit">Conferma</button>
 </form>
+
+<script type="text/javascript" th:src="@{/js/validatePriceQuantityForm.js}"></script>
 </body>
 </html>

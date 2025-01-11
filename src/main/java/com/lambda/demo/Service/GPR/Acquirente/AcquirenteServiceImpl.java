@@ -76,40 +76,42 @@ public class AcquirenteServiceImpl implements AcquirenteService{
 
     @Override
     public AcquirenteEntity updateAcquirenteData(AcquirenteEntity acquirente, String nome, String cognome, String indirizzo, String passwordAttuale, String nuovaPassword, String confermaNuovaPassword) throws GPRException, InvalidAddressException {
+        if (passwordAttuale.isBlank())
+            throw new PasswordEmptyException("Inserire la password attuale per modificare i dati!");
+
+        if (!Encrypt.encrypt(passwordAttuale).equals(acquirente.getPassword()))
+            throw new WrongPasswordException("Password attuale non corretta!");
+
         if (!nome.isBlank()){
-            if (!Validator.isValidName(nome)) throw new InvalidNameException("Nome non rispetta il formato!");
+            if (!Validator.isValidName(nome))
+                throw new InvalidNameException("Nome non rispetta il formato!");
             acquirente.setNome(nome);
         }
 
         if (!cognome.isBlank()){
-            if (!Validator.isValidSurname(cognome)) throw new InvalidSurnameException("Cognome non rispetta il formato!");
+            if (!Validator.isValidSurname(cognome))
+                throw new InvalidSurnameException("Cognome non rispetta il formato!");
             acquirente.setCognome(cognome);
         }
 
         if (!indirizzo.isBlank()){
-            if (!Validator.isValidAddress(indirizzo)) throw new InvalidAddressException("Indizzo non rispetta il formato richiesto!");
+            if (!Validator.isValidAddress(indirizzo))
+                throw new InvalidAddressException("Indizzo non rispetta il formato richiesto!");
             acquirente.setIndirizzo(indirizzo);
         }
 
-        //NB: modificare questo blocco di if se e solo se si trova una lista di condizioni che migliora la leggibilità AND mantiene i controlli ben presenti come qui
-        if ((passwordAttuale.isBlank() && nuovaPassword.isBlank() && confermaNuovaPassword.isBlank()))
-            ;
-        else if (!passwordAttuale.isBlank() && !nuovaPassword.isBlank() && !confermaNuovaPassword.isBlank()){
-            //se la password attuale non coincide con quella in utilizzo
-            if (!Encrypt.encrypt(passwordAttuale).equals(acquirente.getPassword())) throw new WrongPasswordException("Password attuale non corretta!");
-
-            //se la nuova password non rispetta il formato previsto
-            if (!Validator.isValidPassword(nuovaPassword)) throw new InvalidPasswordException("Nuova password non rispetta il formato!");
-
-            //se password attuale e nuova password coincidono
-            if (passwordAttuale.equals(nuovaPassword)) throw new MatchingOldAndNewPasswordException("La vecchia password e la nuova password non possono essere uguali!");
-
-            //se nuova password e conferma password non coincidono
-            if (!nuovaPassword.equals(confermaNuovaPassword)) throw new UnMatchedPasswordException("La nuova password e la conferma non coincidono!");
-
-            acquirente.setPassword(Encrypt.encrypt(nuovaPassword));
-        } else {
+        if ((!nuovaPassword.isBlank() && confermaNuovaPassword.isBlank())
+                || (nuovaPassword.isBlank() && !confermaNuovaPassword.isBlank()))
             throw new NotCompiledAllPasswordFIelds("I campi relativi alle password non sono stati compilati nella loro interezza!");
+
+        if (!nuovaPassword.isBlank() && !confermaNuovaPassword.isBlank()) {
+            if (!Validator.isValidPassword(nuovaPassword))
+                throw new InvalidPasswordException("Nuova password non rispetta il formato!");
+            if (passwordAttuale.equals(nuovaPassword))
+                throw new MatchingOldAndNewPasswordException("La vecchia password e la nuova password non possono essere uguali!");
+            if (!nuovaPassword.equals(confermaNuovaPassword))
+                throw new UnMatchedPasswordException("La nuova password e la conferma non coincidono!");
+            acquirente.setPassword(Encrypt.encrypt(nuovaPassword));
         }
 
         return acquirente;

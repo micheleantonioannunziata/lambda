@@ -13,16 +13,16 @@ function validateLoginForm(){
         message = "La password inserita non rispetta il formato richiesto!"
 
     if (message !== "") {
-        if (document.getElementById("messageDiv") == null) {
-            let messageDiv = document.createElement("div")
-            messageDiv.id = "messageDiv"
-            messageDiv.className = "smallText textCenter"
-            messageDiv.innerText = message
-            document.querySelector("#logInForm > form").appendChild(messageDiv)
+        if (document.getElementById("errorLogIn") == null) {
+            let error = document.createElement("div")
+            error.id = "errorLogIn"
+            error.className = "smallText textCenter"
+            error.innerText = message
+            document.querySelector("#logInForm > form").appendChild(error)
 
             return false
         } else {
-            document.getElementById("messageDiv").innerText = message
+            document.getElementById("errorLogIn").innerText = message
 
             return false
         }
@@ -53,14 +53,14 @@ function validateUserSignUpForm() {
 
 
     if (message !== "") {
-        if (document.getElementById("messageDiv") == null) {
-            let messageDiv = document.createElement("div")
-            messageDiv.id = "messageDiv"
-            messageDiv.className = "smallText textCenter"
-            messageDiv.innerText = message
-            document.querySelector("#signUpForm > form").appendChild(messageDiv)
+        if (document.getElementById("errorSignUp") == null) {
+            let error = document.createElement("div")
+            error.id = "errorSignUp"
+            error.className = "smallText textCenter"
+            error.innerText = message
+            document.querySelector("#signUpForm > form").appendChild(error)
         } else
-            document.getElementById("messageDiv").innerText = message
+            document.getElementById("errorSignUp").innerText = message
 
         return false
     }
@@ -90,14 +90,14 @@ function validateVendorSignUp() {
 
 
     if (message !== "") {
-        if (document.getElementById("messageDiv") == null) {
-            let messageDiv = document.createElement("div")
-            messageDiv.id = "messageDiv"
-            messageDiv.className = "smallText textCenter"
-            messageDiv.innerText = message
-            document.querySelector("#signUpForm > form").appendChild(messageDiv)
+        if (document.getElementById("errorSignUp") == null) {
+            let error = document.createElement("div")
+            error.id = "errorSignUp"
+            error.className = "smallText textCenter"
+            error.innerText = message
+            document.querySelector("#signUpForm > form").appendChild(error)
         } else
-            document.getElementById("messageDiv").innerText = message
+            document.getElementById("errorSignUp").innerText = message
 
         return false
     }
