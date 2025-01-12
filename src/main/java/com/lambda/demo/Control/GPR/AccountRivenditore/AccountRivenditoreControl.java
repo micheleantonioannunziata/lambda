@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class AccountRivenditoreControl {
@@ -48,8 +49,10 @@ public class AccountRivenditoreControl {
     }
 
     @RequestMapping(value = "/deleteVendorAccount", method = RequestMethod.POST)
-    public String deleteVendorAccount(HttpServletRequest req, HttpServletResponse res) {
+    public String deleteVendorAccount(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) {
         rivenditoreService.deleteVendorAccount(SessionManager.getRivenditore(req).getEmail());
+
+        redirectAttributes.addFlashAttribute("msg", "Account aziendale eliminato con successo!");
 
         return "redirect:/";
     }

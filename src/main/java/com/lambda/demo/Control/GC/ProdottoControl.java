@@ -31,7 +31,7 @@ public class ProdottoControl {
      */
 
 
-    @RequestMapping(value = "/searchProduct", method = RequestMethod.GET)
+    @RequestMapping(value = "/searchProduct", method = RequestMethod.POST)
     public String searchProduct(HttpServletRequest req, HttpServletResponse res, Model model) {
         String idCategoriaReq = req.getParameter("idCategoria");
         List<SuperProdottoEntity> products = new ArrayList<>();

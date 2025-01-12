@@ -36,6 +36,12 @@ div.bigText.textCenter {
     font-weight: 450;
 }
 
+
+#insertionArea{
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
 #dataArea > div > span {
     position: relative;
 }

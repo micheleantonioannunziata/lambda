@@ -53,8 +53,10 @@ public class AccountAcquirenteControl {
     }
 
     @RequestMapping(value = "/purchaserDeleteAccount", method = RequestMethod.POST)
-    public String purchaserDeleteAccount(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String purchaserDeleteAccount(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
         acquirenteService.deletePurchaserAccount(SessionManager.getAcquirente(req).getEmail());
+
+        redirectAttributes.addFlashAttribute("msg", "Account personale eliminato con successo!");
 
         return "redirect:/";
     }

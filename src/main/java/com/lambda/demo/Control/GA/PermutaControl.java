@@ -31,9 +31,6 @@ public class PermutaControl {
     @Autowired
     private PermutaService permutaService;
 
-
-    private final long MAX_FILE_SIZE = 30L * 1024 * 1024; // 30 MB in byte
-
     /**
      * gestisce la logica relativa alla visualizzazione delle categorie disponibili
      * @param req oggetto HttServletRequest che rappresenta la richiesta Http
@@ -59,7 +56,7 @@ public class PermutaControl {
      * @see HttpServletRequest
      * @see HttpServletResponse
      */
-    @RequestMapping(value="/redirectToTradeInSearch", method = RequestMethod.GET)
+    @RequestMapping(value="/redirectToTradeInSearch", method = RequestMethod.POST)
     public String redirectToTradeInSearch(HttpServletRequest req, HttpServletResponse res, Model model){
         String idCategoria = req.getParameter("idCategoria");
 

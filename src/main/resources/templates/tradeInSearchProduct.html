@@ -10,7 +10,7 @@
 <body>
 <div th:replace="fragments :: headerNormal"></div>
 
-<form id="searchProductByCategory" action="searchProduct" method="GET" class="centerForced pdHead pdInline scale-in-center">
+<form id="searchProductByCategory" action="searchProduct" method="POST" class="centerForced pdHead pdInline scale-in-center">
     <input type="hidden" name="idCategoria" th:value="${idCategoria}">
     <span class="bigText">Rivendi il tuo prodotto usato</span>
     <span class="midText textCenter">

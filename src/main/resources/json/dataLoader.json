@@ -1,6 +1,7 @@
 {
+  "insert": "n",
   "categories": [
-    {"nome": "Smartphone", "immagine": "/images/image9.png"},
+    {"nome": "Smartphone", "immagine": "/images/image10.png"},
     {"nome": "PC", "immagine": "/images/image9.png"},
     {"nome": "Tablet", "immagine": "/images/download.png"}],
 

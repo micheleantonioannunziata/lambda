@@ -11,7 +11,7 @@
 
 <div class="pdInline pdHead normalText italic" th:text="|La tua ricerca: '${catalogName}'|"></div>
 
-<div class="cardContainer mt20">
+<div class="cardContainer mt20" style="justify-content: space-around">
     <div class="card shadow clickable" th:each="product : ${products}">
         <form action="redirectToInsertionOverview" method="post">
             <input type="hidden" name="id" th:value="${product.id}">

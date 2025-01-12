@@ -21,7 +21,7 @@
 
 <div class="cardContainer mt20 w100" style="justify-content: space-around;">
     <div class="card shadow clickable" th:each="category : ${categories}">
-        <form action="redirectToTradeInSearch" method="GET" >
+        <form action="redirectToTradeInSearch" method="POST" >
             <input type="hidden" th:value="${category.getId()}" name="idCategoria">
         </form>
         <img th:src="${category.getImmagine()}" th:alt="${category.getNome()}">

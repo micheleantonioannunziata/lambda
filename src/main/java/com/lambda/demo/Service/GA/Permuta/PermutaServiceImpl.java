@@ -97,11 +97,11 @@ public class PermutaServiceImpl implements PermutaService {
 
     @Override
     public int evaluateLambdaPoints(SuperProdottoEntity superProdotto, String condizioneGenerale, String batteria) {
-        InserzioneEntity inserzioneEntity = superProdotto.getCheapestInsertion();
-
         int conversionRate = 10;
+        InserzioneEntity inserzioneEntity = superProdotto.getCheapestInsertion();
+        double prezzo = (inserzioneEntity != null) ? inserzioneEntity.getPrezzoBase() : 500;
 
-        int lambdaPoints = (int) (inserzioneEntity.getPrezzoBase() / (conversionRate * 2));
+        int lambdaPoints = (int) (prezzo / (conversionRate * 2));
 
         if (condizioneGenerale.equals("buona")) lambdaPoints -= (int) (0.02 * lambdaPoints);
         else if(condizioneGenerale.equals("discreta")) lambdaPoints -= (int) (0.05 * lambdaPoints);
@@ -110,5 +110,6 @@ public class PermutaServiceImpl implements PermutaService {
             lambdaPoints -= (int) (0.05 * lambdaPoints);
 
         return lambdaPoints;
+
     }
 }

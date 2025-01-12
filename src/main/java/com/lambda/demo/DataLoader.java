@@ -43,20 +43,33 @@ public class DataLoader {
     private InserzioneRepository inserzioneRepository;
 
 
-    @Transactional
     @PostConstruct
-    public void init() {
-        // Leggi il file JSON
-        InputStream inputStream = getClass().getResourceAsStream("/json/dataLoader.json");
-        if (inputStream == null) {
-            throw new IllegalArgumentException("File data.json non trovato nella cartella resources!");
+    @Transactional
+    public void init() throws Exception {
+        try (InputStream inputStream = getClass().getResourceAsStream("/json/dataLoader.json")) {
+            if (inputStream == null) {
+                throw new IllegalArgumentException("File dataLoader.json non trovato nella cartella resources!");
+            }
+
+            String jsonText = new Scanner(inputStream, StandardCharsets.UTF_8).useDelimiter("\\A").next();
+            JSONObject data = new JSONObject(jsonText);
+
+            if (data.getString("insert").equalsIgnoreCase("y")){
+                loadCategories(data.getJSONArray("categories"));
+                loadSuperProducts(data.getJSONArray("superProducts"));
+                loadProducts(data.getJSONArray("products"));
+                loadVendors(data.getJSONArray("vendors"));
+                loadInsertions(data.getJSONArray("insertions"));
+
+                System.out.println("Dati caricati con successo.");
+            }
+        } catch (Exception e) {
+           throw new Exception(e.getMessage());
         }
+    }
 
-        String jsonText = new Scanner(inputStream, StandardCharsets.UTF_8).useDelimiter("\\A").next();
-        JSONObject data = new JSONObject(jsonText);
-
-        // Inserisci le categorie
-        JSONArray categories = data.getJSONArray("categories");
+    // Metodi separati per il caricamento di ciascun tipo di dato
+    private void loadCategories(JSONArray categories) {
         for (int i = 0; i < categories.length(); i++) {
             JSONObject category = categories.getJSONObject(i);
             CategoriaEntity categoria = new CategoriaEntity();
@@ -66,10 +79,12 @@ public class DataLoader {
                 categoriaRepository.save(categoria);
             }
         }
+    }
 
-        JSONArray superProdotti = data.getJSONArray("superProducts");
-        for (int i = 0; i < superProdotti.length(); i++) {
-            JSONObject superProduct = superProdotti.getJSONObject(i);
+
+    private void loadSuperProducts(JSONArray superProducts) {
+        for (int i = 0; i < superProducts.length(); i++) {
+            JSONObject superProduct = superProducts.getJSONObject(i);
             SuperProdottoEntity superProdotto = new SuperProdottoEntity();
             if (!superProdottoRepository.existsByModello(superProduct.getString("modello"))){
                 superProdotto.setMarca(superProduct.getString("marca"));
@@ -79,8 +94,9 @@ public class DataLoader {
                 superProdottoRepository.save(superProdotto);
             }
         }
+    }
 
-        JSONArray products = data.getJSONArray("products");
+    private void loadProducts(JSONArray products){
         for (int i = 0; i < products.length(); i++) {
             JSONObject product = products.getJSONObject(i);
             ProdottoEntity prodotto = new ProdottoEntity();
@@ -98,36 +114,27 @@ public class DataLoader {
                 prodottoRepository.save(prodotto);
             }
         }
+    }
 
 
-        JSONArray vendors = data.getJSONArray("vendors");
+    private void loadVendors(JSONArray vendors) {
         for (int i = 0; i < vendors.length(); i++) {
             JSONObject vendor = vendors.getJSONObject(i);
 
             RivenditoreEntity rivenditore = new RivenditoreEntity();
 
-            // Verifica l'esistenza delle chiavi necessarie
-            if (vendor.has("partitaIva") && vendor.has("mail") && vendor.has("ragioneSociale") && vendor.has("password")) {
-                if (rivenditoreRepository.findByPartitaIva(vendor.getString("partitaIva")) == null
-                        || !rivenditoreRepository.existsByEmail(vendor.getString("mail"))
-                        || !rivenditoreRepository.existsByRagioneSociale(vendor.getString("ragioneSociale"))) {
+            rivenditore.setPartitaIva(vendor.getString("partitaIva"));
+            rivenditore.setEmail(vendor.getString("mail"));
+            rivenditore.setRagioneSociale(vendor.getString("ragioneSociale"));
+            rivenditore.setPassword(vendor.getString("password"));
 
-                    rivenditore.setPartitaIva(vendor.getString("partitaIva"));
-                    rivenditore.setEmail(vendor.getString("mail"));
-                    rivenditore.setRagioneSociale(vendor.getString("ragioneSociale"));
-                    rivenditore.setPassword(vendor.getString("password"));
+            rivenditoreRepository.saveAndFlush(rivenditore);
 
-                    rivenditoreRepository.saveAndFlush(rivenditore);
-                }
-            } else {
-                System.err.println("Oggetto vendor mancante di campi obbligatori: " + vendor);
-            }
         }
+    }
 
 
-
-
-        JSONArray insertions = data.getJSONArray("insertions");
+    private void loadInsertions(JSONArray insertions){
         for (int i = 0; i < insertions.length(); i++) {
             JSONObject insertion = insertions.getJSONObject(i);
             JSONObject product = insertion.getJSONObject("prodotto");
@@ -138,7 +145,7 @@ public class DataLoader {
             InserzioneEntityId inserzioneEntityId = new InserzioneEntityId();
             inserzioneEntityId.setPartitaIvaRivenditore(insertion.getString("partitaIva"));
             inserzioneEntityId.setIdProdotto(new ProdottoEntityId((superProdottoRepository.findByModello(product.getString("superProdottoModello")).getId()),
-                                                product.getInt("ram"), product.getInt("spazioArchiviazione"), product.getString("colore")));
+                    product.getInt("ram"), product.getInt("spazioArchiviazione"), product.getString("colore")));
 
 
             inserzione.setId(inserzioneEntityId);
@@ -159,6 +166,4 @@ public class DataLoader {
         }
 
     }
-
-
 }
