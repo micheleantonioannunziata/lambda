@@ -12,6 +12,7 @@
 <div th:replace="fragments :: headerNormal"></div>
 
 <div class="bigText textCenter pdHead pdInline" th:text="Ciao + ' ' +${session.rivenditore.getRagioneSociale()}"></div>
+<div th:if="${msg}" id="ack" class="textCenter mt20" th:text="${msg}"></div>
 
 <div id="globalArea" class="pdInline mt20">
     <div id="areas">

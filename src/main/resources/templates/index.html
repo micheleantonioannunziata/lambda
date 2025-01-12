@@ -8,41 +8,44 @@
 </head>
 <body style="margin-bottom: 0">
 
-    <div th:replace="fragments :: headerNormal"></div>
+<div th:replace="fragments :: headerNormal"></div>
 
-    <div id="hero" class="poster">
-        <div class="poster__content">
-            <div class="bigText">
-                Lambda Progetto IS
-            </div>
-
-            <div class="normalText" style="padding: 30px 0">
-                Unisciti a Lambda Premium e scopri tutti i vantaggi esclusivi progettati per migliorare la tua esperienza.
-            </div>
-
-            <div class="btns">
-                <a th:href="@{userAuth}">
-                    <button class="button violetBtn clickable" id="utenteBtn">
-                        <span class="smallText" style="font-weight: 500">Area utente</span>
-                    </button>
-                </a>
-
-                <a th:href="@{vendorAuth}">
-                    <button class="button whiteBtn clickable" id="rivenditoreBtn">
-                        <span class="smallText" style="font-weight: 500">Area rivenditore</span>
-                    </button>
-                </a>
-            </div>
+<div id="hero" class="poster">
+    <div class="poster__content">
+        <div class="bigText">
+            <span class="violet">Connetti</span>.
+            <span class="violet">Commercia</span>.
+            <span class="violet">Cresci</span>.<br>
         </div>
-        <div class="poster__image">
-            <img th:src="@{/images/hero.svg}" alt="">
+
+        <div class="normalText mt20">
+            Scopri la piattaforma del futuro per il commercio tecnologico
         </div>
+        <div class="btns mt50">
+            <a th:href="@{userAuth}">
+                <button class="button violetBtn clickable" id="utenteBtn">
+                    <span class="smallText" style="font-weight: 500">Area utente</span>
+                </button>
+            </a>
+
+            <a th:href="@{vendorAuth}">
+                <button class="button whiteBtn clickable" id="rivenditoreBtn">
+                    <span class="smallText" style="font-weight: 500">Area rivenditore</span>
+                </button>
+            </a>
+        </div>
+
+        <div th:if="${msg}" id="ack" class="textCenter mt20" style="margin-inline: 0" th:text="${msg}"></div>
     </div>
+    <div class="poster__image">
+        <img th:src="@{/images/hero.svg}" alt="">
+    </div>
+</div>
 
-    <script>
-        document.getElementById('hero').style.background =
-            'url("/images/ellipse.svg") no-repeat center center';
-    </script>
+<script>
+    document.getElementById('hero').style.background =
+        'url("/images/ellipse.svg") no-repeat center center';
+</script>
 
 </body>
 </html>

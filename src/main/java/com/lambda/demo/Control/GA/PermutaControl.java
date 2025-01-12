@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -153,7 +154,7 @@ public class PermutaControl {
      */
     @Transactional
     @RequestMapping(value="/addTradeIn", method = RequestMethod.POST)
-    public String addTradeIn(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String addTradeIn(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
         String action = req.getParameter("action");
 
         if(action.equals("conferma")) {
@@ -179,6 +180,8 @@ public class PermutaControl {
             }
 
         }
+
+        redirectAttributes.addFlashAttribute("msg", "Permuta effettuata con successo!");
 
         return "redirect:/userArea";
     }

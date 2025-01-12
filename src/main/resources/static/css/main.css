@@ -6,7 +6,7 @@
     --myBlack: #000;
     --inputBack: #eee;
     --placeHolderColor: #6e6e6e;
-    --green: #28a745;
+    --green: #5cb85c;
 }
 
 ::selection {
@@ -19,7 +19,7 @@
 }
 
 /* reset css */
-* {
+•⁠  ⁠{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -165,14 +165,24 @@ select:focus-visible {
     width: 20px;
 }
 
-#errorLogIn, #errorSignUp, #error {
-    background: #ffbaba;
-    color: red;
+#errorLogIn, #errorSignUp, #error, #ack {
     font-size: 13px;
     font-weight: 700;
     border-radius: 10px;
     padding: 10px 15px;
+}
+
+#errorLogIn, #errorSignUp, #error {
+    background: #ffbaba;
+    color: red;
     width: auto;
+}
+
+#ack {
+    background: var(--green);
+    color: white;
+    width: fit-content;
+    margin-inline: auto;
 }
 
 /* helpers */
@@ -236,6 +246,10 @@ select:focus-visible {
 
 .green {
     color: var(--green);
+}
+
+.red {
+    color: red;
 }
 
 .violetBtn {

@@ -17,14 +17,14 @@
             <span class="bigText">Sign in</span>
             <input class="smallText" id="emailLogin" name="email" type="email" placeholder="Email" required>
             <input class="smallText" id="passwordLogin" name="password" type="password" placeholder="Password"  required>
-            <button type="submit" class="button violetBtn normalText mt20">Log in</button>
+            <button type="submit" class="button violetBtn normalText mt20 clickable">Log in</button>
         </form>
     </div>
 
     <div id="logInCall">
         <span class="bigText">Non hai un account?</span>
         <span class="smallText">Registrati ora per usufruire dei servizi della piattaforma Lambda</span>
-        <button class="button whiteBtn normalText" id="activeButton">Sign up</button>
+        <button class="button whiteBtn normalText clickable" id="activeButton">Sign up</button>
     </div>
 
     <div id="signUpForm">
@@ -36,7 +36,7 @@
             <input id="userPassword" class="smallText" name="password" type="password" placeholder="Password" required>
             <input id="userConfirmPassword" class="smallText" name="confermaPassword" type="password" placeholder="Confirm password" required>
             <div style="width: 80%;">Hai già un account? <span id="removeButton" style="color: #874BFF;" class="underline clickable">Log in </span></div>
-            <button type="submit" class="button violetBtn normalText mt20">Sign Up</button>
+            <button type="submit" class="button violetBtn normalText mt20 clickable">Sign Up</button>
         </form>
     </div>
 
@@ -44,7 +44,7 @@
         <span class="bigText">Sei un'azienda rivenditrice?</span>
         <span class="smallText">Registrati ora per ampliare il tuo mercato, raggiungere nuovi clienti e gestire il tuo business</span>
         <a th:href="@{/vendorAuth}" style="color: white;">
-            <button class="button whiteBtn normalText">Sign up</button>
+            <button class="button whiteBtn normalText clickable">Sign up</button>
         </a>
     </div>
 </div>

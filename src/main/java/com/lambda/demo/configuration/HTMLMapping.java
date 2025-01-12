@@ -1,12 +1,14 @@
 package com.lambda.demo.configuration;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HTMLMapping {
     @GetMapping("/")
-    public String index() {
+    public String index(Model model) {
+        model.addAttribute("msg", model.getAttribute("msg"));
         return "index";
     }
 
@@ -27,10 +29,16 @@ public class HTMLMapping {
     public String checkout(){ return "checkout";}
 
     @GetMapping("/userArea")
-    public String userArea(){ return "userArea";}
+    public String userArea(Model model) {
+        model.addAttribute("msg", model.getAttribute("msg"));
+        return "userArea";
+    }
 
     @GetMapping("/vendorArea")
-    public String vendorArea(){ return "vendorArea";}
+    public String vendorArea(Model model) {
+        model.addAttribute("msg", model.getAttribute("msg"));
+        return "vendorArea";
+    }
 
     @GetMapping("/userDataUpdate")
     public String userDataUpdate(){ return "userDataUpdate";}
@@ -74,4 +82,3 @@ public class HTMLMapping {
     @GetMapping("/addInsertionSummary")
     public String addInsertionSummary(){ return "addInsertionSummary";}
 }
-
