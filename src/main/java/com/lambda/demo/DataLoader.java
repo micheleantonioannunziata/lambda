@@ -13,11 +13,13 @@ import com.lambda.demo.Repository.GC.Prodotto.ProdottoRepository;
 import com.lambda.demo.Repository.GC.SuperProdottoRepository;
 import com.lambda.demo.Repository.GPR.RivenditoreRepository;
 import jakarta.annotation.PostConstruct;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.transaction.Transactional;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -43,6 +45,11 @@ public class DataLoader {
     private InserzioneRepository inserzioneRepository;
 
 
+    /**
+     * gestisce la logica di parsing di "dataLoader.json" per popolare le tabelle
+     * @throws Exception eccezione generica
+     * @see Exception
+     */
     @PostConstruct
     @Transactional
     public void init() throws Exception {
@@ -64,11 +71,10 @@ public class DataLoader {
                 System.out.println("Dati caricati con successo.");
             }
         } catch (Exception e) {
-           throw new Exception(e.getMessage());
+            throw new Exception(e.getMessage());
         }
     }
 
-    // Metodi separati per il caricamento di ciascun tipo di dato
     private void loadCategories(JSONArray categories) {
         for (int i = 0; i < categories.length(); i++) {
             JSONObject category = categories.getJSONObject(i);
@@ -80,7 +86,6 @@ public class DataLoader {
             }
         }
     }
-
 
     private void loadSuperProducts(JSONArray superProducts) {
         for (int i = 0; i < superProducts.length(); i++) {
@@ -105,7 +110,6 @@ public class DataLoader {
             prodottoEntityId.setRam(product.getInt("ram"));
             prodottoEntityId.setSpazioArchiviazione(product.getInt("spazioArchiviazione"));
             prodottoEntityId.setColore(product.getString("colore"));
-
 
             prodotto.setId(prodottoEntityId);
             prodotto.setSuperProdotto(superProdottoRepository.findById(prodottoEntityId.getSuperProdottoId()));
