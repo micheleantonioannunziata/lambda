@@ -24,7 +24,7 @@ import java.util.List;
 @Builder
 @Entity
 @Table(name="inserzione")
-@Check(constraints = "prezzo_base > 0 AND sconto_standard >= 0 AND sconto_premium >= 0 AND sconto_premium > sconto_standard AND quantita > 0")
+@Check(constraints = "prezzo_base > 0 AND sconto_standard >= 0 AND sconto_premium >= 0 AND sconto_premium > sconto_standard AND quantita >= 0")
 public class InserzioneEntity {
 
     @EmbeddedId

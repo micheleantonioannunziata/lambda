@@ -81,7 +81,7 @@ public class InserzioneServiceImpl implements InserzioneService {
         if (!Validator.isValidScontoPremium(scontoPremium))
             throw new InvalidPremiumDiscountException("Sconto premium non rispetta il formato!");
 
-        if (Integer.parseInt(scontoPremium) < 0 || Integer.parseInt(scontoPremium) > 80 || Integer.parseInt(scontoPremium) < Integer.parseInt(scontoStandard))
+        if (Integer.parseInt(scontoPremium) < 0 || Integer.parseInt(scontoPremium) > 80 || Integer.parseInt(scontoPremium) <= Integer.parseInt(scontoStandard))
             throw new InvalidPremiumDiscountException("Valore sconto premium non ammesso!");
     }
 

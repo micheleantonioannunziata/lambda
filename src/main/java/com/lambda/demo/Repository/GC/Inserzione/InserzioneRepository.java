@@ -24,5 +24,9 @@ public interface InserzioneRepository extends JpaRepository<InserzioneEntity, In
             nativeQuery = true)
     void insertInserzione(@Param("inserzione") InserzioneEntity inserzione);
 
+    @Transactional
+    @Modifying
+    @Query(value = "UPDATE inserzione i SET i.quantita = :quantity, i.disponibilita = :disponibilita WHERE i.super_prodotto_id = :idSuperProdotto AND i.colore = :colore AND i.spazio_archiviazione = :spazioArchiviazione AND i.ram = :ram", nativeQuery = true)
+    void updateQuantity(@Param("quantity") int quantity, @Param("disponibilita") boolean disponibilita, @Param("idSuperProdotto") int idSuperProdotto, @Param("colore") String colore, @Param("spazioArchiviazione") int spazioArchiviazione, @Param("ram") int ram);
 
 }

@@ -21,6 +21,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -127,7 +128,7 @@ public class InserzioneControl {
     }
 
     @RequestMapping(value = "/addInsertion", method = RequestMethod.POST)
-    public String addInsertion(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String addInsertion(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
         String action = req.getParameter("action");
         if (action.equals("conferma")) {
 
@@ -155,6 +156,7 @@ public class InserzioneControl {
 
         }
 
+        redirectAttributes.addFlashAttribute("msg", "Inserzione aggiunta con successo!");
         return "redirect:/vendorArea";
     }
 
@@ -208,7 +210,7 @@ public class InserzioneControl {
                     Integer.parseInt(values.get("ram")), Integer.parseInt(values.get("storage")), values.get("color"));
 
 
-            if(inserzioneEntity != null) {
+            if(inserzioneEntity != null && inserzioneEntity.isDisponibilita()) {
                 JSONObject obj = new JSONObject();
                 obj.put("prezzo", inserzioneEntity.returnDiscountedPrice(SessionManager.getAcquirente(req).isPremium()));
                 jsonArray.put(obj);

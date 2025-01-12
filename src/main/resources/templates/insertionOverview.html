@@ -74,7 +74,9 @@
     <div class="insertionInfo">
         <div class="midText">Rivenditore: <span class="italic" th:text="${insertion.getRivenditore().getRagioneSociale()}"></span></div>
 
-        <div class="midText mt20 green">Disponibilità immediata</div>
+        <div id="disponibilita" class="midText mt20"></div>
+
+
 
         <div id="price" class="bigText textRight mt20" th:text="'€ ' + ${insertion.returnDiscountedPrice(session.acquirente.premium)}"></div>
 
