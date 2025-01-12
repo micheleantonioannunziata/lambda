@@ -11,9 +11,9 @@
 <div th:replace="fragments :: headerNormal"></div>
 
 <form action="vendorDataUpdate" method="POST" class="centerForced pdHead pdInline scale-in-center" onsubmit="return validateVendorDataForm()">
-    <span class="midText">Modifica dati personali</span>
-    <input id="ragioneSociale" class="smallText" name="ragioneSociale" type="text" placeholder="Ragione sociale">
-    <input id="indirizzo" class="smallText" name="indirizzo" type="text" placeholder="Indirizzo">
+    <span class="midText textCenter">Modifica dati personali</span>
+    <input id="ragioneSociale" class="smallText" name="ragioneSociale" type="text" placeholder="Ragione sociale" th:value="${session.rivenditore.getRagioneSociale()}">
+    <input id="indirizzo" class="smallText" name="indirizzo" type="text" placeholder="Indirizzo" th:value="${session.rivenditore.getIndirizzo()}">
     <input id="passwordAttuale" class="smallText" name="passwordAttuale" type="password" placeholder="Password attuale">
     <input id="nuovaPassword" class="smallText" name="nuovaPassword" type="password" placeholder="Nuova password">
     <input id="confermaNuovaPassword" class="smallText" name="confermaNuovaPassword" type="password" placeholder="Conferma nuova password">

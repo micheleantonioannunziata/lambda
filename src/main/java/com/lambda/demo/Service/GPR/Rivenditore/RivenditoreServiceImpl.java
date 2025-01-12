@@ -81,6 +81,12 @@ public class RivenditoreServiceImpl implements RivenditoreService{
 
     @Override
     public RivenditoreEntity updateVendorData(RivenditoreEntity rivenditoreEntity, String ragioneSociale, String indirizzo, String passwordAttuale, String nuovaPassword, String confermaNuovaPassword) throws GPRException, InvalidAddressException {
+        if (passwordAttuale.isBlank())
+            throw new PasswordEmptyException("Inserire la password attuale per modificare i dati!");
+
+        if (!Encrypt.encrypt(passwordAttuale).equals(rivenditoreEntity.getPassword()))
+            throw new WrongPasswordException("Password attuale non corretta!");
+
         if (!ragioneSociale.isBlank()){
             if (!Validator.isValidCompanyName(ragioneSociale)) throw new InvalidCompanyNameException("Ragione sociale non rispetta il formato richiesto!");
             rivenditoreEntity.setRagioneSociale(ragioneSociale);

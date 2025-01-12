@@ -6,7 +6,8 @@ function validateVendorDataForm(){
     const confermaPassword = document.getElementById("confermaNuovaPassword").value
 
     const ragioneSocialeRegex = /^[A-Za-z0-9ÀÈÉÌÒÓÙàèéìòóùç&',.\s-]{2,100}$/
-    const passwordRegex = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[^\w\s]).{8,50}$/
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,50}$/
+
     const indirizzoRegex = /^(?=.{15,255}$)[A-Za-z' -]+ \d+, \d{5} [A-Za-z' -]{3,}$/
 
 
