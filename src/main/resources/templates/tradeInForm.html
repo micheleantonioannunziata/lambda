@@ -10,7 +10,7 @@
 <body>
 <div th:replace="fragments :: headerNormal"></div>
 
-<form action="productEvaluation" method="POST" class="centerForced pdHead pdInline scale-in-center" enctype="multipart/form-data">
+<form action="productEvaluation" method="POST" class="centerForced pdHead pdInline scale-in-center" enctype="multipart/form-data" onsubmit="return validateTradeInForm()">
     <span class="bigText">Rivendi il tuo prodotto usato</span>
     <span class="midText textCenter">
             Noi valutiamo il tuo prodotto usato. Tu devi solo spedircelo per ricevere il valore direttamente sul tuo conto Lambda.
@@ -27,11 +27,11 @@
         <button id="resetImageBtn" class="button hidden clickable" type="button">
             Reset<img th:src="@{/images/refresh.svg}">
         </button>
-        <input type="file" class="hidden" name="imgDispositivo" accept="image/png" id="hiddenImageInput" required>
+        <input type="file" class="hidden" name="imgDispositivo" accept="image/png" id="hiddenImageInput">
         <span id="imageNameDisplay">Nessun file selezionato</span>
     </div>
 
-    <select name="ram" class="smallText shadow" required>
+    <select id="ram" name="ram" class="smallText shadow" required>
         <option value="" disabled selected>RAM</option>
         <option value="1">1GB</option>
         <option value="2">2GB</option>
@@ -46,7 +46,7 @@
         <option value="128">128GB</option>
     </select>
 
-    <select name="spazioArchiviazione" class="smallText shadow" required>
+    <select id="spazioArchiviazione" name="spazioArchiviazione" class="smallText shadow" required>
         <option value="" disabled selected>Spazio di archiviazione</option>
         <option value="4">4GB</option>
         <option value="6">6GB</option>
@@ -63,7 +63,7 @@
         <option value="2048">2048GB</option>
     </select>
 
-    <select name="condizioneGenerale" class="smallText shadow" required>
+    <select id="condizioneGenerale" name="condizioneGenerale" class="smallText shadow" required>
         <option disabled selected>Condizione generale</option>
         <option value="Discreta">Discreta</option>
         <option value="Buona">Buona</option>
@@ -71,11 +71,11 @@
         <option value="Eccellente">Eccellente</option>
     </select>
 
-    <input type="text" name="colore" placeholder="Colore" required>
+    <input id="colore" type="text" name="colore" placeholder="Colore" required>
 
-    <input type="number" name="batteria" placeholder="Batteria" min="1" max="100" required>
+    <input id="batteria" type="number" name="batteria" placeholder="Batteria" min="1" max="100" required>
 
-    <button id="submitForm" class="violetBtn normalText" type="submit">Conferma</button>
+    <button id="submitForm" class="violetBtn normalText clickable" type="submit">Conferma</button>
 </form>
 
 <script type="text/javascript" th:src="@{/js/tradeInForm.js}">

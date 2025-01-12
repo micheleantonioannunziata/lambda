@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 <body>
 <div th:replace="fragments :: headerNormal"></div>
 
-<form action="techRequirements" method="GET" class="centerForced pdHead pdInline scale-in-center">
+<form id="techRequirements" action="techRequirements" method="GET" class="centerForced pdHead pdInline scale-in-center" onsubmit="return validateTechnicalRequirementsForm()">
 
     <span class="midText textCenter" style="font-weight: 700">Modulo tecnico</span>
 
@@ -41,10 +41,11 @@
 
 
     <input type="hidden" name="idSuperProdotto" th:value="${idSuperProdotto}">
-    <button class="violetBtn normalText" type="submit">Avanti</button>
+    <button class="violetBtn normalText clickable" type="submit">Avanti</button>
 </form>
 
 
 <script th:src="@{/js/changeOptions.js}"></script>
+<script th:src="@{js/validateTechnicalRequirementsForm.js}"></script>
 </body>
 </html>
