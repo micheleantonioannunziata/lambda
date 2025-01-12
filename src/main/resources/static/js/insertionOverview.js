@@ -17,7 +17,7 @@ const idSuperInput = addToCartForm.querySelector("#idSuperCart");
 const ramInput = addToCartForm.querySelector("#ramCart");
 const storageInput = addToCartForm.querySelector("#storageCart");
 const colorInput = addToCartForm.querySelector("#colorCart");
-
+const insertionInfo = document.querySelector(".insertionInfo")
 
 
 // Mostra il pulsante "Aggiungi al carrello"
@@ -92,12 +92,18 @@ function verifyCombination(color, memory, storage) {
                 ramInput.value = memory;
                 storageInput.value = storage;
                 colorInput.value = color;
+                insertionInfo.querySelector("#disponibilita").classList.remove("red"); // Rimuove "red" se presente
+                insertionInfo.querySelector("#disponibilita").classList.add("green");
+                insertionInfo.querySelector("#disponibilita").innerText = "Disponibilità immediata";
                 showAddToCartBtn();
             } else {
                 price.innerText = '';
                 addToCartForm.querySelectorAll("input").forEach(input => {
                     input.value = "";
                 });
+                insertionInfo.querySelector("#disponibilita").classList.remove("green");
+                insertionInfo.querySelector("#disponibilita").classList.add("red");
+                insertionInfo.querySelector("#disponibilita").innerText = "Inserzione non disponibile";
                 hideAddToCartBtn();
             }
         })

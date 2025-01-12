@@ -29,7 +29,19 @@ function validateCheckoutForm() {
         if (!numeroCartaRegex.test(numeroCarta)) error = "Numero carta inserito non rispetta il formato richiesto!";
         if (!cvvRegex.test(cvv)) error = "CVV inserito non rispetta il formato richiesto!";
         if (!scadenzaRegex.test(dataScadenza)) error = "Data di scadenza inserita non rispetta il formato richiesto!";
+
+        // Estrai mese e anno dalla stringa della data di scadenza
+        const [month, year] = dataScadenza.split('/').map(Number);
+        const now = new Date();
+        const currentMonth = now.getMonth() + 1; // Mesi in JavaScript: 0 (Gennaio) a 11 (Dicembre)
+        const currentYear = now.getFullYear();
+
+        // Verifica che la data di scadenza sia valida
+        if (year < currentYear || (year === currentYear && month < currentMonth)) {
+            error = "La data di scadenza della carta è già trascorsa!";
+        }
     }
+
 
     // Gestione degli errori
     if (error !== "") {
@@ -38,9 +50,8 @@ function validateCheckoutForm() {
             errorDiv.id = "error";
             errorDiv.className = "smallText textCenter";
             errorDiv.innerText = error;
-            const submitButton = document.querySelector("form button[type=submit]");
+            const submitButton = document.querySelector("#checkoutInfo button[type=submit]");
             const form = submitButton.parentNode;
-
             form.insertBefore(errorDiv, submitButton)
         } else {
             document.getElementById("error").innerText = error;
