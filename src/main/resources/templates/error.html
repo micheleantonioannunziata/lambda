@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<link rel="stylesheet" th:href="@{/css/main.css}">
+<body>
+
+<div th:replace="fragments::headerNormal"></div>
+
+<div class="textCenter centerForced scale-in-center pdHead pdInline"
+     style="flex-direction: column; gap: 25px; height: 80vh">
+
+    <div style="font-weight: normal; font-size: 4rem">Errore di sistema!</div>
+
+    <img th:src="@{/images/error.svg}" style="width: 300px">
+    <div class="normalText">Status code: <span th:text="${status}"></span></div>
+
+    <div style="display: flex; gap: 20px;">
+        <button class="violetBtn smallText clickable" onclick="window.history.back()">Torna indietro</button>
+        <div id="error" class="textCenter" style="max-width: 80%" th:text="${msg}"></div>
+    </div>
+
+</div>
+</body>
+</html>
