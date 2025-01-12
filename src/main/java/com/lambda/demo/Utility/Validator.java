@@ -32,7 +32,7 @@ public class Validator {
     //  - Una lettera maiuscola.
     //  - Un numero.
     //  - Un carattere speciale (non alfanumerico, come simboli o punteggiatura).
-    private static final String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\\w\\s]).{8,50}$";
+    private static final String passwordRegex = "^(?=.[a-z])(?=.[A-Z])(?=.\\d)(?=.[^\\w\\s]).{8,50}$";
 
     private static final Pattern passwordPattern = Pattern.compile(passwordRegex);
     //metodo che confronta la password con la regex tramite un oggetto Pattern
@@ -93,7 +93,7 @@ public class Validator {
 
 
 
-    private static final String prezzoRegex = "\\d{1,4}(\\.\\d{1,2})?";
+    private static final String prezzoRegex = "^[1-9]\\d{0,3}(\\.\\d{1,2})?$";
     private static final Pattern prezzoPattern = Pattern.compile(prezzoRegex);
     public static boolean isValidPrezzo(String prezzo){
         if (prezzo == null)

@@ -91,14 +91,17 @@ public class CarrelloServiceImpl implements CarrelloService{
             carrello.setCarrelloItems(cartItems);
         }
 
+        if (inserzione.isDisponibilita()) {
+            int itemIndex = getItemIndex(cartItems, inserzione);
+            if (itemIndex == -1) {
+                if (inserzione.getQuantita() > 0) cartItems.add(new FormazioneCarrelloEntity(new FormazioneCarrelloEntityId(carrello.getId(), inserzioneEntityId), carrello, inserzione, 1));
+            } else if (cartItems.get(itemIndex).getQuantita() + 1 <= inserzione.getQuantita()) {
+                cartItems.get(itemIndex).setQuantita(cartItems.get(itemIndex).getQuantita() + 1);
+            }
 
-        int itemIndex = getItemIndex(cartItems, inserzione);
-        if (itemIndex == -1) cartItems.add(new FormazioneCarrelloEntity(new FormazioneCarrelloEntityId(carrello.getId(), inserzioneEntityId), carrello, inserzione, 1));
-        else cartItems.get(itemIndex).setQuantita(cartItems.get(itemIndex).getQuantita() + 1);
 
-
-        carrello.setPrezzoProvvisorio(carrello.getPrezzoProvvisorio() + inserzione.returnDiscountedPrice(SessionManager.getAcquirente(request).isPremium()));
-
+            carrello.setPrezzoProvvisorio(carrello.getPrezzoProvvisorio() + inserzione.returnDiscountedPrice(SessionManager.getAcquirente(request).isPremium()));
+        }
         SessionManager.setCarrello(request, carrello);
     }
 

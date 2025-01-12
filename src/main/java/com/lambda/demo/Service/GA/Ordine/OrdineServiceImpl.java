@@ -11,6 +11,7 @@ import com.lambda.demo.Exception.GA.GestioneOrdini.*;
 import com.lambda.demo.Repository.GA.Carrello.CarrelloRepository;
 import com.lambda.demo.Repository.GA.Ordine.ComposizioneRepository;
 import com.lambda.demo.Repository.GA.Ordine.OrdineRepository;
+import com.lambda.demo.Repository.GC.Inserzione.InserzioneRepository;
 import com.lambda.demo.Repository.GPR.AcquirenteRepository;
 import com.lambda.demo.Utility.SessionManager;
 import com.lambda.demo.Utility.Validator;
@@ -34,6 +35,9 @@ public class OrdineServiceImpl implements OrdineService{
 
     @Autowired
     private CarrelloRepository carrelloRepository;
+
+    @Autowired
+    private InserzioneRepository inserzioneRepository;
 
     @Autowired
     private HttpServletRequest request;
@@ -125,6 +129,13 @@ public class OrdineServiceImpl implements OrdineService{
 
             ordineEntity.addComposizione(orderItem);
             orderItems.add(orderItem);
+
+            cartItem.getInserzione().setQuantita(cartItem.getInserzione().getQuantita() - orderItem.getQuantita());
+            if (cartItem.getInserzione().getQuantita() == 0) {
+                cartItem.getInserzione().setDisponibilita(false);
+            }
+            inserzioneRepository.updateQuantity(cartItem.getInserzione().getQuantita(), cartItem.getInserzione().isDisponibilita(), cartItem.getInserzione().getId().getIdProdotto().getSuperProdottoId(),
+                    cartItem.getInserzione().getId().getIdProdotto().getColore(), cartItem.getInserzione().getId().getIdProdotto().getSpazioArchiviazione(), cartItem.getInserzione().getId().getIdProdotto().getRam());
         }
 
 
