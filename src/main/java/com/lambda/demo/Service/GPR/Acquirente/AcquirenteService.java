@@ -14,5 +14,6 @@ public interface AcquirenteService {
     AcquirenteEntity updateAcquirenteData(AcquirenteEntity acquirenteEntity, String nome, String cognome, String indirizzo, String passwordAttuale, String nuovaPassword, String confermaNuovaPassword) throws GPRException, InvalidAddressException;
 
     AcquirenteEntity getAcquirente(String email);
-}
 
+    void deletePurchaserAccount(String email);
+}

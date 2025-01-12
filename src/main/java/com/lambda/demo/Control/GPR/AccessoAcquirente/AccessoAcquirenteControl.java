@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -35,7 +36,7 @@ public class AccessoAcquirenteControl {
      * @see HttpServletResponse
      */
     @RequestMapping(value = "/purchaserSignup", method = RequestMethod.POST)
-    public String signupAcquirente(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String signupAcquirente(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
 
         String nome = req.getParameter("nome");
         String cognome = req.getParameter("cognome");
@@ -56,14 +57,14 @@ public class AccessoAcquirenteControl {
             throw new GPRException(e.getMessage());
         }
 
-
-
         SessionManager.setAcquirente(req, acquirenteService.getAcquirente(email));
 
         //se tutto va a buon fine, bisogna associare all'acquirente un nuovo carrello
         CarrelloEntity carrelloEntity = new CarrelloEntity();
         carrelloEntity.setAcquirente(SessionManager.getAcquirente(req));
         SessionManager.setCarrello(req, carrelloEntity);
+
+        redirectAttributes.addFlashAttribute("msg", "Registrazione avvenuta con successo!");
 
         return "redirect:/userArea";
     }
@@ -78,28 +79,29 @@ public class AccessoAcquirenteControl {
      */
 
     @RequestMapping(value = "/purchaserLogin", method = RequestMethod.POST)
-    public String loginAcquirente(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String loginAcquirente(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
 
         try {
             acquirenteService.loginAcquirente(email, password);
-        }catch (GPRException gprException){
+        } catch (GPRException gprException){
             throw new GPRException(gprException.getMessage());
         }
 
         AcquirenteEntity acquirente = acquirenteService.getAcquirente(email);
 
-        //setto il bean dell'acquirente nella sessione
+        // bean acquirente in sessione
         SessionManager.setAcquirente(req, acquirente);
 
-        //anche se il carrello è vuoto, già c'è sul database
         CarrelloEntity carrelloEntity = carrelloService.getCartByUser(acquirente.getId());
         if (carrelloEntity == null) carrelloEntity = new CarrelloEntity();
 
-        //setto il carrello preso dal db nella sessione
+        // sincronizzazione carrello db - sessione
         SessionManager.setCarrello(req, carrelloEntity);
+
+        redirectAttributes.addFlashAttribute("msg", "Login effettuato con successo!");
 
         return "redirect:/userArea";
     }
@@ -114,9 +116,8 @@ public class AccessoAcquirenteControl {
      */
     @Transactional
     @RequestMapping(value = "/purchaserLogout", method = RequestMethod.GET)
-    public String logout(HttpServletRequest req, HttpServletResponse res) {
+    public String logout(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) {
         AcquirenteEntity acquirente = SessionManager.getAcquirente(req);
-
 
         //prendo il carrello dalla sessione
         CarrelloEntity carrelloEntity = SessionManager.getCarrello(req);
@@ -143,9 +144,10 @@ public class AccessoAcquirenteControl {
         //chiudo la sessione
         req.getSession().invalidate();
 
+        redirectAttributes.addFlashAttribute("msg", "Logout effettuato con successo!");
+
         return "redirect:/";
     }
 
 
 }
-

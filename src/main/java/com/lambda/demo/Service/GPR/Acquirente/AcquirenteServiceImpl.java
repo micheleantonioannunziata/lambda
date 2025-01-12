@@ -127,4 +127,10 @@ public class AcquirenteServiceImpl implements AcquirenteService{
     public AcquirenteEntity getAcquirente(String email){
         return acquirenteRepository.findByEmail(email);
     }
+
+    @Override
+    @Transactional
+    public void deletePurchaserAccount(String email) {
+        acquirenteRepository.deleteAcquirenteEntityByEmail(email);
+    }
 }

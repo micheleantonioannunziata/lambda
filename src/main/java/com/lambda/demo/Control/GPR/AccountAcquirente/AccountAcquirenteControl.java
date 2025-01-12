@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class AccountAcquirenteControl {
@@ -26,7 +27,7 @@ public class AccountAcquirenteControl {
      * @see HttpServletResponse
      */
     @RequestMapping(value="/purchaserDataUpdate", method = RequestMethod.POST)
-    public String purchaserDataUpdate(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String purchaserDataUpdate(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
         String nome = req.getParameter("nome");
         String cognome = req.getParameter("cognome");
         String indirizzo = req.getParameter("indirizzo");
@@ -39,13 +40,22 @@ public class AccountAcquirenteControl {
 
         try {
             acquirenteEntity = acquirenteService.updateAcquirenteData(acquirenteEntity, nome, cognome, indirizzo, passwordAttuale, nuovaPassword, confermaNuovaPassword);
-        }catch (GPRException | InvalidAddressException gprException){
+        } catch (GPRException | InvalidAddressException gprException) {
             throw new Exception(gprException.getMessage());
         }
 
         acquirenteService.updateAcquirente(acquirenteEntity);
         SessionManager.setAcquirente(req, acquirenteEntity);
 
+        redirectAttributes.addFlashAttribute("msg", "Modifica dati personali avvenuta con successo!");
+
         return "redirect:/userArea";
+    }
+
+    @RequestMapping(value = "/purchaserDeleteAccount", method = RequestMethod.POST)
+    public String purchaserDeleteAccount(HttpServletRequest req, HttpServletResponse res) throws Exception {
+        acquirenteService.deletePurchaserAccount(SessionManager.getAcquirente(req).getEmail());
+
+        return "redirect:/";
     }
 }

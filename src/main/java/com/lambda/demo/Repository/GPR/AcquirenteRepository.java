@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import jakarta.transaction.Transactional;
 
 public interface AcquirenteRepository extends JpaRepository<AcquirenteEntity, Integer> {
     @Query
@@ -25,5 +26,10 @@ public interface AcquirenteRepository extends JpaRepository<AcquirenteEntity, In
     @Modifying
     @Query(value = "UPDATE acquirente a SET a.saldo = :saldo WHERE a.id = :id", nativeQuery = true)
     void updateSaldoLambdaPoints(@Param("saldo") int saldo, @Param("id") int acquirenteId);
+
+    @Transactional
+    @Modifying
+    @Query(value = "DELETE from acquirente a where a.email =:email", nativeQuery = true)
+    void deleteAcquirenteEntityByEmail(String email);
 
 }
