@@ -2,7 +2,6 @@ package com.lambda.demo.Control.GA;
 
 import com.lambda.demo.Service.GA.Carrello.CarrelloService;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,15 +16,15 @@ public class CarrelloControl {
     private CarrelloService carrelloService;
 
     /**
-     * gestisce la logica relativa all'agggiunta di un inserzione al carrello
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
+     * gestisce la logica relativa all'aggiunta di un'inserzione al carrello
      *
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @throws Exception Eccezione generica
      * @see HttpServletRequest
-     * @see HttpServletResponse
      */
     @RequestMapping(value = "/addToCart", method = RequestMethod.POST)
-    public String addToCart(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String addToCart(HttpServletRequest req) throws Exception {
+        // recupero parametri
         String partitaIvaRivenditore = req.getParameter("partitaIvaRivenditore");
         String idSuperProdotto = req.getParameter("idSuperProdotto");
         String ram = req.getParameter("RAM");
@@ -43,52 +42,60 @@ public class CarrelloControl {
     }
 
     /**
-     * gestisce la logica relativa alla rimozione di un inserzione al carrello
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
+     * gestisce la logica relativa alla rimozione di un'inserzione al carrello
      *
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @throws Exception eccezione generica
      * @see HttpServletRequest
-     * @see HttpServletResponse
      */
-
-    @RequestMapping(value="/removeFromCart", method = RequestMethod.POST)
-    public String removeFromCart(HttpServletRequest req, HttpServletResponse res) throws Exception{
-        //Prendo l'id dell'Inserzione (formato da idSuperProdotto, ram, spazioArchiviazione, colore)
+    @RequestMapping(value = "/removeFromCart", method = RequestMethod.POST)
+    public String removeFromCart(HttpServletRequest req) throws Exception {
+        // recupero parametri
         String insertionWrapper = req.getParameter("idInserzione");
 
+        // parsing
         List<String> values = getValues(insertionWrapper);
 
         try {
-            carrelloService.removeFromCart(values.getFirst(),  values.get(1), values.get(2), values.get(3), values.get(4), req);
-        }catch (Exception e) {
+            carrelloService.removeFromCart(values.getFirst(), values.get(1), values.get(2), values.get(3), values.get(4), req);
+        } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
 
         return "redirect:/myCart";
     }
 
-
+    /**
+     * gestisce la logica relativa alla modifica della quantità di un'inserzione nel carrello
+     *
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @throws Exception eccezione generica
+     * @see HttpServletRequest
+     */
     @RequestMapping(value = "/updateQuantity", method = RequestMethod.POST)
-    public String updateQuantity(HttpServletRequest req, HttpServletResponse res) throws Exception {
-        //Prendo l'id dell'Inserzione (formato da idSuperProdotto, ram, spazioArchiviazione, colore)
+    public String updateQuantity(HttpServletRequest req) throws Exception {
         String insertionWrapper = req.getParameter("idInserzione");
 
         List<String> values = getValues(insertionWrapper);
         String quantity = req.getParameter("quantity");
 
-        System.out.println(quantity);
         try {
             carrelloService.updateQuantity(values.getFirst(), values.get(1), values.get(2), values.get(3), values.get(4), quantity, req);
-        }catch (Exception e) {
+        } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
 
         return "redirect:/myCart";
     }
 
-    List<String> getValues(String insertionWrapper) {
+    /**
+     * gestisce la logica relativa al parsing di un'inserzione
+     *
+     * @param insertionWrapper stringa che rappresenta l'id dell'inserzione
+     * @see String
+     */
+    private List<String> getValues(String insertionWrapper) {
         String[] insertionComponents = insertionWrapper.split(",");
-
         List<String> values = new ArrayList<>();
 
         for (String s : insertionComponents) {
@@ -96,7 +103,6 @@ public class CarrelloControl {
             int n = 1;
             if (auxiliarArray.length > 2)
                 n = 2;
-
 
             if (auxiliarArray.length > n) {
                 if (auxiliarArray[n].contains(")"))

@@ -1,6 +1,5 @@
 package com.lambda.demo.Control.GC;
 
-import com.lambda.demo.Entity.GC.Prodotto.ProdottoEntity;
 import com.lambda.demo.Entity.GC.SuperProdottoEntity;
 import com.lambda.demo.Service.GC.SuperProdotto.SuperProdottoService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,17 +19,14 @@ public class ProdottoControl {
     private SuperProdottoService superProdottoService;
 
 
-
     /**
      * gestisce la logica relativa alla ricerca dei prodotti
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
      *
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che funge da interfaccia
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see Model
      */
-
-
     @RequestMapping(value = "/searchProduct", method = RequestMethod.POST)
     public String searchProduct(HttpServletRequest req, HttpServletResponse res, Model model) {
         String idCategoriaReq = req.getParameter("idCategoria");
@@ -41,9 +37,8 @@ public class ProdottoControl {
         if (catalogName != null && !catalogName.isBlank()) {
             List<SuperProdottoEntity> productsToAdd = new ArrayList<>();
             products = superProdottoService.findByName(catalogName);
-            for (SuperProdottoEntity superProdotto : products)
-            {
-                if(superProdotto.getCheapestInsertion() != null)
+            for (SuperProdottoEntity superProdotto : products) {
+                if (superProdotto.getCheapestInsertion() != null)
                     productsToAdd.add(superProdotto);
             }
             model.addAttribute("catalogName", catalogName);
@@ -51,8 +46,7 @@ public class ProdottoControl {
 
             return "catalog";
 
-        }else {
-
+        } else {
 
             if (name != null) {
                 //se il parametro idCategoriaReq è diverso da null significa che c'è un form che ha un input con tale nome - tradeInSearchProduct.html
@@ -85,9 +79,4 @@ public class ProdottoControl {
 
         return "userArea";
     }
-
-
-
-
-
 }

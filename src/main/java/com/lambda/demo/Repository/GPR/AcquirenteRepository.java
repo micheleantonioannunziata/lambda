@@ -1,11 +1,11 @@
 package com.lambda.demo.Repository.GPR;
 
 import com.lambda.demo.Entity.GPR.AcquirenteEntity;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import jakarta.transaction.Transactional;
 
 public interface AcquirenteRepository extends JpaRepository<AcquirenteEntity, Integer> {
     @Query

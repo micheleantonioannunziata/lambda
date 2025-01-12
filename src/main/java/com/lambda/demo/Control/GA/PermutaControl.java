@@ -7,7 +7,6 @@ import com.lambda.demo.Service.GA.Permuta.PermutaService;
 import com.lambda.demo.Service.GC.Categoria.CategoriaService;
 import com.lambda.demo.Service.GC.SuperProdotto.SuperProdottoService;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,15 +32,12 @@ public class PermutaControl {
 
     /**
      * gestisce la logica relativa alla visualizzazione delle categorie disponibili
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
      *
-     * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @param model oggetto Model che funge da interfaccia
      * @see Model
      */
-    @RequestMapping(value="/redirectToTradeInCategory", method = RequestMethod.POST)
-    public String redirectToTradeInCategory(HttpServletRequest req, HttpServletResponse res, Model model){
+    @RequestMapping(value = "/redirectToTradeInCategory", method = RequestMethod.POST)
+    public String redirectToTradeInCategory(Model model) {
         List<CategoriaEntity> categories = categoriaService.getAllCategories();
 
         model.addAttribute("categories", categories);
@@ -49,15 +45,15 @@ public class PermutaControl {
     }
 
     /**
-     * gestisce la logica relativa filtraggio per categoria
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
+     * gestisce la logica relativa al filtraggio per categoria
      *
+     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che funge da interfaccia
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see Model
      */
-    @RequestMapping(value="/redirectToTradeInSearch", method = RequestMethod.POST)
-    public String redirectToTradeInSearch(HttpServletRequest req, HttpServletResponse res, Model model){
+    @RequestMapping(value = "/redirectToTradeInSearch", method = RequestMethod.POST)
+    public String redirectToTradeInSearch(HttpServletRequest req, Model model) {
         String idCategoria = req.getParameter("idCategoria");
 
         model.addAttribute("idCategoria", idCategoria);
@@ -66,18 +62,16 @@ public class PermutaControl {
     }
 
     /**
-     * gestisce la logica
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
-     * @param model oggetto Model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
+     * gestisce la logica per redirigere al form della permuta
      *
+     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che funge da interfaccia
      * @see HttpServletRequest
-     * @see HttpServletResponse
      * @see Model
      */
-    @RequestMapping(value="/redirectToTradeInForm", method = RequestMethod.GET)
-    public String productInfoTradeIn(HttpServletRequest req, HttpServletResponse res, Model model){
-        String idSuperProdottoReq  = req.getParameter("id");
+    @RequestMapping(value = "/redirectToTradeInForm", method = RequestMethod.POST)
+    public String productInfoTradeIn(HttpServletRequest req, Model model) {
+        String idSuperProdottoReq = req.getParameter("id");
         int idSuperProdotto = Integer.parseInt(idSuperProdottoReq);
 
         SuperProdottoEntity superProdottoEntity = superProdottoService.findById(idSuperProdotto);
@@ -87,22 +81,19 @@ public class PermutaControl {
 
     /**
      * gestisce la logica relativa alla valutazione di un prodotto permutato
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
-     * @param model oggetto Model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
      *
+     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
+     * @throws Exception eccezione generica
      * @see HttpServletRequest
-     * @see HttpServletResponse
      * @see Model
      */
-    @RequestMapping(value="/productEvaluation", method = RequestMethod.POST)
-    public String productEvaluation(HttpServletRequest req, HttpServletResponse res, Model model) throws Exception {
-
+    @RequestMapping(value = "/productEvaluation", method = RequestMethod.POST)
+    public String productEvaluation(HttpServletRequest req, Model model) throws Exception {
+        // recupero parametri
         String superProdottoIdReq = req.getParameter("superProdottoId");
         int superProdottoId = Integer.parseInt(superProdottoIdReq);
-
         SuperProdottoEntity superProdottoEntity = superProdottoService.findById(superProdottoId);
-
         String ram = req.getParameter("ram");
         String spazioArchiviazione = req.getParameter("spazioArchiviazione");
         String colore = req.getParameter("colore");
@@ -117,11 +108,11 @@ public class PermutaControl {
 
         try {
             permutaService.checkAddPermuta(ram, spazioArchiviazione, batteria, condizioneGenerale, colore, img);
-        }catch (GAException gaException){
-            throw new GAException(gaException.getMessage());
+        } catch (Exception exception) {
+            throw new Exception(exception.getMessage());
         }
 
-
+        // aggiunta parametri
         model.addAttribute("superProdotto", superProdottoEntity);
         model.addAttribute("ram", ram);
         model.addAttribute("spazioArchiviazione", spazioArchiviazione);
@@ -131,30 +122,28 @@ public class PermutaControl {
         model.addAttribute("nomeImg", img.getFirst());
         model.addAttribute("pesoImg", img.getLast());
 
-
         int lambdaPoints = permutaService.evaluateLambdaPoints(superProdottoEntity, condizioneGenerale, batteria);
-
         model.addAttribute("lambdaPoints", lambdaPoints);
 
         return "tradeInSummary";
     }
 
 
-
     /**
      * gestisce la logica all'aggiunta di una permuta
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
      *
+     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo dei riscontri
+     * @throws Exception eccezione generica
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see RedirectAttributes
      */
     @Transactional
-    @RequestMapping(value="/addTradeIn", method = RequestMethod.POST)
-    public String addTradeIn(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
+    @RequestMapping(value = "/addTradeIn", method = RequestMethod.POST)
+    public String addTradeIn(HttpServletRequest req, RedirectAttributes redirectAttributes) throws Exception {
         String action = req.getParameter("action");
 
-        if(action.equals("conferma")) {
+        if (action.equals("conferma")) {
             String superProdottoId = req.getParameter("superProdottoId");
             String ram = req.getParameter("ram");
             String spazioArchiviazione = req.getParameter("spazioArchiviazione");
@@ -172,7 +161,7 @@ public class PermutaControl {
                 permutaService.addPermuta(Integer.parseInt(ram),
                         Integer.parseInt(spazioArchiviazione), Integer.parseInt(batteria),
                         condizioneGenerale, colore, img);
-            }catch (GAException gaException){
+            } catch (GAException gaException) {
                 throw new GAException(gaException.getMessage());
             }
 

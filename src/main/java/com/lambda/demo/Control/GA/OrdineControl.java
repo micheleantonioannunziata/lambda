@@ -3,7 +3,6 @@ package com.lambda.demo.Control.GA;
 import com.lambda.demo.Exception.GA.GAException;
 import com.lambda.demo.Service.GA.Ordine.OrdineService;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,15 +17,16 @@ public class OrdineControl {
     private OrdineService ordineService;
 
     /**
-     * gestisce la logica relativa all'aggiunta delle informazioni necessarie per completare un ordine
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
+     * gestisce la logica relativa all'aggiunta delle informazioni necessarie per finalizzare un ordine
      *
+     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che rappresenta
+     * @throws GAException eccezione generica di GA
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see Model
      */
     @RequestMapping(value = "/checkoutInfo", method = RequestMethod.POST)
-    public String processCheckoutInfo(HttpServletRequest req, HttpServletResponse res, Model model) throws Exception {
+    public String processCheckoutInfo(HttpServletRequest req, Model model) throws GAException {
         // recupero parametri
         String destinatario = req.getParameter("destinatario");
         String indirizzo = req.getParameter("indirizzo");
@@ -34,7 +34,7 @@ public class OrdineControl {
 
         // verifica lambdaFlag
         if (!(lambdaFlag.equals("true") || lambdaFlag.equals("false")))
-            throw new Exception("DOM modificato: valore non valido per lambdaFlag");
+            throw new GAException("DOM modificato: valore non valido per lambdaFlag");
 
         boolean lambda = Boolean.parseBoolean(lambdaFlag);
 
@@ -65,7 +65,7 @@ public class OrdineControl {
                 throw new GAException(gaException.getMessage());
             }
         } else {
-            throw new Exception("Errore nella selezione del metodo di pagamento: controllare i dati forniti.");
+            throw new GAException("Errore nella selezione del metodo di pagamento: controllare i dati forniti.");
         }
 
         // aggiunta informazioni comuni
@@ -79,41 +79,46 @@ public class OrdineControl {
 
     /**
      * gestisce la logica relativa alla finalizzazione dell'ordine
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
      *
+     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo dei riscontri
+     * @throws GAException eccezione generica di GA
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see RedirectAttributes
      */
-    @Transactional //questo perché o si rimuove dal carrello e si aggiunge all'ordine insieme o non si fa niente
+    @Transactional
     @RequestMapping(value = "/checkoutFinalization", method = RequestMethod.POST)
-    public String checkoutFinalization(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
-        String lambda = req.getParameter("lambda");
+    public String checkoutFinalization(HttpServletRequest req, RedirectAttributes redirectAttributes) throws GAException {
+        // recupero parametri
+        String lambdaFlag = req.getParameter("lambda");
         String destinatario = req.getParameter("destinatario");
         String indirizzo = req.getParameter("indirizzoSpedizione");
         String numeroCarta = req.getParameter("numeroCarta");
         String intestatarioCarta = req.getParameter("intestatario");
         String cvv = req.getParameter("cvv");
         String scadenza = req.getParameter("scadenza");
-
-        if (!lambda.equals("true") && !lambda.equals("false"))
-            throw new Exception("DOM modificato");
-
-
         String action = req.getParameter("action");
-        if (!action.equals("conferma") && !action.equals("annulla"))
-            throw new Exception("DOM modificato");
+
+        // verifica lambdaFlag
+        if (!(lambdaFlag.equals("true") || lambdaFlag.equals("false")))
+            throw new GAException("DOM modificato: valore non valido per lambdaFlag!");
+
+        // verifica action
+        if (!(action.equals("conferma") || action.equals("annulla")))
+            throw new GAException("DOM modificato: valore non valido per action!");
 
 
-        req.setAttribute("lambda", lambda);
-        if (action.equals("conferma")) {
+        // passaggio info al service
+        req.setAttribute("lambda", lambdaFlag);
+
+        if (action.equals("conferma"))
             try {
                 ordineService.checkoutFinalization(destinatario, indirizzo, intestatarioCarta, numeroCarta, cvv, scadenza);
             } catch (GAException gaException) {
                 throw new GAException(gaException.getMessage());
             }
-        }
 
+        // meccanismo riscontri
         redirectAttributes.addFlashAttribute("msg", "Ordine finalizzato con successo!");
 
         return "redirect:/userArea";

@@ -1,11 +1,10 @@
-package com.lambda.demo.Control.GPR.AccessoRivenditore;
+package com.lambda.demo.Control.GPR;
 
 import com.lambda.demo.Entity.GPR.RivenditoreEntity;
 import com.lambda.demo.Exception.GPR.GPRException;
 import com.lambda.demo.Service.GPR.Rivenditore.RivenditoreService;
 import com.lambda.demo.Utility.SessionManager;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,14 +19,14 @@ public class AccessoRivenditoreControl {
     /**
      * gestisce la richiesta di signup di un nuovo rivenditore
      * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
-     *
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
+     * @throws GPRException eccezione generica di GPR
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see RedirectAttributes
+     * @see GPRException
      */
-
     @RequestMapping(value = "/vendorSignup", method = RequestMethod.POST)
-    public String signupRivenditore(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
+    public String signupRivenditore(HttpServletRequest req, RedirectAttributes redirectAttributes) throws GPRException {
 
         String ragioneSociale = req.getParameter("ragioneSociale");
         String partitaIVA = req.getParameter("partitaIVA");
@@ -40,22 +39,23 @@ public class AccessoRivenditoreControl {
         } catch (GPRException gprException) {
             throw new GPRException(gprException.getMessage());
         }
+
         SessionManager.setRivenditore(req, rivenditoreService.findByPartitaIva(partitaIVA));
         redirectAttributes.addFlashAttribute("msg", "Registrazione effettuata con successo!");
         return "redirect:/vendorArea";
     }
 
     /**
-     * gestisce la richiesta di accesso da parte di un rivenditore
+     * gestisce la richiesta di accesso di un rivenditore
      * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
-     *
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
+     * @throws GPRException eccezione generica di GPR
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see RedirectAttributes
+     * @see GPRException
      */
-
     @RequestMapping(value = "/vendorLogin", method = RequestMethod.POST)
-    public String loginRivenditore(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
+    public String loginRivenditore(HttpServletRequest req, RedirectAttributes redirectAttributes) throws GPRException {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
@@ -71,8 +71,15 @@ public class AccessoRivenditoreControl {
         return "redirect:/vendorArea";
     }
 
+    /**
+     * gestisce la logica di logout di un rivenditore
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
+     * @see HttpServletRequest
+     * @see RedirectAttributes
+     */
     @RequestMapping(value = "/vendorLogout", method = RequestMethod.POST)
-    public String logoutRivenditore(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) {
+    public String logoutRivenditore(HttpServletRequest req, RedirectAttributes redirectAttributes) {
         RivenditoreEntity rivenditore = SessionManager.getRivenditore(req);
 
         rivenditoreService.updateRivenditore(rivenditore);

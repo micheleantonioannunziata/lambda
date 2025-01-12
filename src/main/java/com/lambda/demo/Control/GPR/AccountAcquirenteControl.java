@@ -1,4 +1,4 @@
-package com.lambda.demo.Control.GPR.AccountAcquirente;
+package com.lambda.demo.Control.GPR;
 
 import com.lambda.demo.Entity.GPR.AcquirenteEntity;
 import com.lambda.demo.Exception.GA.GestioneOrdini.InvalidAddressException;
@@ -6,7 +6,6 @@ import com.lambda.demo.Exception.GPR.GPRException;
 import com.lambda.demo.Service.GPR.Acquirente.AcquirenteService;
 import com.lambda.demo.Utility.SessionManager;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,13 +20,14 @@ public class AccountAcquirenteControl {
     /**
      * gestisce la richiesta di modifica dei dati di un acquirente
      * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
-     *
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
+     * @throws Exception eccezione generica
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see RedirectAttributes
+     * @see Exception
      */
     @RequestMapping(value="/purchaserDataUpdate", method = RequestMethod.POST)
-    public String purchaserDataUpdate(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
+    public String purchaserDataUpdate(HttpServletRequest req, RedirectAttributes redirectAttributes) throws Exception {
         String nome = req.getParameter("nome");
         String cognome = req.getParameter("cognome");
         String indirizzo = req.getParameter("indirizzo");
@@ -36,7 +36,6 @@ public class AccountAcquirenteControl {
         String confermaNuovaPassword = req.getParameter("confermaNuovaPassword");
 
         AcquirenteEntity acquirenteEntity = SessionManager.getAcquirente(req);
-        //fare controllo presenza sessione, non qui ma in un filtro o chi per esso
 
         try {
             acquirenteEntity = acquirenteService.updateAcquirenteData(acquirenteEntity, nome, cognome, indirizzo, passwordAttuale, nuovaPassword, confermaNuovaPassword);
@@ -52,8 +51,15 @@ public class AccountAcquirenteControl {
         return "redirect:/userArea";
     }
 
+    /**
+     * gestisce la richiesta di cancellazione dell'account di un acquirente
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
+     * @see HttpServletRequest
+     * @see RedirectAttributes
+     */
     @RequestMapping(value = "/purchaserDeleteAccount", method = RequestMethod.POST)
-    public String purchaserDeleteAccount(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
+    public String purchaserDeleteAccount(HttpServletRequest req, RedirectAttributes redirectAttributes) {
         acquirenteService.deletePurchaserAccount(SessionManager.getAcquirente(req).getEmail());
 
         redirectAttributes.addFlashAttribute("msg", "Account personale eliminato con successo!");

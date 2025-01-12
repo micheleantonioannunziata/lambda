@@ -1,219 +1,219 @@
 {
   "insert": "n",
   "categories": [
-    {"nome": "Smartphone", "immagine": "/images/image10.png"},
-    {"nome": "PC", "immagine": "/images/image9.png"},
-    {"nome": "Tablet", "immagine": "/images/download.png"}],
+    {"nome": "Smartphone", "immagine": "/images/categories/image10.png"},
+    {"nome": "PC", "immagine": "/images/categories/image9.png"},
+    {"nome": "Tablet", "immagine": "/images/categories/download.png"}],
 
   "superProducts": [
     {
       "marca": "Apple",
       "modello": "Iphone 16 Pro Max",
-      "immagine": "/images/download2.png",
+      "immagine": "/images/products/download2.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 16 Pro",
-      "immagine": "/images/download2.png",
+      "immagine": "/images/products/download2.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 16",
-      "immagine": "/images/iphone16.png",
+      "immagine": "/images/products/iphone16.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 15 Pro Max",
-      "immagine": "/images/download2.png",
+      "immagine": "/images/products/download2.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 15 Pro",
-      "immagine": "/images/download2.png",
+      "immagine": "/images/products/download2.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 15",
-      "immagine": "/images/iphone15.png",
+      "immagine": "/images/products/iphone15.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 14 Pro Max",
-      "immagine": "/images/download2.png",
+      "immagine": "/images/products/download2.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 14 Pro",
-      "immagine": "/images/download2.png",
+      "immagine": "/images/products/download2.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 14",
-      "immagine": "/images/iphone14.png",
+      "immagine": "/images/products/iphone14.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 13 Pro Max",
-      "immagine": "/images/iphone13promax.png",
+      "immagine": "/images/products/iphone13promax.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 13 Pro",
-      "immagine": "/images/iphone13promax.png",
+      "immagine": "/images/products/iphone13promax.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 13",
-      "immagine": "/images/iphone13.png",
+      "immagine": "/images/products/iphone13.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 12 Pro Max",
-      "immagine": "/images/iphone13promax.png",
+      "immagine": "/images/products/iphone13promax.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 12 Pro",
-      "immagine": "/images/iphone13promax.png",
+      "immagine": "/images/products/iphone13promax.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 12",
-      "immagine": "/images/iphone12.png",
+      "immagine": "/images/products/iphone12.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 11 Pro Max",
-      "immagine": "/images/iphone11promax.png",
+      "immagine": "/images/products/iphone11promax.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 11 Pro",
-      "immagine": "/images/iphone13promax.png",
+      "immagine": "/images/products/iphone13promax.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Iphone 11",
-      "immagine": "/images/iphone11.png",
+      "immagine": "/images/products/iphone11.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Macbook Air 13 (M3)",
-      "immagine": "/images/macbook.png",
+      "immagine": "/images/products/macbook.png",
       "categoria": "PC"
     },
     {
       "marca": "Apple",
       "modello": "Macbook Air 15 (M3)",
-      "immagine": "/images/macbook.png",
+      "immagine": "/images/products/macbook.png",
       "categoria": "PC"
     },
     {
       "marca": "Apple",
       "modello": "Macbook Pro 14 (M3)",
-      "immagine": "/images/macbook.png",
+      "immagine": "/images/products/macbook.png",
       "categoria": "PC"
     },
     {
       "marca": "Apple",
       "modello": "Macbook Pro 16 (M3)",
-      "immagine": "/images/macbook.png",
+      "immagine": "/images/products/macbook.png",
       "categoria": "PC"
     },
     {
       "marca": "Samsung",
       "modello": "Galaxy S24 Ultra",
-      "immagine": "/images/s24ultra.png",
+      "immagine": "/images/products/s24ultra.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Samsung",
       "modello": "Galaxy S24",
-      "immagine": "/images/s24.png",
+      "immagine": "/images/products/s24.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Samsung",
       "modello": "Galaxy A54",
-      "immagine": "/images/a54.png",
+      "immagine": "/images/products/a54.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Samsung",
       "modello": "Galaxy A14",
-      "immagine": "/images/a14.png",
+      "immagine": "/images/products/a14.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Samsung",
       "modello": "Galaxy Z Fold 5",
-      "immagine": "/images/zfold5.png",
+      "immagine": "/images/products/zfold5.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Samsung",
       "modello": "Galaxy M14",
-      "immagine": "/images/m14.png",
+      "immagine": "/images/products/m14.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Xiaomi",
       "modello": "14T Pro",
-      "immagine": "/images/14tpro.png",
+      "immagine": "/images/products/14tpro.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Xiaomi",
       "modello": "14T",
-      "immagine": "/images/14t.png",
+      "immagine": "/images/products/14t.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Xiaomi",
       "modello": "14",
-      "immagine": "/images/14base.png",
+      "immagine": "/images/products/14base.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Xiaomi",
       "modello": "Redmi Note 14",
-      "immagine": "/images/redmi.png",
+      "immagine": "/images/products/redmi.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Xiaomi",
       "modello": "POCO X7",
-      "immagine": "/images/poco.png",
+      "immagine": "/images/products/poco.png",
       "categoria": "Smartphone"
     },
     {
       "marca": "Apple",
       "modello": "Ipad Air 11",
-      "immagine": "/images/ipadair.png",
+      "immagine": "/images/products/ipadair.png",
       "categoria": "Tablet"
     },
     {
       "marca": "Apple",
       "modello": "Ipad Pro 11",
-      "immagine": "/images/ipadpro.png",
+      "immagine": "/images/products/ipadpro.png",
       "categoria": "Tablet"
     }
   ],

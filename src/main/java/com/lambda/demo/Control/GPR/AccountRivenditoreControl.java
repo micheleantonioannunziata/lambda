@@ -1,4 +1,4 @@
-package com.lambda.demo.Control.GPR.AccountRivenditore;
+package com.lambda.demo.Control.GPR;
 
 import com.lambda.demo.Entity.GPR.RivenditoreEntity;
 import com.lambda.demo.Exception.GA.GestioneOrdini.InvalidAddressException;
@@ -6,7 +6,6 @@ import com.lambda.demo.Exception.GPR.GPRException;
 import com.lambda.demo.Service.GPR.Rivenditore.RivenditoreService;
 import com.lambda.demo.Utility.SessionManager;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,15 +18,16 @@ public class AccountRivenditoreControl {
     private RivenditoreService rivenditoreService;
 
     /**
-     * gestisce la richiesta di modifica dei dati di un rivenditore
+     * gestisce la richiesta di modifica dati di un rivenditore
      * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
-     *
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
+     * @throws Exception eccezione generica
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see RedirectAttributes
+     * @see Exception
      */
     @RequestMapping(value="/vendorDataUpdate", method = RequestMethod.POST)
-    public String vendorDataUpdate(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String vendorDataUpdate(HttpServletRequest req, RedirectAttributes redirectAttributes) throws Exception {
         String ragioneSociale = req.getParameter("ragioneSociale");
         String indirizzo = req.getParameter("indirizzo");
         String passwordAttuale = req.getParameter("passwordAttuale");
@@ -35,7 +35,7 @@ public class AccountRivenditoreControl {
         String confermaNuovaPassword = req.getParameter("confermaNuovaPassword");
 
         RivenditoreEntity rivenditoreEntity = SessionManager.getRivenditore(req);
-        //fare controllo presenza sessione, non qui ma in un filtro o chi per esso
+
         try {
             rivenditoreEntity = rivenditoreService.updateVendorData(rivenditoreEntity, ragioneSociale, indirizzo, passwordAttuale, nuovaPassword, confermaNuovaPassword);
         } catch (GPRException | InvalidAddressException gprException) {
@@ -45,11 +45,20 @@ public class AccountRivenditoreControl {
         rivenditoreService.updateRivenditore(rivenditoreEntity);
         SessionManager.setRivenditore(req, rivenditoreEntity);
 
+        redirectAttributes.addFlashAttribute("msg", "Modifica dati aziendali effettuata con successo!");
+
         return "redirect:/vendorArea";
     }
 
+    /**
+     * gestisce la richiesta di cancellazione dell'account di un rivenditore
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
+     * @see HttpServletRequest
+     * @see RedirectAttributes
+     */
     @RequestMapping(value = "/deleteVendorAccount", method = RequestMethod.POST)
-    public String deleteVendorAccount(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) {
+    public String deleteVendorAccount(HttpServletRequest req, RedirectAttributes redirectAttributes) {
         rivenditoreService.deleteVendorAccount(SessionManager.getRivenditore(req).getEmail());
 
         redirectAttributes.addFlashAttribute("msg", "Account aziendale eliminato con successo!");

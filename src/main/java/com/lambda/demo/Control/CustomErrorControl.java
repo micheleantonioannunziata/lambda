@@ -1,19 +1,25 @@
 package com.lambda.demo.Control;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import jakarta.servlet.http.HttpServletRequest;
-
 @Controller
 public class CustomErrorControl implements ErrorController {
 
+    /**
+     * gestisce la richiesta di visualizzazione pagina di errore
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che funge da interfaccia
+     * @see HttpServletRequest
+     * @see Model
+     */
     @RequestMapping("/error")
-    public String handleError(HttpServletRequest request, Model model) {
-        Integer statusCode = (Integer) request.getAttribute("jakarta.servlet.error.status_code");
-        Throwable throwable = (Throwable) request.getAttribute("jakarta.servlet.error.exception");
+    public String handleError(HttpServletRequest req, Model model) {
+        Integer statusCode = (Integer) req.getAttribute("jakarta.servlet.error.status_code");
+        Throwable throwable = (Throwable) req.getAttribute("jakarta.servlet.error.exception");
 
         String msg = "Errore generico di sistema!";
 
@@ -29,6 +35,11 @@ public class CustomErrorControl implements ErrorController {
         return "error";
     }
 
+    /**
+     * gestisce la logica per cattuarare la radice di un'eccezione
+     * @param throwable oggetto Throwable che rappresenta l'eccezione lanciata
+     * @see Throwable
+     */
     private Throwable getRootCause(Throwable throwable) {
         Throwable cause = throwable.getCause();
         if (cause != null && cause != throwable) {

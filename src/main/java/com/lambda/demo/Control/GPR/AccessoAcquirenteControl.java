@@ -1,4 +1,4 @@
-package com.lambda.demo.Control.GPR.AccessoAcquirente;
+package com.lambda.demo.Control.GPR;
 
 import com.lambda.demo.Entity.GA.Carrello.CarrelloEntity;
 import com.lambda.demo.Entity.GA.Carrello.FormazioneCarrello.FormazioneCarrelloEntity;
@@ -30,36 +30,28 @@ public class AccessoAcquirenteControl {
     /**
      * gestisce la richiesta di signup di un nuovo acquirente
      * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
-     *
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
+     * @throws GPRException eccezione generica di GPR
      * @see HttpServletRequest
      * @see HttpServletResponse
+     * @see GPRException
      */
     @RequestMapping(value = "/purchaserSignup", method = RequestMethod.POST)
-    public String signupAcquirente(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
-
+    public String signupAcquirente(HttpServletRequest req, RedirectAttributes redirectAttributes) throws GPRException {
         String nome = req.getParameter("nome");
         String cognome = req.getParameter("cognome");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         String confermaPassword = req.getParameter("confermaPassword");
 
-
-        if (nome == null || cognome == null || email == null || password == null || confermaPassword == null) {
-            res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Tutti i campi sono obbligatori.");
-            return null;
-        }
-
-
         try {
             acquirenteService.signupAcquirente(nome, cognome, email, password, confermaPassword);
-        }catch (GPRException e){
+        } catch (GPRException e){
             throw new GPRException(e.getMessage());
         }
 
         SessionManager.setAcquirente(req, acquirenteService.getAcquirente(email));
 
-        //se tutto va a buon fine, bisogna associare all'acquirente un nuovo carrello
         CarrelloEntity carrelloEntity = new CarrelloEntity();
         carrelloEntity.setAcquirente(SessionManager.getAcquirente(req));
         SessionManager.setCarrello(req, carrelloEntity);
@@ -70,16 +62,17 @@ public class AccessoAcquirenteControl {
     }
 
     /**
-     * gestisce la richiesta di accesso da parte di un acquirente
+     * gestisce la richiesta di accesso di un acquirente
      * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
-     *
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
+     * @throws GPRException eccezione generica di GPR
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see RedirectAttributes
+     * @see GPRException
      */
 
     @RequestMapping(value = "/purchaserLogin", method = RequestMethod.POST)
-    public String loginAcquirente(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
+    public String loginAcquirente(HttpServletRequest req, RedirectAttributes redirectAttributes) throws GPRException {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
@@ -107,47 +100,39 @@ public class AccessoAcquirenteControl {
     }
 
     /**
-     * gestisce la richiesta di logout da parte di un acquirente
+     * gestisce la richiesta di logout di un acquirente
      * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param res oggetto HttpServletResponse che rappresenta la risposta Http
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      *
      * @see HttpServletRequest
-     * @see HttpServletResponse
+     * @see RedirectAttributes
      */
     @Transactional
     @RequestMapping(value = "/purchaserLogout", method = RequestMethod.GET)
-    public String logout(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) {
+    public String logout(HttpServletRequest req, RedirectAttributes redirectAttributes) {
         AcquirenteEntity acquirente = SessionManager.getAcquirente(req);
 
-        //prendo il carrello dalla sessione
         CarrelloEntity carrelloEntity = SessionManager.getCarrello(req);
 
-
-        if(carrelloEntity == null) {
+        if(carrelloEntity == null)
             carrelloEntity = new CarrelloEntity();
-        }
-        //rimuovo dal db l'attuale carrello salvato
-        carrelloService.deleteCartByUser(acquirente.getId());
 
-        //inserisco nel db il carrello presente in sessione
+        carrelloService.deleteCartByUser(acquirente.getId());
         carrelloService.insertCartByUser(acquirente.getId(), carrelloEntity.getPrezzoProvvisorio());
 
 
-        //Salvo ogni elemento della lista FormazioneCarrelloEntity associata al carrello in sessione
         List<FormazioneCarrelloEntity> cartItems = carrelloEntity.getCarrelloItems();
-        for(FormazioneCarrelloEntity cartItem : cartItems){
+
+        for(FormazioneCarrelloEntity cartItem : cartItems) {
             FormazioneCarrelloEntityId id = new FormazioneCarrelloEntityId(carrelloService.getCartByUser(SessionManager.getAcquirente(req).getId()).getId(), cartItem.getInserzione().getId());
             cartItem.setId(id);
             carrelloService.insertItems(cartItem.getId().getIdCarrello(), cartItem.getQuantita(), cartItem.getInserzione().getProdotto().getId().getRam(), cartItem.getInserzione().getProdotto().getId().getSpazioArchiviazione(), cartItem.getInserzione().getProdotto().getSuperProdotto().getId(), cartItem.getInserzione().getProdotto().getId().getColore(), cartItem.getInserzione().getRivenditore().getPartitaIva());
         }
 
-        //chiudo la sessione
         req.getSession().invalidate();
 
         redirectAttributes.addFlashAttribute("msg", "Logout effettuato con successo!");
 
         return "redirect:/";
     }
-
-
 }
