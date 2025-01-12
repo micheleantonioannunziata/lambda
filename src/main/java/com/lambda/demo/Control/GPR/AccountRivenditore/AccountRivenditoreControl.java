@@ -37,7 +37,7 @@ public class AccountRivenditoreControl {
         //fare controllo presenza sessione, non qui ma in un filtro o chi per esso
         try {
             rivenditoreEntity = rivenditoreService.updateVendorData(rivenditoreEntity, ragioneSociale, indirizzo, passwordAttuale, nuovaPassword, confermaNuovaPassword);
-        }catch (GPRException | InvalidAddressException gprException) {
+        } catch (GPRException | InvalidAddressException gprException) {
             throw new Exception(gprException.getMessage());
         }
 
@@ -45,5 +45,12 @@ public class AccountRivenditoreControl {
         SessionManager.setRivenditore(req, rivenditoreEntity);
 
         return "redirect:/vendorArea";
+    }
+
+    @RequestMapping(value = "/deleteVendorAccount", method = RequestMethod.POST)
+    public String deleteVendorAccount(HttpServletRequest req, HttpServletResponse res) {
+        rivenditoreService.deleteVendorAccount(SessionManager.getRivenditore(req).getEmail());
+
+        return "redirect:/";
     }
 }

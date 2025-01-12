@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class AccessoRivenditoreControl {
@@ -26,7 +27,7 @@ public class AccessoRivenditoreControl {
      */
 
     @RequestMapping(value = "/vendorSignup", method = RequestMethod.POST)
-    public String signupRivenditore(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String signupRivenditore(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
 
         String ragioneSociale = req.getParameter("ragioneSociale");
         String partitaIVA = req.getParameter("partitaIVA");
@@ -36,10 +37,11 @@ public class AccessoRivenditoreControl {
 
         try {
             rivenditoreService.signupRivenditore(ragioneSociale, partitaIVA, email, password, confermaPassword);
-        }catch (GPRException gprException){
+        } catch (GPRException gprException) {
             throw new GPRException(gprException.getMessage());
         }
         SessionManager.setRivenditore(req, rivenditoreService.findByPartitaIva(partitaIVA));
+        redirectAttributes.addFlashAttribute("msg", "Registrazione effettuata con successo!");
         return "redirect:/vendorArea";
     }
 
@@ -53,27 +55,31 @@ public class AccessoRivenditoreControl {
      */
 
     @RequestMapping(value = "/vendorLogin", method = RequestMethod.POST)
-    public String loginRivenditore(HttpServletRequest req, HttpServletResponse res) throws Exception {
+    public String loginRivenditore(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) throws Exception {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
         try {
             rivenditoreService.loginRivenditore(email, password);
-        }catch (GPRException gprException){
+        } catch (GPRException gprException) {
             throw new GPRException(gprException.getMessage());
         }
+
+        redirectAttributes.addFlashAttribute("msg", "Login effettuato con successo!");
 
         SessionManager.setRivenditore(req, rivenditoreService.findByEmail(email));
         return "redirect:/vendorArea";
     }
 
     @RequestMapping(value = "/vendorLogout", method = RequestMethod.POST)
-    public String logoutRivenditore(HttpServletRequest req, HttpServletResponse res){
+    public String logoutRivenditore(HttpServletRequest req, HttpServletResponse res, RedirectAttributes redirectAttributes) {
         RivenditoreEntity rivenditore = SessionManager.getRivenditore(req);
 
         rivenditoreService.updateRivenditore(rivenditore);
 
         req.getSession().invalidate();
+
+        redirectAttributes.addFlashAttribute("msg", "Logout effettuato con successo!");
 
         return "redirect:/";
     }

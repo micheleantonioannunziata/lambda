@@ -91,25 +91,18 @@ public class RivenditoreServiceImpl implements RivenditoreService{
             rivenditoreEntity.setIndirizzo(indirizzo);
         }
 
-        //NB: modificare questo blocco di if se e solo se si trova una lista di condizioni che migliora la leggibilità AND mantiene i controlli ben presenti come qui
-        if ((passwordAttuale.isBlank() && nuovaPassword.isBlank() && confermaNuovaPassword.isBlank()))
-            ;
-        else if (!passwordAttuale.isBlank() && !nuovaPassword.isBlank() && !confermaNuovaPassword.isBlank()){
-            //se la password attuale non coincide con quella in utilizzo
-            if (!Encrypt.encrypt(passwordAttuale).equals(rivenditoreEntity.getPassword())) throw new WrongPasswordException("Password attuale non corretta!");
-
-            //se la nuova password non rispetta il formato previsto
-            if (!Validator.isValidPassword(nuovaPassword)) throw new InvalidPasswordException("Nuova password non rispetta il formato!");
-
-            //se password attuale e nuova password coincidono
-            if (passwordAttuale.equals(nuovaPassword)) throw new MatchingOldAndNewPasswordException("La vecchia password e la nuova password non possono essere uguali!");
-
-            //se nuova password e conferma password non coincidono
-            if (!nuovaPassword.equals(confermaNuovaPassword)) throw new UnMatchedPasswordException("La nuova password e la conferma non coincidono!");
-
-            rivenditoreEntity.setPassword(Encrypt.encrypt(nuovaPassword));
-        } else {
+        if ((!nuovaPassword.isBlank() && confermaNuovaPassword.isBlank())
+                || (nuovaPassword.isBlank() && !confermaNuovaPassword.isBlank()))
             throw new NotCompiledAllPasswordFIelds("I campi relativi alle password non sono stati compilati nella loro interezza!");
+
+        if (!nuovaPassword.isBlank() && !confermaNuovaPassword.isBlank()) {
+            if (!Validator.isValidPassword(nuovaPassword))
+                throw new InvalidPasswordException("Nuova password non rispetta il formato!");
+            if (passwordAttuale.equals(nuovaPassword))
+                throw new MatchingOldAndNewPasswordException("La vecchia password e la nuova password non possono essere uguali!");
+            if (!nuovaPassword.equals(confermaNuovaPassword))
+                throw new UnMatchedPasswordException("La nuova password e la conferma non coincidono!");
+            rivenditoreEntity.setPassword(Encrypt.encrypt(nuovaPassword));
         }
 
 
@@ -135,5 +128,11 @@ public class RivenditoreServiceImpl implements RivenditoreService{
     @Override
     public void saveRivenditore(RivenditoreEntity rivenditoreEntity) {
         rivenditoreRepository.save(rivenditoreEntity);
+    }
+
+    @Override
+    @Transactional
+    public void deleteVendorAccount(String email) {
+        rivenditoreRepository.deleteRivenditoreEntityByEmail(email);
     }
 }

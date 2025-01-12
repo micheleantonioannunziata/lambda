@@ -17,4 +17,6 @@ public interface RivenditoreService {
     RivenditoreEntity findByEmail(String email);
 
     void saveRivenditore(RivenditoreEntity rivenditoreEntity);
+
+    void deleteVendorAccount(String email);
 }

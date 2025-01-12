@@ -1,6 +1,7 @@
 package com.lambda.demo.Repository.GPR;
 
 import com.lambda.demo.Entity.GPR.RivenditoreEntity;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -50,4 +51,9 @@ public interface RivenditoreRepository extends JpaRepository<RivenditoreEntity, 
 
     @Query
     boolean existsByEmail(String email);
+
+    @Modifying
+    @Transactional
+    @Query(value = "delete from rivenditore r where r.email =:email", nativeQuery = true)
+    void deleteRivenditoreEntityByEmail(String email);
 }
