@@ -10,7 +10,7 @@
 <body>
 <div th:replace="fragments :: headerNormal"></div>
 
-<form action="searchProduct"  id="searchForm" class="centerForced pdHead pdInline scale-in-center">
+<form action="/searchProduct"  id="searchForm" class="centerForced pdHead pdInline scale-in-center" method="post">
     <span class="midText textCenter" style="font-weight: 700">Aggiungi inserzione</span>
     <span class="smallText">Ricerca un prodotto esistente nel catalogo per aggiungere la tua insezione</span>
     <div class="boxSearch shadow">
@@ -21,7 +21,7 @@
 
 <div id="resultsGrid" class="cardContainer">
     <div class="card shadow clickable" th:each="product : ${products}" onclick="submitForm(this)">
-        <form action="redirectToTechnicalRequirementsForm" method="post" id="searchProductForm">
+        <form action="/redirectToTechnicalRequirementsForm" method="post" id="searchProductForm">
             <input type="hidden" name="id" th:value="${product.id}">
         </form>
         <img th:src="${product.getImmagine()}" alt="">

@@ -78,6 +78,8 @@ public class HTMLMapping {
         return "/purchaser/tradeInCategory";
     }
 
+    @GetMapping("/selectProduct")
+    public String selectProduct(){return "/vendor/selectProduct";};
 
     @PostMapping("/redirectToTradeInSearch")
     public String redirectToTradeInSearch(HttpServletRequest req, Model model) {
