@@ -23,7 +23,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name="inserzione")
+@Table(name = "inserzione")
 @Check(constraints = "prezzo_base > 0 AND sconto_standard >= 0 AND sconto_premium >= 0 AND sconto_premium > sconto_standard AND quantita >= 0")
 public class InserzioneEntity {
 
@@ -127,7 +127,7 @@ public class InserzioneEntity {
         return getId().hashCode();
     }
 
-    public double getPrezzoBase(){
+    public double getPrezzoBase() {
         return roundPrice(prezzoBase);
     }
 

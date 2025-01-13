@@ -52,14 +52,14 @@ public class IscrizioneNewsletterEntity {
 
 
     public void setAcquirente(AcquirenteEntity acquirente) {
-        if(this.acquirente != acquirente && acquirente != null) {
+        if (this.acquirente != acquirente && acquirente != null) {
             this.acquirente = acquirente;
             if (!acquirente.getIscrizioniNewsletter().contains(this)) acquirente.getIscrizioniNewsletter().add(this);
         }
     }
 
     public void setRivenditore(RivenditoreEntity rivenditore) {
-        if(this.rivenditore != rivenditore && rivenditore != null) {
+        if (this.rivenditore != rivenditore && rivenditore != null) {
             this.rivenditore = rivenditore;
             if (!rivenditore.getNewsletters().contains(this)) rivenditore.getNewsletters().add(this);
         }

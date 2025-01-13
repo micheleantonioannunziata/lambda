@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class SuperProdottoServiceImpl implements SuperProdottoService{
+public class SuperProdottoServiceImpl implements SuperProdottoService {
     @Autowired
     private SuperProdottoRepository superProdottoRepository;
 
@@ -32,7 +32,7 @@ public class SuperProdottoServiceImpl implements SuperProdottoService{
     public List<ProdottoEntity> findProductsBySuperProdottoId(int id) {
         SuperProdottoEntity superProdotto = null;
         List<ProdottoEntity> products = new ArrayList<>();
-        if(superProdottoRepository.findById(id) != null) {
+        if (superProdottoRepository.findById(id) != null) {
             superProdotto = superProdottoRepository.findById(id);
             products.addAll(superProdotto.getProdotti());
         }
@@ -72,12 +72,9 @@ public class SuperProdottoServiceImpl implements SuperProdottoService{
 
         // Applica i filtri
         for (ProdottoEntity prod : products) {
-            boolean matches = true;
+            boolean matches = ramInt <= 0 || prod.getId().getRam() == ramInt;
 
             // Filtra per RAM
-            if (ramInt > 0 && prod.getId().getRam() != ramInt) {
-                matches = false;
-            }
 
             // Filtra per Spazio di Archiviazione
             if (spazioArchiviazioneInt > 0 && prod.getId().getSpazioArchiviazione() != spazioArchiviazioneInt) {

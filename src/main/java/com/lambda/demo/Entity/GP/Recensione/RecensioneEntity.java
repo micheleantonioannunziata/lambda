@@ -59,16 +59,16 @@ public class RecensioneEntity {
     private Date dataOra;
 
     public void setAcquirente(AcquirenteEntity acquirente) {
-        if(this.acquirente != acquirente && acquirente != null) {
+        if (this.acquirente != acquirente && acquirente != null) {
             this.acquirente = acquirente;
             if (!acquirente.getRecensioni().contains(this)) acquirente.getRecensioni().add(this);
         }
     }
 
     public void setInserzione_recensione(InserzioneEntity inserzione) {
-        if(this.inserzione != inserzione && inserzione != null) {
+        if (this.inserzione != inserzione && inserzione != null) {
             this.inserzione = inserzione;
-            if(!inserzione.getRecensioni().contains(this)) inserzione.getRecensioni().add(this);
+            if (!inserzione.getRecensioni().contains(this)) inserzione.getRecensioni().add(this);
         }
     }
 

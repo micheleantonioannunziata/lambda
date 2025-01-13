@@ -19,14 +19,15 @@ public class AccountRivenditoreControl {
 
     /**
      * gestisce la richiesta di modifica dati di un rivenditore
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     *
+     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @throws Exception eccezione generica
      * @see HttpServletRequest
      * @see RedirectAttributes
      * @see Exception
      */
-    @RequestMapping(value="/vendorDataUpdate", method = RequestMethod.POST)
+    @RequestMapping(value = "/vendorDataUpdate", method = RequestMethod.POST)
     public String vendorDataUpdate(HttpServletRequest req, RedirectAttributes redirectAttributes) throws Exception {
         String ragioneSociale = req.getParameter("ragioneSociale");
         String indirizzo = req.getParameter("indirizzo");
@@ -52,7 +53,8 @@ public class AccountRivenditoreControl {
 
     /**
      * gestisce la richiesta di cancellazione dell'account di un rivenditore
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     *
+     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @see HttpServletRequest
      * @see RedirectAttributes

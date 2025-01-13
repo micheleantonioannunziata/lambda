@@ -19,14 +19,15 @@ public class AccountAcquirenteControl {
 
     /**
      * gestisce la richiesta di modifica dei dati di un acquirente
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     *
+     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @throws Exception eccezione generica
      * @see HttpServletRequest
      * @see RedirectAttributes
      * @see Exception
      */
-    @RequestMapping(value="/purchaserDataUpdate", method = RequestMethod.POST)
+    @RequestMapping(value = "/purchaserDataUpdate", method = RequestMethod.POST)
     public String purchaserDataUpdate(HttpServletRequest req, RedirectAttributes redirectAttributes) throws Exception {
         String nome = req.getParameter("nome");
         String cognome = req.getParameter("cognome");
@@ -53,7 +54,8 @@ public class AccountAcquirenteControl {
 
     /**
      * gestisce la richiesta di cancellazione dell'account di un acquirente
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     *
+     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @see HttpServletRequest
      * @see RedirectAttributes

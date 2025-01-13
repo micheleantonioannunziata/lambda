@@ -71,7 +71,7 @@ public class OrdineEntity {
 
 
     public void setAcquirente(AcquirenteEntity acquirente) {
-        if(this.acquirente != acquirente && acquirente != null) {
+        if (this.acquirente != acquirente && acquirente != null) {
             this.acquirente = acquirente;
             if (!acquirente.getOrdini().contains(this)) acquirente.getOrdini().add(this);
         }
@@ -81,7 +81,6 @@ public class OrdineEntity {
         composizioni.add(composizione);
         composizione.setOrdine(this);
     }
-
 
 
     @Override

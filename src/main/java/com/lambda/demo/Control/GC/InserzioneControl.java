@@ -45,11 +45,11 @@ public class InserzioneControl {
      * gestisce la logica per redirigere al form TechnicalRequirements
      *
      * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param model oggetto Model che funge da interfaccia
+     * @param model oggetto model che funge da interfaccia
      * @see HttpServletRequest
      * @see Model
      */
-    @RequestMapping(value = "/redirectToTechnicalRequirementsForm", method = RequestMethod.GET)
+    @RequestMapping(value = "/redirectToTechnicalRequirementsForm", method = RequestMethod.POST)
     public String redirectToTechnicalRequirementsForm(HttpServletRequest req, Model model) {
         String id = req.getParameter("id");
         List<ProdottoEntity> products = superProdottoService.findProductsBySuperProdottoId(Integer.parseInt(id));
@@ -63,14 +63,13 @@ public class InserzioneControl {
             colorValues.add(p.getId().getColore());
         }
 
+
         model.addAttribute("ramValues", ramValues);
         model.addAttribute("storageValues", storageValues);
         model.addAttribute("colorValues", colorValues);
-
         model.addAttribute("idSuperProdotto", Integer.parseInt(id));
 
-
-        return "technicalRequirementsForm";
+        return "vendor/technicalRequirementsForm";
     }
 
     /**
@@ -82,7 +81,7 @@ public class InserzioneControl {
      * @see HttpServletRequest
      * @see Model
      */
-    @RequestMapping(value = "/techRequirements", method = RequestMethod.GET)
+    @RequestMapping(value = "/techRequirements", method = RequestMethod.POST)
     public String techRequirements(HttpServletRequest req, Model model) throws GCException {
         String ram = req.getParameter("ram");
         String spazioArchiviazione = req.getParameter("storage");
@@ -100,7 +99,7 @@ public class InserzioneControl {
         model.addAttribute("color", colore);
         model.addAttribute("idSuperProdotto", idSuperProdotto);
 
-        return "priceQuantityForm";
+        return "vendor/priceQuantityForm";
     }
 
     /**
@@ -112,7 +111,7 @@ public class InserzioneControl {
      * @see HttpServletRequest
      * @see Model
      */
-    @RequestMapping(value = "/priceQuantity", method = RequestMethod.GET)
+    @RequestMapping(value = "/priceQuantity", method = RequestMethod.POST)
     public String priceQuantity(HttpServletRequest req, Model model) throws GCException {
         String ram = req.getParameter("ram");
         String storage = req.getParameter("spazioArchiviazione");
@@ -139,13 +138,13 @@ public class InserzioneControl {
         model.addAttribute("scontoStandard", scontoStandard);
         model.addAttribute("scontoPremium", scontoPremium);
 
-        return "addInsertionSummary";
+        return "vendor/addInsertionSummary";
     }
 
     /**
      * gestisce la logica relativa all'aggiunta dell'inserzione
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req                ggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo dei riscontri
      * @throws Exception eccezione generica
      * @see HttpServletRequest
@@ -324,9 +323,9 @@ public class InserzioneControl {
         model.addAttribute("activeRam", inserzioneEntity.getId().getIdProdotto().getRam());
         model.addAttribute("activeStorage", inserzioneEntity.getId().getIdProdotto().getSpazioArchiviazione());
 
+
         List<InserzioneEntity> inserzioni = inserzioneService.getInsertionsByIdSuperProdotto(superProdotto.getId());
         inserzioni.remove(inserzioneEntity);
-
 
         model.addAttribute("inserzioni", inserzioni);
 
@@ -336,7 +335,7 @@ public class InserzioneControl {
         model.addAttribute("rivenditori", rivenditori);
         model.addAttribute("idSuperProdotto", id);
 
-        return "insertionOverview";
+        return "purchaser/insertionOverview";
     }
 
 }

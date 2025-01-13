@@ -1,11 +1,23 @@
 package com.lambda.demo.configuration;
 
+import com.lambda.demo.Service.GC.Categoria.CategoriaService;
+import com.lambda.demo.Service.GC.SuperProdotto.SuperProdottoService;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class HTMLMapping {
+
+    @Autowired
+    private CategoriaService categoriaService;
+    @Autowired
+    private SuperProdottoService superProdottoService;
+
+
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("msg", model.getAttribute("msg"));
@@ -22,63 +34,62 @@ public class HTMLMapping {
         return "userAuth";
     }
 
-    @GetMapping("/myCart")
-    public String myCart(){ return "myCart";}
-
-    @GetMapping("/checkout")
-    public String checkout(){ return "checkout";}
-
     @GetMapping("/userArea")
     public String userArea(Model model) {
         model.addAttribute("msg", model.getAttribute("msg"));
-        return "userArea";
+        return "purchaser/userArea";
     }
 
     @GetMapping("/vendorArea")
     public String vendorArea(Model model) {
         model.addAttribute("msg", model.getAttribute("msg"));
-        return "vendorArea";
+        return "/vendor/vendorArea";
+    }
+
+    @GetMapping("/checkout")
+    public String checkout() {
+        return "/purchaser/checkout";
+    }
+
+    @GetMapping("/checkoutSummary")
+    public String checkoutSummary() {
+        return "/purchaser/checkoutSummary";
     }
 
     @GetMapping("/userDataUpdate")
-    public String userDataUpdate(){ return "userDataUpdate";}
+    public String userDataUpdate() {
+        return "/purchaser/userDataUpdate";
+    }
 
     @GetMapping("/vendorDataUpdate")
-    public String vendorDataUpdate(){ return "vendorDataUpdate";}
+    public String vendorDataUpdate() {
+        return "/vendor/vendorDataUpdate";
+    }
 
-    @GetMapping("/technicalRequirementsForm")
-    public String technicalRequirementsForm(){ return "technicalRequirementsForm";}
+    @GetMapping("/myCart")
+    public String myCart() {
+        return "/purchaser/myCart";
+    }
 
-    @GetMapping("/priceQuantityForm")
-    public String priceQuantityForm(){ return "priceQuantityForm";}
+    @PostMapping("/redirectToTradeInCategory")
+    public String redirectToTradeInCategory(Model model) {
+        model.addAttribute("categories", categoriaService.getAllCategories());
 
-    @GetMapping("/selectProduct")
-    public String selectProduct(){ return "selectProduct";}
+        return "/purchaser/tradeInCategory";
+    }
 
-    @GetMapping("/catalog")
-    public String catalog(){ return "catalog";}
 
-    @GetMapping("/insertionOverview")
-    public String insertionOverview(){ return "insertionOverview";}
+    @PostMapping("/redirectToTradeInSearch")
+    public String redirectToTradeInSearch(HttpServletRequest req, Model model) {
+        model.addAttribute("idCategoria", req.getParameter("idCategoria"));
 
-    @GetMapping("/tradeInCategory")
-    public String tradeInCategory(){ return "tradeInCategory";}
+        return "/purchaser/tradeInSearchProduct";
+    }
 
-    @GetMapping("/tradeInForm")
-    public String tradeInForm(){ return "tradeInForm";}
+    @PostMapping("/redirectToTradeInForm")
+    public String redirectToTradeInForm(HttpServletRequest req, Model model) {
+        model.addAttribute("superProdotto", superProdottoService.findById(Integer.parseInt(req.getParameter("id"))));
+        return "/purchaser/tradeInForm";
+    }
 
-    @GetMapping("/tradeInSearchProduct")
-    public String tradeInSearchProduct(){ return "tradeInSearchProduct";}
-
-    @GetMapping("/tradeInSummary")
-    public String tradeInSummary(){ return "tradeInSummary";}
-
-    @GetMapping("/checkoutSummary")
-    public String checkoutSummary(){ return "checkoutSummary";}
-
-    @GetMapping("/tecnhicalRequirementsForm")
-    public String tecnhicalRequirementsForm(){ return "tecnhicalRequirementsForm";}
-
-    @GetMapping("/addInsertionSummary")
-    public String addInsertionSummary(){ return "addInsertionSummary";}
 }

@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CarrelloServiceImpl implements CarrelloService{
+public class CarrelloServiceImpl implements CarrelloService {
     @Autowired
     private InserzioneRepository inserzioneRepository;
 
@@ -55,20 +55,23 @@ public class CarrelloServiceImpl implements CarrelloService{
         if (!Validator.isValidRamValue(ram))
             throw new InvalidRAMException("Valore ram non ammesso -  DOM probabilmente modificato");
 
-        if(!Validator.isValidStorageValue(spazioArchiviazione))
+        if (!Validator.isValidStorageValue(spazioArchiviazione))
             throw new InvalidStorageException("Valore spazio archiviazione non ammesso - DOM probabilmente modificato");
 
-        if(!Validator.isValidPartitaIVA(partitaIvaRivenditore))
+        if (!Validator.isValidPartitaIVA(partitaIvaRivenditore))
             throw new InvalidVATNumberException("Valore partita iva non ammesso - DOM probabilmente modificato");
 
         if (!Validator.isValidColor(colore))
             throw new InvalidColorException("Colore non rispetta il formato richiesto - DOM probabilmente modificato");
 
-        if (superProdottoRepository.findById(Integer.parseInt(idSuperProdotto)) == null) throw new SuperProductNotFoundException("SuperProdotto non trovaot - DOM probabilmente modificato");
+        if (superProdottoRepository.findById(Integer.parseInt(idSuperProdotto)) == null)
+            throw new SuperProductNotFoundException("SuperProdotto non trovaot - DOM probabilmente modificato");
 
-        if (prodottoRepository.findById(new ProdottoEntityId(Integer.parseInt(idSuperProdotto), Integer.parseInt(ram), Integer.parseInt(spazioArchiviazione), colore)).isEmpty()) throw new ProductNotFoundException("Prodotto non trovato - DOM probabilmente modificato");
+        if (prodottoRepository.findById(new ProdottoEntityId(Integer.parseInt(idSuperProdotto), Integer.parseInt(ram), Integer.parseInt(spazioArchiviazione), colore)).isEmpty())
+            throw new ProductNotFoundException("Prodotto non trovato - DOM probabilmente modificato");
 
-        if (rivenditoreRepository.findByPartitaIva(partitaIvaRivenditore) == null) throw new VendorNotFoundException("Rivenditore non trovato - DOM probabilmente modificato");
+        if (rivenditoreRepository.findByPartitaIva(partitaIvaRivenditore) == null)
+            throw new VendorNotFoundException("Rivenditore non trovato - DOM probabilmente modificato");
 
         return inserzioneRepository.findById(new InserzioneEntityId(partitaIvaRivenditore, new ProdottoEntityId(Integer.parseInt(idSuperProdotto), Integer.parseInt(ram), Integer.parseInt(spazioArchiviazione), colore))).isPresent();
     }
@@ -94,7 +97,8 @@ public class CarrelloServiceImpl implements CarrelloService{
         if (inserzione.isDisponibilita()) {
             int itemIndex = getItemIndex(cartItems, inserzione);
             if (itemIndex == -1) {
-                if (inserzione.getQuantita() > 0) cartItems.add(new FormazioneCarrelloEntity(new FormazioneCarrelloEntityId(carrello.getId(), inserzioneEntityId), carrello, inserzione, 1));
+                if (inserzione.getQuantita() > 0)
+                    cartItems.add(new FormazioneCarrelloEntity(new FormazioneCarrelloEntityId(carrello.getId(), inserzioneEntityId), carrello, inserzione, 1));
             } else if (cartItems.get(itemIndex).getQuantita() + 1 <= inserzione.getQuantita()) {
                 cartItems.get(itemIndex).setQuantita(cartItems.get(itemIndex).getQuantita() + 1);
             }
@@ -104,7 +108,6 @@ public class CarrelloServiceImpl implements CarrelloService{
         }
         SessionManager.setCarrello(request, carrello);
     }
-
 
 
     @Override
@@ -120,7 +123,8 @@ public class CarrelloServiceImpl implements CarrelloService{
 
 
         int itemToRemoveIndex = getItemIndex(cartItems, inserzione);
-        if (itemToRemoveIndex == -1) throw new Exception("Inserzione non presente nel carrello - DOM probabilmente modificato");
+        if (itemToRemoveIndex == -1)
+            throw new Exception("Inserzione non presente nel carrello - DOM probabilmente modificato");
 
         carrello.setPrezzoProvvisorio(carrello.getPrezzoProvvisorio() -
                 cartItems.get(itemToRemoveIndex).getInserzione().returnDiscountedPrice(SessionManager.getAcquirente(req).isPremium()) * cartItems.get(itemToRemoveIndex).getQuantita());
@@ -129,8 +133,6 @@ public class CarrelloServiceImpl implements CarrelloService{
 
         SessionManager.setCarrello(req, carrello);
     }
-
-
 
 
     @Override
@@ -143,10 +145,11 @@ public class CarrelloServiceImpl implements CarrelloService{
         int q;
         try {
             q = Integer.parseInt(quantity);
-        }catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             throw new InvalidQuantityException("Quantità non valida - DOM probabilmente modificato");
         }
-        if (q > inserzione.getQuantita()) throw new InvalidQuantityException("Quantità non valida - DOM probabilmente modificato");
+        if (q > inserzione.getQuantita())
+            throw new InvalidQuantityException("Quantità non valida - DOM probabilmente modificato");
 
         if (q == 0) removeFromCart(partitaIvaRivenditore, idSuperProdotto, ram, spazioArchiviazione, colore, req);
         else {
@@ -156,7 +159,8 @@ public class CarrelloServiceImpl implements CarrelloService{
 
             int itemToUpdateIndex = getItemIndex(cartItems, inserzione);
 
-            if (itemToUpdateIndex == -1) throw new Exception("Inserzione non presente nel carrello - DOM probabilmente modificato");
+            if (itemToUpdateIndex == -1)
+                throw new Exception("Inserzione non presente nel carrello - DOM probabilmente modificato");
 
             int oldQuantity = carrello.getCarrelloItems().get(itemToUpdateIndex).getQuantita();
 

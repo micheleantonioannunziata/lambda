@@ -51,9 +51,9 @@ public class ComposizioneEntity {
 
 
     public void setInserzione_composizione(InserzioneEntity inserzione) {
-        if(this.inserzione != inserzione && inserzione != null){
+        if (this.inserzione != inserzione && inserzione != null) {
             this.inserzione = inserzione;
-            if(!inserzione.getComposizioni().contains(this)) inserzione.getComposizioni().add(this);
+            if (!inserzione.getComposizioni().contains(this)) inserzione.getComposizioni().add(this);
         }
 
     }

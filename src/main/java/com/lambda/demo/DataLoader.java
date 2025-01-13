@@ -13,18 +13,19 @@ import com.lambda.demo.Repository.GC.Prodotto.ProdottoRepository;
 import com.lambda.demo.Repository.GC.SuperProdottoRepository;
 import com.lambda.demo.Repository.GPR.RivenditoreRepository;
 import jakarta.annotation.PostConstruct;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.transaction.Transactional;
+import lombok.Getter;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.io.File;
+import java.io.FilenameFilter;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
-import java.util.Scanner;
+import java.util.*;
 
 @Component
 public class DataLoader {
@@ -45,8 +46,17 @@ public class DataLoader {
     private InserzioneRepository inserzioneRepository;
 
 
+    @Getter
+    private final Set<String> fileNamesPurchaserFolder = new HashSet<>();
+    @Getter
+    private final Set<String> fileNamesFromVendorFolder = new HashSet<>();
+    @Getter
+    private final Set<String> otherFileNames = new HashSet<>();
+
+
     /**
      * gestisce la logica di parsing di "dataLoader.json" per popolare le tabelle
+     *
      * @throws Exception eccezione generica
      * @see Exception
      */
@@ -61,7 +71,7 @@ public class DataLoader {
             String jsonText = new Scanner(inputStream, StandardCharsets.UTF_8).useDelimiter("\\A").next();
             JSONObject data = new JSONObject(jsonText);
 
-            if (data.getString("insert").equalsIgnoreCase("y")){
+            if (data.getString("insert").equalsIgnoreCase("y")) {
                 loadCategories(data.getJSONArray("categories"));
                 loadSuperProducts(data.getJSONArray("superProducts"));
                 loadProducts(data.getJSONArray("products"));
@@ -73,13 +83,34 @@ public class DataLoader {
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
+
+        loadFileNames("templates/purchaser", fileNamesPurchaserFolder);
+        loadFileNames("templates/vendor", fileNamesFromVendorFolder);
+        loadFileNames("templates/", otherFileNames);
+    }
+
+
+    private void loadFileNames(String folderPath, Set<String> fileNamesSet) {
+        File folder = new File(Objects.requireNonNull(getClass().getClassLoader().getResource(folderPath)).getFile());
+        if (folder.exists() && folder.isDirectory()) {
+            String[] files = folder.list(new FilenameFilter() {
+                @Override
+                public boolean accept(File dir, String name) {
+                    return name.endsWith(".html");
+                }
+            });
+
+            if (files != null) {
+                fileNamesSet.addAll(Arrays.asList(files));
+            }
+        }
     }
 
     private void loadCategories(JSONArray categories) {
         for (int i = 0; i < categories.length(); i++) {
             JSONObject category = categories.getJSONObject(i);
             CategoriaEntity categoria = new CategoriaEntity();
-            if (!categoriaRepository.existsByNome(category.getString("nome"))){
+            if (!categoriaRepository.existsByNome(category.getString("nome"))) {
                 categoria.setNome(category.getString("nome"));
                 categoria.setImmagine(category.getString("immagine"));
                 categoriaRepository.save(categoria);
@@ -91,7 +122,7 @@ public class DataLoader {
         for (int i = 0; i < superProducts.length(); i++) {
             JSONObject superProduct = superProducts.getJSONObject(i);
             SuperProdottoEntity superProdotto = new SuperProdottoEntity();
-            if (!superProdottoRepository.existsByModello(superProduct.getString("modello"))){
+            if (!superProdottoRepository.existsByModello(superProduct.getString("modello"))) {
                 superProdotto.setMarca(superProduct.getString("marca"));
                 superProdotto.setModello(superProduct.getString("modello"));
                 superProdotto.setImmagine(superProduct.getString("immagine"));
@@ -101,7 +132,7 @@ public class DataLoader {
         }
     }
 
-    private void loadProducts(JSONArray products){
+    private void loadProducts(JSONArray products) {
         for (int i = 0; i < products.length(); i++) {
             JSONObject product = products.getJSONObject(i);
             ProdottoEntity prodotto = new ProdottoEntity();
@@ -114,7 +145,7 @@ public class DataLoader {
             prodotto.setId(prodottoEntityId);
             prodotto.setSuperProdotto(superProdottoRepository.findById(prodottoEntityId.getSuperProdottoId()));
 
-            if (prodottoRepository.findById(prodottoEntityId).isEmpty()){
+            if (prodottoRepository.findById(prodottoEntityId).isEmpty()) {
                 prodottoRepository.save(prodotto);
             }
         }
@@ -138,7 +169,7 @@ public class DataLoader {
     }
 
 
-    private void loadInsertions(JSONArray insertions){
+    private void loadInsertions(JSONArray insertions) {
         for (int i = 0; i < insertions.length(); i++) {
             JSONObject insertion = insertions.getJSONObject(i);
             JSONObject product = insertion.getJSONObject("prodotto");
@@ -164,10 +195,11 @@ public class DataLoader {
             inserzione.setDataPubblicazione(LocalDateTime.now());
             inserzione.setDisponibilita(true);
 
-            if (inserzioneRepository.findById(inserzioneEntityId).isEmpty()){
+            if (inserzioneRepository.findById(inserzioneEntityId).isEmpty()) {
                 inserzioneRepository.saveAndFlush(inserzione);
             }
         }
-
     }
+
+
 }

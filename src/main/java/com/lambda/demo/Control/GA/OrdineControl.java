@@ -19,11 +19,11 @@ public class OrdineControl {
     /**
      * gestisce la logica relativa all'aggiunta delle informazioni necessarie per finalizzare un ordine
      *
-     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param model oggetto Model che rappresenta
+     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param redirectAttributes oggetto RedirectAttributes che funge da interfaccia
      * @throws GAException eccezione generica di GA
      * @see HttpServletRequest
-     * @see Model
+     * @see RedirectAttributes
      */
     @RequestMapping(value = "/checkoutInfo", method = RequestMethod.POST)
     public String processCheckoutInfo(HttpServletRequest req, Model model) throws GAException {
@@ -73,7 +73,7 @@ public class OrdineControl {
         model.addAttribute("indirizzo", indirizzo);
         model.addAttribute("lambda", lambda);
 
-        return "checkoutSummary";
+        return "purchaser/checkoutSummary";
     }
 
 

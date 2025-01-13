@@ -41,7 +41,6 @@ public class CarrelloEntity {
     private double prezzoProvvisorio;
 
 
-
     @OneToMany(mappedBy = "carrello", fetch = FetchType.EAGER)
     private List<FormazioneCarrelloEntity> carrelloItems = new ArrayList<>();
 
@@ -59,13 +58,13 @@ public class CarrelloEntity {
         return getId();
     }
 
-    public List<FormazioneCarrelloEntity> getCarrelloItems(){
+    public List<FormazioneCarrelloEntity> getCarrelloItems() {
         if (this.carrelloItems == null)
             this.carrelloItems = new ArrayList<>();
         return this.carrelloItems;
     }
 
-    public double getPrezzoProvvisorio(){
+    public double getPrezzoProvvisorio() {
         BigDecimal bd = new BigDecimal(this.prezzoProvvisorio).setScale(2, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }

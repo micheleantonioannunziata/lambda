@@ -34,8 +34,6 @@ function changeOptions(select, firstType){
     let secondOption = secondSelect.value;
     let thirdOption = thirdSelect.value;
 
-    console.log(firstOption + " " + secondOption + " " + thirdOption);
-
 
     urlSearchParam.append("secondType", secondType);
     urlSearchParam.append("secondOption", secondOption);

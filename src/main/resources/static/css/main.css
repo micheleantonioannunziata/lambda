@@ -257,6 +257,18 @@ select:focus-visible {
     color: white;
 }
 
+.redBtn {
+    border: 1px solid red;
+    border-radius: 10px;
+    color: red;
+    transition: background-color .4s ease-in-out;
+}
+
+.redBtn:hover {
+    background-color: red;
+    color: white;
+}
+
 .whiteBtn {
     border: 1px solid var(--primaryColor);
     color: var(--primaryColor);

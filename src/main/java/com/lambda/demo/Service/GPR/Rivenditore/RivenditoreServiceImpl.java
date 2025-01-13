@@ -15,19 +15,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RivenditoreServiceImpl implements RivenditoreService{
+public class RivenditoreServiceImpl implements RivenditoreService {
     @Autowired
     private RivenditoreRepository rivenditoreRepository;
 
     @Override
     public void signupRivenditore(String ragioneSociale, String partitaIVA, String email, String password, String confermaPassword) throws GPRException {
-        if(!Validator.isValidCompanyName(ragioneSociale))
+        if (!Validator.isValidCompanyName(ragioneSociale))
             throw new InvalidCompanyNameException("Ragione sociale non rispetta il formato richiesto!");
 
         if (!Validator.isValidEmail(email))
             throw new InvalidEmailException("Email non rispetta il formato richiesto!");
 
-        if(!Validator.isValidPartitaIVA(partitaIVA))
+        if (!Validator.isValidPartitaIVA(partitaIVA))
             throw new InvalidVATNumberException("Partita Iva non rispetta il formato richiesto!");
 
         if (!Validator.isValidPassword(password))
@@ -46,7 +46,7 @@ public class RivenditoreServiceImpl implements RivenditoreService{
 
         rivenditore = rivenditoreRepository.findByEmail(email);
         //se è già presente una mail nel DB, non può registrarsi con quella mail
-        if(rivenditore != null)
+        if (rivenditore != null)
             throw new AlreadyRegisteredEmailException("Utente già registrato con questa email!");
 
         String encryptedPassword = Encrypt.encrypt(password);
@@ -70,12 +70,12 @@ public class RivenditoreServiceImpl implements RivenditoreService{
 
         RivenditoreEntity rivenditore = rivenditoreRepository.findByEmail(email);
 
-        if(rivenditore == null) throw new NotRegisteredUserException("Utente non registrato!");
+        if (rivenditore == null) throw new NotRegisteredUserException("Utente non registrato!");
 
 
         rivenditore = rivenditoreRepository.findByEmailAndPassword(email, Encrypt.encrypt(password));
 
-        if(rivenditore == null) throw new WrongPasswordException("Password errata!");
+        if (rivenditore == null) throw new WrongPasswordException("Password errata!");
     }
 
 
@@ -87,13 +87,15 @@ public class RivenditoreServiceImpl implements RivenditoreService{
         if (!Encrypt.encrypt(passwordAttuale).equals(rivenditoreEntity.getPassword()))
             throw new WrongPasswordException("Password attuale non corretta!");
 
-        if (!ragioneSociale.isBlank()){
-            if (!Validator.isValidCompanyName(ragioneSociale)) throw new InvalidCompanyNameException("Ragione sociale non rispetta il formato richiesto!");
+        if (!ragioneSociale.isBlank()) {
+            if (!Validator.isValidCompanyName(ragioneSociale))
+                throw new InvalidCompanyNameException("Ragione sociale non rispetta il formato richiesto!");
             rivenditoreEntity.setRagioneSociale(ragioneSociale);
         }
 
-        if (!indirizzo.isBlank()){
-            if (!Validator.isValidAddress(indirizzo)) throw new InvalidAddressException("Indirizzo non rispetta il formato richiesto");
+        if (!indirizzo.isBlank()) {
+            if (!Validator.isValidAddress(indirizzo))
+                throw new InvalidAddressException("Indirizzo non rispetta il formato richiesto");
             rivenditoreEntity.setIndirizzo(indirizzo);
         }
 

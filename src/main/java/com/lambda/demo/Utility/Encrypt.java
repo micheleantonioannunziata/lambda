@@ -6,6 +6,7 @@ import java.security.NoSuchAlgorithmException;
 public class Encrypt {
     /**
      * gestisce la logica di encrypting della password
+     *
      * @param password stringa che rappresenta la password
      * @see String
      */

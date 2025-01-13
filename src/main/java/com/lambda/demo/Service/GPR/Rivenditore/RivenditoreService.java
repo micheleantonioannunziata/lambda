@@ -14,6 +14,7 @@ public interface RivenditoreService {
     RivenditoreEntity updateVendorData(RivenditoreEntity rivenditoreEntity, String ragioneSociale, String indirizzo, String passwordAttuale, String nuovaPassword, String confermaNuovaPassword) throws GPRException, InvalidAddressException;
 
     RivenditoreEntity findByPartitaIva(String partitaIva);
+
     RivenditoreEntity findByEmail(String email);
 
     void saveRivenditore(RivenditoreEntity rivenditoreEntity);

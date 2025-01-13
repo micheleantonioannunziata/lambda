@@ -55,21 +55,17 @@ public class SuperProdottoEntity {
             )
     )
     private CategoriaEntity categoria;
-
-
-    public void setCategoria(CategoriaEntity categoria) {
-        if(this.categoria != categoria && categoria != null) {
-            this.categoria = categoria;
-            if(!categoria.getSuperProdotti().contains(this)) categoria.getSuperProdotti().add(this);
-        }
-    }
-
-
     @OneToMany(mappedBy = "superProdotto")
     private List<ProdottoEntity> prodotti = new ArrayList<>();
-
     @OneToMany(mappedBy = "superProdotto")
     private List<PermutaEntity> permute = new ArrayList<>();
+
+    public void setCategoria(CategoriaEntity categoria) {
+        if (this.categoria != categoria && categoria != null) {
+            this.categoria = categoria;
+            if (!categoria.getSuperProdotti().contains(this)) categoria.getSuperProdotti().add(this);
+        }
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -106,8 +102,6 @@ public class SuperProdottoEntity {
 
         return inserzioneEntity;
     }
-
-
 
 
     @Override

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/formGeneric.css}">
+</head>
+<body>
+<div th:replace="fragments :: headerNormal"></div>
+
+<form action="vendorDataUpdate" method="POST" class="centerForced pdHead pdInline scale-in-center" onsubmit="return validateVendorDataForm()">
+    <span class="midText textCenter">Modifica dati personali</span>
+    <input id="ragioneSociale" class="smallText" name="ragioneSociale" type="text" placeholder="Ragione sociale" th:value="${session.rivenditore.getRagioneSociale()}">
+    <input id="indirizzo" class="smallText" name="indirizzo" type="text" placeholder="Indirizzo" th:value="${session.rivenditore.getIndirizzo()}">
+    <input id="passwordAttuale" class="smallText" name="passwordAttuale" type="password" placeholder="Password attuale">
+    <input id="nuovaPassword" class="smallText" name="nuovaPassword" type="password" placeholder="Nuova password">
+    <input id="confermaNuovaPassword" class="smallText" name="confermaNuovaPassword" type="password" placeholder="Conferma nuova password">
+    <button class="violetBtn normalText" type="submit">Conferma</button>
+</form>
+
+<script th:src="@{/js/validateVendorDataUpdateForm.js}"></script>
+</body>
+</html>

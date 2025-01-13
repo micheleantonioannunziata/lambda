@@ -16,6 +16,7 @@ import com.lambda.demo.Repository.GPR.AcquirenteRepository;
 import com.lambda.demo.Utility.SessionManager;
 import com.lambda.demo.Utility.Validator;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class OrdineServiceImpl implements OrdineService{
+public class OrdineServiceImpl implements OrdineService {
     @Autowired
     private ComposizioneRepository composizioneRepository;
 
@@ -78,6 +79,7 @@ public class OrdineServiceImpl implements OrdineService{
 
     }
 
+    @Transactional
     @Override
     public void checkoutFinalization(String destinatario, String indirizzo, String intestatario, String numeroCarta, String cvv, String scadenza) throws GAException {
         boolean lambda = Boolean.parseBoolean(request.getParameter("lambda"));
@@ -94,8 +96,11 @@ public class OrdineServiceImpl implements OrdineService{
         List<FormazioneCarrelloEntity> cartItems = carrello.getCarrelloItems();
 
         OrdineEntity ordineEntity = new OrdineEntity();
-        ordineEntity.setAcquirente(acquirente); ordineEntity.setPrezzo(carrello.getPrezzoProvvisorio() + 3.99); ordineEntity.setStato("In esecuzione");
-        ordineEntity.setDestinatario(destinatario); ordineEntity.setIndirizzoSpedizione(indirizzo);
+        ordineEntity.setAcquirente(acquirente);
+        ordineEntity.setPrezzo(carrello.getPrezzoProvvisorio() + 3.99);
+        ordineEntity.setStato("In esecuzione");
+        ordineEntity.setDestinatario(destinatario);
+        ordineEntity.setIndirizzoSpedizione(indirizzo);
 
         if (lambda) {
             int lambdaPoints = (int) Math.round(ordineEntity.getPrezzo() / 10.0);
@@ -106,7 +111,7 @@ public class OrdineServiceImpl implements OrdineService{
             ordineEntity.setMetodoDiPagamento("lambda points");
             ordineEntity.setLambdaPointsSpesi(lambdaPoints);
             acquirenteRepository.updateSaldoLambdaPoints(updatedSaldo, idAcquirente);
-        }else{
+        } else {
             ordineEntity.setMetodoDiPagamento("carta di debito");
             ordineEntity.setUltimeQuattroCifre(numeroCarta.substring(numeroCarta.length() - 4));
         }
@@ -115,7 +120,7 @@ public class OrdineServiceImpl implements OrdineService{
 
         List<ComposizioneEntity> orderItems = new ArrayList<>();
         ComposizioneEntityId composizioneEntityId = new ComposizioneEntityId();
-        for (FormazioneCarrelloEntity cartItem: cartItems){
+        for (FormazioneCarrelloEntity cartItem : cartItems) {
             composizioneEntityId.setIdOrdine(ordineEntity.getId());
             composizioneEntityId.setIdInserzione(cartItem.getInserzione().getId());
 
@@ -149,7 +154,6 @@ public class OrdineServiceImpl implements OrdineService{
 
         SessionManager.setAcquirente(request, acquirente);
     }
-
 
 
 }

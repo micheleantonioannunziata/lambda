@@ -29,7 +29,8 @@ public class AccessoAcquirenteControl {
 
     /**
      * gestisce la richiesta di signup di un nuovo acquirente
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     *
+     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @throws GPRException eccezione generica di GPR
      * @see HttpServletRequest
@@ -46,7 +47,7 @@ public class AccessoAcquirenteControl {
 
         try {
             acquirenteService.signupAcquirente(nome, cognome, email, password, confermaPassword);
-        } catch (GPRException e){
+        } catch (GPRException e) {
             throw new GPRException(e.getMessage());
         }
 
@@ -63,7 +64,8 @@ public class AccessoAcquirenteControl {
 
     /**
      * gestisce la richiesta di accesso di un acquirente
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     *
+     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @throws GPRException eccezione generica di GPR
      * @see HttpServletRequest
@@ -79,7 +81,7 @@ public class AccessoAcquirenteControl {
 
         try {
             acquirenteService.loginAcquirente(email, password);
-        } catch (GPRException gprException){
+        } catch (GPRException gprException) {
             throw new GPRException(gprException.getMessage());
         }
 
@@ -101,20 +103,20 @@ public class AccessoAcquirenteControl {
 
     /**
      * gestisce la richiesta di logout di un acquirente
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      *
+     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @see HttpServletRequest
      * @see RedirectAttributes
      */
     @Transactional
-    @RequestMapping(value = "/purchaserLogout", method = RequestMethod.GET)
+    @RequestMapping(value = "/purchaserLogout", method = RequestMethod.POST)
     public String logout(HttpServletRequest req, RedirectAttributes redirectAttributes) {
         AcquirenteEntity acquirente = SessionManager.getAcquirente(req);
 
         CarrelloEntity carrelloEntity = SessionManager.getCarrello(req);
 
-        if(carrelloEntity == null)
+        if (carrelloEntity == null)
             carrelloEntity = new CarrelloEntity();
 
         carrelloService.deleteCartByUser(acquirente.getId());
@@ -123,7 +125,7 @@ public class AccessoAcquirenteControl {
 
         List<FormazioneCarrelloEntity> cartItems = carrelloEntity.getCarrelloItems();
 
-        for(FormazioneCarrelloEntity cartItem : cartItems) {
+        for (FormazioneCarrelloEntity cartItem : cartItems) {
             FormazioneCarrelloEntityId id = new FormazioneCarrelloEntityId(carrelloService.getCartByUser(SessionManager.getAcquirente(req).getId()).getId(), cartItem.getInserzione().getId());
             cartItem.setId(id);
             carrelloService.insertItems(cartItem.getId().getIdCarrello(), cartItem.getQuantita(), cartItem.getInserzione().getProdotto().getId().getRam(), cartItem.getInserzione().getProdotto().getId().getSpazioArchiviazione(), cartItem.getInserzione().getProdotto().getSuperProdotto().getId(), cartItem.getInserzione().getProdotto().getId().getColore(), cartItem.getInserzione().getRivenditore().getPartitaIva());

@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AcquirenteServiceImpl implements AcquirenteService{
+public class AcquirenteServiceImpl implements AcquirenteService {
     @Autowired
     private AcquirenteRepository acquirenteRepository;
 
@@ -22,22 +22,22 @@ public class AcquirenteServiceImpl implements AcquirenteService{
         AcquirenteEntity acquirente = acquirenteRepository.findByEmail(email);
 
         //se è già presente una mail nel DB, l'utente già esiste, quindi non può registrarsi
-        if(acquirente != null)
+        if (acquirente != null)
             throw new AlreadyRegisteredEmailException("Utente già registrato!");
 
-        if(!Validator.isValidName(nome))
+        if (!Validator.isValidName(nome))
             throw new InvalidNameException("Nome non rispetta il formato!");
 
-        if(!Validator.isValidSurname(cognome))
+        if (!Validator.isValidSurname(cognome))
             throw new InvalidSurnameException("Cognome non rispetta il formato!");
 
-        if(!Validator.isValidEmail(email))
+        if (!Validator.isValidEmail(email))
             throw new InvalidEmailException("Email non rispetta il formato!");
 
-        if(!Validator.isValidPassword(password))
+        if (!Validator.isValidPassword(password))
             throw new InvalidPasswordException("Password non rispetta il formato!");
 
-        if(!confermaPassword.equals(password))
+        if (!confermaPassword.equals(password))
             throw new UnMatchedPasswordException("Conferma password non coincide con la password!");
 
 
@@ -82,19 +82,19 @@ public class AcquirenteServiceImpl implements AcquirenteService{
         if (!Encrypt.encrypt(passwordAttuale).equals(acquirente.getPassword()))
             throw new WrongPasswordException("Password attuale non corretta!");
 
-        if (!nome.isBlank()){
+        if (!nome.isBlank()) {
             if (!Validator.isValidName(nome))
                 throw new InvalidNameException("Nome non rispetta il formato!");
             acquirente.setNome(nome);
         }
 
-        if (!cognome.isBlank()){
+        if (!cognome.isBlank()) {
             if (!Validator.isValidSurname(cognome))
                 throw new InvalidSurnameException("Cognome non rispetta il formato!");
             acquirente.setCognome(cognome);
         }
 
-        if (!indirizzo.isBlank()){
+        if (!indirizzo.isBlank()) {
             if (!Validator.isValidAddress(indirizzo))
                 throw new InvalidAddressException("Indizzo non rispetta il formato richiesto!");
             acquirente.setIndirizzo(indirizzo);
@@ -124,7 +124,7 @@ public class AcquirenteServiceImpl implements AcquirenteService{
     }
 
     @Override
-    public AcquirenteEntity getAcquirente(String email){
+    public AcquirenteEntity getAcquirente(String email) {
         return acquirenteRepository.findByEmail(email);
     }
 

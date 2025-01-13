@@ -16,7 +16,7 @@ public interface SuperProdottoRepository extends JpaRepository<SuperProdottoEnti
 
 
     @Query("SELECT sp FROM SuperProdottoEntity sp WHERE CONCAT(sp.marca, ' ', sp.modello) LIKE %:name%")
-    List<SuperProdottoEntity> findByName (@Param("name") String name);
+    List<SuperProdottoEntity> findByName(@Param("name") String name);
 
     @Query(value = "SELECT * FROM super_prodotto WHERE CONCAT(marca, ' ', modello) LIKE CONCAT('%', :name, '%') AND categoria_id = :idCategoria",
             nativeQuery = true)

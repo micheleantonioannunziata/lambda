@@ -20,17 +20,13 @@ public class PermutaEntity {
     private PermutaEntityId id;
 
 
-
-
-
     @MapsId("superProdottoId")
     @ManyToOne
     @JoinColumn(name = "super_prodotto_id",
             foreignKey = @ForeignKey(
-            foreignKeyDefinition =  "FOREIGN KEY (super_prodotto_id) REFERENCES super_prodotto(id) ON UPDATE CASCADE ON DELETE CASCADE"
-    ))
+                    foreignKeyDefinition = "FOREIGN KEY (super_prodotto_id) REFERENCES super_prodotto(id) ON UPDATE CASCADE ON DELETE CASCADE"
+            ))
     private SuperProdottoEntity superProdotto;
-
 
 
     @MapsId("acquirenteId")

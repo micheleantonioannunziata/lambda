@@ -60,7 +60,6 @@ public class InserzioneServiceImpl implements InserzioneService {
     }
 
 
-
     @Override
     public void checkPriceQuantity(String quantity, String prezzoBase, String scontoStandard, String scontoPremium) throws GCException {
         if (Double.parseDouble(prezzoBase) <= 0)
@@ -90,7 +89,7 @@ public class InserzioneServiceImpl implements InserzioneService {
     public void checkAddInserzione(ProdottoEntity prodotto, String prezzoBase, String quantity, String scontoStandard, String scontoPremium) throws GCException, InvalidColorException {
         checkTechRequirements(String.valueOf(prodotto.getId().getSuperProdottoId()), String.valueOf(prodotto.getId().getRam()), String.valueOf(prodotto.getId().getSpazioArchiviazione()), prodotto.getId().getColore());
         checkPriceQuantity(quantity, prezzoBase, scontoStandard, scontoPremium);
-        if(prodottoRepository.findById(prodotto.getId()).isEmpty())
+        if (prodottoRepository.findById(prodotto.getId()).isEmpty())
             throw new ProductNotFoundException("Prodotto non trovato!");
     }
 
@@ -102,10 +101,15 @@ public class InserzioneServiceImpl implements InserzioneService {
 
         InserzioneEntityId idInserzione = new InserzioneEntityId(rivenditore.getPartitaIva(), prodotto.getId());
         InserzioneEntity inserzione = new InserzioneEntity();
-        inserzione.setId(idInserzione); inserzione.setRivenditore(rivenditore); inserzione.setProdotto(prodotto);
-        inserzione.setQuantita(Integer.parseInt(quantity)); inserzione.setPrezzoBase(Double.parseDouble(prezzoBase));
-        inserzione.setScontoStandard(Integer.parseInt(scontoStandard)); inserzione.setScontoPremium(Integer.parseInt(scontoPremium));
-        inserzione.setDisponibilita(true); inserzione.setDataPubblicazione(LocalDateTime.now());
+        inserzione.setId(idInserzione);
+        inserzione.setRivenditore(rivenditore);
+        inserzione.setProdotto(prodotto);
+        inserzione.setQuantita(Integer.parseInt(quantity));
+        inserzione.setPrezzoBase(Double.parseDouble(prezzoBase));
+        inserzione.setScontoStandard(Integer.parseInt(scontoStandard));
+        inserzione.setScontoPremium(Integer.parseInt(scontoPremium));
+        inserzione.setDisponibilita(true);
+        inserzione.setDataPubblicazione(LocalDateTime.now());
 
         inserzioneRepository.save(inserzione);
 

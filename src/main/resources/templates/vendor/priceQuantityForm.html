@@ -10,7 +10,7 @@
 <body>
 <div th:replace="fragments :: headerNormal"></div>
 
-<form action="/priceQuantity" method="GET" class="centerForced pdHead pdInline scale-in-center" onsubmit="return validatePriceQuantityForm()">
+<form action="/priceQuantity" method="POST" class="centerForced pdHead pdInline scale-in-center" onsubmit="return validatePriceQuantityForm()">
   <span class="midText textCenter" style="font-weight: 700">Modulo per prezzo e quantità</span>
 
   <input type="hidden" name="ram" th:value="${ram}">

@@ -43,14 +43,14 @@ public class RivenditoreEntity {
     private List<IscrizioneNewsletterEntity> newsletters = new ArrayList<>();
 
 
-    public InserzioneEntity getCheapestInsertion(int idSuperProdotto){
+    public InserzioneEntity getCheapestInsertion(int idSuperProdotto) {
         List<InserzioneEntity> inserzioni = getInserzioni();
         if (inserzioni == null) inserzioni = new ArrayList<>();
         List<InserzioneEntity> results = new ArrayList<>();
 
 
-        for(InserzioneEntity i : inserzioni){
-            if(i.getProdotto().getSuperProdotto().getId() == idSuperProdotto) results.add(i);
+        for (InserzioneEntity i : inserzioni) {
+            if (i.getProdotto().getSuperProdotto().getId() == idSuperProdotto) results.add(i);
         }
 
         results.sort(Comparator.comparingDouble(InserzioneEntity::getPrezzoBase));
@@ -58,14 +58,14 @@ public class RivenditoreEntity {
         return results.getFirst();
     }
 
-    public List<InserzioneEntity> getInsertionsBySuperProductId(int idSuperProdotto){
+    public List<InserzioneEntity> getInsertionsBySuperProductId(int idSuperProdotto) {
         List<InserzioneEntity> inserzioni = getInserzioni();
         if (inserzioni == null) inserzioni = new ArrayList<>();
         List<InserzioneEntity> results = new ArrayList<>();
 
 
-        for(InserzioneEntity i : inserzioni){
-            if(i.getProdotto().getSuperProdotto().getId() == idSuperProdotto) results.add(i);
+        for (InserzioneEntity i : inserzioni) {
+            if (i.getProdotto().getSuperProdotto().getId() == idSuperProdotto) results.add(i);
         }
 
 

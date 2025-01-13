@@ -43,16 +43,16 @@ public class SottoscrizioneEntity {
     private boolean attivo;
 
     public void setAcquirente(AcquirenteEntity acquirente) {
-        if(this.acquirente != acquirente && acquirente != null){
+        if (this.acquirente != acquirente && acquirente != null) {
             this.acquirente = acquirente;
-            if(!acquirente.getSottoscrizioni().contains(this)) acquirente.getSottoscrizioni().add(this);
+            if (!acquirente.getSottoscrizioni().contains(this)) acquirente.getSottoscrizioni().add(this);
         }
     }
 
     public void setPiano(PianoEntity piano) {
-        if(this.piano != piano && piano != null){
+        if (this.piano != piano && piano != null) {
             this.piano = piano;
-            if(!piano.getSottoscrizioni().contains(this)) piano.getSottoscrizioni().add(this);
+            if (!piano.getSottoscrizioni().contains(this)) piano.getSottoscrizioni().add(this);
         }
     }
 

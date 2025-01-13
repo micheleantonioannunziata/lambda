@@ -11,7 +11,8 @@ public class CustomErrorControl implements ErrorController {
 
     /**
      * gestisce la richiesta di visualizzazione pagina di errore
-     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     *
+     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
      * @param model oggetto Model che funge da interfaccia
      * @see HttpServletRequest
      * @see Model
@@ -37,6 +38,7 @@ public class CustomErrorControl implements ErrorController {
 
     /**
      * gestisce la logica per cattuarare la radice di un'eccezione
+     *
      * @param throwable oggetto Throwable che rappresenta l'eccezione lanciata
      * @see Throwable
      */

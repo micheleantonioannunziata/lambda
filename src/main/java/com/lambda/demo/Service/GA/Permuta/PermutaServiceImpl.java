@@ -41,26 +41,26 @@ public class PermutaServiceImpl implements PermutaService {
 
     @Override
     public void checkAddPermuta(String ramReq, String spazioArchiviazioneReq, String batteriaReq, String condizioneGenerale, String colore, List<String> immagine) throws GAException, InvalidRAMException, InvalidStorageException {
-    if (!Validator.isValidGeneralCondition(condizioneGenerale))
-        throw new InvalidGeneralConditionException("Valore di Condizione generale non ammesso!");
+        if (!Validator.isValidGeneralCondition(condizioneGenerale))
+            throw new InvalidGeneralConditionException("Valore di Condizione generale non ammesso!");
 
-    if(!Validator.isValidRamValue(ramReq))
-        throw new InvalidRAMException("Valore di RAM non ammesso!");
+        if (!Validator.isValidRamValue(ramReq))
+            throw new InvalidRAMException("Valore di RAM non ammesso!");
 
-    if(!Validator.isValidStorageValue(spazioArchiviazioneReq))
-        throw new InvalidStorageException("Valore di spazio archiviazione non valido!");
+        if (!Validator.isValidStorageValue(spazioArchiviazioneReq))
+            throw new InvalidStorageException("Valore di spazio archiviazione non valido!");
 
-    if(!Validator.isValidBattery(batteriaReq))
-        throw new InvalidBatteryException("Valore di batteria non valido!");
+        if (!Validator.isValidBattery(batteriaReq))
+            throw new InvalidBatteryException("Valore di batteria non valido!");
 
-    if(!Validator.isValidColor(colore))
-        throw new InvalidColorException("Il colore non rispetta il formato richiesto!");
+        if (!Validator.isValidColor(colore))
+            throw new InvalidColorException("Il colore non rispetta il formato richiesto!");
 
-    if(!Validator.isValidFileName(immagine.getFirst())) {
-        throw new InvalidFileException("Nome del file non rispetta il formato richiesto!");
-    }
-    if (!Validator.isValidFileSize(Long.parseLong(immagine.getLast())))
-        throw new InvalidFileException("Peso del file eccessivo");
+        if (!Validator.isValidFileName(immagine.getFirst())) {
+            throw new InvalidFileException("Nome del file non rispetta il formato richiesto!");
+        }
+        if (!Validator.isValidFileSize(Long.parseLong(immagine.getLast())))
+            throw new InvalidFileException("Peso del file eccessivo");
 
     }
 
@@ -93,8 +93,6 @@ public class PermutaServiceImpl implements PermutaService {
     }
 
 
-
-
     @Override
     public int evaluateLambdaPoints(SuperProdottoEntity superProdotto, String condizioneGenerale, String batteria) {
         int conversionRate = 10;
@@ -104,7 +102,7 @@ public class PermutaServiceImpl implements PermutaService {
         int lambdaPoints = (int) (prezzo / (conversionRate * 2));
 
         if (condizioneGenerale.equals("buona")) lambdaPoints -= (int) (0.02 * lambdaPoints);
-        else if(condizioneGenerale.equals("discreta")) lambdaPoints -= (int) (0.05 * lambdaPoints);
+        else if (condizioneGenerale.equals("discreta")) lambdaPoints -= (int) (0.05 * lambdaPoints);
 
         if (Integer.parseInt(batteria) < 60)
             lambdaPoints -= (int) (0.05 * lambdaPoints);

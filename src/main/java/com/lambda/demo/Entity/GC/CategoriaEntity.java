@@ -16,21 +16,16 @@ import java.util.List;
 @Table(name = "categoria")
 public class CategoriaEntity {
 
+    @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER)
+    List<SuperProdottoEntity> superProdotti = new ArrayList<>();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private int id;
-
-
     @Column(unique = true, columnDefinition = "VARCHAR(50)")
     private String nome;
-
-
     @Column(nullable = false)
     private String immagine;
-
-    @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER)
-    List<SuperProdottoEntity> superProdotti = new ArrayList<>();
 
     @Override
     public boolean equals(Object o) {

@@ -21,7 +21,7 @@
         <div class="bigText mt20 clickable" id="orderAreaBtn">Area Ordini</div>
         <div class="bigText mt20 clickable" id="tradeInAreaBtn">Area Permute</div>
         <form action="purchaserDeleteAccount" method="post" class="mt20" onsubmit="return confirm('Sei sicuro di voler eliminare il tuo account?')">
-            <button class="violetBtn smallText clickable" style="font-weight: 700; min-width: 120px" type="submit">Cancella account</button>
+            <button class="redBtn smallText clickable" style="font-weight: 700; min-width: 120px; " type = "submit">Cancella account</button>
         </form>
     </div>
 
@@ -37,7 +37,7 @@
             <div class="midText mt20">Email<br><span class="grey" th:text="${session.acquirente.getEmail()}"></span></div>
             <a th:href="@{/userDataUpdate}"><button class="violetBtn topRight smallText clickable" style="font-weight: 700;">Modifica</button></a>
 
-            <form action="purchaserLogout" class="mt50 topRight">
+            <form action="purchaserLogout" method="post" class="mt50 topRight">
                 <button class="violetBtn smallText clickable" style="font-weight: 700; min-width: 120px" type="submit">Logout</button>
             </form>
         </div>
@@ -77,7 +77,7 @@
 
 
 
-            <form action="purchaserLogout" class="topRight">
+            <form action="purchaserLogout" method="post" class="topRight">
                 <button class="violetBtn smallText clickable" style="font-weight: 700;" type="submit">Logout</button>
             </form>
         </div>
@@ -119,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            <form action="purchaserLogout" class="topRight">
+            <form action="purchaserLogout" method="post" class="topRight">
                 <button class="violetBtn smallText clickable" style="font-weight: 700;" type="submit">Logout</button>
             </form>
         </div>

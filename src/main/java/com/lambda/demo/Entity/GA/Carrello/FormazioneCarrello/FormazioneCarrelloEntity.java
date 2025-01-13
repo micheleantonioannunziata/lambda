@@ -60,10 +60,10 @@ public class FormazioneCarrelloEntity {
         return getId().hashCode();
     }
 
-    public void setCarrello(CarrelloEntity carrelloEntity){
+    public void setCarrello(CarrelloEntity carrelloEntity) {
         List<FormazioneCarrelloEntity> cartItems = carrelloEntity.getCarrelloItems();
 
-        if(!cartItems.contains(this))
+        if (!cartItems.contains(this))
             cartItems.add(this);
     }
 }
