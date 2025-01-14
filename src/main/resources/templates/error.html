@@ -9,7 +9,9 @@
 
 <div th:replace="fragments::headerNormal"></div>
 
-<div class="textCenter centerForced scale-in-center pdHead pdInline"
+<div id="errorContainer" class="textCenter centerForced scale-in-center pdHead pdInline"
+     th:data-error-type="${errorType}"
+     th:data-error-msg="${msg}"
      style="flex-direction: column; gap: 25px; height: 80vh">
 
     <div style="font-weight: normal; font-size: 4rem">Errore di sistema!</div>
@@ -17,11 +19,23 @@
     <img th:src="@{/images/error.svg}" style="width: 300px">
     <div class="normalText">Status code: <span th:text="${status}"></span></div>
 
-    <div style="display: flex; gap: 20px;">
-        <button class="violetBtn smallText clickable" onclick="window.history.back()">Torna indietro</button>
+    <div style="display: flex; flex-direction: row; gap: 20px;">
+        <button id="btnGoBack" class="violetBtn smallText clickable" style="display: none;" onclick="window.history.back()">Torna indietro</button>
+
+        <form action="userArea" method="post">
+            <input type="hidden" name="msg" value="Ordine annullato correttamente!">
+            <button id="btnCancelOrder" class="violetBtn smallText clickable" style="display: none;">Annulla ordine</button>
+        </form>
+
+        <form action="checkout" method="post">
+            <button id="btnModifyPayment" class="violetBtn smallText clickable" style="display: none;">Modifica metodo di pagamento</button>
+        </form>
+
         <div id="error" class="textCenter" style="max-width: 80%" th:text="${msg}"></div>
     </div>
 
 </div>
+
+<script th:src="@{/js/errorHandler.js}"></script>
 </body>
 </html>

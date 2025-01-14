@@ -62,6 +62,7 @@ public class AccountRivenditoreControl {
     @RequestMapping(value = "/deleteVendorAccount", method = RequestMethod.POST)
     public String deleteVendorAccount(HttpServletRequest req, RedirectAttributes redirectAttributes) {
         rivenditoreService.deleteVendorAccount(SessionManager.getRivenditore(req).getEmail());
+        SessionManager.setRivenditore(req, null);
 
         redirectAttributes.addFlashAttribute("msg", "Account aziendale eliminato con successo!");
 

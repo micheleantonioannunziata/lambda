@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HTMLMapping {
@@ -34,11 +36,19 @@ public class HTMLMapping {
         return "userAuth";
     }
 
-    @GetMapping("/userArea")
-    public String userArea(Model model) {
-        model.addAttribute("msg", model.getAttribute("msg"));
+    @RequestMapping(value = "/userArea", method = {RequestMethod.GET, RequestMethod.POST})
+    public String userArea(HttpServletRequest request, Model model) {
+        String msg = null;
+        if (request.getMethod().equals("POST")) {
+            msg = request.getParameter("msg");
+        } else if (request.getMethod().equals("GET")) {
+            msg = (String) model.getAttribute("msg");
+        }
+
+        model.addAttribute("msg", msg);
         return "purchaser/userArea";
     }
+
 
     @GetMapping("/vendorArea")
     public String vendorArea(Model model) {
@@ -46,7 +56,7 @@ public class HTMLMapping {
         return "/vendor/vendorArea";
     }
 
-    @GetMapping("/checkout")
+    @RequestMapping(value = "/checkout", method = {RequestMethod.GET, RequestMethod.POST})
     public String checkout() {
         return "/purchaser/checkout";
     }

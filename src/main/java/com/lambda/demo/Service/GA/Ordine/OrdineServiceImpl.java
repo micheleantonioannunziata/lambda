@@ -72,27 +72,27 @@ public class OrdineServiceImpl implements OrdineService {
         if (!Validator.isValidAddress(indirizzo))
             throw new InvalidAddressException("Indirizzo non rispetta il formato richiesto!");
 
-        AcquirenteEntity acquirente = SessionManager.getAcquirente(request);
-        int saldo = acquirente.getSaldo();
-        if ((saldo * 10) < (SessionManager.getCarrello(request).getPrezzoProvvisorio() + 3.99))
-            throw new InsufficientLambdaPointsException("Errore: il saldo attuale di lambda points non è sufficiente per la finalizzazione dell'ordine. Si prega di inserire un metodo di pagamento alternativo.");
-
     }
 
     @Transactional
     @Override
     public void checkoutFinalization(String destinatario, String indirizzo, String intestatario, String numeroCarta, String cvv, String scadenza) throws GAException {
         boolean lambda = Boolean.parseBoolean(request.getParameter("lambda"));
+        AcquirenteEntity acquirente = SessionManager.getAcquirente(request);
+        CarrelloEntity carrello = SessionManager.getCarrello(request);
 
         if (lambda && (!intestatario.isBlank() || !numeroCarta.isBlank() || !cvv.isBlank() || !scadenza.isBlank()))
             throw new GAException("Errore: Hai selezionato i Lambda Points come metodo di pagamento, ma alcuni campi relativi a un altro metodo di pagamento (carta di credito) risultano compilati. Verifica i dati e riprova. Potrebbe essere stato alterato il DOM della pagina.");
 
-        if (lambda) lambdaCheckoutValidation(destinatario, indirizzo);
+        if (lambda) {
+            lambdaCheckoutValidation(destinatario, indirizzo);
+            int saldo = acquirente.getSaldo();
+            if ((saldo * 10) < (carrello.getPrezzoProvvisorio() + 3.99))
+                throw new InsufficientLambdaPointsException("Errore: il saldo attuale di lambda points non è sufficiente per la finalizzazione dell'ordine. Si prega di inserire un metodo di pagamento alternativo.");
+        }
         if (!lambda) cardCheckoutValidation(destinatario, indirizzo, intestatario, numeroCarta, cvv, scadenza);
 
-        AcquirenteEntity acquirente = SessionManager.getAcquirente(request);
 
-        CarrelloEntity carrello = SessionManager.getCarrello(request);
         List<FormazioneCarrelloEntity> cartItems = carrello.getCarrelloItems();
 
         OrdineEntity ordineEntity = new OrdineEntity();
@@ -104,10 +104,12 @@ public class OrdineServiceImpl implements OrdineService {
 
         if (lambda) {
             int lambdaPoints = (int) Math.round(ordineEntity.getPrezzo() / 10.0);
-            int idAcquirente = SessionManager.getAcquirente(request).getId();
-            int updatedSaldo = SessionManager.getAcquirente(request).getSaldo() - lambdaPoints;
+            int saldo = acquirente.getSaldo();
 
-            SessionManager.getAcquirente(request).setSaldo(updatedSaldo);
+            int idAcquirente = acquirente.getId();
+            int updatedSaldo = saldo - lambdaPoints;
+
+            acquirente.setSaldo(updatedSaldo);
             ordineEntity.setMetodoDiPagamento("lambda points");
             ordineEntity.setLambdaPointsSpesi(lambdaPoints);
             acquirenteRepository.updateSaldoLambdaPoints(updatedSaldo, idAcquirente);

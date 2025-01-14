@@ -81,10 +81,10 @@ public class AccessControlFilter implements Filter {
                 throw new Exception("Accesso negato!");
             }
 
-            /*if (SessionManager.getCarrello(request).getPrezzoProvvisorio() == 0.0 &&
+            if (SessionManager.getCarrello(request).getPrezzoProvvisorio() == 0.0 &&
                     (requestedFileName.equalsIgnoreCase("checkout.html") || requestedFileName.equalsIgnoreCase("checkoutSummary.html"))) {
                 throw new Exception("Accesso negato!");
-            }*/
+            }
         }
 
         // Controlla l'accesso per il rivenditore

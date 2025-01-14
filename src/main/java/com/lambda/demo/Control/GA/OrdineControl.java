@@ -20,10 +20,10 @@ public class OrdineControl {
      * gestisce la logica relativa all'aggiunta delle informazioni necessarie per finalizzare un ordine
      *
      * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param redirectAttributes oggetto RedirectAttributes che funge da interfaccia
+     * @param model oggetto RedirectAttributes che funge da interfaccia
      * @throws GAException eccezione generica di GA
      * @see HttpServletRequest
-     * @see RedirectAttributes
+     * @see Model
      */
     @RequestMapping(value = "/checkoutInfo", method = RequestMethod.POST)
     public String processCheckoutInfo(HttpServletRequest req, Model model) throws GAException {
@@ -111,15 +111,18 @@ public class OrdineControl {
         // passaggio info al service
         req.setAttribute("lambda", lambdaFlag);
 
-        if (action.equals("conferma"))
+        String msg = "Ordine annullato!";
+
+        if (action.equals("conferma")) {
             try {
                 ordineService.checkoutFinalization(destinatario, indirizzo, intestatarioCarta, numeroCarta, cvv, scadenza);
+                msg = "Ordine finalizzato con successo!";
             } catch (GAException gaException) {
                 throw new GAException(gaException.getMessage());
             }
-
+        }
         // meccanismo riscontri
-        redirectAttributes.addFlashAttribute("msg", "Ordine finalizzato con successo!");
+        redirectAttributes.addFlashAttribute("msg", msg);
 
         return "redirect:/userArea";
     }
