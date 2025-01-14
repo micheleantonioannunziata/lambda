@@ -32,17 +32,13 @@ body > form > span.midText {
     transition: 0.8s ease-in-out;
 }
 
-.boxSearch:hover input {
-    width: 400px;
-}
-
 .boxSearch:hover button {
     padding: 0;
 }
 
 .boxSearch input {
     min-width: 0;
-    width: 0;
+    width: 400px;
     padding: 10px 0;
     outline: none;
     border: none;
