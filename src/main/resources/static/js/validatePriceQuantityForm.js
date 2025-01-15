@@ -1,10 +1,15 @@
+document.getElementById("quantita").oninput = function (){
+    console.log(document.getElementById("quantita").value)
+}
+
+
 function validatePriceQuantityForm(){
     const quantita = document.getElementById("quantita").value
     const prezzo = document.getElementById("prezzo").value
     const scontoBase = document.getElementById("scontoBase").value
     const scontoPremium = document.getElementById("scontoPremium").value
 
-    const quantityRegex = /[1-9][0-9]{0,2}/
+    const quantityRegex = /^[1-9][0-9]{0,2}$/;
     const prezzoRegex = /^[1-9]\d{0,3}(\.\d{1,2})?$/
     const scontoBaseRegex = /([1-9]?)\d/
     const scontoPremiumRegex = /([1-9]?)\d/

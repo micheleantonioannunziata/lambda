@@ -26,7 +26,7 @@ public class ProdottoEntity {
     @JoinColumn(
             foreignKey = @ForeignKey(
                     name = "super_prodotto_id",
-                    foreignKeyDefinition = "FOREIGN KEY (super_prodotto_id) REFERENCES super_prodotto(id)"
+                    foreignKeyDefinition = "FOREIGN KEY (super_prodotto_id) REFERENCES super_prodotto(id) ON UPDATE CASCADE ON DELETE CASCADE"
             )
     )
     private SuperProdottoEntity superProdotto;
