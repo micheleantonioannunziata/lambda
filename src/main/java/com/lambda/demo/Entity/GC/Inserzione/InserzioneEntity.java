@@ -36,7 +36,7 @@ public class InserzioneEntity {
             name = "partita_iva_rivenditore",
             columnDefinition = "CHAR(11)",
             foreignKey = @ForeignKey(
-                    foreignKeyDefinition = "FOREIGN KEY (partita_iva_rivenditore) REFERENCES rivenditore(partita_iva)"
+                    foreignKeyDefinition = "FOREIGN KEY (partita_iva_rivenditore) REFERENCES rivenditore(partita_iva) ON DELETE CASCADE ON UPDATE CASCADE"
             )
     )
     private RivenditoreEntity rivenditore;
