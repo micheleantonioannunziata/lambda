@@ -15,7 +15,7 @@ public class Validator {
     //  - Deve esserci almeno un token alfanumerico per il dominio, che può includere lettere, numeri, trattini e punti.
     // Dopo il dominio:
     //  - Deve esserci un punto seguito dall'estensione del dominio, composta da 2 a 8 caratteri alfabetici.
-    private static final String emailRegex = "^(?=.{8,50}$)[\\w.%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,8}$";
+    private static final String emailRegex = "^(?=.{8,50}$)[\\w.%+-]+@[a-zA-Z0-9.-]+\\.[a-z]{2,8}$";
 
     private static final Pattern emailPattern = Pattern.compile(emailRegex);
     //regex che la password che deve rispettare
