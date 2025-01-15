@@ -19,8 +19,8 @@ public class OrdineControl {
     /**
      * gestisce la logica relativa all'aggiunta delle informazioni necessarie per finalizzare un ordine
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param model oggetto RedirectAttributes che funge da interfaccia
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
      * @throws GAException eccezione generica di GA
      * @see HttpServletRequest
      * @see Model
@@ -80,7 +80,7 @@ public class OrdineControl {
     /**
      * gestisce la logica relativa alla finalizzazione dell'ordine
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo dei riscontri
      * @throws GAException eccezione generica di GA
      * @see HttpServletRequest

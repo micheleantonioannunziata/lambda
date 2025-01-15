@@ -44,8 +44,8 @@ public class InserzioneControl {
     /**
      * gestisce la logica per redirigere al form TechnicalRequirements
      *
-     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param model oggetto model che funge da interfaccia
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
      * @see HttpServletRequest
      * @see Model
      */
@@ -75,8 +75,8 @@ public class InserzioneControl {
     /**
      * gestisce la logica relativa al form TechnicalRequirements
      *
-     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param model oggetto Model che funge da interfaccia
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
      * @throws GCException eccezione generica di GC
      * @see HttpServletRequest
      * @see Model
@@ -105,8 +105,8 @@ public class InserzioneControl {
     /**
      * gestisce la logica relativa al form priceQuantity
      *
-     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param model oggetto Model che funge da interfaccia
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
      * @throws GCException eccezione generica di GC
      * @see HttpServletRequest
      * @see Model
@@ -144,7 +144,7 @@ public class InserzioneControl {
     /**
      * gestisce la logica relativa all'aggiunta dell'inserzione
      *
-     * @param req                ggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req ggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo dei riscontri
      * @throws Exception eccezione generica
      * @see HttpServletRequest
@@ -271,8 +271,8 @@ public class InserzioneControl {
     /**
      * gestisce la logica per ridirigere l'overview dell'inserzione
      *
-     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param model oggetto Model che funge da interfaccia
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
      * @see HttpServletRequest
      * @see Model
      */

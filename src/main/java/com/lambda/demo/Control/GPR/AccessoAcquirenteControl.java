@@ -30,7 +30,7 @@ public class AccessoAcquirenteControl {
     /**
      * gestisce la richiesta di signup di un nuovo acquirente
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @throws GPRException eccezione generica di GPR
      * @see HttpServletRequest
@@ -65,7 +65,7 @@ public class AccessoAcquirenteControl {
     /**
      * gestisce la richiesta di accesso di un acquirente
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @throws GPRException eccezione generica di GPR
      * @see HttpServletRequest
@@ -104,7 +104,7 @@ public class AccessoAcquirenteControl {
     /**
      * gestisce la richiesta di logout di un acquirente
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @see HttpServletRequest
      * @see RedirectAttributes

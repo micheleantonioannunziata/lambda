@@ -20,7 +20,7 @@ public class AccountAcquirenteControl {
     /**
      * gestisce la richiesta di modifica dei dati di un acquirente
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @throws Exception eccezione generica
      * @see HttpServletRequest
@@ -55,7 +55,7 @@ public class AccountAcquirenteControl {
     /**
      * gestisce la richiesta di cancellazione dell'account di un acquirente
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @see HttpServletRequest
      * @see RedirectAttributes

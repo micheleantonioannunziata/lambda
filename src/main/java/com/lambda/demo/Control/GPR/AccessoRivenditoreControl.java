@@ -19,7 +19,7 @@ public class AccessoRivenditoreControl {
     /**
      * gestisce la richiesta di signup di un nuovo rivenditore
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @throws GPRException eccezione generica di GPR
      * @see HttpServletRequest
@@ -49,7 +49,7 @@ public class AccessoRivenditoreControl {
     /**
      * gestisce la richiesta di accesso di un rivenditore
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @throws GPRException eccezione generica di GPR
      * @see HttpServletRequest
@@ -76,7 +76,7 @@ public class AccessoRivenditoreControl {
     /**
      * gestisce la logica di logout di un rivenditore
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @see HttpServletRequest
      * @see RedirectAttributes

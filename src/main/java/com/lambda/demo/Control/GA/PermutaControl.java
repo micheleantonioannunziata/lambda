@@ -32,8 +32,8 @@ public class PermutaControl {
     /**
      * gestisce la logica relativa alla valutazione di un prodotto permutato
      *
-     * @param req   oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param model oggetto model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
      * @throws Exception eccezione generica
      * @see HttpServletRequest
      * @see Model
@@ -82,8 +82,8 @@ public class PermutaControl {
     /**
      * gestisce la logica all'aggiunta di una permuta
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param redirectAttributes oggetto model per meccanismo dei riscontri
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo dei riscontri
      * @throws Exception eccezione generica
      * @see HttpServletRequest
      * @see RedirectAttributes

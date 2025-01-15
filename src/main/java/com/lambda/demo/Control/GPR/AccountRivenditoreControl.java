@@ -20,7 +20,7 @@ public class AccountRivenditoreControl {
     /**
      * gestisce la richiesta di modifica dati di un rivenditore
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @throws Exception eccezione generica
      * @see HttpServletRequest
@@ -54,7 +54,7 @@ public class AccountRivenditoreControl {
     /**
      * gestisce la richiesta di cancellazione dell'account di un rivenditore
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
      * @param redirectAttributes oggetto RedirectAttributes per meccanismo riscontri
      * @see HttpServletRequest
      * @see RedirectAttributes

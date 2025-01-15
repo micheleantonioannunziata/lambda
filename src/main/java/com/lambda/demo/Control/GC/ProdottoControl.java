@@ -21,8 +21,9 @@ public class ProdottoControl {
     /**
      * gestisce la logica relativa alla ricerca dei prodotti
      *
-     * @param req                oggetto HttServletRequest che rappresenta la richiesta Http
-     * @param redirectAttributes oggetto RedirectAttributes che funge da interfaccia
+     * @param req oggetto HttServletRequest che rappresenta la richiesta Http
+     * @param model oggetto Model che rappresenta un'interfaccia di comunicazione tra View e Business Logic
+     * @param redirectAttributes oggetto RedirectAttributes per meccanismo dei riscontri
      * @see HttpServletRequest
      * @see RedirectAttributes
      */
